@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark" data-base="../">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Combinar estrategias: por qué la mezcla no es la suma | Tu Amigo Inversor</title>
+<meta name="description" content="Qué ocurre con la rentabilidad, la volatilidad y la caída máxima cuando combinas estrategias, y por qué la correlación lo cambia todo. Con datos reales de las seis estrategias.">
+<meta name="theme-color" content="#0a0f1e" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+
+<!-- Open Graph / Twitter -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:site_name" content="Tu Amigo Inversor">
+<meta property="og:title" content="Combinar estrategias: por qué la mezcla no es la suma | Tu Amigo Inversor">
+<meta property="og:description" content="Qué ocurre con la rentabilidad, la volatilidad y la caída máxima cuando combinas estrategias, y por qué la correlación lo cambia todo. Con datos reales de las seis estrategias.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Combinar estrategias: por qué la mezcla no es la suma | Tu Amigo Inversor">
+<meta name="twitter:description" content="Qué ocurre con la rentabilidad, la volatilidad y la caída máxima cuando combinas estrategias, y por qué la correlación lo cambia todo. Con datos reales de las seis estrategias.">
+<meta property="og:image" content="https://tuamigoinversor.com/assets/img/og-tuamigoinversor.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:image" content="https://tuamigoinversor.com/assets/img/og-tuamigoinversor.jpg">
+
+<!-- Tema sin parpadeo: se aplica antes de pintar -->
+<script>
+(function(){try{var t=localStorage.getItem('tai-theme-v3');if(!t){t='light'}document.documentElement.setAttribute('data-theme',t)}catch(e){}})();
+</script>
+
+<link rel="stylesheet" href="../assets/css/fonts.css">
+<link rel="stylesheet" href="../assets/css/site.css">
+<link rel="icon" href="../assets/img/logo-tai.jpg" type="image/jpeg">
+<link rel="apple-touch-icon" href="../assets/img/logo-tai.jpg">
+
+<!-- Única librería externa: Chart.js (diferida) -->
+<script defer src="../assets/js/chart.umd.js"></script>
+<script defer src="../assets/js/tai.js"></script>
+<script defer src="../assets/js/series.js"></script>
+<script defer src="../assets/js/combinar.js"></script>
+
+<!-- Analítica sin cookies (GoatCounter) -->
+<script data-goatcounter="https://tuamigoinversor.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Saltar al contenido</a>
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<!-- SVG sprite (iconos estilo Lucide) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></symbol>
+  <symbol id="i-left" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></symbol>
+  <symbol id="i-right" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+  <symbol id="i-up" viewBox="0 0 24 24"><path d="m18 15-6-6-6 6"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9z"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+  <symbol id="i-scale" viewBox="0 0 24 24"><path d="M12 3v18M5 7h14M5 7l-3 7a4 4 0 0 0 6 0L5 7zM19 7l-3 7a4 4 0 0 0 6 0l-3-7z"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></symbol>
+  <symbol id="i-flask" viewBox="0 0 24 24"><path d="M9 3h6M10 3v6L4 20a1 1 0 0 0 .9 1.5h14.2A1 1 0 0 0 20 20l-6-11V3"/></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></symbol>
+  <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M3 12a9 9 0 0 1 15-6.7L21 8M21 3v5h-5M21 12a9 9 0 0 1-15 6.7L3 16M3 21v-5h5"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></symbol>
+</svg>
+
+<!-- =========================== CABECERA =========================== -->
+<header class="site-header" id="header">
+  <nav class="container nav" aria-label="Navegación principal">
+    <a href="../index.html" class="logo" aria-label="Tu Amigo Inversor, inicio"><img class="logo-mark" src="../assets/img/logo-tai.jpg" width="40" height="40" alt="">Tu Amigo Inversor</a>
+    <ul class="nav-links">
+      <li class="has-sub cur"><button type="button" class="sub-toggle" aria-expanded="false" aria-haspopup="true">Estrategias <svg class="icon" aria-hidden="true"><use href="#i-down"/></svg></button>
+        <ul class="sub">
+          <li><a href="../index.html#estrategias">Las seis estrategias</a></li>
+          <li><a href="../comparador/index.html">Compáralas frente a frente</a></li>
+          <li><a href="../index.html#test" data-quiz>Test de riesgo (3 min)</a></li>
+          <li><a href="../combinar-estrategias/index.html" aria-current="page">Combinar estrategias</a></li>
+        </ul></li>
+      <li class="has-sub"><button type="button" class="sub-toggle" aria-expanded="false" aria-haspopup="true">Cómo funciona <svg class="icon" aria-hidden="true"><use href="#i-down"/></svg></button>
+        <ul class="sub">
+          <li><a href="../empieza-aqui/index.html">Explicado desde cero</a></li>
+          <li><a href="../ejemplo-practico/index.html">Un ejemplo práctico, paso a paso</a></li>
+          <li><a href="../metodologia/index.html">Metodología y cálculos</a></li>
+          <li><a href="../glosario/index.html">Glosario</a></li>
+        </ul></li>
+      <li><a href="../informes/index.html">Informes</a></li>
+      <li><a href="../blog/index.html">Blog</a></li>
+      <li><a href="../sobre-mi/index.html">Sobre mí</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="icon-btn" id="themeToggle" type="button" aria-label="Cambiar a modo claro">
+        <svg class="icon i-sun"><use href="#i-sun"/></svg><svg class="icon i-moon"><use href="#i-moon"/></svg>
+      </button>
+      <a href="../index.html#suscripcion" class="btn btn-primary btn-sm nav-cta magnetic">Quiero el informe</a>
+      <button class="icon-btn burger" id="burger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileMenu"><svg class="icon"><use href="#i-menu"/></svg></button>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="../index.html#estrategias">Las seis estrategias</a></li>
+      <li><a href="../comparador/index.html">Compáralas frente a frente</a></li>
+      <li><a href="../index.html#test" data-quiz>Test de riesgo (3 min)</a></li>
+      <li><a href="../combinar-estrategias/index.html" aria-current="page">Combinar estrategias</a></li>
+      <li><a href="../empieza-aqui/index.html">Explicado desde cero</a></li>
+      <li><a href="../ejemplo-practico/index.html">Un ejemplo práctico, paso a paso</a></li>
+      <li><a href="../metodologia/index.html">Metodología y cálculos</a></li>
+      <li><a href="../glosario/index.html">Glosario</a></li>
+      <li><a href="../informes/index.html">Informes</a></li>
+      <li><a href="../blog/index.html">Blog</a></li>
+      <li><a href="../sobre-mi/index.html">Sobre mí</a></li>
+      <li><a href="../index.html#suscripcion" class="btn btn-primary" style="margin-top:.5rem">Quiero el informe gratis</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+<section class="page-hero" aria-labelledby="page-title"><div class="container">
+  <nav class="crumbs" aria-label="Migas de pan"><a href="../index.html">Inicio</a><span aria-hidden="true">/</span><span aria-current="page">Combinar estrategias</span></nav>
+  <span class="eyebrow">Combinar estrategias</span>
+  <h1 id="page-title">Combinar estrategias: la mezcla no es la suma de las partes</h1>
+  <p class="lead">Puedes seguir una estrategia o varias a la vez. Pero la rentabilidad y la caída máxima de una combinación no son la suma ni la media de las de cada estrategia: depende de cómo se mueven entre sí.</p>
+</div></section>
+
+<section class="section" aria-labelledby="c1"><div class="container narrow guide">
+  <h2 id="c1">La idea en tres frases</h2>
+  <ul>
+    <li><strong>Rentabilidad:</strong> la de una mezcla se parece a la media ponderada de las rentabilidades de sus partes, con diferencias que vienen del rebalanceo y de la volatilidad. No es la suma.</li>
+    <li><strong>Volatilidad:</strong> la de una mezcla es igual o menor que la media ponderada de las volatilidades. Solo es igual si las estrategias se mueven exactamente igual.</li>
+    <li><strong>Caída máxima:</strong> no es ni la suma ni la media de las caídas de cada estrategia. Depende de <em>cuándo</em> cae cada una: puede ser menor que la de cualquiera de las partes y, en otros casos, peor que la media.</li>
+  </ul>
+  <p>El concepto que lo explica es la <strong>correlación</strong>.</p>
+
+  <h2 id="c2">Qué es la correlación</h2>
+  <p>Es un número entre <strong>−1 y +1</strong> que indica si dos estrategias se mueven en la misma dirección durante el mismo periodo (aquí, mes a mes).</p>
+  <ul>
+    <li><strong>+1:</strong> suben y bajan a la vez y en la misma proporción. Mezclarlas no aporta nada: la mezcla se comporta como cada una.</li>
+    <li><strong>0:</strong> no hay relación entre sus movimientos. Los malos meses de una suelen no coincidir con los de la otra.</li>
+    <li><strong>−1:</strong> se mueven siempre en sentido contrario. Es el caso ideal y casi no existe en la práctica.</li>
+  </ul>
+  <p><em>Ejemplo con números inventados:</em> si la estrategia A sube un 10% el mismo mes que la B baja un 10%, una mezcla al 50% de cada una ese mes queda en 0%. Si las dos suben un 10% o bajan un 10% a la vez, la mezcla sube o baja un 10%: no hay compensación.</p>
+  <p>Tres matices importantes: la correlación <strong>no es constante</strong> (en las crisis suele aumentar y las diversificaciones pueden fallar justo cuando más se necesitan); se calcula con datos pasados y no predice el futuro; y que dos estrategias tengan correlación baja <strong>no garantiza</strong> que la mezcla caiga menos.</p>
+
+  <h2 id="c3">Cuatro ejemplos con los datos de esta web</h2>
+  <p>Para que los ejemplos sean comparables, cada mezcla usa los <strong>pesos indicados</strong> en su ficha (50/50 en los de dos estrategias; 30/40/30 en el de IMPULSO, GEDA y GEN-Z; y 60/30/10 en el de GEDA, GEN-Z y CRYPTO) y se <strong>rebalancea cada mes</strong> (se restablecen los pesos). Se usa el <strong>periodo común</strong> de las estrategias y los datos de rentabilidad publicados en sus fichas (en euros, sin comisiones ni impuestos). Son ejemplos didácticos: <strong>no son una cartera recomendada ni hay un reparto ideal</strong>.</p>
+  <noscript><p class="small-note">Esta sección necesita JavaScript para mostrar las tablas.</p></noscript>
+  <div id="cmbExamples"></div>
+  <p>Fíjate en que la <strong>rentabilidad</strong> tampoco es la media: con estrategias muy volátiles, una mezcla menos volátil «compone» mejor y la diferencia puede ser grande. No lo interpretes como una promesa: depende del periodo analizado.</p>
+
+  <h2 id="c4">Correlaciones entre las seis estrategias</h2>
+  <p>Cada casilla usa todos los meses que esas dos estrategias tienen en común. Cuanto más cerca de +1, más se mueven igual; cuanto más baja, más pueden compensarse.</p>
+  <div id="cmbMatrix"></div>
+
+  <h2 id="c5">Compón tu propia mezcla</h2>
+  <p>Elige entre dos y seis estrategias y <strong>ajusta el peso de cada una</strong> con los deslizadores: las métricas se recalculan al momento. Los pesos se normalizan para sumar 100%. No es una cartera recomendada ni hay un reparto ideal.</p>
+  <div class="cmb-chips" id="cmbChips" role="group" aria-label="Estrategias que componen la mezcla"></div>
+  <div class="cmb-weights" id="cmbWeights" aria-label="Peso de cada estrategia en la mezcla"></div>
+  <div class="cmb-tools"><button type="button" class="btn btn-ghost btn-sm" id="cmbEqual">Repartir a partes iguales</button></div>
+  <div id="cmbOut" aria-live="polite"></div>
+
+  <h3 id="simulador">Visualiza el efecto del interés compuesto con tu mezcla</h3>
+  <p>Con la mezcla que has elegido arriba (<strong id="simMix"></strong>), indica cuánto inviertes al principio, cuánto aportas cada mes y durante cuántos años. La gráfica separa lo que has aportado de lo que genera el rendimiento acumulado.</p>
+  <p class="small-note"><strong>Aviso:</strong> es una proyección ilustrativa con datos históricos con dinero real, no una previsión ni una cartera recomendada. Puedes perder dinero.</p>
+  <div class="cmb-sim">
+    <form class="panel" id="simForm" onsubmit="return false" aria-label="Parámetros de la simulación">
+      <div class="field"><label for="sCap">Capital inicial <output id="oCap" for="sCap"></output></label><input type="range" id="sCap" min="0" max="200000" step="1000" value="10000"></div>
+      <div class="field"><label for="sMon">Aportación mensual <output id="oMon" for="sMon"></output></label><input type="range" id="sMon" min="0" max="3000" step="50" value="300"></div>
+      <div class="field"><label for="sYrs">Plazo <output id="oYrs" for="sYrs"></output></label><input type="range" id="sYrs" min="1" max="30" step="1" value="15"></div>
+      <div class="field">
+        <span class="lbl" id="scLbl">Escenario</span>
+        <div class="seg" role="radiogroup" aria-labelledby="scLbl" id="scSeg">
+          <button type="button" class="chip" role="radio" aria-checked="false" data-sc="0.5">Prudente</button>
+          <button type="button" class="chip" role="radio" aria-checked="true" data-sc="0.75">Base</button>
+          <button type="button" class="chip" role="radio" aria-checked="false" data-sc="1">Optimista</button>
+        </div>
+      </div>
+      <p class="small-note">Prudente = 50%, base = 75% y optimista = 100% de la rentabilidad anualizada ponderada de las estrategias elegidas. Capitalización mensual.</p>
+    </form>
+    <div>
+      <p class="callout" id="simShort" hidden></p>
+      <div class="cmb-sim-out" aria-live="polite">
+        <div><span>Capital aportado</span><b class="mono" id="rIn">0 €</b></div>
+        <div><span>Valor final estimado</span><b class="mono pos" id="rOut">0 €</b></div>
+        <div><span>Rendimiento estimado</span><b class="mono" id="rGain">0 €</b></div>
+        <div><span>Rent. anual aplicada</span><b class="mono" id="rRate">0%</b></div>
+      </div>
+      <div class="cmb-chart"><canvas id="simChart" role="img" aria-label="Gráfico de áreas del capital aportado y el rendimiento acumulado por año"></canvas></div>
+      <details class="yt">
+        <summary>Tabla año a año</summary>
+        <div class="table-wrap"><table class="data chart-fallback-keep" id="simTable"><caption class="sr-only">Evolución año a año de la simulación</caption></table></div>
+      </details>
+      <p><button type="button" class="btn btn-ghost btn-sm" id="csvBtn"><svg class="icon"><use href="#i-download"/></svg>Exportar CSV</button></p>
+    </div>
+  </div>
+  <p class="small-note">Esta proyección es ilustrativa y usa la rentabilidad anualizada con dinero real de cada estrategia, no la del periodo común de las tablas. GEN-Z y CRYPTO no entran: con menos de cinco años de historial no tienen una media anual fiable. No incluye comisiones, impuestos ni la secuencia real de caídas, y las rentabilidades pasadas no garantizan rentabilidades futuras: no es una previsión.</p>
+
+  <h2 id="c6">Lo que esta comparación no te dice</h2>
+  <ul>
+    <li><strong>No incluye comisiones ni impuestos,</strong> que aumentan cuantas más operaciones y más estrategias sigas.</li>
+    <li><strong>Las posiciones pueden solaparse.</strong> Dos estrategias pueden coincidir en activos o sectores (por ejemplo, tecnología estadounidense) y eso reduce el beneficio de combinarlas, aunque su correlación histórica sea baja.</li>
+    <li><strong>Más estrategias, más trabajo.</strong> Cada una tiene su frecuencia de revisión y puede requerir otro bróker u otros productos.</li>
+    <li><strong>Combinar no garantiza menos pérdidas.</strong> Si varias estrategias caen a la vez, la mezcla también cae.</li>
+  </ul>
+  <p>Cuántas estrategias seguir, y en qué proporción, es una decisión tuya. El <a href="../aprende/combinar-estrategias-inversion/index.html">artículo sobre combinar estrategias</a>, el <a href="../comparador/index.html">comparador</a> y el <a href="../glosario/index.html">glosario</a> te ayudan a profundizar.</p>
+  <div class="cta-row"><a class="btn btn-primary" href="../ejemplo-practico/index.html">Ver el ejemplo práctico</a><a class="btn btn-ghost" href="../index.html#suscripcion">Quiero el informe gratis</a></div>
+  <p class="small-note">Información divulgativa. No es asesoramiento financiero ni una recomendación personalizada. Las rentabilidades pasadas no garantizan rentabilidades futuras.</p>
+
+  <div class="next-step"><div><small>Siguiente</small><strong>Elige tu estrategia y apúntate gratis</strong><p>Haz el test de riesgo, compara las seis estrategias y, cuando quieras, recibe el informe mensual con las posiciones el día 1.</p></div><a class="btn btn-primary" href="../index.html#suscripcion">Quiero el informe gratis <svg class="icon"><use href="#i-arrow"/></svg></a></div>
+</div></section>
+</main>
+
+<!-- =========================== PIE =========================== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <a href="../index.html" class="logo" style="margin-bottom:1rem"><img class="logo-mark" src="../assets/img/logo-tai.jpg" width="40" height="40" alt="">Tu Amigo Inversor</a>
+        <p>Te cuento cada mes qué hago con mi dinero: estrategias con reglas claras, sin corazonadas. Lo que hagas con tu dinero lo decides tú.</p>
+        <p style="margin-top:.8rem"><a href="mailto:info@tuamigoinversor.com">info@tuamigoinversor.com</a></p>
+      </div>
+      <nav aria-label="Carteras permanentes"><h2>Cartera permanente</h2><ul><li><a href="../cartera-permanente-conservadora-roca/index.html">ROCA</a></li><li><a href="../cartera-inversion-crecimiento-impulso/index.html">IMPULSO</a></li></ul></nav>
+      <nav aria-label="Asignación táctica"><h2>Asignación táctica</h2><ul><li><a href="../inversion-tactica-geda/index.html">GEDA</a></li><li><a href="../inversion-tematica-gen-z/index.html">GEN-Z</a></li><li><a href="../inversion-criptomonedas-crypto/index.html">CRYPTO</a></li><li><a href="../plan-pensiones-moderado-horizonte/index.html">HORIZONTE <small class="pp">plan de pensiones</small></a></li></ul></nav>
+      <nav aria-label="Herramientas y proyecto"><h2>Empieza por aquí</h2><ul><li><a href="../empieza-aqui/index.html">Explicado desde cero</a></li><li><a href="../ejemplo-practico/index.html">Ejemplo práctico</a></li><li><a href="../comparador/index.html">Comparador</a></li><li><a href="../index.html#test" data-quiz>Test de riesgo</a></li><li><a href="../combinar-estrategias/index.html">Combinar estrategias</a></li><li><a href="../informes/index.html">Informes</a></li><li><a href="../metodologia/index.html">Metodología</a></li><li><a href="../glosario/index.html">Glosario</a></li><li><a href="../blog/index.html">Blog</a></li><li><a href="../sobre-mi/index.html">Sobre mí</a></li></ul></nav>
+      <nav aria-label="Legal"><h2>Legal</h2><ul><li><a href="../aviso-legal/index.html">Aviso legal</a></li><li><a href="../privacidad/index.html">Política de privacidad</a></li><li><a href="../recomendaciones/index.html">Cómo elaboro los informes</a></li></ul></nav>
+    </div>
+    <div class="legal">
+      <p><strong>Aviso:</strong> la información publicada en esta web tiene carácter meramente informativo y no constituye asesoramiento financiero ni una recomendación personalizada de inversión. Las inversiones conllevan riesgo y pueden implicar la pérdida total o parcial del capital. Las rentabilidades pasadas no garantizan rentabilidades futuras. Cada inversor debe realizar su propio análisis y tomar decisiones en función de su situación personal.</p>
+      <p style="margin-top:.8rem">© 2026 Tu Amigo Inversor.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Test de riesgo (ventana emergente) -->
+<div class="modal" id="quizModal" aria-hidden="true">
+  <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="quizTitle">
+    <button class="icon-btn modal-close" type="button" aria-label="Cerrar test"><svg class="icon"><use href="#i-x"/></svg></button>
+    <div class="modal-content">
+      <span class="eyebrow">Test de riesgo</span>
+      <h2 id="quizTitle" style="font-size:var(--fs-xl);margin:.3rem 0 .4rem">¿Cuánto riesgo toleras?</h2>
+      <p style="color:var(--muted);margin-bottom:1.4rem">Diez preguntas, unos 3 minutos. Te explico tu tolerancia al riesgo y qué significa en caídas reales.</p>
+      <div class="quiz" id="quiz" aria-live="polite"></div>
+    </div>
+  </div>
+</div>
+<button class="icon-btn to-top" id="toTop" type="button" aria-label="Volver arriba"><svg class="icon"><use href="#i-up"/></svg></button>
+<div class="sticky-cta" id="stickyCta"><small><strong>Gratis</strong><br><span data-countdown-short>El informe del día 1 en tu correo</span></small><a href="../index.html#suscripcion" class="btn btn-primary btn-sm">Quiero el informe</a></div>
+</body>
+</html>

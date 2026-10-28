@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark" data-base="../">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sobre mí: José Manuel García | Tu Amigo Inversor</title>
+<meta name="description" content="Soy José Manuel García, inversor particular y creador de Tu Amigo Inversor. Cuento por qué nace el proyecto y cómo invierto con método.">
+<meta name="theme-color" content="#0a0f1e" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+
+<!-- Open Graph / Twitter -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:site_name" content="Tu Amigo Inversor">
+<meta property="og:title" content="Sobre mí · Tu Amigo Inversor">
+<meta property="og:description" content="Soy José Manuel García, inversor particular y creador de Tu Amigo Inversor. Cuento por qué nace el proyecto y cómo invierto con método.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Sobre mí · Tu Amigo Inversor">
+<meta name="twitter:description" content="Soy José Manuel García, inversor particular y creador de Tu Amigo Inversor. Cuento por qué nace el proyecto y cómo invierto con método.">
+<meta property="og:image" content="https://tuamigoinversor.com/assets/img/og-tuamigoinversor.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:image" content="https://tuamigoinversor.com/assets/img/og-tuamigoinversor.jpg">
+
+<!-- Tema sin parpadeo: se aplica antes de pintar -->
+<script>
+(function(){try{var t=localStorage.getItem('tai-theme-v3');if(!t){t='light'}document.documentElement.setAttribute('data-theme',t)}catch(e){}})();
+</script>
+
+<link rel="stylesheet" href="../assets/css/fonts.css">
+<link rel="stylesheet" href="../assets/css/site.css">
+<link rel="icon" href="../assets/img/logo-tai.jpg" type="image/jpeg">
+<link rel="apple-touch-icon" href="../assets/img/logo-tai.jpg">
+
+<!-- Única librería externa: Chart.js (diferida) -->
+<script defer src="../assets/js/chart.umd.js"></script>
+<script defer src="../assets/js/tai.js"></script>
+
+<!-- Analítica sin cookies (GoatCounter) -->
+<script data-goatcounter="https://tuamigoinversor.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Saltar al contenido</a>
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<!-- SVG sprite (iconos estilo Lucide) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></symbol>
+  <symbol id="i-left" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></symbol>
+  <symbol id="i-right" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+  <symbol id="i-up" viewBox="0 0 24 24"><path d="m18 15-6-6-6 6"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9z"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+  <symbol id="i-scale" viewBox="0 0 24 24"><path d="M12 3v18M5 7h14M5 7l-3 7a4 4 0 0 0 6 0L5 7zM19 7l-3 7a4 4 0 0 0 6 0l-3-7z"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></symbol>
+  <symbol id="i-flask" viewBox="0 0 24 24"><path d="M9 3h6M10 3v6L4 20a1 1 0 0 0 .9 1.5h14.2A1 1 0 0 0 20 20l-6-11V3"/></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></symbol>
+  <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M3 12a9 9 0 0 1 15-6.7L21 8M21 3v5h-5M21 12a9 9 0 0 1-15 6.7L3 16M3 21v-5h5"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></symbol>
+</svg>
+
+<!-- =========================== CABECERA =========================== -->
+<header class="site-header" id="header">
+  <nav class="container nav" aria-label="Navegación principal">
+    <a href="../index.html" class="logo" aria-label="Tu Amigo Inversor, inicio"><img class="logo-mark" src="../assets/img/logo-tai.jpg" width="40" height="40" alt="">Tu Amigo Inversor</a>
+    <ul class="nav-links">
+      <li class="has-sub"><button type="button" class="sub-toggle" aria-expanded="false" aria-haspopup="true">Estrategias <svg class="icon" aria-hidden="true"><use href="#i-down"/></svg></button>
+        <ul class="sub">
+          <li><a href="../index.html#estrategias">Las seis estrategias</a></li>
+          <li><a href="../comparador/index.html">Compáralas frente a frente</a></li>
+          <li><a href="../index.html#test" data-quiz>Test de riesgo (3 min)</a></li>
+          <li><a href="../combinar-estrategias/index.html">Combinar estrategias</a></li>
+        </ul></li>
+      <li class="has-sub"><button type="button" class="sub-toggle" aria-expanded="false" aria-haspopup="true">Cómo funciona <svg class="icon" aria-hidden="true"><use href="#i-down"/></svg></button>
+        <ul class="sub">
+          <li><a href="../empieza-aqui/index.html">Explicado desde cero</a></li>
+          <li><a href="../ejemplo-practico/index.html">Un ejemplo práctico, paso a paso</a></li>
+          <li><a href="../metodologia/index.html">Metodología y cálculos</a></li>
+          <li><a href="../glosario/index.html">Glosario</a></li>
+        </ul></li>
+      <li><a href="../informes/index.html">Informes</a></li>
+      <li><a href="../blog/index.html">Blog</a></li>
+      <li><a href="../sobre-mi/index.html" aria-current="page">Sobre mí</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="icon-btn" id="themeToggle" type="button" aria-label="Cambiar a modo claro">
+        <svg class="icon i-sun"><use href="#i-sun"/></svg><svg class="icon i-moon"><use href="#i-moon"/></svg>
+      </button>
+      <a href="../index.html#suscripcion" class="btn btn-primary btn-sm nav-cta magnetic">Quiero el informe</a>
+      <button class="icon-btn burger" id="burger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileMenu"><svg class="icon"><use href="#i-menu"/></svg></button>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="../index.html#estrategias">Las seis estrategias</a></li>
+      <li><a href="../comparador/index.html">Compáralas frente a frente</a></li>
+      <li><a href="../index.html#test" data-quiz>Test de riesgo (3 min)</a></li>
+      <li><a href="../combinar-estrategias/index.html">Combinar estrategias</a></li>
+      <li><a href="../empieza-aqui/index.html">Explicado desde cero</a></li>
+      <li><a href="../ejemplo-practico/index.html">Un ejemplo práctico, paso a paso</a></li>
+      <li><a href="../metodologia/index.html">Metodología y cálculos</a></li>
+      <li><a href="../glosario/index.html">Glosario</a></li>
+      <li><a href="../informes/index.html">Informes</a></li>
+      <li><a href="../blog/index.html">Blog</a></li>
+      <li><a href="../sobre-mi/index.html" aria-current="page">Sobre mí</a></li>
+      <li><a href="../index.html#suscripcion" class="btn btn-primary" style="margin-top:.5rem">Quiero el informe gratis</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+<section class="page-hero" aria-labelledby="page-title"><div class="container">
+  <nav class="crumbs" aria-label="Migas de pan"><a href="../index.html">Inicio</a><span aria-hidden="true">/</span><span aria-current="page">Sobre mí</span></nav>
+  <span class="eyebrow">Sobre mí</span>
+  <h1 id="page-title">Inversor particular, apasionado de los mercados y defensor de invertir con método</h1>
+</div></section>
+<section class="section"><div class="container about about-wide">
+  <figure class="portrait wide reveal"><img src="../assets/img/jose-wide.jpg" onerror="this.onerror=null;this.src='../assets/img/jose.svg'" width="1200" height="800" decoding="async" alt="Retrato de José Manuel García, creador de Tu Amigo Inversor"><figcaption>José Manuel García · inversor particular</figcaption></figure>
+  <div class="prose wp bio reveal"><p>Hola, soy José Manuel García, creador de <strong>Tu Amigo Inversor</strong>.</p><p>Desde hace años estudio, pruebo y aplico diferentes estrategias de inversión con un objetivo muy claro: construir un patrimonio a largo plazo mediante métodos sencillos, disciplinados y basados en reglas objetivas.</p><p>Como le ocurre a muchos inversores particulares, mis comienzos estuvieron marcados por las noticias financieras, las opiniones de supuestos expertos, las emociones y la búsqueda constante de esa próxima gran oportunidad que parecía capaz de cambiarlo todo.</p><p>Con el tiempo fui comprendiendo algo fundamental: invertir de forma consistente no consiste en acertar siempre, sino en <strong>tener un método, gestionar el riesgo y mantener la disciplina</strong> incluso cuando el mercado no acompaña.</p><p>Esa idea acabaría convirtiéndose en la base de este proyecto.</p><div class="cred"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg><div><strong>Lo que hago con mi dinero</strong><span>Aquí no asesoro: comparto lo que hago con mi dinero, también los meses malos.</span></div></div></div>
+</div></section>
+<section class="section"><div class="container narrow"><div class="sec-head reveal"><h2>¿Cómo empezó todo?</h2></div><div class="prose wp bio reveal"><p>Tu Amigo Inversor no nació como una web ni como un servicio de inversión. Empezó hace años, de una forma mucho más sencilla: como un pequeño blog personal en el que iba anotando ideas, aprendizajes y reflexiones mientras avanzaba en mi propio camino como inversor.</p><p>Quería dejar constancia de lo que iba descubriendo, de las estrategias que probaba y, sobre todo, de las lecciones que me enseñaba el mercado. Porque muchas veces los aprendizajes más valiosos no llegan cuando todo va bien, sino cuando las cosas se tuercen, cometemos errores o nos enfrentamos a situaciones que no habíamos previsto.</p><p>Por eso empecé a documentarlo todo.</p><p>Mi intención inicial era crear una especie de diario de inversión que, con el tiempo, pudiera convertirse incluso en un libro sobre mis experiencias. Había, además, una motivación muy personal: dejarles algún día a mis hijos un legado de conocimiento práctico sobre el dinero y la inversión.</p><p>Quería que pudieran conocer no solo lo que había funcionado, sino también lo que no: los errores que había cometido, las decisiones que habría tomado de otra manera y los métodos que, después de años de aprendizaje, había terminado aplicando con mi propio dinero.</p></div></div></section>
+<section class="section"><div class="container narrow"><div class="sec-head reveal"><h2>De la experiencia personal a las estrategias</h2></div><div class="prose wp bio reveal"><p>Con los años, mis ideas y estrategias fueron evolucionando. Fui aprendiendo, descartando enfoques que no encajaban conmigo y perfeccionando aquellos métodos que me permitían invertir con mayor criterio y menos dependencia de las emociones.</p><p>Poco a poco, esa experiencia fue tomando forma en sistemas más estructurados, con reglas claras y criterios objetivos para tomar decisiones.</p><p>Llegó un momento en el que empecé a compartirlos con amigos y familiares cercanos, para que pudieran entenderlos y aplicar los mismos principios que yo utilizaba en mis propias inversiones.</p><p>Aquello me animó a dar el siguiente paso. Si todo ese trabajo, aprendizaje y experiencia podía resultar útil a las personas de mi entorno, ¿por qué no compartirlo también con quienes, como yo, buscan una forma más metódica de invertir?</p><p>Así comienza esta nueva etapa de Tu Amigo Inversor.</p></div></div></section>
+<section class="section" aria-labelledby="estr-t"><div class="container">
+  <div class="sec-head reveal"><h2 id="estr-t">Estrategias de inversión del blog</h2><p></p></div>
+  <div class="tools tools-3"><a class="m-card tool reveal spot" href="../cartera-permanente-conservadora-roca/index.html"><h3>ROCA</h3><p>La más tranquila: renta fija, oro y bolsa. Crece despacio y cae poco.</p><span class="more">Ver estrategia <svg class="icon"><use href="#i-arrow"/></svg></span></a><a class="m-card tool reveal spot" href="../cartera-inversion-crecimiento-impulso/index.html"><h3>IMPULSO</h3><p>Oro y bolsa, sin renta fija: más crecimiento a cambio de más altibajos.</p><span class="more">Ver estrategia <svg class="icon"><use href="#i-arrow"/></svg></span></a><a class="m-card tool reveal spot" href="../inversion-tactica-geda/index.html"><h3>GEDA</h3><p>Cada mes rota hacia los 7 activos con más fuerza. Es mi estrategia principal.</p><span class="more">Ver estrategia <svg class="icon"><use href="#i-arrow"/></svg></span></a><a class="m-card tool reveal spot" href="../inversion-tematica-gen-z/index.html"><h3>GEN-Z</h3><p>Cuatro acciones de temáticas de futuro, como inteligencia artificial o ciberseguridad. Muy arriesgada.</p><span class="more">Ver estrategia <svg class="icon"><use href="#i-arrow"/></svg></span></a><a class="m-card tool reveal spot" href="../inversion-criptomonedas-crypto/index.html"><h3>CRYPTO</h3><p>Bitcoin, Ethereum y tres criptomonedas más. Solo con dinero que puedas permitirte perder.</p><span class="more">Ver estrategia <svg class="icon"><use href="#i-arrow"/></svg></span></a><a class="m-card tool reveal spot" href="../plan-pensiones-moderado-horizonte/index.html"><h3>HORIZONTE <span class="pp">plan de pensiones</span></h3><p>Para tu plan de pensiones: una regla sencilla decide cada mes entre bolsa de EE. UU. y renta fija.</p><span class="more">Ver estrategia <svg class="icon"><use href="#i-arrow"/></svg></span></a></div>
+</div></section>
+<section class="section alt"><div class="container narrow"><div class="sec-head reveal"><h2>¿Qué encontrarás en Tu Amigo Inversor?</h2></div><div class="prose wp bio reveal"><p>Mi intención no es predecir el próximo movimiento del mercado ni ofrecer fórmulas mágicas para ganar dinero. Tampoco prometer rentabilidades extraordinarias ni presentar la inversión como un camino sin dificultades.</p><p>Quiero compartir contigo lo que he ido aprendiendo a lo largo de los años:</p><ul><li><strong>Conocimiento:</strong> conceptos y herramientas para comprender mejor cómo funcionan los mercados.</li><li><strong>Experiencia real:</strong> aprendizajes, reflexiones y errores que forman parte del camino de cualquier inversor.</li><li><strong>Estrategias con reglas claras:</strong> métodos estructurados que permiten tomar decisiones con criterios objetivos, en lugar de depender continuamente de las noticias o las emociones.</li><li><strong>Gestión del riesgo:</strong> porque proteger el patrimonio y entender las posibles pérdidas es tan importante como buscar oportunidades.</li><li><strong>Transparencia:</strong> explicar cómo funcionan las estrategias, qué lógica hay detrás de ellas y cuáles son también sus limitaciones.</li></ul><p>Todo ello desde una perspectiva práctica, con un principio que considero esencial: <strong>invertir con método, no con predicciones</strong>.</p><p>No se trata de encontrar una estrategia perfecta ni de eliminar la incertidumbre, algo imposible en los mercados. Se trata de disponer de un sistema que nos ayude a tomar decisiones razonadas, actuar con disciplina y mantener una visión de largo plazo.</p><p>Las estrategias que comparto reflejan mi experiencia y mi forma de invertir. Cada inversor, por supuesto, debe valorar sus propias circunstancias, objetivos y tolerancia al riesgo antes de aplicar cualquier método.</p></div></div></section>
+<section class="section"><div class="container narrow"><div class="sec-head reveal"><h2>Un proyecto que crece gracias a quienes lo acompañan</h2></div><div class="prose wp bio reveal"><p>En esta nueva etapa quiero abrir Tu Amigo Inversor a todas las personas interesadas en aprender, compartir experiencias y descubrir otras formas de abordar la inversión.</p><p>Me gustaría que este espacio creciera poco a poco, sin perder nunca su esencia: un lugar donde hablar de inversión con naturalidad, rigor y transparencia, sin promesas imposibles ni necesidad de aparentar que siempre tenemos razón.</p><p>La web seguirá siendo un espacio para compartir conocimientos, ideas y estrategias. Y, para quienes quieran profundizar más o apoyar el proyecto, existirá también la posibilidad de suscribirse. Esa aportación ayudará a mantener la web, las herramientas y el tiempo necesario para seguir investigando, desarrollando contenidos y compartiendo nuevas experiencias.</p><p>Me gusta pensar en ello de una manera muy sencilla: como invitar a un amigo a un café al mes para sentarnos a hablar de inversión, compartir lo aprendido y comentar cómo evolucionan nuestras carteras.</p><p>Sin fórmulas mágicas. Sin promesas de hacerse rico. Simplemente, aprendiendo y avanzando juntos.</p></div></div></section>
+<section class="section"><div class="container narrow"><div class="sec-head reveal"><h2>Gracias por estar aquí</h2></div><div class="prose wp bio reveal"><p>Si has llegado hasta aquí, espero que encuentres en Tu Amigo Inversor ideas útiles, métodos que te ayuden a comprender mejor tus decisiones y experiencias de las que también puedas aprender.</p><p>Este proyecto comenzó como un diario personal y hoy quiero convertirlo en un espacio abierto a todos los que compartan esa inquietud por invertir con más criterio, disciplina y visión de futuro.</p><p>Soy José Manuel García, y esto es Tu Amigo Inversor.</p><p><strong>Bienvenido. Estás en tu casa.</strong></p></div></div></section>
+<section class="section alt"><div class="container narrow"><div class="callout reveal" role="note"><svg class="icon"><use href="#i-alert"/></svg><div class="prose wp bio"><p><strong>Aviso importante</strong></p><p>El contenido de este blog tiene únicamente carácter divulgativo y educativo.</p>
+<p>Nada de lo publicado aquí constituye una recomendación personalizada de inversión.</p>
+<p>Cada inversor debe valorar:</p>
+<ul><li>su situación financiera</li><li>su horizonte temporal</li><li>y su tolerancia al riesgo</li></ul>
+<p>antes de tomar cualquier decisión.</p></div></div></div></section>
+<section class="section" aria-labelledby="cont-t"><div class="container narrow"><div class="sec-head reveal"><h2 id="cont-t">Contacto</h2></div>
+  <div class="prose wp bio reveal"><p>Si algo de lo que lees aquí te ayuda a mejorar tu forma de invertir, el objetivo del blog ya estará cumplido.</p><p>Puedes escribirme en:</p>
+    <p><a class="more" href="mailto:info@tuamigoinversor.com">info@tuamigoinversor.com <svg class="icon"><use href="#i-arrow"/></svg></a></p>
+    <p><a class="more" href="https://x.com/tuamigoinversor" target="_blank" rel="noopener">Twitter/X: @tuamigoinversor <svg class="icon"><use href="#i-arrow"/></svg></a></p></div>
+  <div class="cta-band reveal" style="margin-top:2.5rem"><div><h2>¿Quieres ver las estrategias en directo?</h2><p>Cada día 1 te mando por correo qué tengo en cada estrategia y qué cambio. Lo lees y decides tú qué hacer con tu dinero. Gratis y sin compromiso.</p></div>
+  <div class="cta-row"><a href="../index.html#suscripcion" class="btn btn-primary magnetic">Quiero el informe gratis <svg class="icon"><use href="#i-arrow"/></svg></a></div></div>
+</div></section>
+</main>
+
+<!-- =========================== PIE =========================== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <a href="../index.html" class="logo" style="margin-bottom:1rem"><img class="logo-mark" src="../assets/img/logo-tai.jpg" width="40" height="40" alt="">Tu Amigo Inversor</a>
+        <p>Te cuento cada mes qué hago con mi dinero: estrategias con reglas claras, sin corazonadas. Lo que hagas con tu dinero lo decides tú.</p>
+        <p style="margin-top:.8rem"><a href="mailto:info@tuamigoinversor.com">info@tuamigoinversor.com</a></p>
+      </div>
+      <nav aria-label="Carteras permanentes"><h2>Cartera permanente</h2><ul><li><a href="../cartera-permanente-conservadora-roca/index.html">ROCA</a></li><li><a href="../cartera-inversion-crecimiento-impulso/index.html">IMPULSO</a></li></ul></nav>
+      <nav aria-label="Asignación táctica"><h2>Asignación táctica</h2><ul><li><a href="../inversion-tactica-geda/index.html">GEDA</a></li><li><a href="../inversion-tematica-gen-z/index.html">GEN-Z</a></li><li><a href="../inversion-criptomonedas-crypto/index.html">CRYPTO</a></li><li><a href="../plan-pensiones-moderado-horizonte/index.html">HORIZONTE <small class="pp">plan de pensiones</small></a></li></ul></nav>
+      <nav aria-label="Herramientas y proyecto"><h2>Empieza por aquí</h2><ul><li><a href="../empieza-aqui/index.html">Explicado desde cero</a></li><li><a href="../ejemplo-practico/index.html">Ejemplo práctico</a></li><li><a href="../comparador/index.html">Comparador</a></li><li><a href="../index.html#test" data-quiz>Test de riesgo</a></li><li><a href="../combinar-estrategias/index.html">Combinar estrategias</a></li><li><a href="../informes/index.html">Informes</a></li><li><a href="../metodologia/index.html">Metodología</a></li><li><a href="../glosario/index.html">Glosario</a></li><li><a href="../blog/index.html">Blog</a></li><li><a href="../sobre-mi/index.html">Sobre mí</a></li></ul></nav>
+      <nav aria-label="Legal"><h2>Legal</h2><ul><li><a href="../aviso-legal/index.html">Aviso legal</a></li><li><a href="../privacidad/index.html">Política de privacidad</a></li><li><a href="../recomendaciones/index.html">Cómo elaboro los informes</a></li></ul></nav>
+    </div>
+    <div class="legal">
+      <p><strong>Aviso:</strong> la información publicada en esta web tiene carácter meramente informativo y no constituye asesoramiento financiero ni una recomendación personalizada de inversión. Las inversiones conllevan riesgo y pueden implicar la pérdida total o parcial del capital. Las rentabilidades pasadas no garantizan rentabilidades futuras. Cada inversor debe realizar su propio análisis y tomar decisiones en función de su situación personal.</p>
+      <p style="margin-top:.8rem">© 2026 Tu Amigo Inversor.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Test de riesgo (ventana emergente) -->
+<div class="modal" id="quizModal" aria-hidden="true">
+  <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="quizTitle">
+    <button class="icon-btn modal-close" type="button" aria-label="Cerrar test"><svg class="icon"><use href="#i-x"/></svg></button>
+    <div class="modal-content">
+      <span class="eyebrow">Test de riesgo</span>
+      <h2 id="quizTitle" style="font-size:var(--fs-xl);margin:.3rem 0 .4rem">¿Cuánto riesgo toleras?</h2>
+      <p style="color:var(--muted);margin-bottom:1.4rem">Diez preguntas, unos 3 minutos. Te explico tu tolerancia al riesgo y qué significa en caídas reales.</p>
+      <div class="quiz" id="quiz" aria-live="polite"></div>
+    </div>
+  </div>
+</div>
+
+<button class="icon-btn to-top" id="toTop" type="button" aria-label="Volver arriba"><svg class="icon"><use href="#i-up"/></svg></button>
+<div class="sticky-cta" id="stickyCta"><small><strong>Gratis</strong><br><span data-countdown-short>El informe del día 1 en tu correo</span></small><a href="../index.html#suscripcion" class="btn btn-primary btn-sm">Quiero el informe</a></div>
+</body>
+</html>

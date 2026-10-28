@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark" data-base="../">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Metodología: qué hay detrás de cada cifra · Tu Amigo Inversor</title>
+<meta name="description" content="Cómo se calculan las rentabilidades y la caída máxima, cómo se construyen las estrategias momentum y qué riesgos debes conocer antes de invertir.">
+<meta name="theme-color" content="#0a0f1e" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+
+<!-- Open Graph / Twitter -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:site_name" content="Tu Amigo Inversor">
+<meta property="og:title" content="Metodología: qué hay detrás de cada cifra · Tu Amigo Inversor">
+<meta property="og:description" content="Cómo se calculan las rentabilidades y la caída máxima, cómo se construyen las estrategias momentum y qué riesgos debes conocer antes de invertir.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Metodología: qué hay detrás de cada cifra · Tu Amigo Inversor">
+<meta name="twitter:description" content="Cómo se calculan las rentabilidades y la caída máxima, cómo se construyen las estrategias momentum y qué riesgos debes conocer antes de invertir.">
+<meta property="og:image" content="https://tuamigoinversor.com/assets/img/og-tuamigoinversor.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:image" content="https://tuamigoinversor.com/assets/img/og-tuamigoinversor.jpg">
+
+<!-- Tema sin parpadeo: se aplica antes de pintar -->
+<script>
+(function(){try{var t=localStorage.getItem('tai-theme-v3');if(!t){t='light'}document.documentElement.setAttribute('data-theme',t)}catch(e){}})();
+</script>
+
+<link rel="stylesheet" href="../assets/css/fonts.css">
+<link rel="stylesheet" href="../assets/css/site.css">
+<link rel="icon" href="../assets/img/logo-tai.jpg" type="image/jpeg">
+<link rel="apple-touch-icon" href="../assets/img/logo-tai.jpg">
+
+<!-- Única librería externa: Chart.js (diferida) -->
+<script defer src="../assets/js/chart.umd.js"></script>
+<script defer src="../assets/js/tai.js"></script>
+
+<!-- Analítica sin cookies (GoatCounter) -->
+<script data-goatcounter="https://tuamigoinversor.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Saltar al contenido</a>
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<!-- SVG sprite (iconos estilo Lucide) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></symbol>
+  <symbol id="i-left" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></symbol>
+  <symbol id="i-right" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+  <symbol id="i-up" viewBox="0 0 24 24"><path d="m18 15-6-6-6 6"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9z"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+  <symbol id="i-scale" viewBox="0 0 24 24"><path d="M12 3v18M5 7h14M5 7l-3 7a4 4 0 0 0 6 0L5 7zM19 7l-3 7a4 4 0 0 0 6 0l-3-7z"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></symbol>
+  <symbol id="i-flask" viewBox="0 0 24 24"><path d="M9 3h6M10 3v6L4 20a1 1 0 0 0 .9 1.5h14.2A1 1 0 0 0 20 20l-6-11V3"/></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></symbol>
+  <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M3 12a9 9 0 0 1 15-6.7L21 8M21 3v5h-5M21 12a9 9 0 0 1-15 6.7L3 16M3 21v-5h5"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></symbol>
+</svg>
+
+<!-- =========================== CABECERA =========================== -->
+<header class="site-header" id="header">
+  <nav class="container nav" aria-label="Navegación principal">
+    <a href="../index.html" class="logo" aria-label="Tu Amigo Inversor, inicio"><img class="logo-mark" src="../assets/img/logo-tai.jpg" width="40" height="40" alt="">Tu Amigo Inversor</a>
+    <ul class="nav-links">
+      <li class="has-sub"><button type="button" class="sub-toggle" aria-expanded="false" aria-haspopup="true">Estrategias <svg class="icon" aria-hidden="true"><use href="#i-down"/></svg></button>
+        <ul class="sub">
+          <li><a href="../index.html#estrategias">Las seis estrategias</a></li>
+          <li><a href="../comparador/index.html">Compáralas frente a frente</a></li>
+          <li><a href="../index.html#test" data-quiz>Test de riesgo (3 min)</a></li>
+          <li><a href="../combinar-estrategias/index.html">Combinar estrategias</a></li>
+        </ul></li>
+      <li class="has-sub cur"><button type="button" class="sub-toggle" aria-expanded="false" aria-haspopup="true">Cómo funciona <svg class="icon" aria-hidden="true"><use href="#i-down"/></svg></button>
+        <ul class="sub">
+          <li><a href="../empieza-aqui/index.html">Explicado desde cero</a></li>
+          <li><a href="../ejemplo-practico/index.html">Un ejemplo práctico, paso a paso</a></li>
+          <li><a href="../metodologia/index.html" aria-current="page">Metodología y cálculos</a></li>
+          <li><a href="../glosario/index.html">Glosario</a></li>
+        </ul></li>
+      <li><a href="../informes/index.html">Informes</a></li>
+      <li><a href="../blog/index.html">Blog</a></li>
+      <li><a href="../sobre-mi/index.html">Sobre mí</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="icon-btn" id="themeToggle" type="button" aria-label="Cambiar a modo claro">
+        <svg class="icon i-sun"><use href="#i-sun"/></svg><svg class="icon i-moon"><use href="#i-moon"/></svg>
+      </button>
+      <a href="../index.html#suscripcion" class="btn btn-primary btn-sm nav-cta magnetic">Quiero el informe</a>
+      <button class="icon-btn burger" id="burger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileMenu"><svg class="icon"><use href="#i-menu"/></svg></button>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="../index.html#estrategias">Las seis estrategias</a></li>
+      <li><a href="../comparador/index.html">Compáralas frente a frente</a></li>
+      <li><a href="../index.html#test" data-quiz>Test de riesgo (3 min)</a></li>
+      <li><a href="../combinar-estrategias/index.html">Combinar estrategias</a></li>
+      <li><a href="../empieza-aqui/index.html">Explicado desde cero</a></li>
+      <li><a href="../ejemplo-practico/index.html">Un ejemplo práctico, paso a paso</a></li>
+      <li><a href="../metodologia/index.html" aria-current="page">Metodología y cálculos</a></li>
+      <li><a href="../glosario/index.html">Glosario</a></li>
+      <li><a href="../informes/index.html">Informes</a></li>
+      <li><a href="../blog/index.html">Blog</a></li>
+      <li><a href="../sobre-mi/index.html">Sobre mí</a></li>
+      <li><a href="../index.html#suscripcion" class="btn btn-primary" style="margin-top:.5rem">Quiero el informe gratis</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+<section class="page-hero" aria-labelledby="page-title">
+  <div class="container">
+    <nav class="crumbs" aria-label="Migas de pan"><a href="../index.html">Inicio</a><span aria-hidden="true">/</span><span aria-current="page">Metodología</span></nav>
+    <span class="eyebrow">Transparencia</span>
+    <h1 id="page-title">Metodología: qué hay detrás de cada cifra</h1>
+    <p class="lead">Creo que un inversor informado es un inversor que no abandona su sistema. Por eso te cuento cómo mido y qué riesgos asumes.</p>
+  </div>
+</section>
+
+
+<section class="page-body" aria-label="Metodología">
+  <div class="container">
+    <div class="method">
+      <article class="m-card reveal spot">
+        <div class="m-ic"><svg class="icon"><use href="#i-chart"/></svg></div>
+        <h2 style="font-size:var(--fs-xl);margin:0 0 .6rem">Cómo se calculan las rentabilidades</h2>
+        <p>La rentabilidad anualizada es la tasa anual compuesta (CAGR) de todo el periodo publicado para cada estrategia. La caída máxima es la mayor pérdida desde un máximo previo hasta el mínimo posterior.</p>
+        <ul><li>Periodo analizado: datos mensuales hasta el 30 sep 2026 (2026 incluye solo enero–septiembre).</li><li>Divisa: todas las rentabilidades están expresadas en euros (EUR). Los activos denominados en USD se convierten a euros con el tipo de cambio del día, de modo que las cifras incluyen el efecto divisa.</li><li>Fuente de precios: Yahoo Finance.</li><li>Dividendos: incluidos. Uso precios de cierre ajustados, que incorporan los dividendos (y los desdoblamientos de acciones) como si se reinvirtieran.</li><li>Comisiones e impuestos: no incluidos.</li><li>Volatilidad y caída máxima: se calculan con rentabilidades mensuales, por lo que no recogen las caídas ocurridas dentro de cada mes.</li></ul>
+      </article>
+      <article class="m-card reveal spot">
+        <div class="m-ic"><svg class="icon"><use href="#i-flask"/></svg></div>
+        <h2 style="font-size:var(--fs-xl);margin:0 0 .6rem">Cómo se construyen GEDA, GEN-Z y CRYPTO</h2>
+        <p>GEDA, GEN-Z y CRYPTO se basan en una estrategia propia de tipo momentum, con parámetros propios y actualizaciones mensuales.</p>
+        <p style="margin-top:.8rem"><a class="more" href="../inversion-tactica-geda/index.html">Ver cómo funciona GEDA <svg class="icon"><use href="#i-arrow"/></svg></a></p>
+      </article>
+      <article class="m-card reveal spot">
+        <div class="m-ic"><svg class="icon"><use href="#i-alert"/></svg></div>
+        <h2 style="font-size:var(--fs-xl);margin:0 0 .6rem">Riesgos que debes conocer</h2>
+        <ul><li>Puedes perder parte o la totalidad del capital invertido.</li><li>Las caídas pasadas no limitan las futuras: pueden ser mayores.</li><li>Las estrategias de momentum pueden sufrir en mercados laterales.</li><li>Las criptomonedas presentan volatilidad extrema.</li><li>Replicar con retraso o con otros activos altera los resultados.</li></ul>
+      </article>
+    </div>
+
+    <div class="sec-head reveal" style="margin-top:clamp(2.5rem,6vw,4rem)">
+      <span class="eyebrow">Guía de lectura</span>
+      <h2 style="font-size:var(--fs-xl)">Cómo leer cada métrica y cada gráfico</h2>
+    </div>
+    <div class="gloss">
+      <article class="m-card reveal spot"><h3>Rentabilidad anualizada</h3><p>Es la tasa anual compuesta (CAGR) del periodo con dinero real: la rentabilidad anual constante que daría el mismo resultado acumulado. Es más prudente que la media simple de los años y no es una promesa de lo que obtendrás en el futuro. En toda la web solo publico cifras <strong>con dinero real</strong>, desde que opero cada estrategia (ROCA 2017, IMPULSO 2018, HORIZONTE 2020, GEDA 2021, CRYPTO 2023 y GEN-Z 2024). Los backtest previos solo aparecen como contexto en cada ficha. Con menos de cinco años de historial (GEN-Z y CRYPTO) no doy rentabilidad anualizada, sino el acumulado y los años uno a uno: una media de tan pocos años dependería de uno o dos años excepcionales.</p></article>
+      <article class="m-card reveal spot"><h3>Volatilidad</h3><p>Desviación típica de las rentabilidades mensuales, anualizada (× √12). Cuanto mayor, más oscilan los resultados, tanto al alza como a la baja.</p></article>
+      <article class="m-card reveal spot"><h3>Ratio de Sharpe</h3><p>Rentabilidad media anualizada (media mensual × 12) dividida entre la volatilidad anualizada, sin descontar la rentabilidad de un activo sin riesgo. Sirve para comparar cuánta rentabilidad se obtiene por unidad de volatilidad; no mide las caídas concretas.</p></article>
+      <article class="m-card reveal spot"><h3>Caída máxima (drawdown)</h3><p>La mayor pérdida desde un máximo previo hasta el mínimo posterior. Las caídas futuras pueden ser mayores.</p><p style="margin-top:.6rem"><a class="more" href="../aprende/drawdowns-en-inversion-sin-saltarte-el-sistema/index.html">Leer sobre drawdowns <svg class="icon"><use href="#i-arrow"/></svg></a></p></article>
+      <article class="m-card reveal spot"><h3>Ratio rentabilidad / caída</h3><p>Divide la rentabilidad anualizada entre el valor absoluto de la caída máxima. Cuanto más alto, más rentabilidad obtuvo la estrategia por cada punto de caída sufrido.</p></article>
+      <article class="m-card reveal spot"><h3>Gráfico base 100</h3><p>Todas las series empiezan en 100 y se muestran en escala logarítmica, de modo que un mismo porcentaje ocupa la misma altura. La zona sombreada marca cuánto está la serie por debajo de su máximo previo.</p></article>
+      <article class="m-card reveal spot"><h3>Tabla del comparador</h3><p>Muestra las seis estrategias frente a frente con los mismos datos: perfil, riesgo, rentabilidades (2025, 2026, 3, 6 y 12 meses), caída máxima y ratio rentabilidad/caída. En cada fila numérica se resalta en negrita el mejor valor.</p><p style="margin-top:.6rem"><a class="more" href="../comparador/index.html">Abrir el comparador <svg class="icon"><use href="#i-arrow"/></svg></a></p></article>
+      <article class="m-card reveal spot"><h3>Escenarios de la simulación del interés compuesto</h3><p>Prudente = 50%, base = 75% y optimista = 100% de la rentabilidad anualizada ponderada, con capitalización mensual. No incluye comisiones, impuestos ni la secuencia real de caídas.</p><p style="margin-top:.6rem"><a class="more" href="../combinar-estrategias/index.html#simulador">Abrir la herramienta de mezclas y simulación <svg class="icon"><use href="#i-arrow"/></svg></a></p></article>
+    </div>
+
+
+    <div class="sec-head reveal" style="margin-top:clamp(2.5rem,6vw,4rem)">
+      <span class="eyebrow">Riesgo</span>
+      <h2 id="nivel-riesgo" style="font-size:var(--fs-xl)">Cómo leer el nivel de riesgo (1 a 5)</h2>
+      <p>El nivel es una valoración orientativa mía que sigue, sobre todo, la volatilidad histórica de cada estrategia. No es un test de idoneidad ni una garantía, y la caída máxima histórica tampoco es un límite. Por eso una estrategia puede tener una caída máxima menor y un nivel más alto: HORIZONTE (−19,3%) y GEDA (−16,2%), cuya volatilidad es más del doble (11,5% frente a 26,9%).</p>
+    </div>
+    <div class="guide-table-wrap reveal"><table class="guide-table" style="min-width:480px"><caption class="sr-only">Nivel de riesgo, volatilidad anualizada y caída máxima de cada estrategia, con dinero real</caption>
+      <thead><tr><th scope="col">Estrategia</th><th scope="col">Nivel</th><th scope="col">Volatilidad anualizada</th><th scope="col">Caída máxima con dinero real</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">ROCA</th><td class="mono">1 / 5</td><td class="mono">6,8%</td><td class="mono neg">−9,2%</td></tr>
+        <tr><th scope="row">IMPULSO</th><td class="mono">2 / 5</td><td class="mono">11,2%</td><td class="mono neg">−16,5%</td></tr>
+        <tr><th scope="row">HORIZONTE <span class="pp">plan de pensiones</span></th><td class="mono">2 / 5</td><td class="mono">11,5%</td><td class="mono neg">−19,3%</td></tr>
+        <tr><th scope="row">GEDA</th><td class="mono">4 / 5</td><td class="mono">26,9%</td><td class="mono neg">−16,2%</td></tr>
+        <tr><th scope="row">GEN-Z</th><td class="mono">5 / 5</td><td class="mono">65,6%</td><td class="mono neg">−44,9%</td></tr>
+        <tr><th scope="row">CRYPTO</th><td class="mono">5 / 5</td><td class="mono">70,2%</td><td class="mono neg">−50,1%</td></tr>
+      </tbody></table></div>
+
+<section class="section" id="para-quien" style="padding-block:clamp(2rem,5vw,3.5rem)" aria-labelledby="fit-title">
+  <div class="fit-wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">A quién puede interesar</span>
+      <h2 id="fit-title">¿A quién puede interesar este proyecto?</h2>
+      <p>Prefiero ser honesto: no es para todo el mundo.</p>
+    </div>
+    <div class="fit">
+      <div class="panel yes reveal">
+        <h3><svg class="icon" style="color:var(--pos)"><use href="#i-check"/></svg>Puede interesarte si…</h3>
+        <ul>
+          <li><svg class="icon"><use href="#i-check"/></svg>Quieres invertir con reglas claras y no por intuición.</li>
+          <li><svg class="icon"><use href="#i-check"/></svg>Tienes un horizonte de medio o largo plazo.</li>
+          <li><svg class="icon"><use href="#i-check"/></svg>Aceptas que habrá caídas y estás dispuesto a mantener el sistema.</li>
+          <li><svg class="icon"><use href="#i-check"/></svg>Prefieres dedicar unos minutos al mes en vez de horas cada día.</li>
+          <li><svg class="icon"><use href="#i-check"/></svg>Quieres mantener el control de tu dinero en tu propio bróker.</li>
+        </ul>
+      </div>
+      <div class="panel no reveal">
+        <h3><svg class="icon" style="color:var(--neg)"><use href="#i-x"/></svg>No te interesará si…</h3>
+        <ul>
+          <li><svg class="icon"><use href="#i-x"/></svg>Buscas rentabilidades garantizadas o dinero rápido.</li>
+          <li><svg class="icon"><use href="#i-x"/></svg>Vas a necesitar el dinero a corto plazo.</li>
+          <li><svg class="icon"><use href="#i-x"/></svg>No toleras ver tu cartera en negativo durante meses.</li>
+          <li><svg class="icon"><use href="#i-x"/></svg>Quieres que alguien gestione tu dinero por ti.</li>
+          <li><svg class="icon"><use href="#i-x"/></svg>Buscas asesoramiento financiero personalizado.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+    <div class="disclaimer-bar reveal" role="note"><svg class="icon"><use href="#i-alert"/></svg><p><strong>Esto no es asesoramiento:</strong> te cuento lo que hago yo, con mi dinero. Lo que pasó no garantiza lo que pasará.</p></div>
+
+    <div class="cta-band reveal" style="margin-top:2rem">
+      <div>
+        <h2>¿Quieres verlo cada mes? Recibe el próximo informe gratis</h2>
+        <p>Recibes el informe el día 1 de cada mes, ves las posiciones y decides. Sin compromiso.</p>
+      </div>
+      <div class="cta-row">
+        <a href="../index.html#suscripcion" class="btn btn-primary magnetic">Quiero el informe gratis <svg class="icon"><use href="#i-arrow"/></svg></a>
+        <a href="../index.html#test" class="btn btn-ghost" data-quiz>Hacer el test de riesgo</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- =========================== PIE =========================== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <a href="../index.html" class="logo" style="margin-bottom:1rem"><img class="logo-mark" src="../assets/img/logo-tai.jpg" width="40" height="40" alt="">Tu Amigo Inversor</a>
+        <p>Te cuento cada mes qué hago con mi dinero: estrategias con reglas claras, sin corazonadas. Lo que hagas con tu dinero lo decides tú.</p>
+        <p style="margin-top:.8rem"><a href="mailto:info@tuamigoinversor.com">info@tuamigoinversor.com</a></p>
+      </div>
+      <nav aria-label="Carteras permanentes"><h2>Cartera permanente</h2><ul><li><a href="../cartera-permanente-conservadora-roca/index.html">ROCA</a></li><li><a href="../cartera-inversion-crecimiento-impulso/index.html">IMPULSO</a></li></ul></nav>
+      <nav aria-label="Asignación táctica"><h2>Asignación táctica</h2><ul><li><a href="../inversion-tactica-geda/index.html">GEDA</a></li><li><a href="../inversion-tematica-gen-z/index.html">GEN-Z</a></li><li><a href="../inversion-criptomonedas-crypto/index.html">CRYPTO</a></li><li><a href="../plan-pensiones-moderado-horizonte/index.html">HORIZONTE <small class="pp">plan de pensiones</small></a></li></ul></nav>
+      <nav aria-label="Herramientas y proyecto"><h2>Empieza por aquí</h2><ul><li><a href="../empieza-aqui/index.html">Explicado desde cero</a></li><li><a href="../ejemplo-practico/index.html">Ejemplo práctico</a></li><li><a href="../comparador/index.html">Comparador</a></li><li><a href="../index.html#test" data-quiz>Test de riesgo</a></li><li><a href="../combinar-estrategias/index.html">Combinar estrategias</a></li><li><a href="../informes/index.html">Informes</a></li><li><a href="../metodologia/index.html">Metodología</a></li><li><a href="../glosario/index.html">Glosario</a></li><li><a href="../blog/index.html">Blog</a></li><li><a href="../sobre-mi/index.html">Sobre mí</a></li></ul></nav>
+      <nav aria-label="Legal"><h2>Legal</h2><ul><li><a href="../aviso-legal/index.html">Aviso legal</a></li><li><a href="../privacidad/index.html">Política de privacidad</a></li><li><a href="../recomendaciones/index.html">Cómo elaboro los informes</a></li></ul></nav>
+    </div>
+    <div class="legal">
+      <p><strong>Aviso:</strong> la información publicada en esta web tiene carácter meramente informativo y no constituye asesoramiento financiero ni una recomendación personalizada de inversión. Las inversiones conllevan riesgo y pueden implicar la pérdida total o parcial del capital. Las rentabilidades pasadas no garantizan rentabilidades futuras. Cada inversor debe realizar su propio análisis y tomar decisiones en función de su situación personal.</p>
+      <p style="margin-top:.8rem">© 2026 Tu Amigo Inversor.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Test de riesgo (ventana emergente) -->
+<div class="modal" id="quizModal" aria-hidden="true">
+  <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="quizTitle">
+    <button class="icon-btn modal-close" type="button" aria-label="Cerrar test"><svg class="icon"><use href="#i-x"/></svg></button>
+    <div class="modal-content">
+      <span class="eyebrow">Test de riesgo</span>
+      <h2 id="quizTitle" style="font-size:var(--fs-xl);margin:.3rem 0 .4rem">¿Cuánto riesgo toleras?</h2>
+      <p style="color:var(--muted);margin-bottom:1.4rem">Diez preguntas, unos 3 minutos. Te explico tu tolerancia al riesgo y qué significa en caídas reales.</p>
+      <div class="quiz" id="quiz" aria-live="polite"></div>
+    </div>
+  </div>
+</div>
+
+<button class="icon-btn to-top" id="toTop" type="button" aria-label="Volver arriba"><svg class="icon"><use href="#i-up"/></svg></button>
+<div class="sticky-cta" id="stickyCta"><small><strong>Gratis</strong><br><span data-countdown-short>El informe del día 1 en tu correo</span></small><a href="../index.html#suscripcion" class="btn btn-primary btn-sm">Quiero el informe</a></div>
+</body>
+</html>

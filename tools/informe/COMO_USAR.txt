@@ -1,0 +1,52 @@
+GENERADOR DEL INFORME MENSUAL · Tu Amigo Inversor
+=================================================
+
+QUÉ HACE
+  Crea el informe del mes en HTML y en PDF con el diseño nuevo. Las cifras de las seis estrategias
+  (meses, 2026, 3, 6 y 12 meses, posiciones y bloques) las calcula solo a partir del Excel.
+  Tú solo escribes lo que el Excel no sabe: fecha de envío, cambios del mes y tus comentarios.
+
+CADA MES (unos 15 minutos)
+  1. Actualiza datos/estrategias_limpias.xlsx con el mes que acaba de cerrar (como haces ahora).
+  2. Añade una fila a datos/referencias.csv (índices) y otra a datos/horizonte_planes.csv (planes de
+     HORIZONTE), con la rentabilidad del mes en % (coma decimal, separador punto y coma).
+  3. Copia el archivo del mes anterior (p. ej. datos/2026-10.yaml) como datos/2026-11.yaml y cambia:
+       mes, envio (fecha y hora real de envío), subtitulo, introduccion, contexto, cambios,
+       comentarios, opinion (opcional), novedades y cierre.
+     Si entra un activo nuevo, añade su nombre en datos/nombres.yaml.
+  4. Desde la carpeta raíz de la web:
+         python tools/informe/generar_informe.py tools/informe/datos/2026-11.yaml
+  5. Revisa salida/tuamigoinversor-informe-2026-11.pdf y envíalo.
+
+  El script se para con un mensaje claro si algo no cuadra (por ejemplo, si quieres vender un activo
+  que no está en la cartera según el Excel, o si falta el mes en el Excel). Los avisos («AVISO: …»)
+  no paran el informe, pero conviene leerlos.
+
+INSTALACIÓN (una sola vez)
+  pip install openpyxl pyyaml pypdf playwright
+  playwright install chromium
+  Sin Playwright: el script crea el HTML; ábrelo en Chrome > Imprimir > Guardar como PDF, con
+  «Gráficos de fondo» activado. Si no quieres instalar nada, pásame los datos y te lo genero yo.
+
+REGLAS QUE YA LLEVA LA PLANTILLA (no las quites)
+  - Fecha y hora de envío, autor y enlace a /recomendaciones/: los pide la CNMV en cada recomendación.
+  - «Invierto mi propio dinero en las posiciones de este informe»: es tu conflicto de interés.
+  - «Cambios del mes» (no «Qué hacer»), y el apartado de opinión marcado como «Mi opinión».
+  - ROCA e IMPULSO se revisan en enero y julio; el resto, cada mes.
+  - Metadatos del PDF: autor José Manuel García (no salen nombres de terceros ni de la herramienta).
+
+12 MESES DE ÍNDICES Y PLANES
+  Las tablas .csv empiezan en enero de 2026, así que aún no tienen 12 meses. Mientras tanto, la
+  rentabilidad a 12 meses de índices y planes se toma del apartado «doce_meses» del archivo del mes.
+  Si añades a los .csv las filas de octubre, noviembre y diciembre de 2025, ya no hará falta.
+
+DIFERENCIAS CON LOS INFORMES ANTERIORES
+  Todo sale del Excel, que es la fuente de referencia. Por eso:
+  - Los acumulados por bloque (p. ej. «Acciones EE. UU.» de GEDA o «Altcoins» de CRYPTO) son los
+    del Excel y no coinciden con los de los informes enviados hasta octubre.
+  - Algún acumulado puede diferir en 0,01 respecto a calcularlo con meses ya redondeados
+    (HORIZONTE 2026: +17,60 % con el Excel; +17,61 % sumando meses redondeados).
+
+SI CAMBIAS EL EXCEL DE FORMATO
+  Las columnas de cada hoja están al principio de generar_informe.py (COMPONENTES, BLOQUES, TOTAL_...).
+  Si mueves columnas, hay que ajustarlas ahí.

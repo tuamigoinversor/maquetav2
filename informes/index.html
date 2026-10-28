@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark" data-base="../">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Informes de ejemplo en PDF | Tu Amigo Inversor</title>
+<meta name="description" content="Ejemplos de informes mensuales de Tu Amigo Inversor de meses anteriores, tal y como se enviaron: rentabilidad de cada estrategia, cambios de posiciones y repaso de mercados.">
+<meta name="theme-color" content="#0a0f1e" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+
+<!-- Open Graph / Twitter -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:site_name" content="Tu Amigo Inversor">
+<meta property="og:title" content="Informes de ejemplo, tal y como los envié">
+<meta property="og:description" content="Ejemplos de informes mensuales de Tu Amigo Inversor de meses anteriores, tal y como se enviaron: rentabilidad de cada estrategia, cambios de posiciones y repaso de mercados.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Informes de ejemplo, tal y como los envié">
+<meta name="twitter:description" content="Ejemplos de informes mensuales de Tu Amigo Inversor de meses anteriores, tal y como se enviaron: rentabilidad de cada estrategia, cambios de posiciones y repaso de mercados.">
+
+<!-- Tema sin parpadeo: se aplica antes de pintar -->
+<script>
+(function(){try{var t=localStorage.getItem('tai-theme-v3');if(!t){t='light'}document.documentElement.setAttribute('data-theme',t)}catch(e){}})();
+</script>
+
+<link rel="stylesheet" href="../assets/css/fonts.css">
+<link rel="stylesheet" href="../assets/css/site.css">
+<link rel="icon" href="../assets/img/logo-tai.jpg" type="image/jpeg">
+<link rel="apple-touch-icon" href="../assets/img/logo-tai.jpg">
+
+<!-- Única librería externa: Chart.js (diferida) -->
+<script defer src="../assets/js/chart.umd.js"></script>
+<script defer src="../assets/js/tai.js"></script>
+
+<!-- Analítica sin cookies (GoatCounter) -->
+<script data-goatcounter="https://tuamigoinversor.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Saltar al contenido</a>
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<!-- SVG sprite (iconos estilo Lucide) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></symbol>
+  <symbol id="i-left" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></symbol>
+  <symbol id="i-right" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+  <symbol id="i-up" viewBox="0 0 24 24"><path d="m18 15-6-6-6 6"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9z"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+  <symbol id="i-scale" viewBox="0 0 24 24"><path d="M12 3v18M5 7h14M5 7l-3 7a4 4 0 0 0 6 0L5 7zM19 7l-3 7a4 4 0 0 0 6 0l-3-7z"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></symbol>
+  <symbol id="i-flask" viewBox="0 0 24 24"><path d="M9 3h6M10 3v6L4 20a1 1 0 0 0 .9 1.5h14.2A1 1 0 0 0 20 20l-6-11V3"/></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></symbol>
+  <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M3 12a9 9 0 0 1 15-6.7L21 8M21 3v5h-5M21 12a9 9 0 0 1-15 6.7L3 16M3 21v-5h5"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></symbol>
+</svg>
+
+<!-- =========================== CABECERA =========================== -->
+<header class="site-header" id="header">
+  <nav class="container nav" aria-label="Navegación principal">
+    <a href="../index.html" class="logo" aria-label="Tu Amigo Inversor, inicio"><img class="logo-mark" src="../assets/img/logo-tai.jpg" width="40" height="40" alt="">Tu Amigo Inversor</a>
+    <ul class="nav-links">
+      <li class="has-sub"><button type="button" class="sub-toggle" aria-expanded="false" aria-haspopup="true">Estrategias <svg class="icon" aria-hidden="true"><use href="#i-down"/></svg></button>
+        <ul class="sub">
+          <li><a href="../index.html#estrategias">Las seis estrategias</a></li>
+          <li><a href="../comparador/index.html">Compáralas frente a frente</a></li>
+          <li><a href="../index.html#test" data-quiz>Test de riesgo (3 min)</a></li>
+          <li><a href="../combinar-estrategias/index.html">Combinar estrategias</a></li>
+        </ul></li>
+      <li class="has-sub"><button type="button" class="sub-toggle" aria-expanded="false" aria-haspopup="true">Cómo funciona <svg class="icon" aria-hidden="true"><use href="#i-down"/></svg></button>
+        <ul class="sub">
+          <li><a href="../empieza-aqui/index.html">Explicado desde cero</a></li>
+          <li><a href="../ejemplo-practico/index.html">Un ejemplo práctico, paso a paso</a></li>
+          <li><a href="../metodologia/index.html">Metodología y cálculos</a></li>
+          <li><a href="../glosario/index.html">Glosario</a></li>
+        </ul></li>
+      <li><a href="../informes/index.html" aria-current="page">Informes</a></li>
+      <li><a href="../blog/index.html">Blog</a></li>
+      <li><a href="../sobre-mi/index.html">Sobre mí</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="icon-btn" id="themeToggle" type="button" aria-label="Cambiar a modo claro">
+        <svg class="icon i-sun"><use href="#i-sun"/></svg><svg class="icon i-moon"><use href="#i-moon"/></svg>
+      </button>
+      <a href="../index.html#suscripcion" class="btn btn-primary btn-sm nav-cta magnetic">Quiero el informe</a>
+      <button class="icon-btn burger" id="burger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileMenu"><svg class="icon"><use href="#i-menu"/></svg></button>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="../index.html#estrategias">Las seis estrategias</a></li>
+      <li><a href="../comparador/index.html">Compáralas frente a frente</a></li>
+      <li><a href="../index.html#test" data-quiz>Test de riesgo (3 min)</a></li>
+      <li><a href="../combinar-estrategias/index.html">Combinar estrategias</a></li>
+      <li><a href="../empieza-aqui/index.html">Explicado desde cero</a></li>
+      <li><a href="../ejemplo-practico/index.html">Un ejemplo práctico, paso a paso</a></li>
+      <li><a href="../metodologia/index.html">Metodología y cálculos</a></li>
+      <li><a href="../glosario/index.html">Glosario</a></li>
+      <li><a href="../informes/index.html" aria-current="page">Informes</a></li>
+      <li><a href="../blog/index.html">Blog</a></li>
+      <li><a href="../sobre-mi/index.html">Sobre mí</a></li>
+      <li><a href="../index.html#suscripcion" class="btn btn-primary" style="margin-top:.5rem">Quiero el informe gratis</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+<section class="page-hero" aria-labelledby="page-title"><div class="container">
+  <nav class="crumbs" aria-label="Migas de pan"><a href="../index.html">Inicio</a><span aria-hidden="true">/</span><span aria-current="page">Informes</span></nav>
+  <span class="eyebrow">Informes</span>
+  <h1 id="page-title">Informes de ejemplo, tal y como los envié</h1>
+  <p class="lead">Así es lo que recibes el día 1 en tu correo: qué ha pasado en los mercados, cómo le ha ido a cada estrategia y qué cambia ese mes. Son informes de meses anteriores, sin retocar y con su fecha de envío, para que compruebes que cada cambio se publicó antes de saber cómo saldría.</p>
+  <p class="countdown" data-countdown hidden></p>
+  <p class="rep-lag"><svg class="icon"><use href="#i-clock"/></svg><span><strong>Ojo: van con retraso.</strong> Aquí solo publico ejemplos de meses pasados y la web se actualiza cada trimestre. Las posiciones del mes en curso solo llegan por correo, el día 1.</span></p>
+  <p class="small-note rep-disclosure">Los informes cuentan lo que hago con mi dinero y son iguales para todos: no son una recomendación para tu caso. Antes de leerlos, mira <a href="../recomendaciones/index.html">cómo los elaboro y qué intereses tengo</a> (yo también invierto en esas posiciones).</p>
+  <div class="cta-row"><a class="btn btn-primary magnetic" href="../index.html#suscripcion">Quiero el informe gratis <svg class="icon"><use href="#i-arrow"/></svg></a></div>
+</div></section>
+
+<section class="section" aria-label="Archivo de informes"><div class="container">
+  <div class="rep-list">
+<article class="rep-card reveal rep-first">
+  <a class="rep-thumb" href="tuamigoinversor-informe-2026-10.pdf" aria-label="Abrir Informe del 1 de octubre de 2026 (PDF)"><img src="../assets/img/informes/informe-2026-10.webp" width="720" height="445" loading="eager" decoding="async" alt="Primera página del informe del 1 de octubre de 2026"></a>
+  <div class="rep-body">
+    <span class="rep-latest">Ejemplo más reciente</span><h2>Informe del 1 de octubre de 2026</h2>
+    <p class="rep-meta">Cierre de septiembre de 2026 · Enviado el 1 oct 2026 · 6 páginas · PDF, 703 KB</p>
+    <h3>Cambios de posiciones</h3>
+    <ul><li>GEDA: sale LITE, entra MRNA</li><li>GEN-Z: sale LRCX, entra AMD</li><li>CRYPTO: sale DASH, entra NEAR</li><li>ROCA, IMPULSO y HORIZONTE: sin cambios</li></ul>
+    <div class="cta-row"><a class="btn btn-primary btn-sm" href="tuamigoinversor-informe-2026-10.pdf" target="_blank" rel="noopener"><svg class="icon"><use href="#i-mail"/></svg> Leer el informe</a><a class="btn btn-ghost btn-sm" href="tuamigoinversor-informe-2026-10.pdf" download><svg class="icon"><use href="#i-download"/></svg> Descargar</a></div>
+  </div>
+</article>
+<article class="rep-card reveal">
+  <a class="rep-thumb" href="tuamigoinversor-informe-2026-09.pdf" aria-label="Abrir Informe del 1 de septiembre de 2026 (PDF)"><img src="../assets/img/informes/informe-2026-09.webp" width="720" height="445" loading="lazy" decoding="async" alt="Primera página del informe del 1 de septiembre de 2026"></a>
+  <div class="rep-body">
+    <h2>Informe del 1 de septiembre de 2026</h2>
+    <p class="rep-meta">Cierre de agosto de 2026 · Enviado el 31 ago 2026 · 4 páginas · PDF, 619 KB</p>
+    <h3>Cambios de posiciones</h3>
+    <ul><li>GEDA: sale WDC, entra LITE</li><li>El resto de estrategias: sin cambios</li></ul>
+    <div class="cta-row"><a class="btn btn-primary btn-sm" href="tuamigoinversor-informe-2026-09.pdf" target="_blank" rel="noopener"><svg class="icon"><use href="#i-mail"/></svg> Leer el informe</a><a class="btn btn-ghost btn-sm" href="tuamigoinversor-informe-2026-09.pdf" download><svg class="icon"><use href="#i-download"/></svg> Descargar</a></div>
+  </div>
+</article>
+<article class="rep-card reveal">
+  <a class="rep-thumb" href="tuamigoinversor-informe-2026-08.pdf" aria-label="Abrir Informe del 1 de agosto de 2026 (PDF)"><img src="../assets/img/informes/informe-2026-08.webp" width="720" height="445" loading="lazy" decoding="async" alt="Primera página del informe del 1 de agosto de 2026"></a>
+  <div class="rep-body">
+    <h2>Informe del 1 de agosto de 2026</h2>
+    <p class="rep-meta">Cierre de julio de 2026 · Enviado el 1 ago 2026 · 5 páginas · PDF, 619 KB</p>
+    <h3>Cambios de posiciones</h3>
+    <ul><li>GEDA: sale SLR.MC, entra ASML.AS</li><li>El resto de estrategias: sin cambios</li></ul>
+    <div class="cta-row"><a class="btn btn-primary btn-sm" href="tuamigoinversor-informe-2026-08.pdf" target="_blank" rel="noopener"><svg class="icon"><use href="#i-mail"/></svg> Leer el informe</a><a class="btn btn-ghost btn-sm" href="tuamigoinversor-informe-2026-08.pdf" download><svg class="icon"><use href="#i-download"/></svg> Descargar</a></div>
+  </div>
+</article>
+<article class="rep-card reveal">
+  <a class="rep-thumb" href="tuamigoinversor-informe-2026-07.pdf" aria-label="Abrir Informe del 1 de julio de 2026 (PDF)"><img src="../assets/img/informes/informe-2026-07.webp" width="720" height="445" loading="lazy" decoding="async" alt="Primera página del informe del 1 de julio de 2026"></a>
+  <div class="rep-body">
+    <h2>Informe del 1 de julio de 2026</h2>
+    <p class="rep-meta">Cierre de junio de 2026 · Enviado el 1 jul 2026 · 5 páginas · PDF, 733 KB</p>
+    <h3>Cambios de posiciones</h3>
+    <ul><li>GEDA: sale GLD (oro), entra DBC (materias primas)</li><li>GEN-Z: sale PLS.AX, entra LRCX</li><li>ROCA, IMPULSO, HORIZONTE y CRYPTO: sin cambios</li></ul>
+    <div class="cta-row"><a class="btn btn-primary btn-sm" href="tuamigoinversor-informe-2026-07.pdf" target="_blank" rel="noopener"><svg class="icon"><use href="#i-mail"/></svg> Leer el informe</a><a class="btn btn-ghost btn-sm" href="tuamigoinversor-informe-2026-07.pdf" download><svg class="icon"><use href="#i-download"/></svg> Descargar</a></div>
+  </div>
+</article>
+  </div>
+
+  <div class="rep-notes">
+    <div class="m-card reveal"><h3>¿Por qué alguna cifra no coincide con las fichas?</h3><p>Cada informe se calcula el día que se envía. Después llegan los tipos de cambio y los valores liquidativos definitivos de fondos y planes de pensiones, y alguna rentabilidad se ajusta unas décimas. Las cifras definitivas son las de las fichas y el <a href="../comparador/index.html">comparador</a>.</p></div>
+    <div class="m-card reveal"><h3>Fe de erratas</h3><p>En la tabla de detalle de IMPULSO de estos informes, los pesos aparecen por error como 15%, 10% y 15% (son los de ROCA). Los pesos reales de IMPULSO son <strong>40% oro, 30% renta variable global y 30% renta variable de EE. UU. small cap value</strong>, y el total de la estrategia está calculado con ellos.</p></div>
+    <div class="m-card reveal"><h3>¿Quieres el de este mes?</h3><p>El informe del mes en curso no se publica aquí: te llega al correo el día 1, gratis, y decides tú qué hacer con él.</p><p style="margin-top:.8rem"><a class="more" href="../index.html#suscripcion">Quiero el informe gratis <svg class="icon"><use href="#i-arrow"/></svg></a></p></div>
+  </div>
+  <div class="disclaimer-bar reveal" role="note"><svg class="icon"><use href="#i-alert"/></svg><p>Los informes cuentan lo que hago con mi dinero. No son asesoramiento ni una recomendación personalizada, y lo que pasó no garantiza lo que pasará.</p></div>
+</div></section>
+</main>
+
+<!-- =========================== PIE =========================== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <a href="../index.html" class="logo" style="margin-bottom:1rem"><img class="logo-mark" src="../assets/img/logo-tai.jpg" width="40" height="40" alt="">Tu Amigo Inversor</a>
+        <p>Te cuento cada mes qué hago con mi dinero: estrategias con reglas claras, sin corazonadas. Lo que hagas con tu dinero lo decides tú.</p>
+        <p style="margin-top:.8rem"><a href="mailto:info@tuamigoinversor.com">info@tuamigoinversor.com</a></p>
+      </div>
+      <nav aria-label="Carteras permanentes"><h2>Cartera permanente</h2><ul><li><a href="../cartera-permanente-conservadora-roca/index.html">ROCA</a></li><li><a href="../cartera-inversion-crecimiento-impulso/index.html">IMPULSO</a></li></ul></nav>
+      <nav aria-label="Asignación táctica"><h2>Asignación táctica</h2><ul><li><a href="../inversion-tactica-geda/index.html">GEDA</a></li><li><a href="../inversion-tematica-gen-z/index.html">GEN-Z</a></li><li><a href="../inversion-criptomonedas-crypto/index.html">CRYPTO</a></li><li><a href="../plan-pensiones-moderado-horizonte/index.html">HORIZONTE <small class="pp">plan de pensiones</small></a></li></ul></nav>
+      <nav aria-label="Herramientas y proyecto"><h2>Empieza por aquí</h2><ul><li><a href="../empieza-aqui/index.html">Explicado desde cero</a></li><li><a href="../ejemplo-practico/index.html">Ejemplo práctico</a></li><li><a href="../comparador/index.html">Comparador</a></li><li><a href="../index.html#test" data-quiz>Test de riesgo</a></li><li><a href="../combinar-estrategias/index.html">Combinar estrategias</a></li><li><a href="../informes/index.html">Informes</a></li><li><a href="../metodologia/index.html">Metodología</a></li><li><a href="../glosario/index.html">Glosario</a></li><li><a href="../blog/index.html">Blog</a></li><li><a href="../sobre-mi/index.html">Sobre mí</a></li></ul></nav>
+      <nav aria-label="Legal"><h2>Legal</h2><ul><li><a href="../aviso-legal/index.html">Aviso legal</a></li><li><a href="../privacidad/index.html">Política de privacidad</a></li><li><a href="../recomendaciones/index.html">Cómo elaboro los informes</a></li></ul></nav>
+    </div>
+    <div class="legal">
+      <p><strong>Aviso:</strong> la información publicada en esta web tiene carácter meramente informativo y no constituye asesoramiento financiero ni una recomendación personalizada de inversión. Las inversiones conllevan riesgo y pueden implicar la pérdida total o parcial del capital. Las rentabilidades pasadas no garantizan rentabilidades futuras. Cada inversor debe realizar su propio análisis y tomar decisiones en función de su situación personal.</p>
+      <p style="margin-top:.8rem">© 2026 Tu Amigo Inversor.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Test de riesgo (ventana emergente) -->
+<div class="modal" id="quizModal" aria-hidden="true">
+  <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="quizTitle">
+    <button class="icon-btn modal-close" type="button" aria-label="Cerrar test"><svg class="icon"><use href="#i-x"/></svg></button>
+    <div class="modal-content">
+      <span class="eyebrow">Test de riesgo</span>
+      <h2 id="quizTitle" style="font-size:var(--fs-xl);margin:.3rem 0 .4rem">¿Cuánto riesgo toleras?</h2>
+      <p style="color:var(--muted);margin-bottom:1.4rem">Diez preguntas, unos 3 minutos. Te explico tu tolerancia al riesgo y qué significa en caídas reales.</p>
+      <div class="quiz" id="quiz" aria-live="polite"></div>
+    </div>
+  </div>
+</div>
+<button class="icon-btn to-top" id="toTop" type="button" aria-label="Volver arriba"><svg class="icon"><use href="#i-up"/></svg></button>
+<div class="sticky-cta" id="stickyCta"><small><strong>Gratis</strong><br><span data-countdown-short>El informe del día 1 en tu correo</span></small><a href="../index.html#suscripcion" class="btn btn-primary btn-sm">Quiero el informe</a></div>
+</body>
+</html>

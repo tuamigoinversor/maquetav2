@@ -1,0 +1,123 @@
+# ============================================================================
+# INFORME MENSUAL · datos y textos del mes
+# Copia este archivo para cada mes (p. ej. 2026-11.yaml) y cambia lo necesario.
+# Las cifras de las estrategias salen solas del Excel. Aquí solo va lo que el
+# Excel no tiene: fecha de envío, cambios del mes, tus comentarios y novedades.
+# Los textos admiten **negrita**.
+# ============================================================================
+
+mes: 2026-10            # mes del informe (las posiciones vigentes desde el día 1 de este mes)
+envio: "2026-10-01 08:48"   # fecha y hora de envío (la CNMV pide que figuren en cada recomendación)
+
+# Rentabilidad a 12 meses de índices y planes cuando las tablas .csv aún no
+# tienen 12 meses de datos. Cuando las tablas lleguen a 12 meses, borra esto.
+doce_meses:
+  S&P 500: 18.32
+  Nasdaq 100: 27.45
+  Euro Stoxx 50: 13.38
+  MSCI World: 19.24
+  Global Bonds: 0.62
+  USD-EUR: 3.43
+  Santander ASG RV Norteamérica PP: 23.36
+  BK Variable América PP: 11.14
+  ING SP500 PP: 18.47
+  Renta 4 Megatendencias Tecnología PP: 23.80
+  BBVA Plan Megatendencia Tecnología PP: 28.66
+
+# Una frase bajo el titular (opcional). El titular se calcula solo.
+subtitulo: "Este mes hay tres rotaciones: en GEDA, GEN-Z y CRYPTO. ROCA, IMPULSO y HORIZONTE siguen igual."
+
+introduccion: >
+  Aquí tienes la actualización mensual de las estrategias a cierre de septiembre de 2026, con las
+  posiciones vigentes desde el 1 de octubre. Todas siguen reglas sistemáticas, sin decisiones
+  discrecionales: no intento adivinar qué mercado subirá, sino que dejo que los datos, el momentum y
+  la fortaleza relativa marquen dónde está el capital.
+
+contexto:
+  titulo: "¿Qué pasó en septiembre?"
+  texto: >
+    Septiembre confirma algo que vemos todo 2026: **no todos los mercados se comportan igual.** La
+    fortaleza sigue concentrada en EE. UU. y, dentro de EE. UU., en determinados segmentos
+    tecnológicos. Europa fue más débil, la renta fija estuvo casi plana y el dólar se fortaleció frente al euro.
+
+# Cambios del mes: una entrada por rotación. Las estrategias sin entrada aparecen como «sin cambios».
+# En «texto» explica el cambio sin opinar sobre si la acción va a subir.
+cambios:
+  GEDA:
+    - sale: LITE
+      entra: MRNA
+      texto: >
+        Vendo toda la posición de LITE y, con ese dinero, compro MRNA (Moderna, biotecnología de ARN
+        mensajero). Su fuerte subida reciente se debe sobre todo a los resultados de su vacuna personalizada
+        contra el cáncer. No sé si será la próxima gran ganadora: el sistema no predice, reacciona a lo que
+        el mercado muestra ahora.
+  GEN-Z:
+    - sale: LRCX
+      entra: AMD
+      texto: >
+        Vendo toda la posición de LRCX, que se ha deteriorado bastante, y con ese dinero compro AMD
+        (procesadores, chips gráficos y computación de alto rendimiento). Su exposición a semiconductores,
+        inteligencia artificial y centros de datos encaja con el tipo de compañías que busca GEN-Z.
+  CRYPTO:
+    - sale: DASH-USD
+      entra: NEAR-USD
+      texto: >
+        Vendo toda la posición de DASH y, con ese dinero, compro NEAR por un importe parecido al de las
+        otras altcoins. NEAR es una plataforma blockchain para aplicaciones descentralizadas y contratos
+        inteligentes. Es una rotación basada en las señales de momentum del modelo.
+
+# Comentario de cada estrategia: un titular y unos pocos puntos.
+comentarios:
+  ROCA:
+    titular: "Así es una estrategia conservadora: no compite cada mes con el Nasdaq"
+    puntos:
+      - "Septiembre cierra en **−1,06 %**: fallan a la vez varios diversificadores, la renta fija global (−1,65 %), el oro (−4,66 %) y las small caps de EE. UU. (−3,82 %)."
+      - "La renta variable global aporta un +0,44 % y la **renta fija a corto plazo (+1,17 %) actúa de refugio**: no toda la renta fija responde igual."
+      - "Acumula un +9,36 % a 12 meses: busca una evolución contenida y diversificada, renunciando a parte del potencial de la bolsa."
+  IMPULSO:
+    titular: "Su comportamiento cambia rápido cuando cambia el activo que lidera"
+    puntos:
+      - "En agosto el oro impulsó la cartera; en septiembre retrocede un −4,66 % y es el principal lastre, con el 40 % de la exposición."
+      - "La renta variable global aporta (+0,44 %), pero no compensa que oro y small caps caigan a la vez: **−2,88 %** frente al +4,10 % de agosto."
+      - "El sistema no intenta adivinar si el oro «debería» subir: mantiene la exposición mientras se cumplan sus reglas. A 12 meses, +18,63 %."
+  HORIZONTE:
+    titular: "Vuelve a beneficiarse de la tecnología de EE. UU."
+    puntos:
+      - "Septiembre cierra en **+2,60 %** y acumula un +17,61 % en 2026 y un +23,36 % a 12 meses."
+      - "La misma tendencia se puede seguir con distintos planes, y no todos dan el mismo resultado: en la tabla tienes cinco alternativas."
+  GEDA:
+    titular: "El momentum puede tener meses muy fuertes tras una corrección"
+    puntos:
+      - "Septiembre cierra en **+7,65 %**, tras el +3,45 % de agosto y el −13,62 % de julio. Acumula un +100,25 % en 2026."
+      - "SNDK sigue siendo uno de los motores; XLK vuelve a aportar y DBC mantiene su buen comportamiento."
+      - "GEDA no necesita que todo suba a la vez: mantiene lo que muestra fortaleza y sale de lo que deja de hacerlo, como LITE este mes."
+  GEN-Z:
+    titular: "La volatilidad puede ser enorme: hay que saber convivir con ella"
+    puntos:
+      - "Tras el −31,95 % de julio y el −2,55 % de agosto, septiembre cierra en **+29,38 %**, y esta vez la recuperación no depende de una sola posición: las cuatro suben."
+      - "Acumula un +16,22 % en 2026, aunque sigue en −14,20 % a tres meses y −2,68 % a doce."
+  CRYPTO:
+    titular: "Aquí «volatilidad» y «riesgo» adquieren todo su significado"
+    puntos:
+      - "Tras el +34,23 % de agosto, septiembre suma un **+20,52 %**: +75,47 % en tres meses, pero todavía −10,11 % a doce meses."
+      - "BTC sube un 8,48 % y ETH un 10,57 %, mientras algunas altcoins se mueven mucho más: ZEC +70,26 % y DASH +38,35 %."
+      - "Con movimientos tan violentos, decidir por intuición es especialmente peligroso: por eso el sistema tiene reglas."
+
+# Reflexión del mes (opcional). Se marca como OPINIÓN en el informe.
+opinion:
+  titulo: "Abandonar tras una gran caída puede salir caro"
+  texto: >
+    Este año lo hemos visto en GEN-Z (−31,95 % en julio y +16,22 % en 2026), en GEDA (−13,62 % en julio y
+    +100,25 % en 2026) y en CRYPTO (fuertes caídas antes del verano y +75,47 % en tres meses). Una caída
+    **no garantiza una recuperación**: una estrategia puede seguir cayendo. Pero quien abandona un sistema
+    en su peor momento corre el riesgo de perderse la recuperación, si llega. Por eso intento que mis
+    decisiones dependan de las reglas y no de cómo me siento después de una caída.
+
+novedades:
+  - tipo: "Nuevo artículo"
+    titulo: "Cuenta de Ahorro e Inversión Financia Europa"
+    texto: "Qué es este nuevo vehículo, qué ventajas fiscales tiene y qué falta por concretar antes de poder contratarlo."
+    url: "https://tuamigoinversor.com/aprende/cuenta-financia-europa/"
+    boton: "Leer el artículo"
+
+cierre: "Gracias por seguir el proyecto y por acompañarme en este proceso."

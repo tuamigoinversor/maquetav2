@@ -1,0 +1,24 @@
+# Nombre que se muestra junto a cada ticker en la tabla «Cartera vigente».
+# Si entra un activo nuevo, añádelo aquí (si falta, se muestra solo el ticker).
+DBC: Invesco DB Commodity Index Tracking Fund
+XLE: Energy Select Sector SPDR
+XLK: Technology Select Sector SPDR
+SNDK: SanDisk
+LITE: Lumentum
+MRNA: Moderna
+WDC: Western Digital
+STMPA.PA: STMicroelectronics
+ASML.AS: ASML
+SLR.MC: Solaria
+ENR.DE: Siemens Energy
+FORM: FormFactor
+LRCX: Lam Research
+TER: Teradyne
+INTC: Intel
+AMD: Advanced Micro Devices
+BTC-USD: Bitcoin
+ETH-USD: Ether
+TRX-USD: TRON
+DASH-USD: Dash
+ZEC-USD: Zcash
+NEAR-USD: NEAR Protocol

@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark" data-base="../">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HORIZONTE · Plan de pensiones moderado | Tu Amigo Inversor</title>
+<meta name="description" content="HORIZONTE alterna un plan de pensiones de renta variable de EE. UU. y uno de renta fija según la tendencia del S&P 500. Método, señales históricas, resultados y riesgos.">
+<meta name="theme-color" content="#0a0f1e" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+
+<!-- Open Graph / Twitter -->
+<meta property="og:type" content="article">
+<meta property="og:locale" content="es_ES">
+<meta property="og:site_name" content="Tu Amigo Inversor">
+<meta property="og:title" content="HORIZONTE · Plan de pensiones moderado | Tu Amigo Inversor">
+<meta property="og:description" content="HORIZONTE alterna un plan de pensiones de renta variable de EE. UU. y uno de renta fija según la tendencia del S&P 500. Método, señales históricas, resultados y riesgos.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="HORIZONTE · Plan de pensiones moderado | Tu Amigo Inversor">
+<meta name="twitter:description" content="HORIZONTE alterna un plan de pensiones de renta variable de EE. UU. y uno de renta fija según la tendencia del S&P 500. Método, señales históricas, resultados y riesgos.">
+<meta property="og:image" content="https://tuamigoinversor.com/assets/img/og-tuamigoinversor.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:image" content="https://tuamigoinversor.com/assets/img/og-tuamigoinversor.jpg">
+
+<!-- Tema sin parpadeo: se aplica antes de pintar -->
+<script>
+(function(){try{var t=localStorage.getItem('tai-theme-v3');if(!t){t='light'}document.documentElement.setAttribute('data-theme',t)}catch(e){}})();
+</script>
+
+<!-- Fuentes -->
+<link rel="stylesheet" href="../assets/css/fonts.css">
+
+<!-- Única librería externa: Chart.js (diferida) -->
+<script defer src="../assets/js/chart.umd.js"></script>
+<script defer src="../assets/js/tai.js"></script>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Article",
+   "headline": "HORIZONTE · Plan de pensiones moderado | Tu Amigo Inversor",
+   "inLanguage": "es-ES",
+   "author": {
+    "@type": "Person",
+    "name": "Tu Amigo Inversor"
+   }
+  },
+  {
+   "@type": "FAQPage",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "¿Cuántos traspasos hace al año?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "En los 6,8 años con dinero real (desde 2020) ha habido 14 cambios de señal, unos 2,1 al año, aunque no se reparten por igual: 2022 tuvo 6. Cada uno implica un traspaso entre planes de pensiones."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "¿Qué regla usa exactamente?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Compara el cierre mensual del S&P 500 con su media móvil ponderada de 150 sesiones. Por encima, se invierte todo en el plan de renta variable de EE. UU.; por debajo, todo en el plan de renta fija. Se revisa una vez al mes."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "¿Qué planes utilizo?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Actualmente utilizo en ING su plan de pensiones indexado al S&P 500 para la parte de renta variable. Cualquier entidad con planes equivalentes puede servir: lo importante es la categoría, las comisiones y que replique bien el índice."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "¿Puede perder más que mantener renta variable?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Sí. En 2022 perdió un 19,3%, frente a un 12,0% de mantener siempre el plan de renta variable, y su caída máxima es del -19,3%. Son datos pasados."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "¿Es asesoramiento financiero?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. La información es meramente informativa y no constituye asesoramiento financiero ni una recomendación personalizada. Cada inversor debe hacer su propio análisis y decidir según su situación personal."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+<link rel="stylesheet" href="../assets/css/site.css">
+<link rel="stylesheet" href="../assets/css/ficha.css">
+<style>
+/* ===== Estilo alegre ===== */
+.hero::before{background:radial-gradient(circle,color-mix(in srgb,var(--accent-2) 30%,transparent),transparent 65%)}
+.hero::after{background:radial-gradient(circle,color-mix(in srgb,var(--accent) 24%,transparent),transparent 65%)}
+.strat-hero h1{background:linear-gradient(95deg,var(--accent),var(--accent-2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.section.alt{background:linear-gradient(180deg,var(--bg-2),color-mix(in srgb,var(--bg-2) 50%,var(--bg)))}
+.btn-primary{box-shadow:0 10px 24px color-mix(in srgb,var(--accent) 38%,transparent)}
+.btn-ghost{border-width:2px;border-color:var(--accent);color:var(--accent);font-weight:700}
+.btn-ghost:hover{background:color-mix(in srgb,var(--accent) 10%,transparent)}
+.tech-step .step-n{background:var(--accent);color:var(--accent-ink)}
+.tile{background:var(--c-geda);color:#1a1200}
+.stat{border-top:4px solid var(--accent)}.stat:nth-child(2){border-top-color:var(--accent-2)}.stat:nth-child(3){border-top-color:var(--c-geda)}.stat:nth-child(4){border-top-color:var(--pos)}
+.top-col h4{color:var(--accent)}.top-col:nth-child(2) h4{color:var(--accent-2)}.top-col:nth-child(3) h4{color:var(--c-geda)}.top-col:nth-child(4) h4{color:var(--pos)}
+.pcard{border-top:4px solid var(--c-geda)}
+.m-card .m-ic{background:color-mix(in srgb,var(--accent) 16%,transparent);color:var(--accent)}
+.panel,.m-card,.stat,.tech-step,.top-col,.pcard,.slot-group,.not-do,.hero-panel{box-shadow:0 10px 28px color-mix(in srgb,var(--accent) 9%,transparent)}
+.tl-bar{box-shadow:none}
+.callout .icon{color:var(--accent-2)}
+</style>
+<link rel="icon" href="../assets/img/logo-tai.jpg" type="image/jpeg">
+<link rel="apple-touch-icon" href="../assets/img/logo-tai.jpg">
+<style>
+[data-theme="light"]{--c-geda:#6d28d9}
+[data-theme="dark"]{--c-geda:#a78bfa}
+/* ---- Página GEN-Z ---- */
+.kicker{margin:0 0 .6rem;font-size:var(--fs-xs);font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--c-geda)}
+.story{max-width:70ch;margin:2.2rem auto 1.4rem;padding:1.4rem 1.6rem;background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--c-geda);border-radius:var(--r-lg)}
+.story h3{margin:0 0 .6rem;font-size:1.1rem}.story p{margin:0 0 .7rem;color:var(--muted);line-height:1.7}.story p:last-child{margin:0}.story em{color:var(--text)}
+.themes{list-style:none;margin:1.4rem 0 0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.8rem}
+@media(min-width:760px){.themes{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.themes li{display:flex;flex-direction:column;gap:.3rem;background:var(--surface);border:1px solid var(--line);border-top:4px solid var(--c-geda);border-radius:var(--r-lg);padding:1rem 1.1rem}
+.themes li:nth-child(2n){border-top-color:var(--accent)}.themes li:nth-child(3n){border-top-color:var(--accent-2)}
+.themes b{font-size:1rem}.themes span{font-size:var(--fs-sm);color:var(--muted);line-height:1.5}
+.slots-4{grid-template-columns:repeat(4,minmax(0,1fr)) !important;margin-top:1rem}
+.slots-4 .slot-group{text-align:center;padding:.8rem}.slots-4 .slot-tiles{justify-content:center}.slots-4 h4{margin:.5rem 0 0;font-size:1.1rem}
+.tops-1{grid-template-columns:minmax(0,1fr) !important}.tops-1 .top-col ol{grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:.6rem 1.6rem}
+.tl-row h4{display:none}
+
+/* ---- Páginas de cartera permanente, señal y cripto ---- */
+:root{--s1:#1f5bff;--s2:#ff6a1f;--s3:#00a36c;--s4:#f59e00;--s5:#7c3aed;--s6:#ec4899}
+.wbar{display:flex;height:2.6rem;border-radius:14px;overflow:hidden;box-shadow:inset 0 0 0 1px var(--line);margin:1.6rem 0 1rem}
+.wbar span{display:grid;place-items:center;font-size:.78rem;font-weight:800;color:#fff;font-family:var(--font-mono);min-width:0;overflow:hidden}
+.comp-grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.9rem}
+@media(min-width:900px){.comp-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.comp{background:var(--surface);border:1px solid var(--line);border-top:5px solid var(--s);border-radius:var(--r-lg);padding:1.1rem 1.2rem;display:flex;flex-direction:column;gap:.25rem}
+.comp b.w{font-size:1.8rem;font-family:var(--font-mono);color:var(--s)}
+.comp h4{margin:.1rem 0 0;font-size:1rem}.comp .tk{font-size:var(--fs-xs);color:var(--muted);font-family:var(--font-mono)}.comp p{margin:.3rem 0 0;font-size:var(--fs-sm);color:var(--muted);line-height:1.5}
+.div-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.8rem;margin-top:1rem}
+.div-row div{background:var(--surface-2);border-radius:var(--r-lg);padding:.9rem 1rem;font-size:var(--fs-sm);color:var(--muted);line-height:1.5}.div-row b{display:block;color:var(--text);font-size:1.05rem;margin-bottom:.15rem}
+table.cmp-wide{width:100%;border-collapse:collapse;font-size:var(--fs-sm);min-width:640px}
+table.cmp-wide th,table.cmp-wide td{padding:.65rem .5rem;text-align:right;border-bottom:1px solid var(--line);white-space:nowrap}
+table.cmp-wide th:first-child,table.cmp-wide td:first-child{text-align:left;white-space:normal}
+table.cmp-wide thead th{font-size:.72rem;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
+table.cmp-wide tr.tot td,table.cmp-wide tr.tot th{font-weight:800;border-top:2px solid var(--line-2)}
+.dot{display:inline-block;width:.7rem;height:.7rem;border-radius:3px;margin-right:.45rem;vertical-align:baseline;background:var(--s)}
+.vs-row{display:grid;grid-template-columns:minmax(0,1fr);gap:.7rem;margin-top:1rem}
+@media(min-width:760px){.vs-row{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.vs{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:1rem 1.2rem}
+.vs h4{margin:0 0 .5rem;font-size:var(--fs-xs);text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}.vs b{font-size:1.5rem;font-family:var(--font-mono)}.vs p{margin:.3rem 0 0;font-size:var(--fs-sm);color:var(--muted)}
+.rule{display:grid;grid-template-columns:minmax(0,1fr);gap:1rem;margin-top:1.5rem}
+@media(min-width:760px){.rule{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.rule .r{background:var(--surface);border:1px solid var(--line);border-top:5px solid var(--s);border-radius:var(--r-lg);padding:1.3rem 1.4rem}
+.rule .r h3{margin:0 0 .5rem;font-size:1.1rem}.rule .r p{margin:0;color:var(--muted);line-height:1.65}.rule .r b.big{display:block;font-size:1.6rem;font-family:var(--font-mono);color:var(--s);margin-bottom:.3rem}
+.expect{width:100%;border-collapse:collapse;font-size:var(--fs-sm)}
+.expect th,.expect td{padding:.7rem .6rem;text-align:left;border-bottom:1px solid var(--line)}
+.expect thead th{font-size:.72rem;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
+.expect td.mono{font-weight:700}
+</style>
+<!-- Analítica sin cookies (GoatCounter) -->
+<script data-goatcounter="https://tuamigoinversor.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</head>
+
+<body>
+<a class="skip" href="#main">Saltar al contenido</a>
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<!-- SVG sprite (iconos estilo Lucide) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></symbol>
+  <symbol id="i-left" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></symbol>
+  <symbol id="i-right" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+  <symbol id="i-up" viewBox="0 0 24 24"><path d="m18 15-6-6-6 6"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9z"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+  <symbol id="i-scale" viewBox="0 0 24 24"><path d="M12 3v18M5 7h14M5 7l-3 7a4 4 0 0 0 6 0L5 7zM19 7l-3 7a4 4 0 0 0 6 0l-3-7z"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></symbol>
+  <symbol id="i-flask" viewBox="0 0 24 24"><path d="M9 3h6M10 3v6L4 20a1 1 0 0 0 .9 1.5h14.2A1 1 0 0 0 20 20l-6-11V3"/></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></symbol>
+  <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M3 12a9 9 0 0 1 15-6.7L21 8M21 3v5h-5M21 12a9 9 0 0 1-15 6.7L3 16M3 21v-5h5"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></symbol>
+</svg>
+
+<!-- =========================== CABECERA =========================== -->
+<header class="site-header" id="header">
+  <nav class="container nav" aria-label="Navegación principal">
+    <a href="../index.html" class="logo" aria-label="Tu Amigo Inversor, inicio"><img class="logo-mark" src="../assets/img/logo-tai.jpg" width="40" height="40" alt="">Tu Amigo Inversor</a>
+    <ul class="nav-links">
+      <li class="has-sub"><button type="button" class="sub-toggle" aria-expanded="false" aria-haspopup="true">Estrategias <svg class="icon" aria-hidden="true"><use href="#i-down"/></svg></button>
+        <ul class="sub">
+          <li><a href="../index.html#estrategias">Las seis estrategias</a></li>
+          <li><a href="../comparador/index.html">Compáralas frente a frente</a></li>
+          <li><a href="../index.html#test" data-quiz>Test de riesgo (3 min)</a></li>
+          <li><a href="../combinar-estrategias/index.html">Combinar estrategias</a></li>
+        </ul></li>
+      <li class="has-sub"><button type="button" class="sub-toggle" aria-expanded="false" aria-haspopup="true">Cómo funciona <svg class="icon" aria-hidden="true"><use href="#i-down"/></svg></button>
+        <ul class="sub">
+          <li><a href="../empieza-aqui/index.html">Explicado desde cero</a></li>
+          <li><a href="../ejemplo-practico/index.html">Un ejemplo práctico, paso a paso</a></li>
+          <li><a href="../metodologia/index.html">Metodología y cálculos</a></li>
+          <li><a href="../glosario/index.html">Glosario</a></li>
+        </ul></li>
+      <li><a href="../informes/index.html">Informes</a></li>
+      <li><a href="../blog/index.html">Blog</a></li>
+      <li><a href="../sobre-mi/index.html">Sobre mí</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="icon-btn" id="themeToggle" type="button" aria-label="Cambiar a modo claro">
+        <svg class="icon i-sun"><use href="#i-sun"/></svg><svg class="icon i-moon"><use href="#i-moon"/></svg>
+      </button>
+      <a href="../index.html#suscripcion" class="btn btn-primary btn-sm nav-cta magnetic">Quiero el informe</a>
+      <button class="icon-btn burger" id="burger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileMenu"><svg class="icon"><use href="#i-menu"/></svg></button>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="../index.html#estrategias">Las seis estrategias</a></li>
+      <li><a href="../comparador/index.html">Compáralas frente a frente</a></li>
+      <li><a href="../index.html#test" data-quiz>Test de riesgo (3 min)</a></li>
+      <li><a href="../combinar-estrategias/index.html">Combinar estrategias</a></li>
+      <li><a href="../empieza-aqui/index.html">Explicado desde cero</a></li>
+      <li><a href="../ejemplo-practico/index.html">Un ejemplo práctico, paso a paso</a></li>
+      <li><a href="../metodologia/index.html">Metodología y cálculos</a></li>
+      <li><a href="../glosario/index.html">Glosario</a></li>
+      <li><a href="../informes/index.html">Informes</a></li>
+      <li><a href="../blog/index.html">Blog</a></li>
+      <li><a href="../sobre-mi/index.html">Sobre mí</a></li>
+      <li><a href="../index.html#suscripcion" class="btn btn-primary" style="margin-top:.5rem">Quiero el informe gratis</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+<section class="hero strat-hero" aria-labelledby="hero-title" style="--c:var(--c-geda)">
+  <div class="container hero-grid">
+    <div class="reveal">
+      <nav class="crumbs" aria-label="Migas de pan"><a href="../index.html">Inicio</a><span aria-hidden="true">/</span><a href="../index.html#estrategias">Estrategias</a><span aria-hidden="true">/</span><span aria-current="page">HORIZONTE</span></nav>
+      <p class="badge"><span class="live" aria-hidden="true"></span>Asignación táctica · Plan de pensiones · Perfil moderado · Revisión mensual</p>
+      <h1 id="hero-title">HORIZONTE</h1>
+      <p class="kicker">Plan de pensiones con un riesgo moderado</p>
+      <p class="lead">Una estrategia pensada para planes de pensiones: toda la cartera alterna entre un plan de renta variable de EE. UU. y un plan de renta fija según la tendencia principal del mercado, con reglas simples y muy pocos movimientos.</p>
+      <div class="risk risk-lg" style="--c:var(--c-geda)"><span>Riesgo</span><div class="risk-bars" role="img" aria-label="Nivel de riesgo 2 de 5"><i class="on"></i><i class="on"></i><i></i><i></i><i></i></div><span class="mono">2/5 · Perfil moderado</span></div>
+      <div class="cta-row"><a href="../index.html#suscripcion" class="btn btn-primary magnetic">Quiero el informe gratis <svg class="icon"><use href="#i-arrow"/></svg></a><a href="#metodo" class="btn btn-ghost">Ver cómo funciona</a></div>
+      <blockquote class="pull">«Te cuento la estrategia real que uso con mi dinero, fruto de la experiencia de varios años en el mercado. Con total transparencia.»</blockquote>
+    </div>
+    <div class="hero-panel reveal" aria-labelledby="hp-label">
+      <div class="hp-head"><div><small id="hp-label">Rentabilidad anualizada desde 2020</small>
+<div class="hp-value mono pos">+13,4%</div></div><small class="mono" style="font-weight:700;color:var(--text)">HORIZONTE</small></div>
+      <p class="hp-sub">Con dinero real desde enero de 2020 (6 años y 9 meses).</p>
+      <div class="hp-kpis"><div class="kpi"><span>Máx. caída</span><b class="mono neg">-19,3%</b></div><div class="kpi"><span>2025</span><b class="mono pos">+17,4%</b></div><div class="kpi"><span>2026 (ene–sep)</span><b class="mono pos">+17,6%</b></div></div>
+      <div class="hp-kpis hp-kpis-2"><div class="kpi"><span>Sharpe</span><b class="mono">1,16</b></div><div class="kpi"><span>Volatilidad</span><b class="mono">11,5%</b></div><div class="kpi"><span>Meses positivos</span><b class="mono">64%</b></div></div>
+      <p class="asof"><span class="asof-dot" aria-hidden="true"></span><span>Datos a <strong>30 sep 2026</strong> · La web se actualiza cada trimestre; las posiciones de cada mes, en el informe</span></p>
+      <div class="chart-box"><canvas id="gedaChart" role="img" aria-label="Evolución acumulada de HORIZONTE (base 100) de ene 2020 a sep 2026, con la zona de caída sombreada"></canvas></div>
+      <p class="chart-note">Evolución acumulada con las rentabilidades mensuales de HORIZONTE (base 100, escala logarítmica), de ene 2020 a sep 2026. Rentabilidades en euros, sin comisiones ni impuestos. Rentabilidades pasadas no garantizan rentabilidades futuras.</p>
+    </div>
+  </div>
+</section>
+<div class="container ficha-cover-wrap"><figure class="ficha-cover reveal"><img src="../assets/img/estrategias/horizonte-banner.webp" width="1600" height="600" alt="Valle de montaña con el horizonte azul al fondo" style="object-position:center 45%" decoding="async"></figure></div>
+
+<!-- =========================== EN RESUMEN =========================== -->
+<section class="section alt" id="resumen" aria-labelledby="sum-title" style="--c:#7c3aed">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="eyebrow">En resumen</span>
+      <h2 id="sum-title">Lo esencial de HORIZONTE en un minuto</h2>
+      <p>Antes de entrar en cómo funciona por dentro: para quién es, qué puedes esperar en los años malos, cuánto trabajo te da y qué hubo antes del dinero real.</p>
+    </div>
+    <div class="summary-grid">
+      <article class="m-card reveal"><h3><svg class="icon"><use href="#i-user"/></svg>Para quién es</h3><ul><li><strong>Sí</strong>, si ahorras para la jubilación con un plan de pensiones y quieres una regla sencilla para decidir entre bolsa y renta fija.</li><li><strong>No</strong>, si necesitas tener el dinero disponible: el de un plan de pensiones solo puede rescatarse en supuestos concretos.</li><li><strong>Su principal inconveniente:</strong> solo funciona con planes de pensiones, cuyo dinero no está disponible salvo en supuestos concretos; y en mercados sin tendencia la señal puede cambiar sin ganancia.</li></ul></article>
+      <article class="m-card reveal"><h3><svg class="icon"><use href="#i-alert"/></svg>Qué esperar</h3><ul><li>Mejor año: 2021, +37,1%.</li><li>Peor año: 2022, −19,3%. En 6 años completos con dinero real, 1 en negativo (2022).</li><li>Peor caída: −19,3%, durante 2022. Con 10.000 €, habrías llegado a ver 8.070 €.</li><li>Tardó 14 meses desde el mínimo en recuperar el máximo anterior (febrero de 2024).</li></ul></article>
+      <article class="m-card reveal"><h3><svg class="icon"><use href="#i-clock"/></svg>Cuánto trabajo te da</h3><ul><li>1 plan de pensiones cada vez: uno de bolsa de EE. UU. o uno de renta fija.</li><li>Se revisa cada mes; solo actúas cuando cambia la señal, con un traspaso entre planes.</li><li>Necesitas una gestora que tenga los dos tipos de plan.</li></ul></article>
+      <article class="m-card reveal"><h3><svg class="icon"><use href="#i-flask"/></svg>Antes del dinero real</h3><ul><li>Todas las cifras de esta página son con dinero real, desde enero de 2020.</li><li>Antes, probé la regla con datos de 2018 y 2019. Esos dos años de backtest no cuentan en ninguna cifra.</li><li>La regla es sencilla (una media móvil sobre el S&amp;P 500) y es la misma desde el primer día con dinero real: el backtest solo sirvió para comprobar que se comportaba como esperaba.</li></ul></article>
+    </div>
+    <p class="cards-note">Datos a 30 de septiembre de 2026, en euros, sin comisiones ni impuestos. Lo que pasó no garantiza lo que pasará.</p>
+  </div>
+</section>
+
+
+<section class="section" id="metodo" aria-labelledby="met-title"><div class="container">
+  <div class="sec-head reveal"><span class="eyebrow">El método</span><h2 id="met-title">Alternar entre renta variable y renta fija según la tendencia</h2>
+    <p>Los planes de pensiones suelen ofrecer pocas alternativas y perfiles estáticos (conservador, moderado, agresivo). HORIZONTE aplica, dentro de esas limitaciones, una metodología sencilla basada en reglas objetivas. A diferencia de <a href="../cartera-permanente-conservadora-roca/index.html" style="text-decoration:underline">ROCA</a> e <a href="../cartera-inversion-crecimiento-impulso/index.html" style="text-decoration:underline">IMPULSO</a>, no mantiene una composición estable: toda la cartera está siempre en uno de los dos planes.</p></div>
+  <div class="rule">
+    <article class="r reveal" style="--s:var(--pos)"><b class="big">Tendencia alcista</b><h3>100% en renta variable de EE. UU.</h3><p>Si el cierre mensual del S&amp;P 500 está por encima de su media móvil ponderada de 150 sesiones, se invierte todo en el plan de pensiones de renta variable de EE. UU.: el motor de crecimiento.</p></article>
+    <article class="r reveal" style="--s:var(--neg)"><b class="big">Tendencia bajista</b><h3>100% en renta fija</h3><p>Si el cierre mensual cae por debajo de esa media, se traspasa todo el capital al plan de renta fija: el refugio en los periodos bajistas.</p></article>
+  </div>
+  <p class="lede-note reveal">El sistema se revisa una vez al mes. Solo cuando se produce una señal clara se realiza el traspaso, y los suscriptores reciben la notificación. La clave no es predecir el mercado, sino reaccionar cuando la tendencia cambia de forma objetiva.</p>
+  <div class="callout reveal" role="note"><svg class="icon"><use href="#i-alert"/></svg><p><strong>Instrumentos.</strong> Actualmente gestiono esta parte de la cartera en ING, con su plan de pensiones indexado al S&amp;P 500 para la parte de renta variable. Cualquier entidad con planes equivalentes puede servir; lo importante es la categoría, las comisiones y que replique adecuadamente la exposición buscada. Los traspasos entre planes de pensiones son eficientes fiscalmente, pero conviene que consultes tu situación personal.</p></div>
+</div></section>
+
+<section class="section alt" id="senales" aria-labelledby="sen-title"><div class="container">
+  <div class="sec-head reveal"><span class="eyebrow">Historial de señales</span><h2 id="sen-title">Cuándo ha estado en renta variable y cuándo en renta fija</h2>
+    <p>Cada barra indica en qué plan ha estado la cartera cada mes desde 2020, con dinero real.</p>
+    <p class="asof asof-center"><span class="asof-dot" aria-hidden="true"></span><span>Datos a <strong>30 sep 2026</strong> · a esa fecha, la señal era de renta variable</span></p></div>
+  <div class="tl-wrap reveal"><div class="tl" id="timeline" aria-label="Línea de tiempo de señales"></div></div>
+  <p class="fineprint centered hint-m">Desliza horizontalmente para recorrer los años.</p>
+  <div class="stat-row reveal">
+    <div class="stat"><b class="mono">79%</b><span>de los meses en renta variable (64 de 81)</span></div>
+    <div class="stat"><b class="mono">14</b><span>cambios de señal en 6,8 años (unos 2,1 al año)</span></div>
+    <div class="stat"><b class="mono">7</b><span>periodos en renta fija; el más largo, de 3 meses (mar 2020 – may 2020)</span></div>
+    <div class="stat"><b class="mono">8 y 6</b><span>de los 17 meses en renta fija, en 8 la renta variable subió más de un 2% y en 6 cayó más de un 2%</span></div>
+  </div>
+  <div class="callout reveal" role="note"><svg class="icon"><use href="#i-alert"/></svg><p><strong>Cada cambio es un traspaso entre planes.</strong> La señal se calcula con el cierre mensual, así que reacciona con retraso: protege cuando la caída es larga, pero puede dejar fuera parte de las subidas posteriores.</p></div>
+</div></section>
+<section class="section alt" id="resultados" aria-labelledby="res-title"><div class="container">
+  <div class="sec-head reveal"><span class="eyebrow">Resultados históricos</span><h2 id="res-title">Mes a mes desde 2020, con dinero real</h2>
+    <p class="asof asof-center"><span class="asof-dot" aria-hidden="true"></span><span>Datos a <strong>30 sep 2026</strong> · La web se actualiza cada trimestre; las posiciones de cada mes, en el informe · Rentabilidades en euros, sin comisiones ni impuestos</span></p></div>
+  <div class="table-wrap heat-wrap reveal"><table class="heat" id="heat"><caption class="sr-only">Rentabilidades mensuales de HORIZONTE por año</caption></table></div>
+  <div id="realNote"></div>
+  <div class="metrics-grid reveal">
+    <div class="panel"><h3>Métricas (ene 2020 – sep 2026)</h3>
+      <table class="data cmp-mini"><thead><tr><th scope="col">Métrica</th><th scope="col" style="color:var(--c-geda)">HORIZONTE</th><th scope="col">Siempre RV</th></tr></thead><tbody>
+        <tr><th scope="row">Rentabilidad anualizada</th><td class="mono pos">+13,4%</td><td class="mono">+14,4%</td></tr>
+        <tr><th scope="row">Volatilidad</th><td class="mono">11,5%</td><td class="mono">15,3%</td></tr>
+        <tr><th scope="row">Ratio de Sharpe</th><td class="mono">1,16</td><td class="mono">0,96</td></tr>
+        <tr><th scope="row">Máx. caída</th><td class="mono neg">-19,3%</td><td class="mono neg">-17,9%</td></tr></tbody></table>
+      <p class="fineprint">La comparación con «siempre renta variable» usa el mismo plan de renta variable que la estrategia. El ratio de Sharpe mide la rentabilidad obtenida por cada unidad de volatilidad asumida.</p></div>
+    <div class="panel"><h3>Cómo se ha comportado</h3><ul class="facts">
+      <li><b class="mono">52 de 81</b><span>meses con rentabilidad positiva (64%)</span></li>
+      <li><b class="mono pos">+10,0%</b><span>mejor mes (abr 2026)</span></li>
+      <li><b class="mono neg">-9,3%</b><span>peor mes (feb 2020)</span></li>
+      <li><b class="mono">0</b><span>meses con caídas superiores al 10% en 81</span></li></ul></div></div>
+  <h3 class="sub-h reveal">Año a año: la estrategia frente a mantener siempre un plan</h3><p class="prose reveal" style="margin:0 0 1rem">Rentabilidad anual de la estrategia, de mantener siempre el plan de renta variable y de mantener siempre el plan de renta fija (en euros).</p><div class="table-wrap heat-wrap reveal"><table class="heat comp-year" style="min-width:520px"><thead><tr><th scope="col" style="text-align:left;padding-left:.8rem">Año</th><th scope="col">HORIZONTE</th><th scope="col">Siempre renta variable</th><th scope="col">Siempre renta fija</th></tr></thead><tbody><tr><th scope='row'>2020</th><td class='mono yr' style='background:rgba(var(--pos-rgb),0.10)'>+1,5%</td><td class='mono' style='background:rgba(var(--pos-rgb),0.14)'>4,5</td><td class='mono' style='background:rgba(var(--pos-rgb),0.10)'>1,5</td></tr><tr><th scope='row'>2021</th><td class='mono yr' style='background:rgba(var(--pos-rgb),0.56)'>+37,1%</td><td class='mono' style='background:rgba(var(--pos-rgb),0.56)'>37,1</td><td class='mono' style='background:rgba(var(--neg-rgb),0.16)'>-2,3</td></tr><tr><th scope='row'>2022</th><td class='mono yr' style='background:rgba(var(--neg-rgb),0.63)'>-19,3%</td><td class='mono' style='background:rgba(var(--neg-rgb),0.43)'>-12,0</td><td class='mono' style='background:rgba(var(--neg-rgb),0.44)'>-12,2</td></tr><tr><th scope='row'>2023</th><td class='mono yr' style='background:rgba(var(--pos-rgb),0.26)'>+14,1%</td><td class='mono' style='background:rgba(var(--pos-rgb),0.32)'>18,8</td><td class='mono' style='background:rgba(var(--pos-rgb),0.14)'>5,0</td></tr><tr><th scope='row'>2024</th><td class='mono yr' style='background:rgba(var(--pos-rgb),0.50)'>+32,2%</td><td class='mono' style='background:rgba(var(--pos-rgb),0.50)'>32,2</td><td class='mono' style='background:rgba(var(--pos-rgb),0.11)'>2,3</td></tr><tr><th scope='row'>2025</th><td class='mono yr' style='background:rgba(var(--pos-rgb),0.31)'>+17,4%</td><td class='mono' style='background:rgba(var(--pos-rgb),0.16)'>6,2</td><td class='mono' style='background:rgba(var(--pos-rgb),0.10)'>1,6</td></tr><tr><th scope='row'>2026*</th><td class='mono yr' style='background:rgba(var(--pos-rgb),0.31)'>+17,6%</td><td class='mono' style='background:rgba(var(--pos-rgb),0.31)'>17,6</td><td class='mono' style='background:rgba(var(--neg-rgb),0.11)'>-0,5</td></tr></tbody></table></div><p class="fineprint">*2026 incluye solo enero–septiembre.</p>
+  <h3 class="sub-h reveal">Anatomía de las caídas</h3>
+  <p class="prose reveal" style="margin:0 0 1rem">Las mayores caídas desde un máximo previo, medidas con cierres mensuales. Las caídas pasadas no limitan las futuras: pueden ser mayores.</p>
+  <div class="table-wrap reveal"><table class="data dd-table"><thead><tr><th scope="col">Caída</th><th scope="col">Máximo previo</th><th scope="col">Mínimo</th><th scope="col">Duración de la caída</th><th scope="col">Recuperación del máximo</th></tr></thead><tbody><tr><td class='mono neg'>-19,3%</td><td>dic 2021</td><td>dic 2022</td><td>12 meses</td><td>feb 2024 (26 meses)</td></tr><tr><td class='mono neg'>-10,9%</td><td>ene 2020</td><td>mar 2020</td><td>2 meses</td><td>dic 2020 (11 meses)</td></tr><tr><td class='mono neg'>-5,0%</td><td>oct 2025</td><td>mar 2026</td><td>5 meses</td><td>abr 2026 (6 meses)</td></tr><tr><td class='mono neg'>-2,8%</td><td>ene 2025</td><td>mar 2025</td><td>2 meses</td><td>jun 2025 (5 meses)</td></tr><tr><td class='mono neg'>-2,8%</td><td>mar 2024</td><td>abr 2024</td><td>1 mes</td><td>jun 2024 (3 meses)</td></tr></tbody></table></div>
+  <p class="fineprint reveal">A 30 sep 2026, HORIZONTE está en máximos.</p>
+</div></section>
+
+<section class="section" id="limites" aria-labelledby="lim-title"><div class="container">
+  <div class="sec-head reveal"><span class="eyebrow">Qué muestran los datos</span><h2 id="lim-title">Menos volatilidad, pero no menos caída máxima</h2>
+    <p>En los datos con dinero real (2020–2026) la estrategia reduce la volatilidad y mejora el ratio de Sharpe frente a mantener siempre renta variable, a cambio de menos rentabilidad. Su caída máxima no ha sido menor.</p></div>
+  <div class="fit reveal">
+    <div class="fit-col yes"><h3><svg class="icon"><use href="#i-check"/></svg>Donde suele funcionar mejor</h3><ul><li>Tendencias alcistas largas: en 2021 (+37,1%) y 2024 (+32,2%) rindió lo mismo que mantener la renta variable.</li><li>Caídas largas y claras: en 2025 pasó a renta fija de marzo a mayo y terminó con un +17,4%, frente a un +6,2% de mantener la renta variable.</li><li>Reglas simples y objetivas, que reducen el estrés emocional.</li></ul></div>
+    <div class="fit-col no"><h3><svg class="icon"><use href="#i-x"/></svg>Donde suele sufrir</h3><ul><li>Mercados laterales o con giros rápidos: en 2022 hubo 6 cambios de señal y la estrategia perdió un 19,3%, frente a un 12,0% de mantener la renta variable y un 12,2% de mantener la renta fija.</li><li>Señales tardías: en 8 de los 17 meses en renta fija, la renta variable subió más de un 2%.</li><li>La renta fija no siempre protege: en 2022 cayó casi lo mismo que la renta variable.</li><li>Menos rentabilidad: +13,4% frente a +14,4% de mantener siempre renta variable.</li></ul></div></div>
+  <div class="not-do reveal"><h3>Qué hay que tener claro</h3><ul><li>La estrategia no predice: reacciona a una señal mensual que llega con retraso.</li><li>Su caída máxima (-19,3%) ha sido mayor que la de mantener solo renta variable (-17,9%) en este periodo.</li><li>Los resultados de esta página son de 2020 en adelante; un periodo más largo podría dar conclusiones distintas.</li></ul></div>
+    <div class="risk-ex reveal"><h3>Qué significa la caída máxima en euros</h3>
+      <p>Ejemplo ilustrativo con 5.000 €: la caída máxima de HORIZONTE con dinero real ha sido del <strong>−19,3%</strong>.</p>
+      <div class="risk-ex-grid">
+        <div><small>Inversión inicial</small><b class="mono">5.000 €</b></div>
+        <div><small>Tras una caída del −19,3%</small><b class="mono neg">4.040 €</b></div>
+        <div><small>Subida necesaria para volver a 5.000 €</small><b class="mono">+23,9%</b></div>
+      </div>
+      <p class="risk-ex-note">Es una ilustración, no una previsión: la caída máxima histórica no es un límite y las caídas futuras pueden ser mayores. Sin comisiones ni impuestos.</p>
+    </div>
+</div></section>
+
+<section class="section alt" id="replicar" aria-labelledby="rep-title"><div class="container narrow">
+  <div class="sec-head reveal"><span class="eyebrow">Cómo replicarla</span><h2 id="rep-title">Muy pocos movimientos al año</h2><p>Solo rota hacia renta fija cuando el sistema detecta un mercado bajista relevante.</p></div>
+  <ol class="steps">
+    <li class="step reveal"><span class="step-n" aria-hidden="true">1</span><div><h3>Te suscribes al servicio</h3><p>Accedes a todas las estrategias activas y a sus actualizaciones mensuales.</p></div></li>
+    <li class="step reveal"><span class="step-n" aria-hidden="true">2</span><div><h3>Recibes un email el día 1 de cada mes</h3><p>Con la posición actual y los posibles cambios.</p></div></li>
+    <li class="step reveal"><span class="step-n" aria-hidden="true">3</span><div><h3>Haces el traspaso en tu banco o plataforma</h3><p>Entre el plan de renta variable y el de renta fija, solo cuando haya señal.</p></div></li>
+    <li class="step reveal"><span class="step-n" aria-hidden="true">4</span><div><h3>Mantienes hasta la siguiente revisión</h3><p>Sin necesidad de seguimiento constante.</p></div></li></ol>
+</div></section>
+
+<section class="section" id="comportamiento" aria-labelledby="comp-title"><div class="container narrow">
+  <div class="sec-head reveal"><span class="eyebrow">Comentario</span><h2 id="comp-title">Comportamiento en 2026 (hasta septiembre)</h2></div>
+  <div class="prose reveal"><p>HORIZONTE acumula un <strong>+17,6%</strong> en lo que va de año. Empezó posicionada en renta variable, tuvo un inicio algo dubitativo (-1,4% en febrero y -2,9% en marzo) y recuperó fuerza en abril (+10,0%) y mayo (+6,4%) junto al mercado americano. En los últimos meses ha vuelto a subir, con +2,4% en agosto y +2,6% en septiembre. La señal de renta variable está activa desde junio de 2025.</p></div>
+  <details class="more reveal"><summary>Comportamiento en 2025</summary><div class="prose"><p>2025 terminó con un <strong>+17,4%</strong>. La estrategia pasó a renta fija entre marzo y mayo y protegió parcialmente la cartera durante la volatilidad de esos meses; después volvió a renta variable en junio.</p></div></details>
+</div></section>
+<section class="section" id="faq" aria-labelledby="faq-title"><div class="container narrow">
+  <div class="sec-head reveal"><span class="eyebrow">Preguntas frecuentes</span><h2 id="faq-title">Sobre HORIZONTE</h2></div>
+  <div class="faq" id="faqList"></div>
+  <p class="fineprint centered reveal" style="margin-top:1.5rem">Cómo se calculan las cifras: rentabilidades en euros, precios de los planes de pensiones, sin comisiones ni impuestos. Más detalle en la <a href="../metodologia/index.html" style="text-decoration:underline">metodología</a>.</p></div></section>
+<figure class="name-note container narrow reveal" style="margin:0 auto 2.5rem"><blockquote>«Cada estrategia tiene un nombre con significado. HORIZONTE es la estrategia que dedico a gestionar el plan de pensiones con el horizonte fijado en la jubilación.»</blockquote></figure>
+<section class="section alt tight" aria-labelledby="otras-title"><div class="container"><h2 id="otras-title" class="small-h reveal">Otras estrategias</h2><ul class="others reveal"><li><a href="../cartera-permanente-conservadora-roca/index.html"><b>ROCA</b><span>Cartera permanente conservadora</span></a></li><li><a href="../cartera-inversion-crecimiento-impulso/index.html"><b>IMPULSO</b><span>Cartera permanente de crecimiento</span></a></li><li><a href="../inversion-tactica-geda/index.html"><b>GEDA</b><span>Inversión táctica con momentum</span></a></li><li><a href="../inversion-tematica-gen-z/index.html"><b>GEN-Z</b><span>Inversión temática</span></a></li><li><a href="../inversion-criptomonedas-crypto/index.html"><b>CRYPTO</b><span>Criptomonedas</span></a></li></ul></div></section>
+<section class="section" id="suscripcion" aria-labelledby="sub-title"><div class="container"><div class="cta reveal cta-simple"><span class="offer">EMPIEZA GRATIS</span><h2 id="sub-title">Compruébalo en directo, sin compromiso</h2>
+  <p style="font-size:var(--fs-lg)">Cada día 1 te cuento qué tengo en esta estrategia y qué cambio. Si decides seguirla, lo aplicas desde tu propio bróker; si no, no haces nada.</p>
+  <div class="cta-row" style="justify-content:center"><a href="../index.html#suscripcion" class="btn btn-primary magnetic">Quiero el informe gratis <svg class="icon"><use href="#i-arrow"/></svg></a><a href="mailto:info@tuamigoinversor.com" class="btn btn-ghost">Escríbeme: info@tuamigoinversor.com</a></div></div></div></section>
+</main>
+
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <a href="../index.html" class="logo" style="margin-bottom:1rem"><img class="logo-mark" src="../assets/img/logo-tai.jpg" width="40" height="40" alt="">Tu Amigo Inversor</a>
+        <p>Te cuento cada mes qué hago con mi dinero: estrategias con reglas claras, sin corazonadas. Lo que hagas con tu dinero lo decides tú.</p>
+        <p style="margin-top:.8rem"><a href="mailto:info@tuamigoinversor.com">info@tuamigoinversor.com</a></p>
+      </div>
+      <nav aria-label="Carteras permanentes"><h2>Cartera permanente</h2><ul><li><a href="../cartera-permanente-conservadora-roca/index.html">ROCA</a></li><li><a href="../cartera-inversion-crecimiento-impulso/index.html">IMPULSO</a></li></ul></nav>
+      <nav aria-label="Asignación táctica"><h2>Asignación táctica</h2><ul><li><a href="../inversion-tactica-geda/index.html">GEDA</a></li><li><a href="../inversion-tematica-gen-z/index.html">GEN-Z</a></li><li><a href="../inversion-criptomonedas-crypto/index.html">CRYPTO</a></li><li><a href="../plan-pensiones-moderado-horizonte/index.html">HORIZONTE <small class="pp">plan de pensiones</small></a></li></ul></nav>
+      <nav aria-label="Herramientas y proyecto"><h2>Empieza por aquí</h2><ul><li><a href="../empieza-aqui/index.html">Explicado desde cero</a></li><li><a href="../ejemplo-practico/index.html">Ejemplo práctico</a></li><li><a href="../comparador/index.html">Comparador</a></li><li><a href="../index.html#test" data-quiz>Test de riesgo</a></li><li><a href="../combinar-estrategias/index.html">Combinar estrategias</a></li><li><a href="../informes/index.html">Informes</a></li><li><a href="../metodologia/index.html">Metodología</a></li><li><a href="../glosario/index.html">Glosario</a></li><li><a href="../blog/index.html">Blog</a></li><li><a href="../sobre-mi/index.html">Sobre mí</a></li></ul></nav>
+      <nav aria-label="Legal"><h2>Legal</h2><ul><li><a href="../aviso-legal/index.html">Aviso legal</a></li><li><a href="../privacidad/index.html">Política de privacidad</a></li><li><a href="../recomendaciones/index.html">Cómo elaboro los informes</a></li></ul></nav>
+    </div>
+    <div class="legal">
+      <p><strong>Aviso:</strong> la información publicada en esta web tiene carácter meramente informativo y no constituye asesoramiento financiero ni una recomendación personalizada de inversión. Las inversiones conllevan riesgo y pueden implicar la pérdida total o parcial del capital. Las rentabilidades pasadas no garantizan rentabilidades futuras. Cada inversor debe realizar su propio análisis y tomar decisiones en función de su situación personal.</p>
+      <p style="margin-top:.8rem">© 2026 Tu Amigo Inversor.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Test de riesgo (ventana emergente) -->
+<div class="modal" id="quizModal" aria-hidden="true">
+  <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="quizTitle">
+    <button class="icon-btn modal-close" type="button" aria-label="Cerrar test"><svg class="icon"><use href="#i-x"/></svg></button>
+    <div class="modal-content">
+      <span class="eyebrow">Test de riesgo</span>
+      <h2 id="quizTitle" style="font-size:var(--fs-xl);margin:.3rem 0 .4rem">¿Cuánto riesgo toleras?</h2>
+      <p style="color:var(--muted);margin-bottom:1.4rem">Diez preguntas, unos 3 minutos. Te explico tu tolerancia al riesgo y qué significa en caídas reales.</p>
+      <div class="quiz" id="quiz" aria-live="polite"></div>
+    </div>
+  </div>
+</div>
+
+<button class="icon-btn to-top" id="toTop" type="button" aria-label="Volver arriba"><svg class="icon"><use href="#i-up"/></svg></button>
+<div class="sticky-cta" id="stickyCta"><small><strong>Gratis</strong><br><span data-countdown-short>El informe del día 1 en tu correo</span></small><a href="../index.html#suscripcion" class="btn btn-primary btn-sm">Quiero el informe</a></div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+'use strict';
+const $=(s,c=document)=>c.querySelector(s),$$=(s,c=document)=>[...c.querySelectorAll(s)];
+const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const css=v=>getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+const alpha=(hex,a)=>{const n=parseInt(hex.slice(1),16);return `rgba(${n>>16},${(n>>8)&255},${n&255},${a})`};
+const hasChart=typeof window.Chart!=='undefined';
+const fmt=(v,d=1)=>v.toLocaleString('es-ES',{minimumFractionDigits:d,maximumFractionDigits:d});
+const pc=(v,d=1)=>(v>0?'+':'')+fmt(v,d)+'%';
+
+/* ---- Datos: rentabilidades mensuales de GEDA (%) · fuente: resumen_estrategias.xlsx, datos a 30-sep-2026 ---- */
+const GEDA={"2020":[1.49,-9.34,-1.68,0.08,0.91,0.78,0.35,5.93,-1.47,-2.59,7.38,0.63],"2021":[1.13,3.14,6.71,2.51,-1.02,5.1,2.25,3.53,-2.17,5.92,0.45,4.84],"2022":[-3.99,-1.32,-1.46,-3.58,-0.83,-1.0,2.83,-2.46,-2.61,0.21,0.82,-7.45],"2023":[1.34,-0.8,1.38,0.72,3.8,3.09,1.12,-0.01,-2.29,0.72,1.62,2.71],"2024":[5.23,4.98,3.2,-2.81,2.8,5.38,-0.4,0.9,0.7,1.17,8.5,-0.85],"2025":[3.36,-2.36,-0.47,1.26,0.05,2.71,5.81,-1.98,3.24,5.81,-0.25,-0.62],"2026":[0.13,-1.43,-2.89,10.04,6.4,1.52,-1.76,2.42,2.6]};
+/* Primer año con dinero real. Poner null para ocultar la distinción simulado/real. */
+/* Totales anuales exactos (estrategias_limpias.xlsx): evitan el redondeo de sumar meses con 2 decimales */
+const YX={"2020": 1.5, "2021": 37.12, "2022": -19.28, "2023": 14.07, "2024": 32.17, "2025": 17.38, "2026": 17.6};
+const REAL_FROM=2020;
+const REALNOTE="<p class=\"fineprint centered\" style=\"margin-top:.8rem\">*2026 incluye solo enero–septiembre. Todos los años son con dinero real.</p>";
+const POS={"labels":["2020-1","2020-2","2020-3","2020-4","2020-5","2020-6","2020-7","2020-8","2020-9","2020-10","2020-11","2020-12","2021-1","2021-2","2021-3","2021-4","2021-5","2021-6","2021-7","2021-8","2021-9","2021-10","2021-11","2021-12","2022-1","2022-2","2022-3","2022-4","2022-5","2022-6","2022-7","2022-8","2022-9","2022-10","2022-11","2022-12","2023-1","2023-2","2023-3","2023-4","2023-5","2023-6","2023-7","2023-8","2023-9","2023-10","2023-11","2023-12","2024-1","2024-2","2024-3","2024-4","2024-5","2024-6","2024-7","2024-8","2024-9","2024-10","2024-11","2024-12","2025-1","2025-2","2025-3","2025-4","2025-5","2025-6","2025-7","2025-8","2025-9","2025-10","2025-11","2025-12","2026-1","2026-2","2026-3","2026-4","2026-5","2026-6","2026-7","2026-8","2026-9"],"stints":[[0,"RV",0,1],[0,"RF",2,4],[0,"RV",5,24],[0,"RF",25,26],[0,"RV",27,27],[0,"RF",28,30],[0,"RV",31,31],[0,"RF",32,34],[0,"RV",35,35],[0,"RF",36,36],[0,"RV",37,44],[0,"RF",45,46],[0,"RV",47,61],[0,"RF",62,64],[0,"RV",65,80]],"blocks":["Plan en el que está invertida la cartera"],"lanes":[1],"colors":{"RV":"var(--c-geda)","RF":"#64748b"}};
+const MES=['ene','feb','mar','abr','may','jun','jul','ago','sep','oct','nov','dic'];
+
+/* ---- Tema: el cambio de modo lo gestiona tai.js; aquí solo se repintan los gráficos ---- */
+$('#themeToggle').addEventListener('click',()=>themeCharts());
+
+/* ---- Gráfico: evolución acumulada real, escala logarítmica ---- */
+const charts={};
+function defaults(){if(!hasChart)return;Chart.defaults.font.family="Inter, system-ui, sans-serif";Chart.defaults.color=css('--muted');Chart.defaults.borderColor=css('--line');Chart.defaults.animation.duration=reduced?0:900}
+const tip=()=>({backgroundColor:css('--surface'),titleColor:css('--text'),bodyColor:css('--text'),borderColor:css('--line-2'),borderWidth:1,padding:10,cornerRadius:10,boxPadding:4});
+function series(){
+  const labels=['dic '+(+Object.keys(GEDA)[0]-1)],values=[100],rets=[null];let v=100;
+  Object.keys(GEDA).forEach(y=>GEDA[y].forEach((r,i)=>{v*=1+r/100;labels.push(MES[i]+' '+y);values.push(+v.toFixed(2));rets.push(r)}));
+  let p=-Infinity;const peaks=values.map(x=>p=Math.max(p,x));return{labels,values,peaks,rets};
+}
+let COLOR=css('--c-geda');const negFill=al=>`rgba(${css('--neg-rgb')},${al})`;
+if(hasChart){
+  defaults();const d=series();
+  charts.g=new Chart($('#gedaChart'),{type:'line',
+    data:{labels:d.labels,datasets:[
+      {label:'Máximo previo',data:d.peaks,borderWidth:0,pointRadius:0,fill:false,borderColor:'transparent'},
+      {label:'Zona de caída',data:d.values,borderWidth:0,pointRadius:0,borderColor:'transparent',backgroundColor:negFill(.45),fill:{target:0,above:'rgba(0,0,0,0)',below:negFill(.28)}},
+      {label:'Evolución acumulada (base 100)',data:d.values,borderColor:COLOR,borderWidth:2.25,tension:0,pointHoverRadius:5,
+        pointRadius:c=>c.dataIndex===c.dataset.data.length-1?4:0,pointBackgroundColor:COLOR,fill:'start',
+        backgroundColor:c=>{const a=c.chart.chartArea;if(!a)return alpha(COLOR,.15);const g=c.chart.ctx.createLinearGradient(0,a.top,0,a.bottom);g.addColorStop(0,alpha(COLOR,.35));g.addColorStop(1,alpha(COLOR,0));return g}}]},
+    options:{responsive:true,maintainAspectRatio:false,layout:{padding:{right:8}},interaction:{mode:'index',intersect:false},
+      scales:{x:{display:true,grid:{display:false},ticks:{autoSkip:false,maxRotation:0,font:{size:11},callback:function(v){const l=this.getLabelForValue(v);if(!l.startsWith('ene'))return '';const yr=+l.slice(-4);return yr%2===0?String(yr):''}}},
+        y:{type:'logarithmic',grid:{color:alpha('#8899bb',.12)},afterBuildTicks:ax=>{const n=[10,20,50,100,200,500,1000,2000,5000,10000];ax.ticks=ax.ticks.filter(t=>n.includes(Math.round(t.value)))},ticks:{callback:v=>fmt(v,0)}}},
+      plugins:{legend:{display:true,position:'bottom',labels:{boxWidth:10,boxHeight:10,usePointStyle:true,filter:i=>i.datasetIndex!==0}},
+        tooltip:{...tip(),filter:i=>i.datasetIndex===2,callbacks:{title:c=>c[0].label,label:c=>' Valor: '+fmt(c.parsed.y),
+          afterLabel:c=>{const i=c.dataIndex,r=d.rets[i],pk=d.peaks[i],o=[];if(r!==null)o.push(' Mes: '+pc(r,2));const cur=c.parsed.y/pk-1;if(cur<-0.0005)o.push(' Desde máximo: '+fmt(cur*100)+'%');return o}}}}}});
+}
+function themeCharts(){renderHeat();if(!hasChart)return;COLOR=css('--c-geda');defaults();
+  if(charts.g){const ds=charts.g.data.datasets;ds[2].borderColor=COLOR;ds[2].pointBackgroundColor=COLOR;ds[1].backgroundColor=negFill(.45);ds[1].fill={target:0,above:'rgba(0,0,0,0)',below:negFill(.28)}}Object.values(charts).forEach(c=>{Object.assign(c.options.plugins.tooltip,tip());Object.values(c.options.scales).forEach(s=>{if(s.ticks)s.ticks.color=css('--muted')});c.options.plugins.legend.labels.color=css('--muted');c.update('none')})}
+
+/* ---- Mapa de calor mensual ---- */
+function renderHeat(){
+  const t=$('#heat');let h='<thead><tr><th scope="col" style="text-align:left;padding-left:.8rem">Año</th>'+MES.map(m=>`<th scope="col">${m}</th>`).join('')+'<th scope="col">Año</th></tr></thead><tbody>';
+  const pr=css('--pos-rgb'),nr=css('--neg-rgb');
+  const color=v=>v>=0?`rgba(${pr},${Math.min(.6,.08+v/25*.52).toFixed(2)})`:`rgba(${nr},${Math.min(.65,.1+Math.abs(v)/12*.55).toFixed(2)})`;
+  Object.keys(GEDA).forEach(y=>{
+    const r=GEDA[y],yr=(YX[y]!==undefined?YX[y]:(r.reduce((a,x)=>a*(1+x/100),1)-1)*100);
+    const tag=REAL_FROM===null?'':(+y>=REAL_FROM?'<span class="tag-s real">Real</span>':'<span class="tag-s sim">Simulado</span>');
+    h+=`<tr><th scope="row">${y}${y==='2026'?'*':''}${tag}</th>`+MES.map((m,i)=>i<r.length?`<td class="mono" style="background:${color(r[i])}">${fmt(Math.abs(r[i])<0.05?0:r[i],1)}</td>`:'<td></td>').join('')+`<td class="mono yr" style="background:${color(yr/4)}">${pc(yr)}</td></tr>`;
+  });
+  t.innerHTML=h+'</tbody>';
+  $('#realNote').innerHTML=REALNOTE;
+}
+renderHeat();
+
+
+/* ---- Línea de tiempo de posiciones ---- */
+(function(){
+  const root=$('#timeline');if(!root||!POS)return;
+  const n=POS.labels.length;root.style.setProperty('--n',n);
+  const fit=Math.floor((root.parentElement.clientWidth-34)/n*10)/10;root.style.setProperty('--pm',(fit>=8?fit:9)+'px');
+  const mname=i=>{const [y,m]=POS.labels[i].split('-');return MES[m-1]+' '+y};
+  const h0=+css('--tl-h0'),hr=+css('--tl-hr'),ts=css('--tl-s'),tlum=css('--tl-l');
+  const color=t=>{if(POS.colors&&POS.colors[t])return POS.colors[t];let h=0;for(const c of t)h=(h*31+c.charCodeAt(0))%360;return `hsl(${h0+h%hr} ${ts}% ${tlum}%)`};
+  let html='<div class="tl-axis">';
+  POS.labels.forEach((l,i)=>{const [y,m]=l.split('-');if(+m===1)html+=`<span style="left:calc(${i} * var(--pm))">${y}</span>`});
+  html+='</div>';
+  POS.blocks.forEach((name,k)=>{
+    const st=POS.stints.filter(s=>s[0]===k).sort((x,y)=>x[2]-y[2]);
+    const nl=(POS.lanes&&POS.lanes[k])||(k===0?1:2);const lanes=Array(nl).fill(-1),place=[];
+    st.forEach(s=>{let L=lanes.findIndex(e=>e<s[2]);if(L<0)L=0;lanes[L]=s[3];place.push([s,L])});
+    html+=`<div class="tl-row"><h4>${name}</h4><div class="tl-track" style="--lanes:${nl}">`;
+    place.forEach(([s,L])=>{const len=s[3]-s[2]+1;const lab=len>=3?s[1]:'';
+      html+=`<div class="tl-bar" style="left:calc(${s[2]} * var(--pm));width:calc(${len} * var(--pm) - 1px);top:${L*26}px;background:${color(s[1])}" title="${s[1]} · ${mname(s[2])} – ${mname(s[3])} (${len} ${len===1?'mes':'meses'})">${lab}</div>`});
+    html+='</div></div>';
+  });
+  root.innerHTML=html;
+  const w=root.parentElement;requestAnimationFrame(()=>{if(innerWidth<760)w.scrollLeft=w.scrollWidth});
+})();
+
+/* ---- FAQ ---- */
+const FAQ=[["¿Cuántos traspasos hace al año?", "En los 6,8 años con dinero real (desde 2020) ha habido 14 cambios de señal, unos 2,1 al año, aunque no se reparten por igual: 2022 tuvo 6. Cada uno implica un traspaso entre planes de pensiones."], ["¿Qué regla usa exactamente?", "Compara el cierre mensual del S&P 500 con su media móvil ponderada de 150 sesiones. Por encima, se invierte todo en el plan de renta variable de EE. UU.; por debajo, todo en el plan de renta fija. Se revisa una vez al mes."], ["¿Qué planes utilizo?", "Actualmente utilizo en ING su plan de pensiones indexado al S&P 500 para la parte de renta variable. Cualquier entidad con planes equivalentes puede servir: lo importante es la categoría, las comisiones y que replique bien el índice."], ["¿Puede perder más que mantener renta variable?", "Sí. En 2022 perdió un 19,3%, frente a un 12,0% de mantener siempre el plan de renta variable, y su caída máxima es del -19,3%. Son datos pasados."], ["¿Es asesoramiento financiero?", "No. La información es meramente informativa y no constituye asesoramiento financiero ni una recomendación personalizada. Cada inversor debe hacer su propio análisis y decidir según su situación personal."]];
+$('#faqList').innerHTML=FAQ.map((f,i)=>`<div class="qa reveal in"><h3><button type="button" aria-expanded="false" aria-controls="fa${i}" id="fq${i}">${f[0]}<svg class="icon"><use href="#i-plus"/></svg></button></h3><div class="ans" id="fa${i}" role="region" aria-labelledby="fq${i}"><div><p>${f[1]}</p></div></div></div>`).join('');
+$$('.qa button').forEach(b=>b.addEventListener('click',()=>{const o=b.getAttribute('aria-expanded')!=='true';b.setAttribute('aria-expanded',o);b.closest('.qa').classList.toggle('open',o)}));
+
+if(window.TAI&&TAI.initForm)TAI.initForm();
+});
+
+</script>
+</body>
+</html>

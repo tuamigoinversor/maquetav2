@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark" data-base="../">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ROCA · Cartera permanente conservadora | Tu Amigo Inversor</title>
+<meta name="description" content="ROCA es una cartera permanente conservadora: seis activos con peso fijo, baja volatilidad y rebalanceo una o dos veces al año. Composición, resultados y riesgos.">
+<meta name="theme-color" content="#0a0f1e" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+
+<!-- Open Graph / Twitter -->
+<meta property="og:type" content="article">
+<meta property="og:locale" content="es_ES">
+<meta property="og:site_name" content="Tu Amigo Inversor">
+<meta property="og:title" content="ROCA · Cartera permanente conservadora | Tu Amigo Inversor">
+<meta property="og:description" content="ROCA es una cartera permanente conservadora: seis activos con peso fijo, baja volatilidad y rebalanceo una o dos veces al año. Composición, resultados y riesgos.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ROCA · Cartera permanente conservadora | Tu Amigo Inversor">
+<meta name="twitter:description" content="ROCA es una cartera permanente conservadora: seis activos con peso fijo, baja volatilidad y rebalanceo una o dos veces al año. Composición, resultados y riesgos.">
+<meta property="og:image" content="https://tuamigoinversor.com/assets/img/og-tuamigoinversor.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:image" content="https://tuamigoinversor.com/assets/img/og-tuamigoinversor.jpg">
+
+<!-- Tema sin parpadeo: se aplica antes de pintar -->
+<script>
+(function(){try{var t=localStorage.getItem('tai-theme-v3');if(!t){t='light'}document.documentElement.setAttribute('data-theme',t)}catch(e){}})();
+</script>
+
+<!-- Fuentes -->
+<link rel="stylesheet" href="../assets/css/fonts.css">
+
+<!-- Única librería externa: Chart.js (diferida) -->
+<script defer src="../assets/js/chart.umd.js"></script>
+<script defer src="../assets/js/tai.js"></script>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Article",
+   "headline": "ROCA · Cartera permanente conservadora | Tu Amigo Inversor",
+   "inLanguage": "es-ES",
+   "author": {
+    "@type": "Person",
+    "name": "Tu Amigo Inversor"
+   }
+  },
+  {
+   "@type": "FAQPage",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "¿Cada cuánto hay que rebalancear?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Reviso la cartera en enero y julio, y rebalanceo solo si algún activo se aleja más de un 15% de su propio peso (no 15 puntos). Por ejemplo, si las small cap, que pesan un 10%, suben por encima del 11,5% o bajan del 8,5%. En la práctica, eso supone más o menos un rebalanceo al año. Si te suscribes, recibirás avisos cuando sea necesario actuar. Ten en cuenta que las rentabilidades publicadas parten cada mes de los pesos objetivo."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "¿Por qué fondos de inversión y no ETF?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Utilizo fondos por su ventaja fiscal en España: permiten traspasos sin tributar, lo que hace el rebalanceo más eficiente. Los ETF también serían válidos, pero menos ágiles en este aspecto, y en la práctica la diferencia de rentabilidad es poco significativa."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "¿Qué hago si mi bróker no ofrece estos fondos?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No todos los brókers ofrecen estos fondos. Si alguno no está disponible en tu plataforma, puedes utilizar alternativas equivalentes. Lo que hay que comprobar es que el fondo o ETF alternativo siga el mismo índice o tipo de activo. No respondo consultas sobre qué producto concreto usar en cada caso: la información es la misma para todos."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "¿Cuánto puede llegar a caer?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "La mayor caída con dinero real, medida con cierres mensuales, es del -9,2% y la más lenta tardó 24 meses en recuperar el máximo. Son datos pasados: una caída futura puede ser mayor."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "¿Es asesoramiento financiero?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. La información es meramente informativa y no constituye asesoramiento financiero ni una recomendación personalizada. Cada inversor debe hacer su propio análisis y decidir según su situación personal."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+<link rel="stylesheet" href="../assets/css/site.css">
+<link rel="stylesheet" href="../assets/css/ficha.css">
+<style>
+/* ===== Estilo alegre ===== */
+.hero::before{background:radial-gradient(circle,color-mix(in srgb,var(--accent-2) 30%,transparent),transparent 65%)}
+.hero::after{background:radial-gradient(circle,color-mix(in srgb,var(--accent) 24%,transparent),transparent 65%)}
+.strat-hero h1{background:linear-gradient(95deg,var(--accent),var(--accent-2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.section.alt{background:linear-gradient(180deg,var(--bg-2),color-mix(in srgb,var(--bg-2) 50%,var(--bg)))}
+.btn-primary{box-shadow:0 10px 24px color-mix(in srgb,var(--accent) 38%,transparent)}
+.btn-ghost{border-width:2px;border-color:var(--accent);color:var(--accent);font-weight:700}
+.btn-ghost:hover{background:color-mix(in srgb,var(--accent) 10%,transparent)}
+.tech-step .step-n{background:var(--accent);color:var(--accent-ink)}
+.tile{background:var(--c-geda);color:#1a1200}
+.stat{border-top:4px solid var(--accent)}.stat:nth-child(2){border-top-color:var(--accent-2)}.stat:nth-child(3){border-top-color:var(--c-geda)}.stat:nth-child(4){border-top-color:var(--pos)}
+.top-col h4{color:var(--accent)}.top-col:nth-child(2) h4{color:var(--accent-2)}.top-col:nth-child(3) h4{color:var(--c-geda)}.top-col:nth-child(4) h4{color:var(--pos)}
+.pcard{border-top:4px solid var(--c-geda)}
+.m-card .m-ic{background:color-mix(in srgb,var(--accent) 16%,transparent);color:var(--accent)}
+.panel,.m-card,.stat,.tech-step,.top-col,.pcard,.slot-group,.not-do,.hero-panel{box-shadow:0 10px 28px color-mix(in srgb,var(--accent) 9%,transparent)}
+.tl-bar{box-shadow:none}
+.callout .icon{color:var(--accent-2)}
+</style>
+<link rel="icon" href="../assets/img/logo-tai.jpg" type="image/jpeg">
+<link rel="apple-touch-icon" href="../assets/img/logo-tai.jpg">
+<style>
+[data-theme="light"]{--c-geda:#0284c7}
+[data-theme="dark"]{--c-geda:#38bdf8}
+/* ---- Página GEN-Z ---- */
+.kicker{margin:0 0 .6rem;font-size:var(--fs-xs);font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--c-geda)}
+.story{max-width:70ch;margin:2.2rem auto 1.4rem;padding:1.4rem 1.6rem;background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--c-geda);border-radius:var(--r-lg)}
+.story h3{margin:0 0 .6rem;font-size:1.1rem}.story p{margin:0 0 .7rem;color:var(--muted);line-height:1.7}.story p:last-child{margin:0}.story em{color:var(--text)}
+.themes{list-style:none;margin:1.4rem 0 0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.8rem}
+@media(min-width:760px){.themes{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.themes li{display:flex;flex-direction:column;gap:.3rem;background:var(--surface);border:1px solid var(--line);border-top:4px solid var(--c-geda);border-radius:var(--r-lg);padding:1rem 1.1rem}
+.themes li:nth-child(2n){border-top-color:var(--accent)}.themes li:nth-child(3n){border-top-color:var(--accent-2)}
+.themes b{font-size:1rem}.themes span{font-size:var(--fs-sm);color:var(--muted);line-height:1.5}
+.slots-4{grid-template-columns:repeat(4,minmax(0,1fr)) !important;margin-top:1rem}
+.slots-4 .slot-group{text-align:center;padding:.8rem}.slots-4 .slot-tiles{justify-content:center}.slots-4 h4{margin:.5rem 0 0;font-size:1.1rem}
+.tops-1{grid-template-columns:minmax(0,1fr) !important}.tops-1 .top-col ol{grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:.6rem 1.6rem}
+.tl-row h4{display:none}
+
+/* ---- Páginas de cartera permanente, señal y cripto ---- */
+:root{--s1:#1f5bff;--s2:#ff6a1f;--s3:#00a36c;--s4:#f59e00;--s5:#7c3aed;--s6:#ec4899}
+.wbar{display:flex;height:2.6rem;border-radius:14px;overflow:hidden;box-shadow:inset 0 0 0 1px var(--line);margin:1.6rem 0 1rem}
+.wbar span{display:grid;place-items:center;font-size:.78rem;font-weight:800;color:#fff;font-family:var(--font-mono);min-width:0;overflow:hidden}
+.comp-grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.9rem}
+@media(min-width:900px){.comp-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.comp{background:var(--surface);border:1px solid var(--line);border-top:5px solid var(--s);border-radius:var(--r-lg);padding:1.1rem 1.2rem;display:flex;flex-direction:column;gap:.25rem}
+.comp b.w{font-size:1.8rem;font-family:var(--font-mono);color:var(--s)}
+.comp h4{margin:.1rem 0 0;font-size:1rem}.comp .tk{font-size:var(--fs-xs);color:var(--muted);font-family:var(--font-mono)}.comp p{margin:.3rem 0 0;font-size:var(--fs-sm);color:var(--muted);line-height:1.5}
+.div-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.8rem;margin-top:1rem}
+.div-row div{background:var(--surface-2);border-radius:var(--r-lg);padding:.9rem 1rem;font-size:var(--fs-sm);color:var(--muted);line-height:1.5}.div-row b{display:block;color:var(--text);font-size:1.05rem;margin-bottom:.15rem}
+table.cmp-wide{width:100%;border-collapse:collapse;font-size:var(--fs-sm);min-width:640px}
+table.cmp-wide th,table.cmp-wide td{padding:.65rem .5rem;text-align:right;border-bottom:1px solid var(--line);white-space:nowrap}
+table.cmp-wide th:first-child,table.cmp-wide td:first-child{text-align:left;white-space:normal}
+table.cmp-wide thead th{font-size:.72rem;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
+table.cmp-wide tr.tot td,table.cmp-wide tr.tot th{font-weight:800;border-top:2px solid var(--line-2)}
+.dot{display:inline-block;width:.7rem;height:.7rem;border-radius:3px;margin-right:.45rem;vertical-align:baseline;background:var(--s)}
+.vs-row{display:grid;grid-template-columns:minmax(0,1fr);gap:.7rem;margin-top:1rem}
+@media(min-width:760px){.vs-row{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.vs{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:1rem 1.2rem}
+.vs h4{margin:0 0 .5rem;font-size:var(--fs-xs);text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}.vs b{font-size:1.5rem;font-family:var(--font-mono)}.vs p{margin:.3rem 0 0;font-size:var(--fs-sm);color:var(--muted)}
+.rule{display:grid;grid-template-columns:minmax(0,1fr);gap:1rem;margin-top:1.5rem}
+@media(min-width:760px){.rule{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.rule .r{background:var(--surface);border:1px solid var(--line);border-top:5px solid var(--s);border-radius:var(--r-lg);padding:1.3rem 1.4rem}
+.rule .r h3{margin:0 0 .5rem;font-size:1.1rem}.rule .r p{margin:0;color:var(--muted);line-height:1.65}.rule .r b.big{display:block;font-size:1.6rem;font-family:var(--font-mono);color:var(--s);margin-bottom:.3rem}
+.expect{width:100%;border-collapse:collapse;font-size:var(--fs-sm)}
+.expect th,.expect td{padding:.7rem .6rem;text-align:left;border-bottom:1px solid var(--line)}
+.expect thead th{font-size:.72rem;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
+.expect td.mono{font-weight:700}
+</style>
+<!-- Analítica sin cookies (GoatCounter) -->
+<script data-goatcounter="https://tuamigoinversor.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</head>
+
+<body>
+<a class="skip" href="#main">Saltar al contenido</a>
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<!-- SVG sprite (iconos estilo Lucide) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></symbol>
+  <symbol id="i-left" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></symbol>
+  <symbol id="i-right" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+  <symbol id="i-up" viewBox="0 0 24 24"><path d="m18 15-6-6-6 6"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9z"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+  <symbol id="i-scale" viewBox="0 0 24 24"><path d="M12 3v18M5 7h14M5 7l-3 7a4 4 0 0 0 6 0L5 7zM19 7l-3 7a4 4 0 0 0 6 0l-3-7z"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></symbol>
+  <symbol id="i-flask" viewBox="0 0 24 24"><path d="M9 3h6M10 3v6L4 20a1 1 0 0 0 .9 1.5h14.2A1 1 0 0 0 20 20l-6-11V3"/></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></symbol>
+  <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M3 12a9 9 0 0 1 15-6.7L21 8M21 3v5h-5M21 12a9 9 0 0 1-15 6.7L3 16M3 21v-5h5"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></symbol>
+</svg>
+
+<!-- =========================== CABECERA =========================== -->
+<header class="site-header" id="header">
+  <nav class="container nav" aria-label="Navegación principal">
+    <a href="../index.html" class="logo" aria-label="Tu Amigo Inversor, inicio"><img class="logo-mark" src="../assets/img/logo-tai.jpg" width="40" height="40" alt="">Tu Amigo Inversor</a>
+    <ul class="nav-links">
+      <li class="has-sub"><button type="button" class="sub-toggle" aria-expanded="false" aria-haspopup="true">Estrategias <svg class="icon" aria-hidden="true"><use href="#i-down"/></svg></button>
+        <ul class="sub">
+          <li><a href="../index.html#estrategias">Las seis estrategias</a></li>
+          <li><a href="../comparador/index.html">Compáralas frente a frente</a></li>
+          <li><a href="../index.html#test" data-quiz>Test de riesgo (3 min)</a></li>
+          <li><a href="../combinar-estrategias/index.html">Combinar estrategias</a></li>
+        </ul></li>
+      <li class="has-sub"><button type="button" class="sub-toggle" aria-expanded="false" aria-haspopup="true">Cómo funciona <svg class="icon" aria-hidden="true"><use href="#i-down"/></svg></button>
+        <ul class="sub">
+          <li><a href="../empieza-aqui/index.html">Explicado desde cero</a></li>
+          <li><a href="../ejemplo-practico/index.html">Un ejemplo práctico, paso a paso</a></li>
+          <li><a href="../metodologia/index.html">Metodología y cálculos</a></li>
+          <li><a href="../glosario/index.html">Glosario</a></li>
+        </ul></li>
+      <li><a href="../informes/index.html">Informes</a></li>
+      <li><a href="../blog/index.html">Blog</a></li>
+      <li><a href="../sobre-mi/index.html">Sobre mí</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="icon-btn" id="themeToggle" type="button" aria-label="Cambiar a modo claro">
+        <svg class="icon i-sun"><use href="#i-sun"/></svg><svg class="icon i-moon"><use href="#i-moon"/></svg>
+      </button>
+      <a href="../index.html#suscripcion" class="btn btn-primary btn-sm nav-cta magnetic">Quiero el informe</a>
+      <button class="icon-btn burger" id="burger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileMenu"><svg class="icon"><use href="#i-menu"/></svg></button>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="../index.html#estrategias">Las seis estrategias</a></li>
+      <li><a href="../comparador/index.html">Compáralas frente a frente</a></li>
+      <li><a href="../index.html#test" data-quiz>Test de riesgo (3 min)</a></li>
+      <li><a href="../combinar-estrategias/index.html">Combinar estrategias</a></li>
+      <li><a href="../empieza-aqui/index.html">Explicado desde cero</a></li>
+      <li><a href="../ejemplo-practico/index.html">Un ejemplo práctico, paso a paso</a></li>
+      <li><a href="../metodologia/index.html">Metodología y cálculos</a></li>
+      <li><a href="../glosario/index.html">Glosario</a></li>
+      <li><a href="../informes/index.html">Informes</a></li>
+      <li><a href="../blog/index.html">Blog</a></li>
+      <li><a href="../sobre-mi/index.html">Sobre mí</a></li>
+      <li><a href="../index.html#suscripcion" class="btn btn-primary" style="margin-top:.5rem">Quiero el informe gratis</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+<section class="hero strat-hero" aria-labelledby="hero-title" style="--c:var(--c-geda)">
+  <div class="container hero-grid">
+    <div class="reveal">
+      <nav class="crumbs" aria-label="Migas de pan"><a href="../index.html">Inicio</a><span aria-hidden="true">/</span><a href="../index.html#estrategias">Estrategias</a><span aria-hidden="true">/</span><span aria-current="page">ROCA</span></nav>
+      <p class="badge"><span class="live" aria-hidden="true"></span>Cartera permanente · Perfil conservador · Rebalanceo 1–2 veces al año</p>
+      <h1 id="hero-title">ROCA</h1>
+      <p class="kicker">Mi cartera de menor riesgo, con dinero real desde 2017</p>
+      <p class="lead">Una cartera permanente conservadora pensada para quien busca rentabilidad estable con baja volatilidad y sin necesidad de seguimiento constante: seis activos que se comportan de forma distinta, pesos fijos y un rebalanceo una o dos veces al año.</p>
+      <div class="risk risk-lg" style="--c:var(--c-geda)"><span>Riesgo</span><div class="risk-bars" role="img" aria-label="Nivel de riesgo 1 de 5"><i class="on"></i><i></i><i></i><i></i><i></i></div><span class="mono">1/5 · Perfil conservador</span></div>
+      <div class="cta-row"><a href="../index.html#suscripcion" class="btn btn-primary magnetic">Quiero el informe gratis <svg class="icon"><use href="#i-arrow"/></svg></a><a href="#composicion" class="btn btn-ghost">Ver la composición</a></div>
+      <blockquote class="pull">«Te cuento la estrategia real que uso con mi dinero, fruto de la experiencia de varios años en el mercado. Con total transparencia.»</blockquote>
+    </div>
+    <div class="hero-panel reveal" aria-labelledby="hp-label">
+      <div class="hp-head"><div><small id="hp-label">Rentabilidad anualizada desde 2017</small>
+<div class="hp-value mono pos">+7,1%</div></div><small class="mono" style="font-weight:700;color:var(--text)">ROCA</small></div>
+      <p class="hp-sub">Con dinero real desde enero de 2017 (9 años y 9 meses).</p>
+      <div class="hp-kpis"><div class="kpi"><span>Máx. caída</span><b class="mono neg">-9,2%</b></div><div class="kpi"><span>2025</span><b class="mono pos">+5,6%</b></div><div class="kpi"><span>2026 (ene–sep)</span><b class="mono pos">+4,7%</b></div></div>
+      <div class="hp-kpis hp-kpis-2"><div class="kpi"><span>Sharpe</span><b class="mono">1,05</b></div><div class="kpi"><span>Volatilidad</span><b class="mono">6,8%</b></div><div class="kpi"><span>Meses positivos</span><b class="mono">62%</b></div></div>
+      <p class="asof"><span class="asof-dot" aria-hidden="true"></span><span>Datos a <strong>30 sep 2026</strong> · La web se actualiza cada trimestre; las posiciones de cada mes, en el informe</span></p>
+      <div class="chart-box"><canvas id="gedaChart" role="img" aria-label="Evolución acumulada de ROCA (base 100) de ene 2017 a sep 2026, con la zona de caída sombreada"></canvas></div>
+      <p class="chart-note">Evolución acumulada con las rentabilidades mensuales de ROCA (base 100, escala logarítmica), de ene 2017 a sep 2026. Rentabilidades en euros, sin comisiones ni impuestos. Rentabilidades pasadas no garantizan rentabilidades futuras.</p>
+    </div>
+  </div>
+</section>
+<div class="container ficha-cover-wrap"><figure class="ficha-cover reveal"><img src="../assets/img/estrategias/roca-banner.webp" width="1600" height="600" alt="Amanecer sobre un mar de nubes entre montañas" style="object-position:center 38%" decoding="async"></figure></div>
+
+<!-- =========================== EN RESUMEN =========================== -->
+<section class="section alt" id="resumen" aria-labelledby="sum-title" style="--c:#0ea5e9">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="eyebrow">En resumen</span>
+      <h2 id="sum-title">Lo esencial de ROCA en un minuto</h2>
+      <p>Antes de entrar en cómo funciona por dentro: para quién es, qué puedes esperar en los años malos, cuánto trabajo te da y qué hubo antes del dinero real.</p>
+    </div>
+    <div class="summary-grid">
+      <article class="m-card reveal"><h3><svg class="icon"><use href="#i-user"/></svg>Para quién es</h3><ul><li><strong>Sí</strong>, si quieres que tu dinero crezca más que en una cuenta, con pocos sobresaltos, y no quieres estar pendiente cada mes.</li><li><strong>No</strong>, si buscas ganar a la bolsa en los años buenos: ROCA está pensada para caer poco, no para subir mucho.</li><li><strong>Su principal inconveniente:</strong> en años de bolsa muy alcista se queda bastante por detrás: está pensada para caer poco, no para subir mucho.</li></ul></article>
+      <article class="m-card reveal"><h3><svg class="icon"><use href="#i-alert"/></svg>Qué esperar</h3><ul><li>Mejor año: 2019, +18,7%.</li><li>Peor año: 2017, −2,8%. En 9 años completos con dinero real, 2 en negativo (2017 y 2022).</li><li>Peor caída: −9,2%, en 2020 (de enero a marzo). Con 10.000 €, habrías llegado a ver 9.080 €.</li><li>Tardó 8 meses desde el mínimo en recuperar el máximo anterior.</li></ul></article>
+      <article class="m-card reveal"><h3><svg class="icon"><use href="#i-clock"/></svg>Cuánto trabajo te da</h3><ul><li>6 posiciones: fondos indexados o ETF de renta fija, oro y bolsa.</li><li>Se revisa cada semestre; en condiciones normales, basta con rebalancear una o dos veces al año.</li><li>Necesitas un bróker con fondos indexados o ETF.</li></ul></article>
+      <article class="m-card reveal"><h3><svg class="icon"><use href="#i-flask"/></svg>Antes del dinero real</h3><ul><li>Todas las cifras de esta página son con dinero real, desde enero de 2017.</li><li>Antes, probé el reparto con datos de 2016. Ese año de backtest no cuenta en ninguna cifra.</li><li>Como son fondos indexados con pesos fijos, el backtest no depende de elegir ganadores a posteriori: solo sirvió para comprobar que el reparto se comportaba como esperaba.</li></ul></article>
+    </div>
+    <p class="cards-note">Datos a 30 de septiembre de 2026, en euros, sin comisiones ni impuestos. Lo que pasó no garantiza lo que pasará.</p>
+  </div>
+</section>
+
+
+<section class="section" id="filosofia" aria-labelledby="fil-title"><div class="container">
+  <div class="sec-head reveal"><span class="eyebrow">Qué es una cartera permanente</span><h2 id="fil-title">No adivinar el mercado: estar preparado para cualquier escenario</h2>
+    <p>Una cartera permanente conservadora es una estrategia diseñada para mantener la estabilidad en distintos entornos económicos, combinando activos descorrelacionados y de baja volatilidad. La lógica es simple.</p></div>
+  <div class="method">
+    <article class="m-card reveal spot"><div class="m-ic"><svg class="icon"><use href="#i-chart"/></svg></div><h3>Combinar activos distintos</h3><p>Activos que se comportan de forma diferente según el entorno: bonos, oro y renta variable.</p></article>
+    <article class="m-card reveal spot"><div class="m-ic"><svg class="icon"><use href="#i-flask"/></svg></div><h3>Asignarles un peso fijo</h3><p>Cada activo tiene un porcentaje definido de antemano, sin tener que decidir qué va a subir.</p></article>
+    <article class="m-card reveal spot"><div class="m-ic"><svg class="icon"><use href="#i-refresh"/></svg></div><h3>Dejar que se equilibren</h3><p>Cuando unos caen, otros compensan. Un rebalanceo ocasional devuelve la cartera a sus pesos.</p></article>
+  </div>
+  <div class="story reveal"><h3>Cómo llegué a ROCA</h3>
+    <p>Cuando empecé a invertir, tomaba decisiones guiado por la intuición, las emociones y pequeños trucos de análisis técnico que encontraba en redes. El resultado fue el esperable: algunos aciertos muy buenos… y errores que costaban dinero de verdad. Con el tiempo entendí que <em>sin un método claro y consistente, inviertes a merced del mercado y de tus propias emociones</em>.</p>
+    <p>Busqué algo distinto: un sistema sencillo, fácil de mantener, sin estar pendiente del mercado cada día y con un objetivo claro: <em>batir la inflación con una volatilidad contenida</em>. Así llegué a las carteras diversificadas de baja rotación (Cartera Permanente, All Seasons, Bogleheads). ROCA no replica exactamente ninguna: es una versión propia, con otra selección de activos y de porcentajes, adaptada a mi forma de invertir y al contexto fiscal del inversor en España.</p></div>
+</div></section>
+
+<section class="section alt" id="composicion" aria-labelledby="com-title"><div class="container">
+  <div class="sec-head reveal"><span class="eyebrow">Composición</span><h2 id="com-title">Seis activos con peso fijo</h2>
+    <p>Las dos terceras partes de la cartera son defensivas. La renta variable es el motor de crecimiento y el oro, la cobertura frente a la inflación y las crisis.</p></div>
+  <div class="wbar reveal" role="img" aria-label="Reparto de la cartera: 60% renta fija, 15% oro, 25% renta variable"><span style="width:20%;background:var(--s1)" title="RF ligada a inflación 20%">20%</span><span style="width:25%;background:var(--s2)" title="RF a corto plazo 25%">25%</span><span style="width:15%;background:var(--s3)" title="RF global 15%">15%</span><span style="width:15%;background:var(--s4)" title="Oro 15%">15%</span><span style="width:15%;background:var(--s5)" title="RV global 15%">15%</span><span style="width:10%;background:var(--s6)" title="RV USA small cap value 10%">10%</span></div>
+  <ul class="comp-grid reveal"><li class="comp" style="--s:var(--s1)"><b class="w">20%</b><h4>RF ligada a inflación</h4><span class="tk">Vanguard Inflation-Protected Securities Fund</span><p>Bonos ligados a inflación: protegen el poder adquisitivo.</p></li><li class="comp" style="--s:var(--s2)"><b class="w">25%</b><h4>RF a corto plazo</h4><span class="tk">NYLI Short Term Bond Class A</span><p>Bonos a corto plazo, muy baja volatilidad y escasa sensibilidad a los tipos.</p></li><li class="comp" style="--s:var(--s3)"><b class="w">15%</b><h4>RF global</h4><span class="tk">Dodge & Cox Global Bond Fund</span><p>Bonos globales y corporativos: diversificación y mayor rendimiento.</p></li><li class="comp" style="--s:var(--s4)"><b class="w">15%</b><h4>Oro</h4><span class="tk">iShares Gold Trust (IAU)</span><p>Oro físico como cobertura frente a inflación y crisis.</p></li><li class="comp" style="--s:var(--s5)"><b class="w">15%</b><h4>RV global</h4><span class="tk">Vanguard Global Equity Fund – Investor Shares</span><p>Renta variable global diversificada, mercados desarrollados y emergentes.</p></li><li class="comp" style="--s:var(--s6)"><b class="w">10%</b><h4>RV EE. UU. small cap value</h4><span class="tk">Vanguard Small Cap Value Index Admiral (VSIAX)</span><p>Pequeña capitalización con sesgo valor: crecimiento y diversificación parcial.</p></li></ul>
+  <div class="div-row reveal"><div><b>Renta fija · 60%</b>Estabilidad y protección del capital.</div><div><b>Oro · 15%</b>Cobertura frente a inflación y crisis.</div><div><b>Renta variable · 25%</b>Motor de crecimiento.</div></div>
+  <h3 class="sub-h reveal">Cada componente por separado (ene 2017 – sep 2026)</h3>
+  <div class="table-wrap reveal"><table class="cmp-wide"><caption class="sr-only">Métricas de cada componente de ROCA</caption><thead><tr><th scope="col">Componente</th><th scope="col">Peso</th><th scope="col">Rent. anualizada</th><th scope="col">Volatilidad</th><th scope="col">Sharpe</th><th scope="col">Máx. caída</th><th scope="col">2025</th><th scope="col">2026 (ene–sep)</th></tr></thead><tbody><tr><th scope="row"><span class="dot" style="--s:var(--s1)"></span>RF ligada a inflación</th><td class="mono">20%</td><td class="mono">+1,5%</td><td class="mono">7,0%</td><td class="mono">0,25</td><td class="mono neg">-14,3%</td><td class="mono neg">-5,4%</td><td class="mono pos">+1,3%</td></tr><tr><th scope="row"><span class="dot" style="--s:var(--s2)"></span>RF a corto plazo</th><td class="mono">25%</td><td class="mono">+2,8%</td><td class="mono">7,2%</td><td class="mono">0,42</td><td class="mono neg">-13,6%</td><td class="mono neg">-7,0%</td><td class="mono pos">+3,5%</td></tr><tr><th scope="row"><span class="dot" style="--s:var(--s3)"></span>RF global</th><td class="mono">15%</td><td class="mono">+3,8%</td><td class="mono">6,6%</td><td class="mono">0,59</td><td class="mono neg">-8,8%</td><td class="mono neg">-1,2%</td><td class="mono pos">+0,7%</td></tr><tr><th scope="row"><span class="dot" style="--s:var(--s4)"></span>Oro</th><td class="mono">15%</td><td class="mono">+13,0%</td><td class="mono">13,3%</td><td class="mono">0,98</td><td class="mono neg">-21,3%</td><td class="mono pos">+45,2%</td><td class="mono neg">-0,3%</td></tr><tr><th scope="row"><span class="dot" style="--s:var(--s5)"></span>RV global</th><td class="mono">15%</td><td class="mono">+16,6%</td><td class="mono">14,8%</td><td class="mono">1,11</td><td class="mono neg">-20,2%</td><td class="mono pos">+21,1%</td><td class="mono pos">+11,8%</td></tr><tr><th scope="row"><span class="dot" style="--s:var(--s6)"></span>RV EE. UU. small cap value</th><td class="mono">10%</td><td class="mono">+8,2%</td><td class="mono">19,2%</td><td class="mono">0,51</td><td class="mono neg">-33,9%</td><td class="mono neg">-3,4%</td><td class="mono pos">+14,1%</td></tr><tr class="tot"><th scope="row">ROCA (cartera)</th><td class="mono">100%</td><td class="mono">+7,1%</td><td class="mono">6,8%</td><td class="mono">1,05</td><td class="mono neg">-9,2%</td><td class="mono pos">+5,6%</td><td class="mono pos">+4,7%</td></tr></tbody></table></div>
+  <p class="fineprint reveal">Rentabilidades en euros: los fondos cotizan en dólares, así que las cifras incluyen el efecto del tipo de cambio EUR/USD, también en la renta fija.</p>
+  <div class="callout reveal" role="note"><svg class="icon"><use href="#i-alert"/></svg><p><strong>Fondos de inversión.</strong> Utilizo fondos de inversión por su ventaja fiscal en España (permiten traspasos sin tributar), lo que hace el rebalanceo más eficiente. Los ETF también serían válidos, pero menos ágiles en este aspecto. No todos los brókers ofrecen estos fondos: si alguno no está disponible en tu plataforma, puedes utilizar alternativas equivalentes.</p></div>
+</div></section>
+
+<section class="section" id="entorno" aria-labelledby="ent-title"><div class="container">
+  <div class="sec-head reveal"><span class="eyebrow">Riesgo y comportamiento</span><h2 id="ent-title">Lo que se espera de ROCA, frente a lo que ha pasado</h2></div>
+  <div class="table-wrap reveal"><table class="expect"><thead><tr><th scope="col">Indicador</th><th scope="col">Lo que esperaba</th><th scope="col">Lo medido (2017–2026)</th></tr></thead><tbody>
+    <tr><th scope="row">Volatilidad</th><td class="mono">~6%</td><td class="mono">6,8%</td></tr>
+    <tr><th scope="row">Caída máxima</th><td class="mono">~-10%</td><td class="mono">-9,2%</td></tr>
+    <tr><th scope="row">Recuperación habitual</th><td class="mono">1–2 años</td><td>Las dos mayores caídas (-9,2% en 2020 y -8,9% en 2017–18) tardaron 10 y 24 meses en recuperar el máximo previo</td></tr></tbody></table></div>
+  <div class="fit reveal">
+    <div class="fit-col yes"><h3><svg class="icon"><use href="#i-check"/></svg>Fortalezas</h3><ul><li>Equilibrio entre rentabilidad y riesgo: un Sharpe de 1,05 con una volatilidad del 6,8%.</li><li>Muy resistente en entornos complicados: cuando la bolsa cae, el oro y la renta fija de corto plazo suelen amortiguar.</li><li>Pensada para invertir con tranquilidad y con muy poca gestión.</li></ul></div>
+    <div class="fit-col no"><h3><svg class="icon"><use href="#i-x"/></svg>Debilidades</h3><ul><li>Se queda atrás en mercados muy alcistas: no está diseñada para competir con la bolsa.</li><li>Dependencia parcial de la renta fija, especialmente estadounidense.</li><li>No siempre se compensan: en septiembre de 2026 cayeron a la vez la renta fija global (-1,65%), el oro (-4,66%) y las small caps (-3,82%), y la cartera cerró el mes en -1,06%.</li><li>Dos años negativos en 9 completos con dinero real: 2017 (-2,8%) y 2022 (-1,9%).</li></ul></div></div>
+    <div class="risk-ex reveal"><h3>Qué significa la caída máxima en euros</h3>
+      <p>Ejemplo ilustrativo con 5.000 €: la caída máxima de ROCA con dinero real ha sido del <strong>−9,2%</strong>.</p>
+      <div class="risk-ex-grid">
+        <div><small>Inversión inicial</small><b class="mono">5.000 €</b></div>
+        <div><small>Tras una caída del −9,2%</small><b class="mono neg">4.540 €</b></div>
+        <div><small>Subida necesaria para volver a 5.000 €</small><b class="mono">+10,1%</b></div>
+      </div>
+      <p class="risk-ex-note">Es una ilustración, no una previsión: la caída máxima histórica no es un límite y las caídas futuras pueden ser mayores. Sin comisiones ni impuestos.</p>
+    </div>
+</div></section>
+
+<section class="section alt" id="replicar" aria-labelledby="rep-title"><div class="container narrow">
+  <div class="sec-head reveal"><span class="eyebrow">Cómo replicarla</span><h2 id="rep-title">Una cartera de baja rotación</h2>
+    <p>ROCA está diseñada para que cualquier inversor pueda aplicarla de forma sencilla, sin conocimientos avanzados ni seguimiento diario.</p></div>
+  <ol class="steps">
+    <li class="step reveal"><span class="step-n" aria-hidden="true">1</span><div><h3>Defines la asignación inicial</h3><p>Los seis porcentajes de arriba, con los fondos indicados o alternativas equivalentes.</p></div></li>
+    <li class="step reveal"><span class="step-n" aria-hidden="true">2</span><div><h3>Mantienes la cartera en el tiempo</h3><p>Sin necesidad de estar pendiente del mercado.</p></div></li>
+    <li class="step reveal"><span class="step-n" aria-hidden="true">3</span><div><h3>Rebalanceas una o dos veces al año</h3><p>En enero y julio compruebas que ningún activo se aleja más de un 15% de su peso. Por ejemplo, las small cap (10%) deben quedar entre el 8,5% y el 11,5%.</p></div></li>
+    <li class="step reveal"><span class="step-n" aria-hidden="true">4</span><div><h3>O recibes los avisos</h3><p>Si te suscribes, recibirás un aviso cuando sea necesario rebalancear o ajustar algún componente.</p></div></li>
+  </ol>
+  <div class="callout reveal" role="note"><svg class="icon"><use href="#i-alert"/></svg><p><strong>Una precisión sobre las cifras.</strong> Las rentabilidades publicadas se calculan partiendo cada mes de los pesos objetivo (20%, 25%, 15%, 15%, 15% y 10%). En la práctica el rebalanceo se hace una o dos veces al año, de modo que puede haber pequeñas diferencias.</p></div>
+</div></section>
+<section class="section alt" id="resultados" aria-labelledby="res-title"><div class="container">
+  <div class="sec-head reveal"><span class="eyebrow">Resultados históricos</span><h2 id="res-title">Mes a mes desde 2017, con dinero real</h2>
+    <p class="asof asof-center"><span class="asof-dot" aria-hidden="true"></span><span>Datos a <strong>30 sep 2026</strong> · La web se actualiza cada trimestre; las posiciones de cada mes, en el informe · Rentabilidades en euros, sin comisiones ni impuestos</span></p></div>
+  <div class="table-wrap heat-wrap reveal"><table class="heat" id="heat"><caption class="sr-only">Rentabilidades mensuales de ROCA por año</caption></table></div>
+  <div id="realNote"></div>
+  <div class="metrics-grid reveal">
+    <div class="panel"><h3>Métricas (ene 2017 – sep 2026)</h3>
+      <table class="data cmp-mini"><thead><tr><th scope="col">Métrica</th><th scope="col" style="color:var(--c-geda)">ROCA</th></tr></thead><tbody>
+        <tr><th scope="row">Rentabilidad anualizada</th><td class="mono pos">+7,1%</td></tr>
+        <tr><th scope="row">Volatilidad</th><td class="mono">6,8%</td></tr>
+        <tr><th scope="row">Ratio de Sharpe</th><td class="mono">1,05</td></tr>
+        <tr><th scope="row">Máx. caída</th><td class="mono neg">-9,2%</td></tr></tbody></table>
+      <p class="fineprint">ROCA no busca maximizar la rentabilidad, sino invertir de forma constante y con una volatilidad contenida. El ratio de Sharpe mide la rentabilidad obtenida por cada unidad de volatilidad asumida.</p></div>
+    <div class="panel"><h3>Cómo se ha comportado</h3><ul class="facts">
+      <li><b class="mono">72 de 117</b><span>meses con rentabilidad positiva (62%)</span></li>
+      <li><b class="mono pos">+7,5%</b><span>mejor mes (abr 2020)</span></li>
+      <li><b class="mono neg">-7,7%</b><span>peor mes (mar 2020)</span></li>
+      <li><b class="mono">0</b><span>meses con caídas superiores al 10% en 117</span></li></ul></div></div>
+  <h3 class="sub-h reveal">Qué aportó cada componente cada año</h3><p class="prose reveal" style="margin:0 0 1rem">Rentabilidad anual de cada activo por separado (en euros). La cartera no es la suma simple de estas columnas: cada una pesa según su porcentaje.</p><div class="table-wrap heat-wrap reveal"><table class="heat comp-year"><thead><tr><th scope="col" style="text-align:left;padding-left:.8rem">Año</th><th scope="col">RF ligada a inflación</th><th scope="col">RF a corto plazo</th><th scope="col">RF global</th><th scope="col">Oro</th><th scope="col">RV global</th><th scope="col">RV EE. UU. small cap value</th><th scope="col">ROCA</th></tr></thead><tbody><tr><th scope="row">2017</th><td class="mono" style="background:rgba(var(--neg-rgb),0.35)">-8,9</td><td class="mono" style="background:rgba(var(--neg-rgb),0.34)">-8,6</td><td class="mono" style="background:rgba(var(--neg-rgb),0.21)">-4,0</td><td class="mono" style="background:rgba(var(--neg-rgb),0.10)">-0,0</td><td class="mono" style="background:rgba(var(--pos-rgb),0.25)">13,2</td><td class="mono" style="background:rgba(var(--neg-rgb),0.13)">-1,0</td><td class="mono yr" style="background:rgba(var(--neg-rgb),0.18)">-2,8%</td></tr><tr><th scope="row">2018</th><td class="mono" style="background:rgba(var(--pos-rgb),0.12)">2,8</td><td class="mono" style="background:rgba(var(--pos-rgb),0.13)">3,5</td><td class="mono" style="background:rgba(var(--pos-rgb),0.13)">3,9</td><td class="mono" style="background:rgba(var(--pos-rgb),0.11)">2,5</td><td class="mono" style="background:rgba(var(--pos-rgb),0.10)">1,8</td><td class="mono" style="background:rgba(var(--neg-rgb),0.33)">-8,4</td><td class="mono yr" style="background:rgba(var(--pos-rgb),0.11)">+2,0%</td></tr><tr><th scope="row">2019</th><td class="mono" style="background:rgba(var(--pos-rgb),0.21)">10,3</td><td class="mono" style="background:rgba(var(--pos-rgb),0.25)">12,8</td><td class="mono" style="background:rgba(var(--pos-rgb),0.27)">14,6</td><td class="mono" style="background:rgba(var(--pos-rgb),0.35)">20,5</td><td class="mono" style="background:rgba(var(--pos-rgb),0.56)">36,8</td><td class="mono" style="background:rgba(var(--pos-rgb),0.41)">25,4</td><td class="mono yr" style="background:rgba(var(--pos-rgb),0.32)">+18,7%</td></tr><tr><th scope="row">2020</th><td class="mono" style="background:rgba(var(--pos-rgb),0.09)">1,0</td><td class="mono" style="background:rgba(var(--pos-rgb),0.12)">3,5</td><td class="mono" style="background:rgba(var(--pos-rgb),0.11)">2,4</td><td class="mono" style="background:rgba(var(--pos-rgb),0.26)">13,9</td><td class="mono" style="background:rgba(var(--pos-rgb),0.26)">14,0</td><td class="mono" style="background:rgba(var(--neg-rgb),0.20)">-3,6</td><td class="mono yr" style="background:rgba(var(--pos-rgb),0.16)">+6,0%</td></tr><tr><th scope="row">2021</th><td class="mono" style="background:rgba(var(--pos-rgb),0.27)">14,7</td><td class="mono" style="background:rgba(var(--pos-rgb),0.19)">8,2</td><td class="mono" style="background:rgba(var(--pos-rgb),0.20)">9,2</td><td class="mono" style="background:rgba(var(--pos-rgb),0.14)">4,3</td><td class="mono" style="background:rgba(var(--pos-rgb),0.56)">36,7</td><td class="mono" style="background:rgba(var(--pos-rgb),0.59)">39,2</td><td class="mono yr" style="background:rgba(var(--pos-rgb),0.29)">+16,2%</td></tr><tr><th scope="row">2022</th><td class="mono" style="background:rgba(var(--neg-rgb),0.28)">-6,6</td><td class="mono" style="background:rgba(var(--pos-rgb),0.10)">1,4</td><td class="mono" style="background:rgba(var(--neg-rgb),0.17)">-2,5</td><td class="mono" style="background:rgba(var(--pos-rgb),0.15)">5,6</td><td class="mono" style="background:rgba(var(--neg-rgb),0.35)">-9,2</td><td class="mono" style="background:rgba(var(--neg-rgb),0.20)">-3,7</td><td class="mono yr" style="background:rgba(var(--neg-rgb),0.15)">-1,9%</td></tr><tr><th scope="row">2023</th><td class="mono" style="background:rgba(var(--neg-rgb),0.10)">-0,1</td><td class="mono" style="background:rgba(var(--pos-rgb),0.09)">0,6</td><td class="mono" style="background:rgba(var(--pos-rgb),0.19)">8,2</td><td class="mono" style="background:rgba(var(--pos-rgb),0.19)">8,7</td><td class="mono" style="background:rgba(var(--pos-rgb),0.33)">19,0</td><td class="mono" style="background:rgba(var(--pos-rgb),0.23)">11,7</td><td class="mono yr" style="background:rgba(var(--pos-rgb),0.17)">+6,9%</td></tr><tr><th scope="row">2024</th><td class="mono" style="background:rgba(var(--pos-rgb),0.19)">8,2</td><td class="mono" style="background:rgba(var(--pos-rgb),0.23)">11,4</td><td class="mono" style="background:rgba(var(--pos-rgb),0.17)">6,9</td><td class="mono" style="background:rgba(var(--pos-rgb),0.53)">34,9</td><td class="mono" style="background:rgba(var(--pos-rgb),0.40)">24,3</td><td class="mono" style="background:rgba(var(--pos-rgb),0.33)">19,5</td><td class="mono yr" style="background:rgba(var(--pos-rgb),0.29)">+16,3%</td></tr><tr><th scope="row">2025</th><td class="mono" style="background:rgba(var(--neg-rgb),0.25)">-5,4</td><td class="mono" style="background:rgba(var(--neg-rgb),0.29)">-7,0</td><td class="mono" style="background:rgba(var(--neg-rgb),0.13)">-1,2</td><td class="mono" style="background:rgba(var(--pos-rgb),0.60)">45,2</td><td class="mono" style="background:rgba(var(--pos-rgb),0.35)">21,1</td><td class="mono" style="background:rgba(var(--neg-rgb),0.19)">-3,4</td><td class="mono yr" style="background:rgba(var(--pos-rgb),0.15)">+5,6%</td></tr><tr><th scope="row">2026*</th><td class="mono" style="background:rgba(var(--pos-rgb),0.10)">1,3</td><td class="mono" style="background:rgba(var(--pos-rgb),0.13)">3,5</td><td class="mono" style="background:rgba(var(--pos-rgb),0.09)">0,7</td><td class="mono" style="background:rgba(var(--neg-rgb),0.11)">-0,3</td><td class="mono" style="background:rgba(var(--pos-rgb),0.23)">11,8</td><td class="mono" style="background:rgba(var(--pos-rgb),0.26)">14,1</td><td class="mono yr" style="background:rgba(var(--pos-rgb),0.14)">+4,7%</td></tr></tbody></table></div><p class="fineprint">*2026 incluye solo enero–septiembre.</p>
+  <h3 class="sub-h reveal">Anatomía de las caídas</h3>
+  <p class="prose reveal" style="margin:0 0 1rem">Las mayores caídas desde un máximo previo, medidas con cierres mensuales. Las caídas pasadas no limitan las futuras: pueden ser mayores.</p>
+  <div class="table-wrap reveal"><table class="data dd-table"><thead><tr><th scope="col">Caída</th><th scope="col">Máximo previo</th><th scope="col">Mínimo</th><th scope="col">Duración de la caída</th><th scope="col">Recuperación del máximo</th></tr></thead><tbody><tr><td class='mono neg'>-9,2%</td><td>ene 2020</td><td>mar 2020</td><td>2 meses</td><td>nov 2020 (10 meses)</td></tr><tr><td class='mono neg'>-8,9%</td><td>feb 2017</td><td>mar 2018</td><td>13 meses</td><td>feb 2019 (24 meses)</td></tr><tr><td class='mono neg'>-7,6%</td><td>feb 2025</td><td>abr 2025</td><td>2 meses</td><td>oct 2025 (8 meses)</td></tr><tr><td class='mono neg'>-4,8%</td><td>jul 2022</td><td>dic 2022</td><td>5 meses</td><td>dic 2023 (17 meses)</td></tr><tr><td class='mono neg'>-3,6%</td><td>abr 2022</td><td>jun 2022</td><td>2 meses</td><td>jul 2022 (3 meses)</td></tr></tbody></table></div>
+  <p class="fineprint reveal">A 30 sep 2026, ROCA se encuentra un 1,1% por debajo del máximo de agosto de 2026.</p>
+</div></section>
+
+<section class="section" id="comportamiento" aria-labelledby="comp-title"><div class="container narrow">
+  <div class="sec-head reveal"><span class="eyebrow">Comentario</span><h2 id="comp-title">Comportamiento en 2026 (hasta septiembre)</h2></div>
+  <div class="prose reveal"><p>ROCA acumula un <strong>+4,7%</strong> en lo que va de año, con todos los componentes en positivo salvo el oro.</p>
+    <ul><li><strong>Renta variable:</strong> la mejor parte del año, con la renta variable global en +11,8% y la americana de pequeña capitalización en +14,1%.</li>
+    <li><strong>Renta fija:</strong> sube de forma moderada: +3,5% la de corto plazo, +1,3% la ligada a inflación y +0,7% la global.</li>
+    <li><strong>Oro:</strong> empezó el año con un +10,3% en enero y un +10,1% en febrero, pero lo ha devuelto casi todo (-0,3% en el año) tras caídas del 8,4% en marzo, del 9,9% en junio y del 4,7% en septiembre.</li></ul></div>
+  <details class="more reveal"><summary>Comportamiento en 2025</summary><div class="prose"><p>2025 terminó con un <strong>+5,6%</strong>. Fue un año muy pobre para la renta fija en euros (-1,2% la global, -7,0% la de corto plazo y -5,4% la ligada a inflación), que es la parte de mayor peso de la cartera. Lo compensaron el oro (+45,2%) y la renta variable global (+21,1%). Se hicieron ajustes por rebalanceo a lo largo del año, avisados a los suscriptores.</p></div></details>
+</div></section>
+<section class="section" id="faq" aria-labelledby="faq-title"><div class="container narrow">
+  <div class="sec-head reveal"><span class="eyebrow">Preguntas frecuentes</span><h2 id="faq-title">Sobre ROCA</h2></div>
+  <div class="faq" id="faqList"></div>
+  <p class="fineprint centered reveal" style="margin-top:1.5rem">Cómo se calculan las cifras: rentabilidades en euros (los fondos en dólares se convierten con el tipo de cambio del día), precios de Yahoo Finance, sin comisiones ni impuestos. Las rentabilidades parten cada mes de los pesos objetivo; en la práctica el rebalanceo se hace una o dos veces al año. Más detalle en la <a href="../metodologia/index.html" style="text-decoration:underline">metodología</a>.</p></div></section>
+<figure class="name-note container narrow reveal" style="margin:0 auto 2.5rem"><blockquote>«Cada estrategia tiene un nombre con significado. ROCA hace referencia a la resistencia de la estrategia ante cualquier situación adversa, capaz de ganar dinero de forma consistente en cualquier escenario.»</blockquote></figure>
+<section class="section alt tight" aria-labelledby="otras-title"><div class="container"><h2 id="otras-title" class="small-h reveal">Otras estrategias</h2><ul class="others reveal"><li><a href="../cartera-inversion-crecimiento-impulso/index.html"><b>IMPULSO</b><span>Cartera permanente de crecimiento</span></a></li><li><a href="../plan-pensiones-moderado-horizonte/index.html"><b>HORIZONTE</b><span>Plan de pensiones moderado</span></a></li><li><a href="../inversion-tactica-geda/index.html"><b>GEDA</b><span>Inversión táctica con momentum</span></a></li><li><a href="../inversion-tematica-gen-z/index.html"><b>GEN-Z</b><span>Inversión temática</span></a></li><li><a href="../inversion-criptomonedas-crypto/index.html"><b>CRYPTO</b><span>Criptomonedas</span></a></li></ul></div></section>
+<section class="section" id="suscripcion" aria-labelledby="sub-title"><div class="container"><div class="cta reveal cta-simple"><span class="offer">EMPIEZA GRATIS</span><h2 id="sub-title">Compruébalo en directo, sin compromiso</h2>
+  <p style="font-size:var(--fs-lg)">Cada día 1 te cuento qué tengo en esta estrategia y qué cambio. Si decides seguirla, lo aplicas desde tu propio bróker; si no, no haces nada.</p>
+  <div class="cta-row" style="justify-content:center"><a href="../index.html#suscripcion" class="btn btn-primary magnetic">Quiero el informe gratis <svg class="icon"><use href="#i-arrow"/></svg></a><a href="mailto:info@tuamigoinversor.com" class="btn btn-ghost">Escríbeme: info@tuamigoinversor.com</a></div></div></div></section>
+</main>
+
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <a href="../index.html" class="logo" style="margin-bottom:1rem"><img class="logo-mark" src="../assets/img/logo-tai.jpg" width="40" height="40" alt="">Tu Amigo Inversor</a>
+        <p>Te cuento cada mes qué hago con mi dinero: estrategias con reglas claras, sin corazonadas. Lo que hagas con tu dinero lo decides tú.</p>
+        <p style="margin-top:.8rem"><a href="mailto:info@tuamigoinversor.com">info@tuamigoinversor.com</a></p>
+      </div>
+      <nav aria-label="Carteras permanentes"><h2>Cartera permanente</h2><ul><li><a href="../cartera-permanente-conservadora-roca/index.html">ROCA</a></li><li><a href="../cartera-inversion-crecimiento-impulso/index.html">IMPULSO</a></li></ul></nav>
+      <nav aria-label="Asignación táctica"><h2>Asignación táctica</h2><ul><li><a href="../inversion-tactica-geda/index.html">GEDA</a></li><li><a href="../inversion-tematica-gen-z/index.html">GEN-Z</a></li><li><a href="../inversion-criptomonedas-crypto/index.html">CRYPTO</a></li><li><a href="../plan-pensiones-moderado-horizonte/index.html">HORIZONTE <small class="pp">plan de pensiones</small></a></li></ul></nav>
+      <nav aria-label="Herramientas y proyecto"><h2>Empieza por aquí</h2><ul><li><a href="../empieza-aqui/index.html">Explicado desde cero</a></li><li><a href="../ejemplo-practico/index.html">Ejemplo práctico</a></li><li><a href="../comparador/index.html">Comparador</a></li><li><a href="../index.html#test" data-quiz>Test de riesgo</a></li><li><a href="../combinar-estrategias/index.html">Combinar estrategias</a></li><li><a href="../informes/index.html">Informes</a></li><li><a href="../metodologia/index.html">Metodología</a></li><li><a href="../glosario/index.html">Glosario</a></li><li><a href="../blog/index.html">Blog</a></li><li><a href="../sobre-mi/index.html">Sobre mí</a></li></ul></nav>
+      <nav aria-label="Legal"><h2>Legal</h2><ul><li><a href="../aviso-legal/index.html">Aviso legal</a></li><li><a href="../privacidad/index.html">Política de privacidad</a></li><li><a href="../recomendaciones/index.html">Cómo elaboro los informes</a></li></ul></nav>
+    </div>
+    <div class="legal">
+      <p><strong>Aviso:</strong> la información publicada en esta web tiene carácter meramente informativo y no constituye asesoramiento financiero ni una recomendación personalizada de inversión. Las inversiones conllevan riesgo y pueden implicar la pérdida total o parcial del capital. Las rentabilidades pasadas no garantizan rentabilidades futuras. Cada inversor debe realizar su propio análisis y tomar decisiones en función de su situación personal.</p>
+      <p style="margin-top:.8rem">© 2026 Tu Amigo Inversor.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Test de riesgo (ventana emergente) -->
+<div class="modal" id="quizModal" aria-hidden="true">
+  <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="quizTitle">
+    <button class="icon-btn modal-close" type="button" aria-label="Cerrar test"><svg class="icon"><use href="#i-x"/></svg></button>
+    <div class="modal-content">
+      <span class="eyebrow">Test de riesgo</span>
+      <h2 id="quizTitle" style="font-size:var(--fs-xl);margin:.3rem 0 .4rem">¿Cuánto riesgo toleras?</h2>
+      <p style="color:var(--muted);margin-bottom:1.4rem">Diez preguntas, unos 3 minutos. Te explico tu tolerancia al riesgo y qué significa en caídas reales.</p>
+      <div class="quiz" id="quiz" aria-live="polite"></div>
+    </div>
+  </div>
+</div>
+
+<button class="icon-btn to-top" id="toTop" type="button" aria-label="Volver arriba"><svg class="icon"><use href="#i-up"/></svg></button>
+<div class="sticky-cta" id="stickyCta"><small><strong>Gratis</strong><br><span data-countdown-short>El informe del día 1 en tu correo</span></small><a href="../index.html#suscripcion" class="btn btn-primary btn-sm">Quiero el informe</a></div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+'use strict';
+const $=(s,c=document)=>c.querySelector(s),$$=(s,c=document)=>[...c.querySelectorAll(s)];
+const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const css=v=>getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+const alpha=(hex,a)=>{const n=parseInt(hex.slice(1),16);return `rgba(${n>>16},${(n>>8)&255},${n&255},${a})`};
+const hasChart=typeof window.Chart!=='undefined';
+const fmt=(v,d=1)=>v.toLocaleString('es-ES',{minimumFractionDigits:d,maximumFractionDigits:d});
+const pc=(v,d=1)=>(v>0?'+':'')+fmt(v,d)+'%';
+
+/* ---- Datos: rentabilidades mensuales de GEDA (%) · fuente: resumen_estrategias.xlsx, datos a 30-sep-2026 ---- */
+const GEDA={"2017":[0.57,2.54,-0.67,-0.59,-2.26,-2.42,-1.41,-0.19,1.0,1.62,-1.13,0.21],"2018":[-2.55,-0.6,-0.22,1.16,4.35,0.29,-0.75,0.5,-0.29,-0.09,0.44,-0.08],"2019":[3.27,1.78,2.17,1.42,-0.18,1.52,2.35,2.18,0.9,-0.78,1.5,1.15],"2020":[2.43,-1.62,-7.68,7.46,0.82,0.56,-1.46,1.22,-0.15,0.48,1.24,3.26],"2021":[1.2,-0.27,4.13,-1.3,1.34,1.64,0.93,1.27,0.0,0.85,2.29,3.12],"2022":[-0.98,-0.1,-0.13,2.63,-2.73,-0.85,5.42,-0.46,-3.37,0.65,0.94,-2.62],"2023":[2.92,-0.31,-0.65,-0.85,1.8,0.39,0.37,-0.57,0.6,-0.87,1.23,2.74],"2024":[1.64,0.93,2.93,-0.58,1.01,1.34,1.93,-1.02,1.22,2.08,4.19,-0.38],"2025":[2.78,0.64,-3.68,-4.06,1.51,-0.98,2.77,0.22,2.22,2.38,0.78,1.22],"2026":[1.06,3.46,-1.06,0.42,0.76,0.62,-0.86,1.38,-1.06]};
+/* Primer año con dinero real. Poner null para ocultar la distinción simulado/real. */
+/* Totales anuales exactos (estrategias_limpias.xlsx): evitan el redondeo de sumar meses con 2 decimales */
+const YX={"2017": -2.83, "2018": 2.04, "2019": 18.67, "2020": 6.01, "2021": 16.18, "2022": -1.9, "2023": 6.9, "2024": 16.27, "2025": 5.649, "2026": 4.72};
+const REAL_FROM=2017;
+const REALNOTE="<p class=\"fineprint centered\" style=\"margin-top:.8rem\">*2026 incluye solo enero–septiembre. Todos los años son con dinero real.</p>";
+const POS=null;
+const MES=['ene','feb','mar','abr','may','jun','jul','ago','sep','oct','nov','dic'];
+
+/* ---- Tema: el cambio de modo lo gestiona tai.js; aquí solo se repintan los gráficos ---- */
+$('#themeToggle').addEventListener('click',()=>themeCharts());
+
+/* ---- Gráfico: evolución acumulada real, escala logarítmica ---- */
+const charts={};
+function defaults(){if(!hasChart)return;Chart.defaults.font.family="Inter, system-ui, sans-serif";Chart.defaults.color=css('--muted');Chart.defaults.borderColor=css('--line');Chart.defaults.animation.duration=reduced?0:900}
+const tip=()=>({backgroundColor:css('--surface'),titleColor:css('--text'),bodyColor:css('--text'),borderColor:css('--line-2'),borderWidth:1,padding:10,cornerRadius:10,boxPadding:4});
+function series(){
+  const labels=['dic '+(+Object.keys(GEDA)[0]-1)],values=[100],rets=[null];let v=100;
+  Object.keys(GEDA).forEach(y=>GEDA[y].forEach((r,i)=>{v*=1+r/100;labels.push(MES[i]+' '+y);values.push(+v.toFixed(2));rets.push(r)}));
+  let p=-Infinity;const peaks=values.map(x=>p=Math.max(p,x));return{labels,values,peaks,rets};
+}
+let COLOR=css('--c-geda');const negFill=al=>`rgba(${css('--neg-rgb')},${al})`;
+if(hasChart){
+  defaults();const d=series();
+  charts.g=new Chart($('#gedaChart'),{type:'line',
+    data:{labels:d.labels,datasets:[
+      {label:'Máximo previo',data:d.peaks,borderWidth:0,pointRadius:0,fill:false,borderColor:'transparent'},
+      {label:'Zona de caída',data:d.values,borderWidth:0,pointRadius:0,borderColor:'transparent',backgroundColor:negFill(.45),fill:{target:0,above:'rgba(0,0,0,0)',below:negFill(.28)}},
+      {label:'Evolución acumulada (base 100)',data:d.values,borderColor:COLOR,borderWidth:2.25,tension:0,pointHoverRadius:5,
+        pointRadius:c=>c.dataIndex===c.dataset.data.length-1?4:0,pointBackgroundColor:COLOR,fill:'start',
+        backgroundColor:c=>{const a=c.chart.chartArea;if(!a)return alpha(COLOR,.15);const g=c.chart.ctx.createLinearGradient(0,a.top,0,a.bottom);g.addColorStop(0,alpha(COLOR,.35));g.addColorStop(1,alpha(COLOR,0));return g}}]},
+    options:{responsive:true,maintainAspectRatio:false,layout:{padding:{right:8}},interaction:{mode:'index',intersect:false},
+      scales:{x:{display:true,grid:{display:false},ticks:{autoSkip:false,maxRotation:0,font:{size:11},callback:function(v){const l=this.getLabelForValue(v);if(!l.startsWith('ene'))return '';const yr=+l.slice(-4);return yr%2===0?String(yr):''}}},
+        y:{type:'logarithmic',grid:{color:alpha('#8899bb',.12)},afterBuildTicks:ax=>{const n=[10,20,50,100,200,500,1000,2000,5000,10000];ax.ticks=ax.ticks.filter(t=>n.includes(Math.round(t.value)))},ticks:{callback:v=>fmt(v,0)}}},
+      plugins:{legend:{display:true,position:'bottom',labels:{boxWidth:10,boxHeight:10,usePointStyle:true,filter:i=>i.datasetIndex!==0}},
+        tooltip:{...tip(),filter:i=>i.datasetIndex===2,callbacks:{title:c=>c[0].label,label:c=>' Valor: '+fmt(c.parsed.y),
+          afterLabel:c=>{const i=c.dataIndex,r=d.rets[i],pk=d.peaks[i],o=[];if(r!==null)o.push(' Mes: '+pc(r,2));const cur=c.parsed.y/pk-1;if(cur<-0.0005)o.push(' Desde máximo: '+fmt(cur*100)+'%');return o}}}}}});
+}
+function themeCharts(){renderHeat();if(!hasChart)return;COLOR=css('--c-geda');defaults();
+  if(charts.g){const ds=charts.g.data.datasets;ds[2].borderColor=COLOR;ds[2].pointBackgroundColor=COLOR;ds[1].backgroundColor=negFill(.45);ds[1].fill={target:0,above:'rgba(0,0,0,0)',below:negFill(.28)}}Object.values(charts).forEach(c=>{Object.assign(c.options.plugins.tooltip,tip());Object.values(c.options.scales).forEach(s=>{if(s.ticks)s.ticks.color=css('--muted')});c.options.plugins.legend.labels.color=css('--muted');c.update('none')})}
+
+/* ---- Mapa de calor mensual ---- */
+function renderHeat(){
+  const t=$('#heat');let h='<thead><tr><th scope="col" style="text-align:left;padding-left:.8rem">Año</th>'+MES.map(m=>`<th scope="col">${m}</th>`).join('')+'<th scope="col">Año</th></tr></thead><tbody>';
+  const pr=css('--pos-rgb'),nr=css('--neg-rgb');
+  const color=v=>v>=0?`rgba(${pr},${Math.min(.6,.08+v/25*.52).toFixed(2)})`:`rgba(${nr},${Math.min(.65,.1+Math.abs(v)/12*.55).toFixed(2)})`;
+  Object.keys(GEDA).forEach(y=>{
+    const r=GEDA[y],yr=(YX[y]!==undefined?YX[y]:(r.reduce((a,x)=>a*(1+x/100),1)-1)*100);
+    const tag=REAL_FROM===null?'':(+y>=REAL_FROM?'<span class="tag-s real">Real</span>':'<span class="tag-s sim">Simulado</span>');
+    h+=`<tr><th scope="row">${y}${y==='2026'?'*':''}${tag}</th>`+MES.map((m,i)=>i<r.length?`<td class="mono" style="background:${color(r[i])}">${fmt(Math.abs(r[i])<0.05?0:r[i],1)}</td>`:'<td></td>').join('')+`<td class="mono yr" style="background:${color(yr/4)}">${pc(yr)}</td></tr>`;
+  });
+  t.innerHTML=h+'</tbody>';
+  $('#realNote').innerHTML=REALNOTE;
+}
+renderHeat();
+
+
+/* ---- Línea de tiempo de posiciones ---- */
+(function(){
+  const root=$('#timeline');if(!root||!POS)return;
+  const n=POS.labels.length;root.style.setProperty('--n',n);
+  const fit=Math.floor((root.parentElement.clientWidth-34)/n*10)/10;root.style.setProperty('--pm',(fit>=8?fit:9)+'px');
+  const mname=i=>{const [y,m]=POS.labels[i].split('-');return MES[m-1]+' '+y};
+  const h0=+css('--tl-h0'),hr=+css('--tl-hr'),ts=css('--tl-s'),tlum=css('--tl-l');
+  const color=t=>{if(POS.colors&&POS.colors[t])return POS.colors[t];let h=0;for(const c of t)h=(h*31+c.charCodeAt(0))%360;return `hsl(${h0+h%hr} ${ts}% ${tlum}%)`};
+  let html='<div class="tl-axis">';
+  POS.labels.forEach((l,i)=>{const [y,m]=l.split('-');if(+m===1)html+=`<span style="left:calc(${i} * var(--pm))">${y}</span>`});
+  html+='</div>';
+  POS.blocks.forEach((name,k)=>{
+    const st=POS.stints.filter(s=>s[0]===k).sort((x,y)=>x[2]-y[2]);
+    const nl=(POS.lanes&&POS.lanes[k])||(k===0?1:2);const lanes=Array(nl).fill(-1),place=[];
+    st.forEach(s=>{let L=lanes.findIndex(e=>e<s[2]);if(L<0)L=0;lanes[L]=s[3];place.push([s,L])});
+    html+=`<div class="tl-row"><h4>${name}</h4><div class="tl-track" style="--lanes:${nl}">`;
+    place.forEach(([s,L])=>{const len=s[3]-s[2]+1;const lab=len>=3?s[1]:'';
+      html+=`<div class="tl-bar" style="left:calc(${s[2]} * var(--pm));width:calc(${len} * var(--pm) - 1px);top:${L*26}px;background:${color(s[1])}" title="${s[1]} · ${mname(s[2])} – ${mname(s[3])} (${len} ${len===1?'mes':'meses'})">${lab}</div>`});
+    html+='</div></div>';
+  });
+  root.innerHTML=html;
+  const w=root.parentElement;requestAnimationFrame(()=>{if(innerWidth<760)w.scrollLeft=w.scrollWidth});
+})();
+
+/* ---- FAQ ---- */
+const FAQ=[["¿Cada cuánto hay que rebalancear?", "Reviso la cartera en enero y julio, y rebalanceo solo si algún activo se aleja más de un 15% de su propio peso (no 15 puntos). Por ejemplo, si las small cap, que pesan un 10%, suben por encima del 11,5% o bajan del 8,5%. En la práctica, eso supone más o menos un rebalanceo al año. Si te suscribes, recibirás avisos cuando sea necesario actuar. Ten en cuenta que las rentabilidades publicadas parten cada mes de los pesos objetivo."], ["¿Por qué fondos de inversión y no ETF?", "Utilizo fondos por su ventaja fiscal en España: permiten traspasos sin tributar, lo que hace el rebalanceo más eficiente. Los ETF también serían válidos, pero menos ágiles en este aspecto, y en la práctica la diferencia de rentabilidad es poco significativa."], ["¿Qué hago si mi bróker no ofrece estos fondos?", "No todos los brókers ofrecen estos fondos. Si alguno no está disponible en tu plataforma, puedes utilizar alternativas equivalentes. Lo que hay que comprobar es que el fondo o ETF alternativo siga el mismo índice o tipo de activo. No respondo consultas sobre qué producto concreto usar en cada caso: la información es la misma para todos."], ["¿Cuánto puede llegar a caer?", "La mayor caída con dinero real, medida con cierres mensuales, es del -9,2% y la más lenta tardó 24 meses en recuperar el máximo. Son datos pasados: una caída futura puede ser mayor."], ["¿Es asesoramiento financiero?", "No. La información es meramente informativa y no constituye asesoramiento financiero ni una recomendación personalizada. Cada inversor debe hacer su propio análisis y decidir según su situación personal."]];
+$('#faqList').innerHTML=FAQ.map((f,i)=>`<div class="qa reveal in"><h3><button type="button" aria-expanded="false" aria-controls="fa${i}" id="fq${i}">${f[0]}<svg class="icon"><use href="#i-plus"/></svg></button></h3><div class="ans" id="fa${i}" role="region" aria-labelledby="fq${i}"><div><p>${f[1]}</p></div></div></div>`).join('');
+$$('.qa button').forEach(b=>b.addEventListener('click',()=>{const o=b.getAttribute('aria-expanded')!=='true';b.setAttribute('aria-expanded',o);b.closest('.qa').classList.toggle('open',o)}));
+
+if(window.TAI&&TAI.initForm)TAI.initForm();
+});
+
+</script>
+</body>
+</html>

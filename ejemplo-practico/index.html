@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark" data-base="../">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cómo se aplica una estrategia: ejemplo paso a paso | Tu Amigo Inversor</title>
+<meta name="description" content="Ejemplo educativo con cinco personajes ficticios, uno por perfil de riesgo, y un caso completo de cómo se aplica una estrategia, desde el test de riesgo hasta la primera operación.">
+<meta name="theme-color" content="#0a0f1e" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+
+<!-- Open Graph / Twitter -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:site_name" content="Tu Amigo Inversor">
+<meta property="og:title" content="Cómo se aplica una estrategia: ejemplo paso a paso | Tu Amigo Inversor">
+<meta property="og:description" content="Ejemplo educativo con cinco personajes ficticios, uno por perfil de riesgo, y un caso completo de cómo se aplica una estrategia, desde el test de riesgo hasta la primera operación.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Cómo se aplica una estrategia: ejemplo paso a paso | Tu Amigo Inversor">
+<meta name="twitter:description" content="Ejemplo educativo con cinco personajes ficticios, uno por perfil de riesgo, y un caso completo de cómo se aplica una estrategia, desde el test de riesgo hasta la primera operación.">
+<meta property="og:image" content="https://tuamigoinversor.com/assets/img/og-tuamigoinversor.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:image" content="https://tuamigoinversor.com/assets/img/og-tuamigoinversor.jpg">
+
+<!-- Tema sin parpadeo: se aplica antes de pintar -->
+<script>
+(function(){try{var t=localStorage.getItem('tai-theme-v3');if(!t){t='light'}document.documentElement.setAttribute('data-theme',t)}catch(e){}})();
+</script>
+
+<link rel="stylesheet" href="../assets/css/fonts.css">
+<link rel="stylesheet" href="../assets/css/site.css">
+<link rel="icon" href="../assets/img/logo-tai.jpg" type="image/jpeg">
+<link rel="apple-touch-icon" href="../assets/img/logo-tai.jpg">
+
+<!-- Única librería externa: Chart.js (diferida) -->
+<script defer src="../assets/js/chart.umd.js"></script>
+<script defer src="../assets/js/tai.js"></script>
+
+<!-- Analítica sin cookies (GoatCounter) -->
+<script data-goatcounter="https://tuamigoinversor.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Saltar al contenido</a>
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<!-- SVG sprite (iconos estilo Lucide) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></symbol>
+  <symbol id="i-left" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></symbol>
+  <symbol id="i-right" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+  <symbol id="i-up" viewBox="0 0 24 24"><path d="m18 15-6-6-6 6"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9z"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+  <symbol id="i-scale" viewBox="0 0 24 24"><path d="M12 3v18M5 7h14M5 7l-3 7a4 4 0 0 0 6 0L5 7zM19 7l-3 7a4 4 0 0 0 6 0l-3-7z"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></symbol>
+  <symbol id="i-flask" viewBox="0 0 24 24"><path d="M9 3h6M10 3v6L4 20a1 1 0 0 0 .9 1.5h14.2A1 1 0 0 0 20 20l-6-11V3"/></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></symbol>
+  <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M3 12a9 9 0 0 1 15-6.7L21 8M21 3v5h-5M21 12a9 9 0 0 1-15 6.7L3 16M3 21v-5h5"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></symbol>
+</svg>
+
+<!-- =========================== CABECERA =========================== -->
+<header class="site-header" id="header">
+  <nav class="container nav" aria-label="Navegación principal">
+    <a href="../index.html" class="logo" aria-label="Tu Amigo Inversor, inicio"><img class="logo-mark" src="../assets/img/logo-tai.jpg" width="40" height="40" alt="">Tu Amigo Inversor</a>
+    <ul class="nav-links">
+      <li class="has-sub"><button type="button" class="sub-toggle" aria-expanded="false" aria-haspopup="true">Estrategias <svg class="icon" aria-hidden="true"><use href="#i-down"/></svg></button>
+        <ul class="sub">
+          <li><a href="../index.html#estrategias">Las seis estrategias</a></li>
+          <li><a href="../comparador/index.html">Compáralas frente a frente</a></li>
+          <li><a href="../index.html#test" data-quiz>Test de riesgo (3 min)</a></li>
+          <li><a href="../combinar-estrategias/index.html">Combinar estrategias</a></li>
+        </ul></li>
+      <li class="has-sub cur"><button type="button" class="sub-toggle" aria-expanded="false" aria-haspopup="true">Cómo funciona <svg class="icon" aria-hidden="true"><use href="#i-down"/></svg></button>
+        <ul class="sub">
+          <li><a href="../empieza-aqui/index.html">Explicado desde cero</a></li>
+          <li><a href="../ejemplo-practico/index.html" aria-current="page">Un ejemplo práctico, paso a paso</a></li>
+          <li><a href="../metodologia/index.html">Metodología y cálculos</a></li>
+          <li><a href="../glosario/index.html">Glosario</a></li>
+        </ul></li>
+      <li><a href="../informes/index.html">Informes</a></li>
+      <li><a href="../blog/index.html">Blog</a></li>
+      <li><a href="../sobre-mi/index.html">Sobre mí</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="icon-btn" id="themeToggle" type="button" aria-label="Cambiar a modo claro">
+        <svg class="icon i-sun"><use href="#i-sun"/></svg><svg class="icon i-moon"><use href="#i-moon"/></svg>
+      </button>
+      <a href="../index.html#suscripcion" class="btn btn-primary btn-sm nav-cta magnetic">Quiero el informe</a>
+      <button class="icon-btn burger" id="burger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileMenu"><svg class="icon"><use href="#i-menu"/></svg></button>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="../index.html#estrategias">Las seis estrategias</a></li>
+      <li><a href="../comparador/index.html">Compáralas frente a frente</a></li>
+      <li><a href="../index.html#test" data-quiz>Test de riesgo (3 min)</a></li>
+      <li><a href="../combinar-estrategias/index.html">Combinar estrategias</a></li>
+      <li><a href="../empieza-aqui/index.html">Explicado desde cero</a></li>
+      <li><a href="../ejemplo-practico/index.html" aria-current="page">Un ejemplo práctico, paso a paso</a></li>
+      <li><a href="../metodologia/index.html">Metodología y cálculos</a></li>
+      <li><a href="../glosario/index.html">Glosario</a></li>
+      <li><a href="../informes/index.html">Informes</a></li>
+      <li><a href="../blog/index.html">Blog</a></li>
+      <li><a href="../sobre-mi/index.html">Sobre mí</a></li>
+      <li><a href="../index.html#suscripcion" class="btn btn-primary" style="margin-top:.5rem">Quiero el informe gratis</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+<section class="page-hero" aria-labelledby="page-title"><div class="container">
+  <nav class="crumbs" aria-label="Migas de pan"><a href="../index.html">Inicio</a><span aria-hidden="true">/</span><span aria-current="page">Ejemplo práctico</span></nav>
+  <span class="eyebrow">Ejemplo práctico</span>
+  <h1 id="page-title">Cómo se aplica una estrategia, paso a paso</h1>
+  <p class="lead">Un ejemplo paso a paso con cinco personajes ficticios, uno por perfil de riesgo: qué estrategias tienen un nivel de riesgo parecido al suyo, qué riesgos supone cada una y cómo se aplicaría en la práctica. Es un ejemplo para aprender cómo funciona el proceso.</p>
+  <ol class="steps-nav" aria-label="Recorrido de tres pasos"><li><a href="../empieza-aqui/index.html"><b>1</b>Cómo funciona</a></li><li><span class="cur" aria-current="step"><b>2</b>Ejemplo práctico</span></li><li><a href="../comparador/index.html"><b>3</b>Compara y elige</a></li></ol>
+</div></section>
+
+<section class="section" aria-labelledby="e0"><div class="container narrow guide">
+  <div class="panel" style="margin-bottom:2rem"><p style="margin:0"><strong>Aviso.</strong> Los cinco personajes son ficticios y los importes, ilustrativos. Este ejemplo no es asesoramiento financiero ni una recomendación personalizada: cada persona debe valorar su situación, su tolerancia al riesgo y los costes antes de invertir. Los perfiles de riesgo que aparecen son los que devuelve el test con las respuestas de cada personaje; qué estrategias mira cada uno es una decisión del propio personaje.</p></div>
+
+  <h2 id="e0">El recorrido, en ocho pasos</h2>
+  <ol>
+    <li><strong>Haces el test</strong> de riesgo: te ayuda a entender cuánto riesgo toleras. No es una recomendación.</li>
+    <li><strong>Lees las fichas</strong> y comparas el nivel de riesgo de cada estrategia con el tuyo, mirando su riesgo en euros.</li>
+    <li><strong>Decides cuánto dinero puedes invertir</strong> sin comprometer tu reserva para imprevistos.</li>
+    <li><strong>Te suscribes</strong> con tu nombre y tu correo para recibir el informe mensual (empezar es gratis).</li>
+    <li><strong>Repartes ese dinero</strong> según las posiciones de la estrategia.</li>
+    <li><strong>Eliges bróker</strong> según los productos que necesites (<a href="../aprende/mejores-brokers-espana-2026/index.html">cómo elegir bróker</a>).</li>
+    <li><strong>Abres la cuenta, transfieres y compras.</strong></li>
+    <li><strong>Sigues los informes:</strong> en cada uno compruebas si hay cambios y decides si los aplicas.</li>
+  </ol>
+
+  <h2 id="e1">Cinco personas, cinco perfiles</h2>
+  <p>El test solo da un perfil de riesgo. Debajo de cada personaje aparecen, a modo de ejemplo, las estrategias cuyo nivel de riesgo es <strong>igual o inferior</strong> a ese perfil. No es una selección para nadie: cuántas y cuáles mirar es decisión de cada persona, y puedes <a href="../combinar-estrategias/index.html">combinar varias</a> (<a href="../aprende/combinar-estrategias-inversion/index.html">artículo del blog sobre cómo combinar estrategias</a>).</p>
+  <div class="persona-grid">
+    <article class="persona"><span class="persona-tag">Perfil conservador</span><h3>Carlos</h3>
+      <p>Quiere que su cartera oscile poco y no desea tomar decisiones constantes.</p>
+      <p><strong>Estrategias de su nivel de riesgo o inferior:</strong> ROCA.</p>
+      <p><strong>Qué aprende:</strong> ROCA se revisa cada semestre (en condiciones normales basta con rebalancear una o dos veces al año) y «conservadora» no significa «sin riesgo»: en septiembre de 2026 cayeron a la vez la renta fija global, el oro y las small caps, y la cartera cerró el mes en −1,06%.</p>
+      <p class="persona-note"><strong>Precaución:</strong> con 10.000 €, la caída máxima con dinero real (−9,2%) los dejaría en 9.080 €. Que haya caído poco en el pasado no garantiza que caiga poco en el futuro.</p></article>
+    <article class="persona"><span class="persona-tag">Perfil moderado</span><h3>Marta</h3>
+      <p>38 años. Busca algo más de crecimiento y acepta caídas temporales moderadas. <a href="#marta">Su caso completo, más abajo.</a></p>
+      <p><strong>Estrategias de su nivel de riesgo o inferior:</strong> IMPULSO, HORIZONTE (plan de pensiones) y ROCA.</p>
+      <p class="persona-note"><strong>Precaución:</strong> HORIZONTE es un plan de pensiones, con sus propias reglas de liquidez y rescate.</p></article>
+    <article class="persona"><span class="persona-tag">Perfil agresivo</span><h3>Daniel</h3>
+      <p>Conoce los fondos y las acciones y acepta fluctuaciones importantes.</p>
+      <p><strong>Estrategias de su nivel de riesgo o inferior:</strong> GEDA, IMPULSO, HORIZONTE (plan de pensiones) y ROCA.</p>
+      <p><strong>Qué aprende:</strong> GEDA se revisa cada mes y mantiene 7 posiciones con el mismo importe. <a href="#daniel">Cómo se aplica, más abajo.</a></p>
+      <p class="persona-note"><strong>Precaución:</strong> más rotación significa más operaciones, comisiones e impuestos, que las rentabilidades publicadas no incluyen.</p></article>
+    <article class="persona"><span class="persona-tag">Perfil muy agresivo</span><h3>Laura</h3>
+      <p>Busca un crecimiento alto y acepta caídas profundas.</p>
+      <p><strong>Estrategias de su nivel de riesgo o inferior:</strong> GEN-Z, GEDA, IMPULSO, HORIZONTE (plan de pensiones) y ROCA.</p>
+      <p><strong>Qué aprende:</strong> GEN-Z concentra pocas posiciones en sectores disruptivos. Su caída máxima con dinero real es del −44,9%: con 10.000 €, quedarían en 5.510 €, y para recuperarlos haría falta una subida del +81,5%.</p>
+      <p class="persona-note"><strong>Precaución:</strong> aceptar mucho riesgo no es lo mismo que concentrar todo el capital en una sola estrategia.</p></article>
+    <article class="persona"><span class="persona-tag">Perfil especulativo</span><h3>Álex</h3>
+      <p>Prioriza el crecimiento y acepta pérdidas muy elevadas.</p>
+      <p><strong>Estrategias de su nivel de riesgo o inferior:</strong> las seis estrategias, incluida CRYPTO.</p>
+      <p><strong>Qué aprende:</strong> CRYPTO tiene una caída máxima con dinero real del −50,1%: con 10.000 €, quedarían en 4.990 €, y para recuperarlos haría falta un +100,4%. En su backtest previo llegó a caer más de un 70%.</p>
+      <p class="persona-note"><strong>Precaución:</strong> solo con dinero que se pueda perder sin cambiar los planes. CRYPTO es la única estrategia de nivel especulativo.</p></article>
+  </div>
+
+  <h2 id="marta">Caso completo: Marta e IMPULSO</h2>
+  <p><strong>Quién es.</strong> Marta tiene 38 años y 13.000 € ahorrados, además de un colchón que cubre entre 1 y 3 meses de gastos. Ha invertido antes en fondos. Acepta una caída temporal de hasta un 20% y, si su cartera cayera, mantendría su posición.</p>
+  <h3>Paso 1 · Hace el test</h3>
+  <p>Responde las diez preguntas. El resultado es <strong>perfil moderado</strong>. Al comparar ese perfil con el nivel de riesgo de las seis estrategias, Marta se fija en tres: <strong>IMPULSO, HORIZONTE (plan de pensiones) y ROCA</strong>, y descarta GEDA, GEN-Z y CRYPTO porque su riesgo es mayor que el que tolera. El test es educativo: no es un test de idoneidad ni asesoramiento.</p>
+  <h3>Paso 2 · Compara las fichas</h3>
+  <ul>
+    <li><strong>IMPULSO:</strong> 40% oro, 30% renta variable global y 30% renta variable EE. UU. small cap value (pequeñas empresas estadounidenses de estilo valor). Caída máxima con dinero real del −16,5%. Su resultado depende mucho del oro.</li>
+    <li><strong>ROCA:</strong> menos caídas (−9,2%), pero también menos rentabilidad histórica.</li>
+    <li><strong>HORIZONTE (plan de pensiones):</strong> es un plan de pensiones. Aunque su horizonte lo permitiría, Marta prefiere conservar la posibilidad de rescatar el dinero libremente.</li>
+  </ul>
+  <p>Marta elige <strong>IMPULSO</strong>. No lo hace porque haya caído menos en el pasado (esa sería ROCA), sino porque su caída máxima con dinero real queda dentro de lo que ella dice aceptar (un 20%) y busca algo más de crecimiento. Una caída histórica menor ayuda a entender el riesgo asumido, pero no garantiza una caída menor en el futuro ni que sea la opción más adecuada para ella.</p>
+  <h3>Paso 3 · Decide cuánto invierte</h3>
+  <p>Antes de elegir el importe, Marta mira su reserva: su colchón cubre solo entre 1 y 3 meses de gastos. Decide <strong>destinar 3.000 € a reforzarla</strong> e <strong>invertir 10.000 €</strong>. La lección: primero se decide el dinero que se puede invertir; no se elige una estrategia para luego encajar en ella todo el ahorro.</p>
+  <p>Ejemplo de riesgo con 10.000 €: una caída del −16,5% los dejaría en 8.350 €, y para volver a 10.000 € haría falta una subida del +19,8%. Es una ilustración, no una previsión: la caída máxima pasada no es un límite.</p>
+  <h3>Paso 4 · Se suscribe</h3>
+  <p>Con la estrategia y el importe ya decididos, deja su nombre y su correo para recibir el informe mensual. Empezar es gratis y no se pide ningún dato de pago.</p>
+  <h3>Paso 5 · Reparte según los pesos de la ficha</h3>
+  <div class="guide-table-wrap"><table class="guide-table">
+    <caption class="sr-only">Reparto de 10.000 euros según los pesos de IMPULSO</caption>
+    <thead><tr><th scope="col">Componente</th><th scope="col">Peso</th><th scope="col">Con 10.000 €</th><th scope="col">Producto indicado en la ficha</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">Oro</th><td>40%</td><td class="mono">4.000 €</td><td>iShares Gold Trust (IAU)</td></tr>
+      <tr><th scope="row">Renta variable global</th><td>30%</td><td class="mono">3.000 €</td><td>Vanguard Global Equity Fund – Investor Shares</td></tr>
+      <tr><th scope="row">RV EE. UU. small cap value</th><td>30%</td><td class="mono">3.000 €</td><td>Vanguard Small Cap Value Index Admiral (VSIAX)</td></tr>
+      <tr><th scope="row"><strong>Total</strong></th><td><strong>100%</strong></td><td class="mono"><strong>10.000 €</strong></td><td></td></tr>
+    </tbody></table></div>
+  <p class="small-note">La ficha de IMPULSO indica que no todos los brókers ofrecen estos fondos y que, si alguno no está disponible en tu plataforma, puedes utilizar alternativas equivalentes. También indica que la estrategia puede seguirse con ETF que repliquen los mismos índices o tipos de activo.</p>
+  <h3>Paso 6 · Elige bróker</h3>
+  <p>Marta compara según los productos que necesita y si prefiere un bróker español o uno internacional. En estos artículos explico <a href="../aprende/mejores-brokers-espana-2026/index.html">cómo elegir bróker</a> y <a href="../aprende/que-brokers-utilizo/index.html">cuáles utilizo yo</a>. <strong>No tengo ningún acuerdo comercial ni de afiliación con ningún bróker.</strong> La fiscalidad de cada tipo de bróker se explica en esos artículos y puede variar según tu caso: consulta fuentes actualizadas.</p>
+  <h3>Paso 7 · Abre la cuenta, transfiere y compra</h3>
+  <p>Completa el alta, transfiere los 10.000 € y compra cada tramo con el importe de la tabla. Los plazos, los requisitos y los costes dependen de cada entidad.</p>
+  <h3>Paso 8 · Qué pasa después</h3>
+  <p>IMPULSO se revisa cada semestre (en condiciones normales basta con rebalancear una o dos veces al año). Cuando llega el informe, Marta comprueba si hay cambios: si no los hay (como en «Sin cambios para octubre» en los <a href="../informes/index.html">informes de ejemplo</a>), no tiene que hacer nada. Si los hay, decide si los aplica. Y puede decidir dejar de seguir la estrategia cuando quiera.</p>
+
+  <h2 id="daniel">Daniel y GEDA: la versión táctica</h2>
+  <p>Daniel dispone de 14.000 €. Esto cambia respecto al caso de Marta:</p>
+  <ul>
+    <li><strong>Frecuencia:</strong> GEDA se revisa <strong>cada mes</strong>. El informe del día 1 puede indicar rotaciones («sale un activo, entra otro»).</li>
+    <li><strong>Reparto:</strong> las 7 posiciones tienen el mismo importe y se mantienen hasta el día 1 del mes siguiente. Con 14.000 €, unos 2.000 € por posición. Una posición nueva entra por un importe equivalente al promedio de las demás.</li>
+    <li><strong>Productos:</strong> mezcla de acciones y ETF. Como en cualquier estrategia, hay que comprobar qué productos están disponibles en tu bróker y qué alternativas equivalentes existen.</li>
+    <li><strong>Brókers:</strong> yo utilizo uno internacional para las acciones de Estados Unidos y otro para las acciones europeas y los ETF UCITS, pero es mi configuración, no un requisito: otro inversor puede operar todo desde una sola entidad si su bróker lo permite. Más información en <a href="../aprende/que-brokers-utilizo/index.html">qué brókers utilizo</a> y <a href="../aprende/mejores-brokers-espana-2026/index.html">cómo elegir bróker</a>.</li>
+    <li><strong>Costes:</strong> más rotación implica más operaciones y más impacto de comisiones y diferenciales. Las rentabilidades publicadas no los incluyen.</li>
+  </ul>
+
+  <h2 id="combinar">¿Y si quiero seguir más de una estrategia?</h2>
+  <p>Se puede: no hay por qué quedarse con una sola. Pero hay un matiz importante: <strong>la rentabilidad y la caída máxima de una mezcla no son la suma ni la media de las de cada estrategia</strong>; depende de cómo se mueven entre sí (su correlación). Lo explico con datos reales en <a href="../combinar-estrategias/index.html">Combinar estrategias</a> (y en el artículo del blog <a href="../aprende/combinar-estrategias-inversion/index.html">cómo combinar estrategias de inversión</a>), donde además puedes ajustar el peso de cada una y ver el efecto del interés compuesto.</p>
+
+  <h2 id="costes">Qué costes y decisiones siguen siendo tuyos</h2>
+  <ul>
+    <li>Comisiones de compra, venta y custodia de tu bróker, y diferencial de cambio si el activo está en otra divisa.</li>
+    <li>Impuestos: las rentabilidades publicadas no los incluyen.</li>
+    <li>Cuánto inviertes, si aplicas cada cambio y cuándo dejas de seguir una estrategia.</li>
+    <li>Después de hacer el test y revisar el riesgo, puede que decidas que todavía no te conviene invertir. También es un resultado válido.</li>
+  </ul>
+  <div class="cta-row"><a class="btn btn-primary" href="../index.html#test" data-quiz>Hacer el test</a><a class="btn btn-ghost" href="../index.html#suscripcion">Quiero el informe gratis</a><a class="btn btn-ghost" href="../informes/index.html">Ver informes de ejemplo</a></div>
+  <p class="small-note">Ejemplo ilustrativo. La información no constituye asesoramiento financiero ni una recomendación personalizada. Las rentabilidades pasadas no garantizan rentabilidades futuras.</p>
+
+  <div class="next-step"><div><small>Paso 3 de 3</small><strong>Compara y elige</strong><p>Las seis estrategias frente a frente, con su rentabilidad, su riesgo y su frecuencia de revisión, para decidir por cuál empezar.</p></div><a class="btn btn-primary" href="../comparador/index.html">Ir al paso 3 <svg class="icon"><use href="#i-arrow"/></svg></a></div>
+</div></section>
+</main>
+
+<!-- =========================== PIE =========================== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <a href="../index.html" class="logo" style="margin-bottom:1rem"><img class="logo-mark" src="../assets/img/logo-tai.jpg" width="40" height="40" alt="">Tu Amigo Inversor</a>
+        <p>Te cuento cada mes qué hago con mi dinero: estrategias con reglas claras, sin corazonadas. Lo que hagas con tu dinero lo decides tú.</p>
+        <p style="margin-top:.8rem"><a href="mailto:info@tuamigoinversor.com">info@tuamigoinversor.com</a></p>
+      </div>
+      <nav aria-label="Carteras permanentes"><h2>Cartera permanente</h2><ul><li><a href="../cartera-permanente-conservadora-roca/index.html">ROCA</a></li><li><a href="../cartera-inversion-crecimiento-impulso/index.html">IMPULSO</a></li></ul></nav>
+      <nav aria-label="Asignación táctica"><h2>Asignación táctica</h2><ul><li><a href="../inversion-tactica-geda/index.html">GEDA</a></li><li><a href="../inversion-tematica-gen-z/index.html">GEN-Z</a></li><li><a href="../inversion-criptomonedas-crypto/index.html">CRYPTO</a></li><li><a href="../plan-pensiones-moderado-horizonte/index.html">HORIZONTE <small class="pp">plan de pensiones</small></a></li></ul></nav>
+      <nav aria-label="Herramientas y proyecto"><h2>Empieza por aquí</h2><ul><li><a href="../empieza-aqui/index.html">Explicado desde cero</a></li><li><a href="../ejemplo-practico/index.html">Ejemplo práctico</a></li><li><a href="../comparador/index.html">Comparador</a></li><li><a href="../index.html#test" data-quiz>Test de riesgo</a></li><li><a href="../combinar-estrategias/index.html">Combinar estrategias</a></li><li><a href="../informes/index.html">Informes</a></li><li><a href="../metodologia/index.html">Metodología</a></li><li><a href="../glosario/index.html">Glosario</a></li><li><a href="../blog/index.html">Blog</a></li><li><a href="../sobre-mi/index.html">Sobre mí</a></li></ul></nav>
+      <nav aria-label="Legal"><h2>Legal</h2><ul><li><a href="../aviso-legal/index.html">Aviso legal</a></li><li><a href="../privacidad/index.html">Política de privacidad</a></li><li><a href="../recomendaciones/index.html">Cómo elaboro los informes</a></li></ul></nav>
+    </div>
+    <div class="legal">
+      <p><strong>Aviso:</strong> la información publicada en esta web tiene carácter meramente informativo y no constituye asesoramiento financiero ni una recomendación personalizada de inversión. Las inversiones conllevan riesgo y pueden implicar la pérdida total o parcial del capital. Las rentabilidades pasadas no garantizan rentabilidades futuras. Cada inversor debe realizar su propio análisis y tomar decisiones en función de su situación personal.</p>
+      <p style="margin-top:.8rem">© 2026 Tu Amigo Inversor.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Test de riesgo (ventana emergente) -->
+<div class="modal" id="quizModal" aria-hidden="true">
+  <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="quizTitle">
+    <button class="icon-btn modal-close" type="button" aria-label="Cerrar test"><svg class="icon"><use href="#i-x"/></svg></button>
+    <div class="modal-content">
+      <span class="eyebrow">Test de riesgo</span>
+      <h2 id="quizTitle" style="font-size:var(--fs-xl);margin:.3rem 0 .4rem">¿Cuánto riesgo toleras?</h2>
+      <p style="color:var(--muted);margin-bottom:1.4rem">Diez preguntas, unos 3 minutos. Te explico tu tolerancia al riesgo y qué significa en caídas reales.</p>
+      <div class="quiz" id="quiz" aria-live="polite"></div>
+    </div>
+  </div>
+</div>
+<button class="icon-btn to-top" id="toTop" type="button" aria-label="Volver arriba"><svg class="icon"><use href="#i-up"/></svg></button>
+<div class="sticky-cta" id="stickyCta"><small><strong>Gratis</strong><br><span data-countdown-short>El informe del día 1 en tu correo</span></small><a href="../index.html#suscripcion" class="btn btn-primary btn-sm">Quiero el informe</a></div>
+</body>
+</html>
