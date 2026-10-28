@@ -1,0 +1,411 @@
+TU AMIGO INVERSOR · WEB V45
+===========================
+
+CAMBIOS V45
+  - Quitadas todas las referencias a Rankia: portada, Quién soy, Informes y el archivo del informe (datos/2026-10.yaml).
+    En los PDF de ejemplo de julio a octubre (carpeta informes/) se ha borrado el apartado «Seguimiento Desafío Rankia»
+    y su enlace. Queda un hueco en blanco donde estaba. Las menciones de Rankia en versiones anteriores de este LEEME
+    son históricas.
+  - Foto pequeña de la portada (assets/img/jose-avatar.jpg): encuadre más abierto, con cabeza y hombros, para que se
+    reconozca mejor a 48 px.
+
+CAMBIOS V44 ↓
+
+CAMBIOS V44 (solo resultados con dinero real)
+  - Toda la web muestra solo rentabilidades, posiciones y caídas con dinero real: ROCA desde 2017, IMPULSO 2018,
+    HORIZONTE 2020, GEDA 2021, CRYPTO 2023 y GEN-Z 2024. Los backtest previos solo aparecen como contexto, en la tarjeta
+    «Antes del dinero real» de cada ficha (y, en CRYPTO, también en los avisos de riesgo: caídas de más del 70 % en 2018 y 2022).
+  - GEDA: nueva serie de GEDA_historico_web_definitivo.xlsx (método actual 2021–2025 + lo publicado en 2026: SNDK desde
+    enero, LITE después, sin IFX), presentada como dinero real desde enero de 2021. +45,9 % anual, caída máxima −16,2 %.
+    Posiciones, rotación, tops y caídas recalculados con esa serie.
+  - GEN-Z y CRYPTO (menos de 5 años con dinero real): sin rentabilidad anualizada. Se muestran el acumulado, los años uno a
+    uno y un aviso de historial corto (fichas, tarjetas de la portada, comparador). En tai.js: campos realCum y short.
+  - Fichas: constantes GEDA/YX/POS recortadas al periodo real; métricas, componentes, bloques, señales de HORIZONTE,
+    estadísticas de posiciones, tablas año a año, anatomía de caídas, FAQ y ejemplos en euros recalculados.
+  - Portada, comparador, metodología, guía, ejemplo práctico, recomendaciones y artículos (drawdowns, combinar,
+    rebalanceo, con cuánto dinero): cifras con dinero real. El artículo de rebalanceo se recalculó desde 2017/2018.
+  - Combinar: el simulador de interés compuesto no proyecta mezclas con GEN-Z o CRYPTO (no tienen media anual fiable).
+  - GEDA 12 meses en portada y comparador: +100,86 % (serie nueva). El informe de octubre decía +101,93 % (Excel de seguimiento).
+  - Generador de informes: el bloque «Altcoins» de CRYPTO pasa a ser la media de las tres altcoins. La columna T del Excel
+    (CRYPTO-detalle) no cuadra con el total de la estrategia en 104 de 105 meses; la media sí cuadra.
+  - tools/check_site.py comprueba el acumulado (no la media) en GEN-Z y CRYPTO.
+  - OJO: no ejecutes tools/prelaunch.py hasta el lanzamiento (quita el noindex y abre robots.txt).
+
+CAMBIOS V43 (generador de informes y mejoras de la web)
+  - NUEVO tools/informe/: generador del informe mensual en HTML y PDF con el diseño nuevo. Lee el Excel
+    (tools/informe/datos/estrategias_limpias.xlsx), referencias.csv, horizonte_planes.csv, nombres.yaml y el archivo
+    del mes (datos/2026-10.yaml). Instrucciones en tools/informe/COMO_USAR.txt. La carpeta tools no se publica en la web,
+    pero si el repositorio es público, el Excel y los datos del mes se podrán ver en GitHub.
+  - Portada: mapa de calor «2026, mes a mes» en Resultados (del mes más reciente al más antiguo). Se regenera con
+    python tools/build_home_heatmap.py a partir de assets/js/series.js (marcas HEATMAP:INICIO / FIN).
+  - Cuenta atrás hasta el próximo informe (día 1, 9:00 de Madrid), en días y horas: bloque de suscripción, página de
+    informes y botón fijo del móvil («Próximo informe: 1 de noviembre»). Se calcula sola en el navegador.
+
+CAMBIOS V42 (revisión para no prestar asesoramiento; guía CNMV «Finfluencers», mayo de 2026)
+  - Test: pasa a ser «Test de riesgo» educativo. Da la tolerancia al riesgo y muestra las seis estrategias ordenadas por riesgo,
+    sin filtrar ni decir cuáles «encajan». Quitados «Estrategias que encajan con tu perfil», «las que no encajan» y el botón
+    «Comparar mis estrategias». Ventana: «¿Cuánto riesgo toleras?». NO volver a añadir una selección personal de estrategias.
+  - Quitadas las ofertas personales de producto («escríbeme y te propongo ETF equivalentes», «te ayudo a encontrar la mejor
+    opción en tu caso», «te indico cuál uso yo») en ROCA, IMPULSO, GEDA y ejemplo práctico. Ahora se explica qué comprobar
+    (que siga el mismo índice) y que no se responden consultas sobre productos para un caso concreto.
+  - Nueva página /recomendaciones/ «Cómo elaboro los informes y conflictos de interés»: quién elabora, intereses (invierto en
+    lo que publico; opero el primer día hábil, antes o después del envío; sin acuerdos con brókers), método, hechos vs opinión,
+    plazo, frecuencia y riesgos. Enlazada en el pie de todas las páginas, en el aviso legal y en la página de informes.
+  - FAQ: nueva respuesta a «¿Es asesoramiento financiero?» y nueva pregunta «¿Puedo preguntarte qué hacer en mi caso?» (web y datos para Google).
+  - Lenguaje: fuera las frases de acción directa («lo copias en tu bróker», «¿Te encaja?», «Es para ti si…»). Ejemplo práctico,
+    guía, metodología, CRYPTO y artículos (pasos en primera persona: «vendo», «apunto», «lo que haría yo»).
+  - PENDIENTE (tuyo): en la plantilla del informe, fecha y hora de envío, autor, enlace a /recomendaciones/, separar datos de
+    opinión. Correo de bienvenida: añadir que no se responden consultas sobre casos personales. Revisión por abogado especialista.
+
+CAMBIOS V41
+  - Portadas nuevas: «Cómo aplico el informe del mes», «Cómo rebalanceo ROCA e IMPULSO» y «Planes vs fondos» (sustituye a la
+    antigua con el 19–28 %). Convertidas a WebP 1200x800 en assets/img/posts/.
+  - Portada de la web: vuelve el bloque «Del blog · Lo último que he escrito» con los 3 artículos más recientes, entre
+    Resultados y Preguntas frecuentes, y el enlace «Ver todos los artículos». Se rellena solo con tools/build_blog.py
+    (marcas BLOG:INICIO / BLOG:FIN). En móvil, formato compacto: miniatura + título. Se alternan los fondos de FAQ y Suscripción.
+  - PENDIENTE: portada de «Con cuánto dinero seguir cada estrategia» (con-cuanto-dinero-seguir-cada-estrategia.webp) y la
+    de «Entra poco a poco» (lema «gana a lo grande»).
+
+CAMBIOS V40 (analítica sin cookies)
+  - GoatCounter instalado en todas las páginas (y en tools/chrome.py para los artículos): código «tuamigoinversor»,
+    panel en https://tuamigoinversor.goatcounter.com. No usa cookies: no hace falta aviso de cookies.
+  - Clics medidos como eventos (tai.js, apartado 12b), con el nombre de la página y el lugar del botón:
+      suscribirse/<página>/<lugar>   botones «Quiero el informe» (cabecera, menú, boton-fijo, articulo, suscripcion…)
+      ver-informes/<página>/<lugar>  enlaces a la página de informes
+      pdf/AAAA-MM-abrir | -descargar informes en PDF
+      puerta/soy-nuevo | ya-invierto las dos puertas de la portada
+      siguiente/<artículo>           segundo botón del final de cada artículo
+  - Las altas del formulario no se ven en GoatCounter (el formulario de Brevo es de otro dominio): míralas en Brevo.
+  - Política de privacidad: párrafo sobre GoatCounter (estadísticas agregadas, sin cookies ni datos identificativos).
+  - En local (file://) no cuenta nada: empieza a contar cuando la web esté publicada en el dominio.
+
+CAMBIOS V39 (tras la auditoría de marketing)
+  - Sin aviso de cookies: la web no usa cookies de analítica, publicidad ni seguimiento. Eliminados el aviso, el enlace
+    «Configurar cookies» del pie (en todas las páginas y en tools/chrome.py) y su código en tai.js. La política de privacidad
+    explica que solo se guarda el tema claro/oscuro en el navegador y que el formulario de Brevo puede usar sus propias cookies.
+    Si algún día añades analítica con cookies, habrá que volver a pedir consentimiento antes de cargarla.
+  - Portada: «qué tengo, con mi propio dinero, en mis seis estrategias» y microtexto bajo los botones
+    «Sin tarjeta · Un correo al mes · Baja con un clic».
+  - Suscripción: enlace «¿Quieres verlo antes? Mira un informe de ejemplo» junto al formulario.
+  - Blog: las tarjetas muestran la fecha de publicación y, si la hay, «actualizado el…» (antes solo la de actualización).
+  - Artículos: segundo botón al final con un siguiente paso propio (campos opcionales siguiente_texto y siguiente_url en la
+    cabecera del .md; ver _plantilla.md). Puesto en los 14 artículos.
+
+CAMBIOS V38 (publicación escalonada)
+  - Fechas de publicación: «Cómo aplico el informe del mes» el 12 oct 2026, «Cómo rebalanceo ROCA e IMPULSO» el 19 oct y
+    «Con cuánto dinero seguir cada estrategia» el 26 oct (programado: no aparece en la web generada hoy; GitHub lo publica solo
+    en la ejecución diaria del 26 de octubre, o al volver a ejecutar tools/build_blog.py a partir de ese día).
+  - El blog se ordena por fecha de publicación (antes, por «actualizado»): los artículos nuevos salen siempre primero.
+  - Fichas de ROCA e IMPULSO: revisión en enero y julio con margen del 15% del peso de cada activo (antes «dentro de un rango
+    razonable»), en el bloque «Cómo funciona» y en la pregunta frecuente sobre el rebalanceo (también en los datos para Google).
+  - Artículo «Con cuánto dinero…»: versión sencilla (respuesta corta, ejemplo, regla de 1.000 € por posición, cambio de divisa)
+    y los cálculos en un desplegable «Para los que quieren los números». Tarifas de Interactive Brokers y DEGIRO comprobadas (2026).
+
+CAMBIOS V37 (nuevo artículo)
+  - Nuevo artículo «Cómo aplico el informe del mes, paso a paso» (articulos/2026-10-12-como-aplico-el-informe-del-mes.md),
+    categoría Operativa, con el informe de octubre de 2026 como ejemplo.
+  - Nuevo artículo «Cómo rebalanceo ROCA e IMPULSO» (articulos/2026-10-19-rebalanceo-roca-impulso.md): regla enero/julio
+    con margen del 15 % de cada peso (comparado con 10 %, 20 % y 5 puntos); ejemplo de IMPULSO en 2025 y simulación 2016–2026 calculada con estrategias_limpias.xlsx.
+  - Nuevo artículo «Con cuánto dinero seguir cada estrategia» (articulos/2026-10-26-con-cuanto-dinero-seguir-cada-estrategia.md):
+    operaciones al año contadas en estrategias_limpias.xlsx (GEDA ~15 cambios, GEN-Z ~7-8, CRYPTO ~10), coste con 1 € y 5 €
+    por operación y tabla orientativa. Límite de planes individuales 2026: 1.500 €/año.
+  - PENDIENTE: portadas en assets/img/posts/como-aplico-el-informe-del-mes.webp y rebalanceo-roca-impulso.webp y con-cuanto-dinero-seguir-cada-estrategia.webp (mientras no exista, el blog muestra un hueco).
+
+CAMBIOS V36 (móvil más compacto)
+  - En pantallas de móvil (≤600 px): interlineado del texto 1,45 (antes ~1,6), notas y tarjetas 1,35, titulares 1,1.
+  - Menos espacio vertical entre secciones (2rem), entre párrafos, títulos, tarjetas y rejillas.
+  - En móvil se ocultan el móvil decorativo de «Cómo funciona» y la cita destacada de la cabecera de cada ficha.
+  - Titular de portada algo más pequeño en móvil; bloques plegables («Ver todo») un poco más cortos.
+  - Escritorio sin cambios. Altura en móvil (375 px): portada −14 %, fichas −9 %, artículos −4 %, Sobre mí −6 %.
+
+CAMBIOS V35 (a partir de la auditoría externa)
+  - Comparador: nuevas filas «Peor caída con dinero real» (con el año de inicio) y «Principal inconveniente»; la caída anterior se
+    llama ahora «Peor caída (histórico completo)».
+  - Fichas: «Para quién es» incluye su principal inconveniente; «Con dinero real o simulado» incluye la peor caída con dinero real.
+  - FAQ: nueva pregunta «Ya tengo fondos indexados, ¿para qué me sirve esto?» (web y datos estructurados).
+  - Cómo funciona: «Puedes empezar solo leyendo los informes, sin operar».
+  - Metodología: los dividendos están incluidos (precios de cierre ajustados).
+  - Inconvenientes editables en assets/js/tai.js (campo con:).
+
+CAMBIOS V34: MÓVIL
+  - Test de riesgo en móvil: pantalla completa, cabecera compacta y botones Atrás/Siguiente siempre visibles abajo.
+    Comprobado en 375x667 (iPhone SE) y 390x844: las 10 preguntas caben sin hacer scroll.
+  - Fichas en móvil un 20–25 % más cortas: menos aire entre secciones, interlineado 1,6 en móvil y las secciones de consulta
+    (historial, señales, resultados y entornos) plegadas con un botón «Ver todo».
+  - Tarjetas de estrategia con imagen más baja en móvil; textos de entrada algo más pequeños.
+  - Suscripción: en móvil el formulario va justo después del titular; precio y condiciones, debajo.
+  - El botón fijo inferior ya no tapa el final de la página ni choca con «volver arriba».
+  - Enlaces «Ver más» con zona táctil de 44 px; etiquetas diminutas (menos de 11 px) agrandadas; deslizadores más fáciles de tocar.
+  - Formulario de Brevo: su contenido no se puede maquetar desde la web (es un iframe). Ver recomendaciones abajo.
+
+CAMBIOS V33: INTERLINEADO Y ESPACIOS HOMOGÉNEOS
+  - Medido con el navegador en las 30 páginas (escritorio y móvil) y unificado con una única escala (bloque «V33» al final de site.css):
+    · Interlineado: texto corrido 1,7 (antes 1,6, 1,65, 1,7 o 1,75 según la página); textos de entrada 1,6; textos pequeños 1,6; notas 1,5.
+    · Entre párrafos: siempre 1rem (antes 0, 10, 11, 16 o 18 px según la página).
+    · Título → contenido: 0,8rem (en los artículos del blog era 0).
+    · Tras la cabecera de las páginas interiores: el mismo espacio en todas (antes 38, 77 o 138 px según la página).
+  - Aviso legal: quitada una frase repetida tras retirar la certificación.
+
+CAMBIOS V32
+  - Se retira toda mención a la certificación MiFID II (UC3M): cabecera de la home, «Quién soy», «Sobre mí» (ahora: cartera pública
+    en Rankia), aviso legal y datos estructurados. Cuando la tengas, se puede volver a añadir.
+  - Tarjetas y fichas: «Rentabilidad anualizada desde AAAA» (antes «Real, al año»). Donde hace falta distinguir, se dice «con dinero real».
+  - Menú superior alineado (los desplegables quedaban más bajos).
+  - «Compáralas frente a frente» (antes «lado a lado»); «Ejemplo práctico» en el menú (antes «Un ejemplo real», que era ficticio).
+  - Foto más abierta (encuadre completo, con la Bolsa de Madrid) en «Quién soy» y «Sobre mí»: assets/img/jose-wide.jpg.
+
+CAMBIOS V31
+  - Portadas nuevas de «Qué brókers utilizo» y «Cómo combinar las estrategias» (la de brókers, 16:9, se completa arriba y abajo
+    con un fondo difuminado para el formato 3:2 del blog).
+  - HORIZONTE: los planes son ahora el plan de ING indexado al S&P 500 (ficha, FAQ y artículo de brókers). Se quita «escríbeme».
+  - CRYPTO y GEN-Z: la plataforma que uso coincide con el artículo de brókers (Revolut X e Interactive Brokers), sin «recomiendo»
+    ni «escríbeme».
+
+CAMBIOS V30: REVISIÓN DEL BLOG
+  - «Qué brókers utilizo en 2026» reescrito con la actualización del 15 de octubre de 2026 (Openbank y Revolut X), tarifas comprobadas
+    con fuentes públicas y portada nueva (la anterior mostraba Binance). Portada antigua guardada fuera del zip.
+  - Correcciones de contenido: tipos de la base del ahorro (27 % de 200.000 a 300.000 €; 30 % desde 300.000 €), rescate del plan en ERE
+    («si las especificaciones del plan lo prevén»), exención de la indemnización (límite de 180.000 €), reducción del 40 % una sola vez
+    por contingencia, matiz honesto sobre entrar poco a poco, caídas máximas actualizadas (GEN-Z −44,9 %), momentum sin exageraciones,
+    se quita la invitación a «escríbeme y hablamos» (podía parecer asesoramiento) y la afirmación de que los valores están protegidos
+    hasta 100.000 € en toda la UE.
+  - Formato: títulos con jerarquía correcta (sin saltos), sin emojis en títulos, sin líneas separadoras, enlaces internos limpios,
+    tablas con cabecera, resúmenes escritos para Google en todos los artículos e imágenes rotas de WordPress eliminadas.
+  - Nuevo campo «actualizado:» en los artículos: muestra «Actualizado el…», lo indica a Google. Desde la V38 el blog se ordena por la fecha de publicación («fecha:»).
+  - Redirección desde /aprende/brokers/cuenta-financia-europa/ (enlace del informe de octubre) a la dirección actual.
+
+PENDIENTE DEL BLOG
+  - Portadas con datos desfasados (imágenes): «Planes vs fondos» (pone 19–28 %; ahora el máximo es 30 %) y «Entra poco a poco»
+    (lema «gana a lo grande»).
+
+CHEQUEO FINAL V29
+  - Revisado: enlaces y anclas, imágenes y PDF, IDs, encabezados, textos alternativos, etiquetas HTML, errores JS, desbordes en móvil (375 px)
+    y escritorio, modo oscuro, menú y menú móvil, filtros, FAQ, test de riesgo completo, comparador, combinar y gráficos de las fichas.
+  - Cifras cruzadas entre tai.js, series.js, fichas, comparador, tabla de resultados de la home, metodología y estrategias_limpias.xlsx.
+  - Corregido: los totales anuales del mapa de calor de las fichas salían de sumar meses redondeados a 2 decimales (diferencias de 0,1 en
+    9 años: ROCA 2019, IMPULSO 2017 y 2020, GEDA 2017 y 2023, GEN-Z 2021, CRYPTO 2021, 2024 y 2025). Ahora usan el total exacto del Excel
+    (constante YX en cada ficha). Bloque «En resumen» ajustado (ROCA 2019 +18,7 %; CRYPTO 2021 +597,7 %; CRYPTO 2025 −23,6 %).
+  - Fichas tácticas: «Datos a 30 sep 2026 · las posiciones del mes en curso solo llegan por correo». HORIZONTE: «a esa fecha, la señal era
+    de renta variable» (antes «hoy»), y «renta variable de EE. UU.».
+  - IMPULSO: la comparación con ROCA indica que es rentabilidad con simulación y en el mismo periodo.
+  - Blog: título oculto «Artículos» para lectores de pantalla; «EE. UU.» en dos artículos.
+  - Si añades años nuevos a una ficha, añade también su total exacto en YX (o bórralo y se calculará con los meses).
+
+CAMBIOS V28 (sobre la V27)
+  - Modelo claro: la web se actualiza cada trimestre y los informes publicados son ejemplos de meses anteriores (con retraso).
+    Las posiciones del mes en curso solo llegan por correo. Se dice en la home (panel de ejemplo, estrategias, resultados, suscripción),
+    en la página de informes (aviso «Ojo: van con retraso») y en las fichas.
+  - Nueva pregunta en la FAQ: «¿Por qué suscribirme si hay informes en la web?».
+  - Precio: «pasará a ser de pago, con nuevos contenidos y novedades que estoy preparando» (antes «más contenidos»).
+  - Botones: «Ver un informe de ejemplo» / «Más informes de ejemplo».
+
+CAMBIOS V27 (sobre la V26)
+  - Años reales según estrategias_limpias.xlsx: ROCA real desde 2017 (2016 simulado) y HORIZONTE real desde 2020 (2018–2019 simulados).
+    Cifra real: ROCA +7,1 % al año; HORIZONTE +13,4 % al año. Actualizado en tarjetas, fichas (panel, «En resumen», historial Real/Simulado,
+    notas), comparador, guía, metodología y FAQ.
+  - Informes: añadido el de agosto (GEDA: sale SLR.MC, entra ASML.AS), nota de Rankia y llamada final «¿Quieres el siguiente?».
+  - Imagen para compartir (assets/img/og-tuamigoinversor.jpg, 1200x630) en todas las páginas: WhatsApp, LinkedIn o X ya muestran foto y titular.
+    Usa el dominio final; si cambia, edita OG en tools/chrome.py y en las páginas.
+  - Título de la home con palabras clave: «Estrategias de inversión con reglas claras».
+  - Prueba externa: enlace a la cartera pública de GEDA en el Desafío Rankia 2026 (Quién soy e Informes).
+  - Avisos legales de comparador y metodología con el mismo tono cercano; descripciones de las estrategias en «Sobre mí» en lenguaje llano.
+
+ACTUALIZACIÓN TRIMESTRAL DE LA WEB (tras el informe de enero, abril, julio y octubre)
+  1. PDF: guárdalo como informes/tuamigoinversor-informe-AAAA-MM.pdf y su miniatura en assets/img/informes/informe-AAAA-MM.webp.
+  2. informes/index.html: si añades un ejemplo, ponlo arriba (mueve «Ejemplo más reciente» y la clase rep-first). No hace falta publicar el del mes en curso.
+  3. index.html: panel del hero («Qué cambia en…», fecha y enlace al PDF), cambios del móvil de «Cómo funciona» y tabla de Resultados.
+  4. Series mensuales: fichas → tools/build_series.py y después tools/build_home_heatmap.py (mapa de calor de la portada); después revisa avg/realAvg/y26 en assets/js/tai.js, los datos de assets/js/comparador.js
+     y la constante YX (totales anuales exactos) de cada ficha.
+  5. Fechas «Datos a …» (buscar «30 sep 2026» en toda la web) y bloque «En resumen» de las fichas si cambia la peor caída o el mejor/peor año.
+  6. python3 tools/check_site.py
+
+CAMBIOS V26 (sobre la V25)
+  - Home en 7 bloques: Hero · Cómo funciona (4 pasos) · Quién soy · Estrategias · Resultados · FAQ · Suscripción. El blog se enlaza desde la FAQ.
+    Hero nuevo: «Invierto con reglas, no con corazonadas», dos puertas (Soy nuevo / Ya invierto) y los cambios reales del último informe.
+  - Botón principal único en toda la web: «Quiero el informe gratis» (menú: «Quiero el informe»).
+  - Menú: Estrategias ▾ (seis estrategias, comparador, test, combinar) · Cómo funciona ▾ (desde cero, ejemplo, metodología, glosario) · Informes · Blog · Sobre mí.
+  - Nueva página /informes/ con los PDF reales (jul, sep y oct 2026), cambios de cada mes, nota sobre cifras provisionales y fe de erratas de IMPULSO.
+    /informe-ejemplo/ redirige a /informes/. Para añadir un informe: copia el PDF en /informes/ y añade una tarjeta en informes/index.html.
+  - Rentabilidad real separada de la simulada: tarjetas, fichas y comparador muestran «real desde AAAA» como cifra principal y la que incluye backtest aparte.
+    Cifras calculadas desde series.js (coincide al 100% con estrategias_limpias.xlsx). GEDA y CRYPTO corregidas: 40,6% y 44,8% (antes 40,3% y 44,1%).
+  - Fichas: nuevo bloque «En resumen» (para quién es, qué esperar, cuánto trabajo da, real o simulado) bajo la portada; se quita el aviso de datos repetido.
+  - Filtro de estrategias por riesgo: Tranquila / Equilibradas / Atrevidas. Descripciones más llanas.
+  - Precio: gratis hasta aviso con 3 meses de antelación; el modelo de pago incluirá más contenidos (cuota prevista 5 €/mes, 30 € semestre, 50 € año).
+  - Sobre mí: la certificación ya no dice que «habilita para el asesoramiento».
+  - Estilo: ETF sin «s», «Brókers», «EE. UU.» en el texto, «seis estrategias».
+
+PENDIENTE DE TI
+  - Sustituir los 4 PDF de Gmail por versiones sin la marca (mismos nombres en /informes/). Si cambia el número de páginas o el tamaño, actualiza la tarjeta.
+  - Plantilla del informe: pesos de IMPULSO (pone 15/10/15), «Rebalanceo mensual» en «RECUERDA» (ROCA e IMPULSO son semestrales),
+    enlace al artículo de la Cuenta Financia Europa (/aprende/brokers/... no existe; es /aprende/cuenta-financia-europa/).
+  - NIF y domicilio en el aviso legal; revisión legal.
+  - Antes de lanzar: python3 tools/check_site.py y después python3 tools/prelaunch.py.
+
+CAMBIOS V25 (sobre la V24)
+  - Se mantienen las seis estrategias. Foto de José Manuel en «Sobre mí», «Quién soy» (home) y avatar del hero (assets/img/jose.jpg y jose-avatar.jpg).
+  - Home: nuevo orden = Hero · Mes a mes · Estrategias · Si eres nuevo (cómo funciona) · Quién soy · Herramientas · Blog · FAQ · Suscripción.
+    La tabla del hero incluye ahora la columna «12 meses» (a septiembre de 2026) y enlaces al glosario (caída máxima, backtest, asignación táctica).
+  - FAQ ampliada a 12 preguntas desde una única lista (web + datos estructurados FAQPage): qué recibo, precio previsto, con cuánto dinero empezar, si hay que operar cada mes,
+    empezar a mitad de mes, impuestos y comisiones, baja, experiencia, para quién es, si gestiono dinero ajeno y asesoramiento.
+  - Recorrido de tres pasos renombrado: Paso 1 «Cómo funciona» (antes «Empieza aquí»), Paso 2 «Ejemplo práctico», Paso 3 «Compara y elige» (comparador).
+    «Combinar estrategias» pasa a ser herramienta (en «Recursos») y ya no es un paso. Menú, pie y botón fijo regenerados desde tools/chrome.py.
+  - Ejemplo práctico reordenado: test -> fichas -> importe -> suscripción -> reparto -> bróker -> cuenta -> informes (caso de Marta renumerado).
+  - Etiqueta «Rentabilidad anual media» sustituida por «Rentabilidad anualizada» (CAGR) en toda la web; glosario y metodología explican la diferencia con la acumulada.
+  - Sharpe: definido como media mensual x 12 / volatilidad anualizada, SIN descontar tasa libre de riesgo (glosario y metodología).
+  - Metodología: nueva sección «Cómo leer el nivel de riesgo (1 a 5)» con volatilidad y caída máxima por estrategia. ROCA/IMPULSO: «RV USA small cap value» en vez de «RV americana».
+  - ROCA/IMPULSO: «revisión semestral» (en tai.js y textos). GEN-Z: «La más arriesgada de mis estrategias de acciones». HORIZONTE: aclarado que no tiene backtest (real desde 2018).
+  - Nuevo tools/prelaunch.py: al lanzar, quita noindex, añade canonical y og:url, crea sitemap.xml y reescribe robots.txt (cambia DOMINIO dentro si hace falta).
+
+PENDIENTE DE TI (no lo puedo resolver yo)
+  - Aviso legal: NIF y domicilio del titular (hay un comentario HTML «AÑADIR AQUÍ»). Revisión legal recomendable (MiFID II: formación vs asesoramiento).
+  - «6 meses gratis»: solo figura en el formulario de Brevo; la web habla de «empezar es gratis». Asegúrate de que coinciden.
+  - Confirma que los niveles de riesgo 1-5 son los que quieres: la web explica que siguen sobre todo la volatilidad histórica.
+  - Discrepancia: las medias mostradas de GEDA (40,3) y CRYPTO (44,1) no coinciden con el CAGR recalculado desde series.js (40,6 y 44,8). El resto sí cuadra. Revisa cuál es correcta antes de publicar.
+  - Plantilla de email: IMPULSO 40/30/30, «RV USA Small Cap Value», Real Decreto-ley 26/2026 desactualizado y CRYPTO «Datos a 31 agosto».
+  - No he revisado a fondo los artículos del blog ni las preguntas del test.
+  - Antes de lanzar: python3 tools/check_site.py y después python3 tools/prelaunch.py.
+
+TU AMIGO INVERSOR · WEB V24
+===========================
+
+CAMBIOS V24 (sobre la V23)
+  - Home: nuevo orden = Hero · Quién soy · Estrategias · «Si eres nuevo aquí + Cómo funciona» (un solo bloque: tres pasos + funcionamiento mes a mes) · Herramientas · Blog · FAQ · Suscripción.
+  - Las tres páginas de inicio son ahora Paso 1 (Empieza aquí), Paso 2 (Ejemplo práctico) y Paso 3 (Combinar estrategias): indicador de pasos bajo el título y bloque «Siguiente» al final.
+    En el menú superior forman el desplegable «Empieza aquí»; «Recursos» agrupa Test, Comparador, Metodología y Glosario. Se genera desde tools/chrome.py.
+  - Política: ya no hay fecha. Todos los botones/enlaces dicen «Empieza gratis». Textos nuevos (home, FAQ, datos estructurados): empezar es gratis; en el futuro será de pago con cuota mínima prevista de 5 €/mes
+    (30 € por semestre o 50 € al año con descuento), aviso con 3 meses de antelación, sin pagos automáticos y con alta explícita. Los «6 meses gratis» van en el formulario de Brevo (no se mencionan en la web).
+  - Formulario de Brevo: iframe de 610 px de alto (el doble).
+  - Combinar estrategias: se quitan las viñetas «Los periodos son distintos» y «Hay años simulados»; el ejemplo ROCA + CRYPTO se sustituye por GEDA 60 % + GEN-Z 30 % + CRYPTO 10 %.
+  - Espaciado: guía, artículos, textos legales y fichas comparten ahora interlineado 1,75 y las mismas separaciones entre párrafos, listas y títulos (bloque «V24» al final de site.css).
+
+CAMBIOS V23 (sobre la V22)
+  - Formulario de suscripción: sustituido el formulario simulado por el iframe de Brevo (sibforms). Se elimina el código de simulación de tai.js (initForm).
+  - Home: orden de las cajas «Por dónde empezar» = Empieza aquí -> Ejemplo práctico -> Combina estrategias; texto del hero que explica qué recibe el suscriptor y que no hay que operar cada mes;
+    tarjeta duplicada «Combinar y simular» eliminada de Herramientas; nota bajo las tarjetas que explica que HORIZONTE es un plan de pensiones (traspasos entre planes).
+  - Informe de ejemplo: nota de actualización fechada sobre el Real Decreto-ley 26/2026 (no convalidado) y el 29/2026, con enlace al artículo del blog.
+  - Simulador: aviso visible junto a los controles. Ficha de GEDA: el botón «Ver posiciones del mes» (ancla inexistente) apunta ahora al informe de ejemplo.
+  - Nuevo tools/check_site.py: comprueba enlaces/anclas, título, meta descripción, noindex y que las rentabilidades medias de tai.js coincidan con las fichas. Ejecútalo antes de publicar.
+  - AL LANZAR: quitar noindex de las 30 páginas y el Disallow de robots.txt, crear sitemap.xml, aviso legal con NIF y domicilio.
+
+CAMBIOS V22 (sobre la V21)
+  - Menú unificado en las 30 páginas (se genera desde tools/chrome.py): Estrategias · Empieza aquí · Combinar estrategias · Recursos (desplegable: Ejemplo práctico,
+    Test de riesgo, Comparador, Metodología, Glosario) · Blog · Sobre mí. En móvil, lista plana. El pie también es el mismo en todas las páginas.
+  - Home: nuevo bloque «Por dónde empezar» antes de «Quién soy» con tres cajas destacadas (Empieza aquí, Combina estrategias, Ejemplo práctico).
+    Bajo la tabla de las 6 estrategias del hero hay un enlace al Comparador. La herramienta «Simulador» pasa a «Combinar y simular».
+  - HORIZONTE: es un PLAN DE PENSIONES y se cataloga como ASIGNACIÓN TÁCTICA (antes «cartera permanente»), con revisión mensual (como indica su ficha).
+    Aparece siempre con la etiqueta «plan de pensiones» (home, tarjetas, comparador, test, informe de ejemplo, glosario, pie...). Datos en tools/ y assets/js/tai.js: campo note:'Plan de pensiones'.
+    Los textos de frecuencia dicen ahora: tácticas (GEDA, GEN-Z, CRYPTO y HORIZONTE) = mensual; carteras permanentes (ROCA e IMPULSO) = semestral.
+  - Combinar estrategias: ejemplos nuevos IMPULSO + GEDA (50/50) e IMPULSO + GEDA + GEN-Z (30/40/30); se mantienen ROCA + CRYPTO y ROCA + IMPULSO (50/50).
+    La herramienta «Compón tu mezcla» tiene un deslizador de peso por estrategia (los pesos se normalizan a 100 %) y cada ejemplo tiene un botón «Probar esta mezcla en la herramienta».
+  - El simulador de interés compuesto está integrado en Combinar estrategias (#simulador) como gráfica adicional, con la mezcla y los pesos elegidos.
+    /simulador/ queda como redirección a esa sección (puedes borrar la carpeta cuando quieras); assets/js/simulador.js eliminado.
+  - Ejemplo práctico: enlaces a los posts del blog sobre elegir bróker (mejores-brokers-espana-2026, que-brokers-utilizo) y sobre combinar estrategias (combinar-estrategias-inversion).
+  - Las fichas apuntaban a ../index.html#metodologia (ya no existe en la home): ahora enlazan a /metodologia/.
+  - Pendiente conocido (anterior): el botón «Ver posiciones del mes» de la ficha de GEDA apunta a #posiciones, que no existe en esa página.
+
+
+CAMBIOS V16
+  - Oferta: ya no hay "3 meses gratis". Todo es gratis hasta el 31 de diciembre de 2026; después 30 EUR/semestre o 50 EUR/año
+    para seguir recibiendo el informe mensual con las posiciones el día 1 y poder replicar las estrategias (home, FAQ, avisos, JSON-LD).
+  - Certificación MiFID II (UC3M, avalada por la CNMV): en la home (línea del autor y datos estructurados), en Sobre mí y en el aviso legal
+    (aclarando que la web no da asesoramiento personalizado).
+
+CAMBIOS V15
+  - Perfiles unificados en toda la web y en el test: Conservador (ROCA), Moderado (IMPULSO y HORIZONTE), Agresivo (GEDA), Muy agresivo (GEN-Z), Especulativo (CRYPTO).
+    "Perfil tolerante" desaparece (IMPULSO es ahora "Perfil moderado").
+  - Test: 5 niveles de perfil (<=18, <=26, <=31, <=36, >36 puntos de 40). Encajan las estrategias de nivel igual o inferior al del cliente;
+    las inferiores salen con la nota "su rentabilidad potencial es inferior a la que buscas". Quedan fuera las de nivel superior
+    y las que no cumplen sus condiciones (HORIZONTE con menos de 5 años; GEDA/GEN-Z/CRYPTO según la pérdida que acepta).
+  - Metodología: eliminada la mención al "perfil radar" del comparador (ya no existe).
+
+
+CAMBIOS V13 (+ ajustes finales)
+  - Imagen nueva de IMPULSO, precio en la FAQ (30 €/semestre o 50 €/año) y Brevo como proveedor de correo en la política de privacidad.
+  - Nombre: "José Manuel García" en toda la web (antes "José M. García").
+  - Test de riesgo: 10 preguntas (situación, conocimientos, riesgo y objetivos, puntúan 1-4; máx. 40). Perfil Conservador/Moderado/Dinámico/Agresivo
+    con reglas de prudencia (p. ej. dinero necesario en <2 años = máx. Conservador) y explicación en lenguaje natural.
+    Muestra las estrategias que encajan (sin porcentajes) y las que no, con el motivo. Todo se calcula en el navegador.
+    Código en assets/js/tai.js (QUIZ, evaluate, STRAT_WHY). Umbrales: <=18 Conservador, <=26 Moderado, <=34 Dinámico, resto Agresivo.
+  - Páginas nuevas: aviso-legal/ y privacidad/ (enlazadas desde el pie). Quitados todos los [PLACEHOLDER].
+
+CAMBIOS V12
+  - Sobre mí: texto nuevo (cómo empezó todo, de la experiencia a las estrategias, qué encontrarás, gracias) con viñetas y espaciado correctos.
+  - Imágenes de los dos posts que faltaban: estrategias-momentum y rentabilidad-en-euros-tipo-cambio (assets/img/posts/).
+  - Listas de los posts: las líneas con ✔ ✅ ❌ eran párrafos sueltos; ahora son listas reales (estrategias-momentum, planes-de-pensiones-vs-fondos, dollar-cost-averaging).
+  - Viñetas visibles también en las fichas de las estrategias (el texto corrido no tenía estilo de lista).
+
+CAMBIOS V11
+  - Logo: nueva imagen (assets/img/logo-tai.jpg) en cabecera y pie de todas las páginas, y como favicon / icono de Apple.
+  - Comparador: tabla única con las 6 estrategias (ya no hay selector). ?s=ROCA,GEDA resalta esas columnas.
+  - Informe mensual: informe-ejemplo/index.html es ahora el informe del 1 de octubre de 2026 (cierre de septiembre), con el aspecto de la web.
+    Estilos en assets/css/informe.css.
+  - Eliminados archivos que ya no se usaban: favicon.svg, favicon2.jpg, logoTAI-150x150.jpg (duplicados del logo),
+    assets/js/series.js (no lo leía ningún script) y articulos/_imagenes-pendientes.md (ya hay imágenes).
+
+CONTENIDO
+  index.html                         Home
+  comparador/ simulador/ metodologia/ sobre-mi/ blog/ informe-ejemplo/
+  6 fichas de estrategia             (carpetas de cada una, mismas URL que en WordPress)
+  aprende/                           Artículos del blog (se generan solos desde /articulos)
+  assets/                            css, js, img, fonts
+  articulos/                         Artículos en Markdown (+ borradores/ sin publicar, + _plantilla.md)
+  tools/                             build_blog.py y chrome.py (cabecera/pie comunes), sprite.txt (iconos)
+  .github/workflows/publicar.yml     Publicación en GitHub Pages
+
+PUBLICAR UN ARTÍCULO
+  1. En articulos/, copia _plantilla.md como AAAA-MM-DD-titulo.md y edítala.
+  2. Commit. En 1-2 minutos GitHub regenera la web (artículo, listado, 3 últimos de la home y RSS).
+  3. Fecha futura = se publica ese día. Borradores: carpeta articulos/borradores/.
+  Una vez en GitHub: Settings > Pages > Source: "GitHub Actions".
+
+TU FOTO
+  assets/img/jose.jpg (vertical, ~800x1000). Si no existe se muestra jose.svg (provisional).
+
+PENDIENTE ANTES DE PUBLICAR DE VERDAD
+  - Quitar noindex de las páginas y cambiar robots.txt.
+  - Aviso legal y privacidad: añadir NIF y domicilio (busca "AÑADIR AQUÍ" en aviso-legal/ y privacidad/) y revisarlos con un abogado.
+  - Conectar el formulario de suscripción (hoy simula el envío).
+  - La imagen del tipo de cambio es pequeña (547x365): conviene una de 1200x800.
+
+
+=== CAMBIOS V17 (sobre la V16) ===
+- Home: nuevo hero (propuesta de valor y matiz sobre disponibilidad de activos/costes segun bróker), CTA "Accede gratis hasta el 31 de diciembre", nota bajo los botones y fecha visible junto a la tabla.
+- Estrategias: titulo "Seis estrategias de inversión, seis formas de aplicar un sistema" y descripcion sin promesas absolutas (se mantienen filtros, tarjetas y fichas).
+- Cómo funciona: H2 "Cómo seguir las estrategias mes a mes", bloque "Reglas claras. Revisión mensual. Tú decides." y paso 4 reescrito.
+- Herramientas: textos descriptivos (el simulador aclara que es hipotético).
+- Blog (home y pagina /blog/): encabezado "Aprende a entender y aplicar las estrategias de inversión".
+- Suscripcion: "Conoce las estrategias antes de decidir", precios y fecha reescritos; el CTA del test ya no menciona "final de año".
+- Aviso de actualizacion (10 paginas): "Las rentabilidades llegan hasta el cierre del último trimestre (30 sep 2026). El informe mensual ... lo recibes el día 1". La fecha "30 sep 2026" esta escrita a mano: actualizala cada trimestre en las 10 paginas (buscar "data-notice") y en el hero (rp-note).
+
+
+=== CAMBIOS V18 (revision "como cliente") ===
+- Frecuencia: FAQ "¿Tengo que operar todos los meses?" y paso 2 de "Cómo funciona" (tacticas = mensual; permanentes = semestral).
+- Real vs simulado: asterisco en "Rent. anual media" de GEDA, GEN-Z, IMPULSO y CRYPTO + nota bajo las tarjetas + FAQ "¿Las rentabilidades son reales?". Los años (GEDA 2016-2020, GEN-Z 2020-2023, IMPULSO 2016-2017, CRYPTO 2018-2022) salen de REAL_FROM/REALNOTE de cada ficha: si cambian, actualiza la nota (index.html, clase cards-note) y la FAQ (assets/js/home.js).
+- Riesgo junto a la tabla del hero (caida maxima -9,2% ROCA a -73% CRYPTO; valores de tai.js).
+- Hero: "Sin asesoramiento personalizado" junto al certificado MiFID II.
+- FAQ ampliada (7 preguntas) y FAQPage JSON-LD sincronizado.
+- Una sola etiqueta para suscribirse: "Suscríbete gratis" (menu, botones, formulario, fichas, blog). Fecha de oferta siempre "31 de diciembre".
+- Fichas: cierre sin "es para ti". Descripciones de ROCA, GEDA y GEN-Z sin promesas absolutas.
+- Informe de ejemplo: aclaracion de que es un informe ya publicado como ejemplo.
+- Suscripcion: "solo nombre y correo, sin datos de pago" (cierto con el formulario actual; revisar si se conecta un cobro).
+
+
+=== CAMBIOS V19 ===
+- El informe de /informe-ejemplo/ es un ejemplo fijo (octubre 2026) y no se actualizara: la pagina lo dice y explica que, para conocer las posiciones de cada mes, hay que suscribirse. Etiquetas "Informe de ejemplo" en el hero.
+- Precios: el servicio de pago aun no esta disponible; se avisara a los suscriptores con suficiente antelacion. Los 30 EUR/semestre y 50 EUR/año figuran como "precio previsto" (home, FAQ y datos estructurados). Pendiente: confirmar o quitar estos importes.
+
+
+=== CAMBIOS V20 (rondas 1 y 2) ===
+- Articulos: matizadas frases categoricas en momentum, drawdowns y abandono (ver cambios_articulos_ronda1.md). Articulo de la Cuenta Financia Europa reescrito con el estado normativo actual (RDL 29/2026 pendiente de convalidacion; sin comercializacion).
+- Nuevas paginas: /empieza-aqui/ (guia de entrada) y /glosario/, enlazadas desde el pie (chrome.py y todas las paginas). Enlace a la guia desde "Cómo funciona" en la home.
+- Fichas: bloque "Qué significa la caída máxima en euros" (ejemplo con 5.000 EUR) en las 6 fichas. Usa la caida maxima de tai.js (campo dd). Si cambia dd, hay que recalcular ese bloque a mano (4.020 = 5.000 x (1 - 0,196); subida necesaria = 1/(1 - caida) - 1).
+- La tabla de "Empieza aquí" repite revision, caida maxima e historial simulado de cada estrategia: actualizar tambien cuando cambien.
+- Pendiente de tu revision: el informe de ejemplo cita el RDL 26/2026 (derogado).
+
+
+=== CAMBIOS V21 ===
+- NUEVA /ejemplo-practico/: cinco personajes (Carlos, Marta, Daniel, Laura, Alex), uno por perfil del test, con los resultados verificados en el test real; caso completo de Marta con IMPULSO (10.000 EUR invertidos + 3.000 EUR para reforzar la reserva) y bloque de Daniel con GEDA (14.000 EUR = 7 posiciones de 2.000). Mantiene los productos de la ficha de IMPULSO y cita su aviso de "alternativas equivalentes". Incluye "No tengo ningun acuerdo comercial ni de afiliacion con ningun broker" (confirmado por el autor).
+- NUEVA /combinar-estrategias/: explica que rentabilidad, volatilidad y caida maxima de una mezcla no son la suma ni la media de las partes y que interviene la correlacion. Tres ejemplos con datos reales, matriz de correlaciones y herramienta "Compón tu mezcla" (pesos iguales, rebalanceo mensual, periodo comun). Los numeros se verificaron contra un calculo independiente.
+- Datos de la herramienta: assets/js/series.js, GENERADO por tools/build_series.py a partir de las rentabilidades mensuales de las 6 fichas (const GEDA={...}). Cada vez que actualices los datos de las fichas, ejecuta: python tools/build_series.py. Los textos de los ejemplos se recalculan solos.
+- Glosario: nuevo termino "Correlacion". Enlaces nuevos en el pie, "Empieza aqui", home y resultado del test.
+- (Resuelto en V23) IMPULSO: la tabla del informe ya es 40/30/30 como la ficha; el 15/10/15 que se veía es la composición de ROCA. Rentabilidades medias de tai.js alineadas con las fichas (IMPULSO 13,7; HORIZONTE 12,2; GEN-Z 68,8; CRYPTO 44,1).

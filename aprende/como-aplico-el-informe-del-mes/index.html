@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark" data-base="../../">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cómo aplico el informe del mes, paso a paso | Tu Amigo Inversor</title>
+<meta name="description" content="Qué miro primero cuando llega el informe del día 1, cómo ejecuto una rotación, qué tipo de orden uso y qué hago si empiezo de cero. Con el ejemplo real de octubre de 2026.">
+<meta name="theme-color" content="#0a0f1e" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+
+<!-- Open Graph / Twitter -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:site_name" content="Tu Amigo Inversor">
+<meta property="og:title" content="Cómo aplico el informe del mes, paso a paso">
+<meta property="og:description" content="Qué miro primero cuando llega el informe del día 1, cómo ejecuto una rotación, qué tipo de orden uso y qué hago si empiezo de cero. Con el ejemplo real de octubre de 2026.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Cómo aplico el informe del mes, paso a paso">
+<meta name="twitter:description" content="Qué miro primero cuando llega el informe del día 1, cómo ejecuto una rotación, qué tipo de orden uso y qué hago si empiezo de cero. Con el ejemplo real de octubre de 2026.">
+<meta property="og:image" content="https://tuamigoinversor.com/assets/img/og-tuamigoinversor.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:image" content="https://tuamigoinversor.com/assets/img/og-tuamigoinversor.jpg">
+
+<!-- Tema sin parpadeo: se aplica antes de pintar -->
+<script>
+(function(){try{var t=localStorage.getItem('tai-theme-v3');if(!t){t='light'}document.documentElement.setAttribute('data-theme',t)}catch(e){}})();
+</script>
+
+<link rel="stylesheet" href="../../assets/css/fonts.css">
+<link rel="stylesheet" href="../../assets/css/site.css">
+<link rel="icon" href="../../assets/img/logo-tai.jpg" type="image/jpeg">
+<link rel="apple-touch-icon" href="../../assets/img/logo-tai.jpg">
+
+<!-- Única librería externa: Chart.js (diferida) -->
+<script defer src="../../assets/js/chart.umd.js"></script>
+<script defer src="../../assets/js/tai.js"></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Cómo aplico el informe del mes, paso a paso", "datePublished": "2026-10-12", "dateModified": "2026-10-12", "author": {"@type": "Person", "name": "José Manuel García"}, "description": "Qué miro primero cuando llega el informe del día 1, cómo ejecuto una rotación, qué tipo de orden uso y qué hago si empiezo de cero. Con el ejemplo real de octubre de 2026.", "mainEntityOfPage": "https://tuamigoinversor.com/aprende/como-aplico-el-informe-del-mes/"}</script>
+<!-- Analítica sin cookies (GoatCounter) -->
+<script data-goatcounter="https://tuamigoinversor.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Saltar al contenido</a>
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<!-- SVG sprite (iconos estilo Lucide) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></symbol>
+  <symbol id="i-left" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></symbol>
+  <symbol id="i-right" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+  <symbol id="i-up" viewBox="0 0 24 24"><path d="m18 15-6-6-6 6"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9z"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+  <symbol id="i-scale" viewBox="0 0 24 24"><path d="M12 3v18M5 7h14M5 7l-3 7a4 4 0 0 0 6 0L5 7zM19 7l-3 7a4 4 0 0 0 6 0l-3-7z"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></symbol>
+  <symbol id="i-flask" viewBox="0 0 24 24"><path d="M9 3h6M10 3v6L4 20a1 1 0 0 0 .9 1.5h14.2A1 1 0 0 0 20 20l-6-11V3"/></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></symbol>
+  <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M3 12a9 9 0 0 1 15-6.7L21 8M21 3v5h-5M21 12a9 9 0 0 1-15 6.7L3 16M3 21v-5h5"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></symbol>
+</svg>
+
+<!-- =========================== CABECERA =========================== -->
+<header class="site-header" id="header">
+  <nav class="container nav" aria-label="Navegación principal">
+    <a href="../../index.html" class="logo" aria-label="Tu Amigo Inversor, inicio"><img class="logo-mark" src="../../assets/img/logo-tai.jpg" width="40" height="40" alt="">Tu Amigo Inversor</a>
+    <ul class="nav-links">
+      <li class="has-sub"><button type="button" class="sub-toggle" aria-expanded="false" aria-haspopup="true">Estrategias <svg class="icon" aria-hidden="true"><use href="#i-down"/></svg></button>
+        <ul class="sub">
+          <li><a href="../../index.html#estrategias">Las seis estrategias</a></li>
+          <li><a href="../../comparador/index.html">Compáralas frente a frente</a></li>
+          <li><a href="../../index.html#test" data-quiz>Test de riesgo (3 min)</a></li>
+          <li><a href="../../combinar-estrategias/index.html">Combinar estrategias</a></li>
+        </ul></li>
+      <li class="has-sub"><button type="button" class="sub-toggle" aria-expanded="false" aria-haspopup="true">Cómo funciona <svg class="icon" aria-hidden="true"><use href="#i-down"/></svg></button>
+        <ul class="sub">
+          <li><a href="../../empieza-aqui/index.html">Explicado desde cero</a></li>
+          <li><a href="../../ejemplo-practico/index.html">Un ejemplo práctico, paso a paso</a></li>
+          <li><a href="../../metodologia/index.html">Metodología y cálculos</a></li>
+          <li><a href="../../glosario/index.html">Glosario</a></li>
+        </ul></li>
+      <li><a href="../../informes/index.html">Informes</a></li>
+      <li><a href="../../blog/index.html" aria-current="page">Blog</a></li>
+      <li><a href="../../sobre-mi/index.html">Sobre mí</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="icon-btn" id="themeToggle" type="button" aria-label="Cambiar a modo claro">
+        <svg class="icon i-sun"><use href="#i-sun"/></svg><svg class="icon i-moon"><use href="#i-moon"/></svg>
+      </button>
+      <a href="../../index.html#suscripcion" class="btn btn-primary btn-sm nav-cta magnetic">Quiero el informe</a>
+      <button class="icon-btn burger" id="burger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileMenu"><svg class="icon"><use href="#i-menu"/></svg></button>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="../../index.html#estrategias">Las seis estrategias</a></li>
+      <li><a href="../../comparador/index.html">Compáralas frente a frente</a></li>
+      <li><a href="../../index.html#test" data-quiz>Test de riesgo (3 min)</a></li>
+      <li><a href="../../combinar-estrategias/index.html">Combinar estrategias</a></li>
+      <li><a href="../../empieza-aqui/index.html">Explicado desde cero</a></li>
+      <li><a href="../../ejemplo-practico/index.html">Un ejemplo práctico, paso a paso</a></li>
+      <li><a href="../../metodologia/index.html">Metodología y cálculos</a></li>
+      <li><a href="../../glosario/index.html">Glosario</a></li>
+      <li><a href="../../informes/index.html">Informes</a></li>
+      <li><a href="../../blog/index.html" aria-current="page">Blog</a></li>
+      <li><a href="../../sobre-mi/index.html">Sobre mí</a></li>
+      <li><a href="../../index.html#suscripcion" class="btn btn-primary" style="margin-top:.5rem">Quiero el informe gratis</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+<section class="page-hero" aria-labelledby="page-title"><div class="container narrow">
+  <nav class="crumbs" aria-label="Migas de pan"><a href="../../index.html">Inicio</a><span aria-hidden="true">/</span><a href="../../blog/index.html">Blog</a><span aria-hidden="true">/</span><span aria-current="page">Operativa</span></nav>
+  <span class="eyebrow">Operativa</span>
+  <h1 id="page-title">Cómo aplico el informe del mes, paso a paso</h1>
+  <p class="post-meta">Por José Manuel García · <time datetime="2026-10-12">12 oct 2026</time> · 8 min de lectura</p>
+</div></section>
+<article class="page-body"><div class="container narrow"><figure class="post-cover"><img src="../../assets/img/posts/como-aplico-el-informe-del-mes.webp" alt="" width="1200" height="800" decoding="async"></figure>
+<div class="post-content prose"><p>El día 1 de cada mes te llega el informe. Trae muchas tablas, comentarios del mercado y el detalle de las seis estrategias. Y es normal que la primera vez te preguntes: «Vale, ¿y yo qué tengo que hacer con esto?».</p>
+<p>La respuesta corta: casi siempre, muy poco. La mayor parte del informe es para que entiendas qué ha pasado. Lo que tienes que hacer tú cabe en unas pocas líneas.</p>
+<p>Aquí te cuento cómo lo aplico yo, paso a paso, con el informe real de octubre de 2026 como ejemplo. Puedes descargarlo en la página de <a href="../../informes/index.html">informes de ejemplo</a>.</p>
+<h2>Antes de empezar: qué necesitas tener listo</h2>
+<p>El informe te dice qué cambia, no cómo montar la estrategia desde cero. Para aplicarlo necesitas:</p>
+<ul>
+<li><strong>La estrategia ya montada</strong>, con el reparto que indica su ficha. Si todavía no la tienes, más abajo te explico cómo empezar.</li>
+<li><strong>Una cuenta en un bróker</strong> que tenga los productos de esa estrategia. Te cuento cuáles uso yo en <a href="../../aprende/que-brokers-utilizo/index.html">qué brókers utilizo</a>.</li>
+<li><strong>Un rato el primer día hábil del mes.</strong> Si no hay cambios en tus estrategias, son cinco minutos.</li>
+</ul>
+<h2>Paso 1: voy directo a mis estrategias</h2>
+<p>El informe sigue siempre el mismo orden:</p>
+<ol>
+<li>Qué ha pasado en el mercado durante el mes.</li>
+<li>Una tabla con la rentabilidad de las seis estrategias.</li>
+<li>El detalle de cada estrategia, con sus posiciones y, al final, <strong>«Cambios para…»</strong> o <strong>«Sin cambios»</strong>.</li>
+<li>Un resumen final con todos los cambios del mes.</li>
+</ol>
+<p>Si solo sigues una o dos estrategias, no necesitas leer todo antes de actuar. Busca tu estrategia y lee la línea de cambios. El resto puedes leerlo con calma después: te ayuda a entender por qué el sistema hace lo que hace, pero no cambia lo que tienes que hacer.</p>
+<p>En el informe de octubre, el resumen final decía:</p>
+<ul>
+<li><strong>GEDA:</strong> sale LITE y entra MRNA.</li>
+<li><strong>GEN-Z:</strong> sale LRCX y entra AMD.</li>
+<li><strong>CRYPTO:</strong> sale DASH y entra NEAR.</li>
+</ul>
+<p>ROCA, IMPULSO y HORIZONTE no tenían cambios.</p>
+<h2>Paso 2: si no hay cambios, no hago nada</h2>
+<p>Parece obvio, pero es el paso más importante. Si tu estrategia dice «Sin cambios», no tienes que tocar nada. No hace falta «ajustar un poco» ni vender lo que ha bajado.</p>
+<p>Cada estrategia tiene su ritmo:</p>
+<ul>
+<li><strong><a href="../../cartera-permanente-conservadora-roca/index.html">ROCA</a> e <a href="../../cartera-inversion-crecimiento-impulso/index.html">IMPULSO</a></strong> son carteras permanentes, con pesos fijos. No rotan cada mes. Se revisan cada semestre y, en condiciones normales, basta con rebalancear una o dos veces al año. Cuando toque, lo verás en el informe.</li>
+<li><strong><a href="../../plan-pensiones-moderado-horizonte/index.html">HORIZONTE</a></strong> trabaja con planes de pensiones. Lo normal es que el informe diga «Sin cambios ni actuaciones necesarias», como en octubre.</li>
+<li><strong><a href="../../inversion-tactica-geda/index.html">GEDA</a>, <a href="../../inversion-tematica-gen-z/index.html">GEN-Z</a> y <a href="../../inversion-criptomonedas-crypto/index.html">CRYPTO</a></strong> se revisan cada mes, así que en ellas es donde suelen aparecer las rotaciones.</li>
+</ul>
+<h2>Paso 3: si hay una rotación, vendo la que sale y compro la que entra</h2>
+<p>Una rotación siempre tiene la misma forma: <strong>sale un activo y entra otro.</strong> Lo que hago yo es:</p>
+<ol>
+<li><strong>Vendo toda la posición que sale.</strong> No vendo la mitad ni me quedo un poco «por si acaso».</li>
+<li><strong>Con el dinero de esa venta, compro el activo que entra.</strong></li>
+</ol>
+<p>En el informe lo escribo así: «compro MRNA por importe equivalente al promedio del resto de posiciones». Ese promedio es la referencia. En la práctica, yo compro con lo que saco de la venta, sin buscar cuadrarlo al céntimo.</p>
+<p>Con números inventados, para que se vea: si al vender LITE obtienes 1.900 € y el resto de posiciones de GEDA ronda los 2.100 €, compras MRNA por esos 1.900 €. No hace falta vender un poco de las demás para igualarlas.</p>
+<p>En CRYPTO funciona igual, pero dentro de las altcoins: DASH salió y NEAR entró por un importe parecido al de las otras altcoins, no al de bitcoin o ether. Bitcoin y ether pesan un 30 % cada uno, y cada altcoin, una tercera parte del 40 % restante.</p>
+<p>Un detalle práctico: si la acción que sale y la que entra cotizan en la misma divisa, conviene operar en un bróker que te deje mantener esa divisa. Así no pagas el cambio de moneda dos veces. Lo explico en el artículo de <a href="../../aprende/que-brokers-utilizo/index.html">brókers</a>.</p>
+<h2>Paso 4: lo hago el primer día hábil del mes</h2>
+<p>Yo ejecuto los cambios <strong>el primer día hábil del mes</strong>. Si el día 1 cae en fin de semana o festivo, lo hago el siguiente día de mercado.</p>
+<p>La razón es sencilla: el sistema decide con los datos del cierre de mes, y las posiciones del informe son las que estarán vigentes a partir del día 1. Cuanto más se parezca lo que haces tú a lo que hace el sistema, más se parecerán tus resultados a los publicados.</p>
+<p>Ten en cuenta que no todo se ejecuta igual de rápido:</p>
+<ul>
+<li><strong>Acciones, ETF y criptomonedas:</strong> la orden se ejecuta en el momento, o cuando el precio llega a tu límite.</li>
+<li><strong>Fondos de inversión y planes de pensiones:</strong> no compras a un precio que veas en pantalla. Se aplica el valor liquidativo que fije la gestora, y un traspaso puede tardar varios días en completarse.</li>
+</ul>
+<h2>Paso 5: elijo el tipo de orden según el activo</h2>
+<p>Aquí no tengo una regla única. Depende de lo líquido que sea el activo:</p>
+<ul>
+<li><strong>En activos muy líquidos</strong> (ETF grandes, acciones muy negociadas, bitcoin o ether) uso <strong>orden a mercado</strong>. Se ejecuta al momento y la diferencia entre el precio de compra y el de venta suele ser pequeña.</li>
+<li><strong>En activos menos líquidos</strong> (algunas acciones pequeñas o algunas altcoins) uso <strong>orden limitada</strong>. Fijo el precio máximo al que compro o el mínimo al que vendo. Así evito pagar de más si hay poca oferta en ese momento.</li>
+</ul>
+<p>Antes de lanzar la orden, mira la horquilla, es decir, la diferencia entre el mejor precio de compra y el de venta. Si es amplia, una orden a mercado te puede salir cara.</p>
+<h2>Paso 6: apunto lo que he hecho</h2>
+<p>Cuando termino, anoto cada operación: fecha, activo, importe, precio y comisión. Me lleva dos minutos y me ahorra mucho tiempo en la declaración de la renta.</p>
+<p>En las estrategias que rotan cada mes, esto importa. Un ejemplo: si vendes un valor cotizado con pérdidas y compras ese mismo valor en los dos meses anteriores o posteriores a la venta, Hacienda no te deja restar esa pérdida todavía. Lo explicaré con calma en un artículo aparte, pero ya ves por qué conviene tenerlo todo apuntado.</p>
+<h2>Si se empieza de cero: poco a poco</h2>
+<p>Si acabas de suscribirte y todavía no tienes la estrategia montada, el informe te dice qué posiciones están vigentes ese mes. La tentación es comprarlas todas de golpe. En las estrategias más agresivas (GEDA, GEN-Z y CRYPTO) yo <strong>entraría poco a poco</strong>, en varios meses, como explico en <a href="../../aprende/dollar-cost-averaging/index.html">cómo incorporarte a una estrategia</a>.</p>
+<p>En la práctica:</p>
+<ol>
+<li><strong>Se decide el importe total</strong> y en cuántas partes dividirlo.</li>
+<li><strong>El primer mes, se compran las posiciones vigentes con la primera parte</strong>, respetando el reparto de la estrategia (está en la tabla de abajo).</li>
+<li><strong>Los meses siguientes, se añade otra parte</strong> a las posiciones que estén vigentes en ese momento.</li>
+<li><strong>Si hay una rotación mientras tanto, se aplica a lo que ya se tiene</strong>, igual que en el paso 3.</li>
+</ol>
+<p>Así se reparte el dinero en las tres estrategias que rotan:</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Estrategia</th>
+<th>Posiciones</th>
+<th>Reparto</th>
+<th>Con 1.000 €</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GEDA</td>
+<td>7: 1 de índices, 2 de sectores, 2 acciones de EE. UU. y 2 europeas</td>
+<td>Mismo importe en cada una (1/7)</td>
+<td>Unos 143 € por posición</td>
+</tr>
+<tr>
+<td>GEN-Z</td>
+<td>4 acciones</td>
+<td>25 % cada una</td>
+<td>250 € por posición</td>
+</tr>
+<tr>
+<td>CRYPTO</td>
+<td>Bitcoin, ether y 3 altcoins</td>
+<td>30 % bitcoin, 30 % ether y el 40 % restante a partes iguales entre las 3 altcoins</td>
+<td>300 € en bitcoin, 300 € en ether y unos 133 € en cada altcoin</td>
+</tr>
+</tbody>
+</table></div>
+<p>En ROCA e IMPULSO, que se mueven menos, el momento de entrada pesa menos. Aun así, entrar en dos o más veces sigue siendo válido si te da tranquilidad.</p>
+<h2>Lo que no hago nunca</h2>
+<ul>
+<li><strong>Elegir qué cambios aplico y cuáles no.</strong> Si una estrategia me pide vender una acción que me gusta, la vendo. Si solo aplicas las señales que te convencen, ya no sigues el sistema: sigues tu intuición con un informe al lado.</li>
+<li><strong>Adelantarme al informe.</strong> No vendo a mitad de mes porque una posición haya caído. El sistema revisa una vez al mes, y yo también.</li>
+<li><strong>Mirar el precio cada día.</strong> No cambia lo que tengo que hacer el día 1, y sí hace más difícil mantener la calma. Te lo contaba en <a href="../../aprende/por-que-los-inversores-abandonan-su-estrategia-en-un-drawdown/index.html">por qué muchos inversores ganan menos que su propia estrategia</a>.</li>
+</ul>
+<h2>Lo que sigue siendo decisión tuya</h2>
+<p>El informe cuenta lo que hago yo con mi dinero. Tú decides si lo aplicas, cuánto inviertes y cuándo dejas de seguir una estrategia. Ten en cuenta también que las rentabilidades publicadas no incluyen comisiones ni impuestos, y que cuantas más rotaciones tenga una estrategia, más pesan esos costes.</p>
+<h2>Resumen: mi rutina del día 1</h2>
+<ol>
+<li>Abro el informe y busco mis estrategias.</li>
+<li>¿«Sin cambios»? No hago nada.</li>
+<li>¿Rotación? Vendo entera la posición que sale y, con ese dinero, compro la que entra.</li>
+<li>Lo hago el primer día hábil del mes.</li>
+<li>Orden a mercado en lo muy líquido y limitada en lo menos líquido.</li>
+<li>Apunto cada operación.</li>
+<li>Leo el resto del informe con calma, ya sin nada pendiente.</li>
+</ol>
+<p>Así, el informe se queda en lo que es: unos minutos al mes para aplicar unas reglas, no una decisión nueva cada vez.</p>
+<p><em>Este artículo describe mi operativa personal y tiene carácter informativo. No es asesoramiento financiero ni una recomendación personalizada. El ejemplo con importes es ilustrativo. Las rentabilidades pasadas no garantizan rentabilidades futuras.</em></p></div>
+<div class="disclaimer-bar" role="note"><svg class="icon"><use href="#i-alert"/></svg><p><strong>Importante:</strong> este artículo es informativo y no constituye asesoramiento financiero. Las rentabilidades pasadas no garantizan rentabilidades futuras.</p></div>
+<div class="cta-band reveal" style="margin-top:2.5rem"><div><h2>¿Quieres ver las estrategias en directo?</h2><p>Cada día 1 te mando por correo qué tengo en cada estrategia y qué cambio. Lo lees y decides tú qué hacer con tu dinero. Gratis y sin compromiso.</p></div>
+<div class="cta-row"><a href="../../index.html#suscripcion" class="btn btn-primary magnetic">Quiero el informe gratis <svg class="icon"><use href="#i-arrow"/></svg></a><a href="../../informes/index.html" class="btn btn-ghost">Ver un informe de ejemplo</a></div></div>
+</div></article>
+<section class="section alt tight" aria-labelledby="seguir-t"><div class="container"><h2 id="seguir-t" class="small-h reveal">Sigue leyendo</h2><div class="blog"><article class="post reveal" data-cat="Operativa">
+  <div class="post-media post-media--empty" aria-hidden="true"></div>
+  <div class="post-body"><small>Operativa · 26 oct 2026</small><h3><a href="../../aprende/con-cuanto-dinero-seguir-cada-estrategia/index.html">Con cuánto dinero seguir cada estrategia (y por qué el bróker importa tanto)</a></h3><p>No hay un mínimo, pero sí un importe a partir del cual las comisiones dejan de comerse la rentabilidad. La respuesta corta para cada estrategia y por qué yo empezaría GEDA con unos 7.000 €.</p><a class="more" href="../../aprende/con-cuanto-dinero-seguir-cada-estrategia/index.html">Leer artículo <svg class="icon"><use href="#i-arrow"/></svg><span class="sr-only">: Con cuánto dinero seguir cada estrategia (y por qué el bróker importa tanto)</span></a></div>
+</article><article class="post reveal" data-cat="Operativa">
+  <div class="post-media"><img src="../../assets/img/posts/rebalanceo-roca-impulso.webp" width="1200" height="800" loading="lazy" decoding="async" alt=""></div>
+  <div class="post-body"><small>Operativa · 19 oct 2026</small><h3><a href="../../aprende/rebalanceo-roca-impulso/index.html">Cómo rebalanceo ROCA e IMPULSO (y por qué no lo hago cada mes)</a></h3><p>Cuándo reviso las carteras permanentes, por qué rebalanceo con un margen del 15 %, cómo lo hago sin pagar impuestos de más y qué habría pasado con y sin rebalanceo desde que invierto con dinero real.</p><a class="more" href="../../aprende/rebalanceo-roca-impulso/index.html">Leer artículo <svg class="icon"><use href="#i-arrow"/></svg><span class="sr-only">: Cómo rebalanceo ROCA e IMPULSO (y por qué no lo hago cada mes)</span></a></div>
+</article><article class="post reveal" data-cat="Fiscalidad">
+  <div class="post-media"><img src="../../assets/img/posts/cuenta-financia-europa.webp" width="1200" height="800" loading="lazy" decoding="async" alt=""></div>
+  <div class="post-body"><small>Fiscalidad · 30 sep 2026 · actualizado el 18 oct 2026</small><h3><a href="../../aprende/cuenta-financia-europa/index.html">Cuenta Financia Europa: qué es, qué ventajas fiscales tiene y cuándo podrá contratarse</a></h3><p>La Cuenta de Ahorro e Inversión Financia Europa ya tiene norma en vigor, pero todavía no puede contratarse y sigue pendiente de convalidación en el Congreso. Te explico cómo funciona, qué ventajas fiscales ofrece y qué falta por conocer.</p><a class="more" href="../../aprende/cuenta-financia-europa/index.html">Leer artículo <svg class="icon"><use href="#i-arrow"/></svg><span class="sr-only">: Cuenta Financia Europa: qué es, qué ventajas fiscales tiene y cuándo podrá contratarse</span></a></div>
+</article></div></div></section>
+</main>
+
+<!-- =========================== PIE =========================== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <a href="../../index.html" class="logo" style="margin-bottom:1rem"><img class="logo-mark" src="../../assets/img/logo-tai.jpg" width="40" height="40" alt="">Tu Amigo Inversor</a>
+        <p>Te cuento cada mes qué hago con mi dinero: estrategias con reglas claras, sin corazonadas. Lo que hagas con tu dinero lo decides tú.</p>
+        <p style="margin-top:.8rem"><a href="mailto:info@tuamigoinversor.com">info@tuamigoinversor.com</a></p>
+      </div>
+      <nav aria-label="Carteras permanentes"><h2>Cartera permanente</h2><ul><li><a href="../../cartera-permanente-conservadora-roca/index.html">ROCA</a></li><li><a href="../../cartera-inversion-crecimiento-impulso/index.html">IMPULSO</a></li></ul></nav>
+      <nav aria-label="Asignación táctica"><h2>Asignación táctica</h2><ul><li><a href="../../inversion-tactica-geda/index.html">GEDA</a></li><li><a href="../../inversion-tematica-gen-z/index.html">GEN-Z</a></li><li><a href="../../inversion-criptomonedas-crypto/index.html">CRYPTO</a></li><li><a href="../../plan-pensiones-moderado-horizonte/index.html">HORIZONTE <small class="pp">plan de pensiones</small></a></li></ul></nav>
+      <nav aria-label="Herramientas y proyecto"><h2>Empieza por aquí</h2><ul><li><a href="../../empieza-aqui/index.html">Explicado desde cero</a></li><li><a href="../../ejemplo-practico/index.html">Ejemplo práctico</a></li><li><a href="../../comparador/index.html">Comparador</a></li><li><a href="../../index.html#test" data-quiz>Test de riesgo</a></li><li><a href="../../combinar-estrategias/index.html">Combinar estrategias</a></li><li><a href="../../informes/index.html">Informes</a></li><li><a href="../../metodologia/index.html">Metodología</a></li><li><a href="../../glosario/index.html">Glosario</a></li><li><a href="../../blog/index.html">Blog</a></li><li><a href="../../sobre-mi/index.html">Sobre mí</a></li></ul></nav>
+      <nav aria-label="Legal"><h2>Legal</h2><ul><li><a href="../../aviso-legal/index.html">Aviso legal</a></li><li><a href="../../privacidad/index.html">Política de privacidad</a></li><li><a href="../../recomendaciones/index.html">Cómo elaboro los informes</a></li></ul></nav>
+    </div>
+    <div class="legal">
+      <p><strong>Aviso:</strong> la información publicada en esta web tiene carácter meramente informativo y no constituye asesoramiento financiero ni una recomendación personalizada de inversión. Las inversiones conllevan riesgo y pueden implicar la pérdida total o parcial del capital. Las rentabilidades pasadas no garantizan rentabilidades futuras. Cada inversor debe realizar su propio análisis y tomar decisiones en función de su situación personal.</p>
+      <p style="margin-top:.8rem">© 2026 Tu Amigo Inversor.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Test de riesgo (ventana emergente) -->
+<div class="modal" id="quizModal" aria-hidden="true">
+  <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="quizTitle">
+    <button class="icon-btn modal-close" type="button" aria-label="Cerrar test"><svg class="icon"><use href="#i-x"/></svg></button>
+    <div class="modal-content">
+      <span class="eyebrow">Test de riesgo</span>
+      <h2 id="quizTitle" style="font-size:var(--fs-xl);margin:.3rem 0 .4rem">¿Cuánto riesgo toleras?</h2>
+      <p style="color:var(--muted);margin-bottom:1.4rem">Diez preguntas, unos 3 minutos. Te explico tu tolerancia al riesgo y qué significa en caídas reales.</p>
+      <div class="quiz" id="quiz" aria-live="polite"></div>
+    </div>
+  </div>
+</div>
+<button class="icon-btn to-top" id="toTop" type="button" aria-label="Volver arriba"><svg class="icon"><use href="#i-up"/></svg></button>
+<div class="sticky-cta" id="stickyCta"><small><strong>Gratis</strong><br><span data-countdown-short>El informe del día 1 en tu correo</span></small><a href="../../index.html#suscripcion" class="btn btn-primary btn-sm">Quiero el informe</a></div>
+</body>
+</html>

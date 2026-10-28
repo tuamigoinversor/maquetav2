@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark" data-base="../../">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Estrategias momentum: ¿por qué funcionan? | Tu Amigo Inversor</title>
+<meta name="description" content="Qué es el momentum, qué dice la investigación académica y qué autores han influido en cómo lo aplico en GEDA, GEN-Z y CRYPTO.">
+<meta name="theme-color" content="#0a0f1e" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+
+<!-- Open Graph / Twitter -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:site_name" content="Tu Amigo Inversor">
+<meta property="og:title" content="Estrategias momentum: ¿por qué funcionan?">
+<meta property="og:description" content="Qué es el momentum, qué dice la investigación académica y qué autores han influido en cómo lo aplico en GEDA, GEN-Z y CRYPTO.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Estrategias momentum: ¿por qué funcionan?">
+<meta name="twitter:description" content="Qué es el momentum, qué dice la investigación académica y qué autores han influido en cómo lo aplico en GEDA, GEN-Z y CRYPTO.">
+<meta property="og:image" content="https://tuamigoinversor.com/assets/img/og-tuamigoinversor.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:image" content="https://tuamigoinversor.com/assets/img/og-tuamigoinversor.jpg">
+
+<!-- Tema sin parpadeo: se aplica antes de pintar -->
+<script>
+(function(){try{var t=localStorage.getItem('tai-theme-v3');if(!t){t='light'}document.documentElement.setAttribute('data-theme',t)}catch(e){}})();
+</script>
+
+<link rel="stylesheet" href="../../assets/css/fonts.css">
+<link rel="stylesheet" href="../../assets/css/site.css">
+<link rel="icon" href="../../assets/img/logo-tai.jpg" type="image/jpeg">
+<link rel="apple-touch-icon" href="../../assets/img/logo-tai.jpg">
+
+<!-- Única librería externa: Chart.js (diferida) -->
+<script defer src="../../assets/js/chart.umd.js"></script>
+<script defer src="../../assets/js/tai.js"></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Estrategias momentum: ¿por qué funcionan?", "datePublished": "2026-04-07", "dateModified": "2026-04-07", "author": {"@type": "Person", "name": "José Manuel García"}, "description": "Qué es el momentum, qué dice la investigación académica y qué autores han influido en cómo lo aplico en GEDA, GEN-Z y CRYPTO.", "mainEntityOfPage": "https://tuamigoinversor.com/aprende/estrategias-momentum/"}</script>
+<!-- Analítica sin cookies (GoatCounter) -->
+<script data-goatcounter="https://tuamigoinversor.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Saltar al contenido</a>
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<!-- SVG sprite (iconos estilo Lucide) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></symbol>
+  <symbol id="i-left" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></symbol>
+  <symbol id="i-right" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+  <symbol id="i-up" viewBox="0 0 24 24"><path d="m18 15-6-6-6 6"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9z"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+  <symbol id="i-scale" viewBox="0 0 24 24"><path d="M12 3v18M5 7h14M5 7l-3 7a4 4 0 0 0 6 0L5 7zM19 7l-3 7a4 4 0 0 0 6 0l-3-7z"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></symbol>
+  <symbol id="i-flask" viewBox="0 0 24 24"><path d="M9 3h6M10 3v6L4 20a1 1 0 0 0 .9 1.5h14.2A1 1 0 0 0 20 20l-6-11V3"/></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></symbol>
+  <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M3 12a9 9 0 0 1 15-6.7L21 8M21 3v5h-5M21 12a9 9 0 0 1-15 6.7L3 16M3 21v-5h5"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></symbol>
+</svg>
+
+<!-- =========================== CABECERA =========================== -->
+<header class="site-header" id="header">
+  <nav class="container nav" aria-label="Navegación principal">
+    <a href="../../index.html" class="logo" aria-label="Tu Amigo Inversor, inicio"><img class="logo-mark" src="../../assets/img/logo-tai.jpg" width="40" height="40" alt="">Tu Amigo Inversor</a>
+    <ul class="nav-links">
+      <li class="has-sub"><button type="button" class="sub-toggle" aria-expanded="false" aria-haspopup="true">Estrategias <svg class="icon" aria-hidden="true"><use href="#i-down"/></svg></button>
+        <ul class="sub">
+          <li><a href="../../index.html#estrategias">Las seis estrategias</a></li>
+          <li><a href="../../comparador/index.html">Compáralas frente a frente</a></li>
+          <li><a href="../../index.html#test" data-quiz>Test de riesgo (3 min)</a></li>
+          <li><a href="../../combinar-estrategias/index.html">Combinar estrategias</a></li>
+        </ul></li>
+      <li class="has-sub"><button type="button" class="sub-toggle" aria-expanded="false" aria-haspopup="true">Cómo funciona <svg class="icon" aria-hidden="true"><use href="#i-down"/></svg></button>
+        <ul class="sub">
+          <li><a href="../../empieza-aqui/index.html">Explicado desde cero</a></li>
+          <li><a href="../../ejemplo-practico/index.html">Un ejemplo práctico, paso a paso</a></li>
+          <li><a href="../../metodologia/index.html">Metodología y cálculos</a></li>
+          <li><a href="../../glosario/index.html">Glosario</a></li>
+        </ul></li>
+      <li><a href="../../informes/index.html">Informes</a></li>
+      <li><a href="../../blog/index.html" aria-current="page">Blog</a></li>
+      <li><a href="../../sobre-mi/index.html">Sobre mí</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="icon-btn" id="themeToggle" type="button" aria-label="Cambiar a modo claro">
+        <svg class="icon i-sun"><use href="#i-sun"/></svg><svg class="icon i-moon"><use href="#i-moon"/></svg>
+      </button>
+      <a href="../../index.html#suscripcion" class="btn btn-primary btn-sm nav-cta magnetic">Quiero el informe</a>
+      <button class="icon-btn burger" id="burger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileMenu"><svg class="icon"><use href="#i-menu"/></svg></button>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="../../index.html#estrategias">Las seis estrategias</a></li>
+      <li><a href="../../comparador/index.html">Compáralas frente a frente</a></li>
+      <li><a href="../../index.html#test" data-quiz>Test de riesgo (3 min)</a></li>
+      <li><a href="../../combinar-estrategias/index.html">Combinar estrategias</a></li>
+      <li><a href="../../empieza-aqui/index.html">Explicado desde cero</a></li>
+      <li><a href="../../ejemplo-practico/index.html">Un ejemplo práctico, paso a paso</a></li>
+      <li><a href="../../metodologia/index.html">Metodología y cálculos</a></li>
+      <li><a href="../../glosario/index.html">Glosario</a></li>
+      <li><a href="../../informes/index.html">Informes</a></li>
+      <li><a href="../../blog/index.html" aria-current="page">Blog</a></li>
+      <li><a href="../../sobre-mi/index.html">Sobre mí</a></li>
+      <li><a href="../../index.html#suscripcion" class="btn btn-primary" style="margin-top:.5rem">Quiero el informe gratis</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+<section class="page-hero" aria-labelledby="page-title"><div class="container narrow">
+  <nav class="crumbs" aria-label="Migas de pan"><a href="../../index.html">Inicio</a><span aria-hidden="true">/</span><a href="../../blog/index.html">Blog</a><span aria-hidden="true">/</span><span aria-current="page">Estrategias</span></nav>
+  <span class="eyebrow">Estrategias</span>
+  <h1 id="page-title">Estrategias momentum: ¿por qué funcionan?</h1>
+  <p class="post-meta">Por José Manuel García · <time datetime="2026-04-07">7 abr 2026</time> · 5 min de lectura</p>
+</div></section>
+<article class="page-body"><div class="container narrow"><figure class="post-cover"><img src="../../assets/img/posts/estrategias-momentum.webp" alt="" width="1200" height="800" decoding="async"></figure>
+<div class="post-content prose"><p>Si llevas tiempo leyendo el blog, ya sabes que mis estrategias tácticas se basan en un mismo principio:</p>
+<p>👉 Seguir la tendencia.</p>
+<p>No intento adivinar el mercado.<br />
+No busco techos ni suelos.<br />
+No compro “gangas”.</p>
+<p>Simplemente intento estar invertido en lo que sube… y evitar lo que baja.</p>
+<p>Ese enfoque tiene nombre: <strong>momentum investing</strong>.</p>
+<p>En este artículo quiero explicarte:</p>
+<ul>
+<li>Qué son las estrategias momentum</li>
+<li>Por qué podrían funcionar (también a nivel académico)</li>
+<li>Qué inversores influyeron más en mi forma de aplicarlas</li>
+</ul>
+<h2>Qué es una estrategia momentum</h2>
+<p>El momentum es uno de los factores más estudiados en la literatura académica sobre los mercados financieros. La idea es muy simple:</p>
+<blockquote>
+<p>Los activos que lo han hecho bien en el pasado reciente tienden a seguir haciéndolo bien en el futuro cercano.</p>
+</blockquote>
+<p>Y al revés:</p>
+<ul>
+<li>Lo débil suele seguir débil</li>
+<li>Lo fuerte suele seguir fuerte</li>
+</ul>
+<p>Esto se puede aplicar a:</p>
+<ul>
+<li>Acciones</li>
+<li>Índices</li>
+<li>Sectores</li>
+<li>ETF</li>
+<li>Criptomonedas</li>
+</ul>
+<h2>La base académica del momentum</h2>
+<p>Aunque hoy suene intuitivo, cuenta con un amplio respaldo académico. Eso no significa que funcione siempre: tiene periodos malos y sus resultados dependen del mercado y del periodo analizado.</p>
+<p>Uno de los más citados es:</p>
+<p><strong>“Returns to Buying Winners and Selling Losers”</strong><br />
+Jegadeesh y Titman (1993)</p>
+<p>Este paper encontró que, en el periodo analizado, comprar los activos más fuertes y evitar los más débiles generó rentabilidades superiores.</p>
+<p>Desde entonces, el momentum se considera uno de los factores clásicos junto a:</p>
+<ul>
+<li>Value</li>
+<li>Size</li>
+<li>Quality</li>
+<li>Low volatility</li>
+</ul>
+<p>Incluso fondos cuantitativos y hedge funds institucionales lo utilizan.</p>
+<h2>Por qué podría funcionar el momentum</h2>
+<p>La gran pregunta siempre es:<br />
+Si todo el mundo lo conoce… ¿por qué sigue funcionando?</p>
+<p>Las explicaciones más habituales son dos:</p>
+<h3>1. Psicología humana</h3>
+<p>El ser humano está programado para:</p>
+<ul>
+<li>Comprar barato</li>
+<li>Vender caro</li>
+<li>Ir contra la masa</li>
+</ul>
+<p>Pero, según esta explicación, el mercado ha tendido a recompensar justo lo contrario:</p>
+<ul>
+<li>Comprar fortaleza</li>
+<li>Dejar correr ganancias</li>
+<li>Cortar pérdidas rápido</li>
+</ul>
+<p>Según esta teoría, el momentum aprovecha ese sesgo conductual.</p>
+<h3>2. Inercia de los mercados</h3>
+<p>Las tendencias no se crean en un día.</p>
+<p>Cuando un activo empieza a subir:</p>
+<ul>
+<li>Entra dinero institucional</li>
+<li>Llegan flujos pasivos</li>
+<li>Aparece cobertura mediática</li>
+<li>Se activa el FOMO</li>
+</ul>
+<p>Todo eso puede generar persistencia.</p>
+<h2>El origen de mi enfoque: Stan Weinstein</h2>
+<p>Si tengo que señalar la mayor influencia en mi forma de entender el mercado, esa es Stan Weinstein.</p>
+<p>Su libro <em>Secrets for Profiting in Bull and Bear Markets</em> (en español, <em>Los secretos para ganar dinero en los mercados alcistas y bajistas</em>) fue un antes y un después para mí.</p>
+<p>Su concepto clave:<br />
+👉 Solo estar invertido en fase alcista.</p>
+<p>Su modelo de las 4 etapas del mercado:</p>
+<ol>
+<li>Acumulación</li>
+<li>Tendencia alcista</li>
+<li>Distribución</li>
+<li>Tendencia bajista</li>
+</ol>
+<p>Aunque no hablaba de “momentum cuantitativo”, su filosofía es exactamente esa:</p>
+<ul>
+<li>Comprar fortaleza</li>
+<li>Evitar debilidad</li>
+<li>Seguir la tendencia principal</li>
+</ul>
+<p>Fue el primer gran clic mental:<br />
+<strong>No hay que comprar barato. Hay que comprar fuerte.</strong></p>
+<h2>Momentum moderno y cuantitativo</h2>
+<p>Con el tiempo, el momentum evolucionó desde el análisis técnico clásico hacia modelos sistemáticos.</p>
+<p>Aquí entran varios referentes que me han influido mucho.</p>
+<h3>Andrew Clenow – Momentum sistemático</h3>
+<p>Autor de <em>Stocks on the Move</em>, uno de los libros más prácticos sobre momentum moderno.</p>
+<p>Su enfoque:</p>
+<ul>
+<li>Tendencias claras</li>
+<li>Reglas objetivas</li>
+<li>Gestión del riesgo estricta</li>
+<li>Sistemas replicables</li>
+</ul>
+<p>Me influyó especialmente en la parte de:</p>
+<ul>
+<li>Sistemas cuantitativos</li>
+<li>Backtesting</li>
+<li>Disciplina operativa</li>
+</ul>
+<p>Muchas de mis estrategias beben directamente de esa filosofía.</p>
+<h3>Javier Alfayate – Fortaleza relativa en español</h3>
+<p>Si hablas de momentum en el mundo hispano, es imposible no mencionar a Javier Alfayate.</p>
+<p>Su libro <em>Aleta de tiburón</em> popularizó la fortaleza relativa en España.</p>
+<p>Ideas clave que comparto:</p>
+<ul>
+<li>Comprar líderes, no rezagados</li>
+<li>Usar rankings de fuerza</li>
+<li>Evitar acciones débiles</li>
+</ul>
+<p>Muchas estrategias de inversores particulares en España nacen de ahí.</p>
+<h3>Gary Antonacci – Dual Momentum</h3>
+<p>Gary Antonacci dio un paso más allá con su concepto de <strong>Dual Momentum</strong>.</p>
+<p>Combina:</p>
+<ul>
+<li>Momentum relativo → elegir el mejor activo</li>
+<li>Momentum absoluto → decidir si estar dentro o fuera del mercado</li>
+</ul>
+<p>Su libro <em>Dual Momentum Investing</em> es especialmente potente porque:</p>
+<ul>
+<li>Simplifica mucho el modelo</li>
+<li>Busca reducir los drawdowns</li>
+<li>Es muy replicable</li>
+</ul>
+<p>De aquí salen muchas estrategias tipo:</p>
+<ul>
+<li>Rotaciones mensuales</li>
+<li>Sistemas de timing</li>
+<li>Carteras adaptativas</li>
+</ul>
+<h2>Cómo aplico el momentum en mis estrategias</h2>
+<p>Todas mis estrategias siguen reglas objetivas. En las tácticas (GEDA, GEN-Z, CRYPTO y HORIZONTE), esas reglas se basan solo en el precio. ROCA e IMPULSO son distintas: son carteras permanentes, con pesos fijos que se rebalancean.</p>
+<p>En las tácticas, por ejemplo:</p>
+<ul>
+<li>Rotación mensual por fortaleza</li>
+<li>Filtros de tendencia (medias largas)</li>
+<li>Momentum entre activos</li>
+<li>Eliminación sistemática de lo débil</li>
+</ul>
+<p>No hay opiniones.<br />
+No hay intuición.<br />
+No hay noticias.</p>
+<p>Solo datos.</p>
+<h2>Ventajas del momentum</h2>
+<p>Después de años aplicándolo, estas son las principales ventajas que veo:</p>
+<ul class="check-list">
+<li>✔ Con filtro de tendencia (como en HORIZONTE), puede reducir la exposición en los grandes mercados bajistas</li>
+<li>✔ Simplifica decisiones</li>
+<li>✔ Reduce carga emocional</li>
+<li>✔ Es replicable</li>
+<li>✔ Tiene un amplio respaldo académico</li>
+</ul>
+<h2>Inconvenientes (importante)</h2>
+<p>No todo es perfecto.</p>
+<p>El momentum tiene puntos débiles:</p>
+<ul class="check-list">
+<li>❌ Rachas laterales</li>
+<li>❌ Falsas rupturas</li>
+<li>❌ Alta rotación en algunos sistemas</li>
+<li>❌ Necesita disciplina</li>
+</ul>
+<p>Aun así, históricamente ha sido uno de los factores más persistentes. Eso no garantiza que lo siga siendo.</p>
+<h2>Mi conclusión personal</h2>
+<p>Después de probar muchos enfoques, llegué a una conclusión sencilla:</p>
+<p>👉 Prefiero seguir sistemas que opiniones.</p>
+<p>El momentum no es magia.<br />
+No gana todos los meses.<br />
+No evita pérdidas.</p>
+<p>Pero tiene algo muy valioso:<br />
+<strong>Coherencia.</strong></p>
+<p>Y en inversión, la coherencia suele ser más importante que la brillantez.</p>
+<p>Desde Stan Weinstein hasta Antonacci, pasando por Clenow o Alfayate, todos coinciden en algo:</p>
+<blockquote>
+<p>La tendencia importa.</p>
+</blockquote>
+<p>Y mucho.</p>
+<h2>Reflexión final</h2>
+<p>Si tuviera que resumir mi filosofía en una frase, sería esta:</p>
+<p>No intento tener razón.<br />
+Intento estar alineado con el mercado.</p>
+<p>Por eso la base de casi todas mis estrategias es la misma:</p>
+<ul>
+<li>Sistemas</li>
+<li>Reglas claras</li>
+<li>Momentum</li>
+</ul>
+<p>Porque al final, invertir bien muchas veces no va de predecir…<br />
+Sino de <strong>seguir lo que ya está ocurriendo</strong>.</p></div>
+<div class="disclaimer-bar" role="note"><svg class="icon"><use href="#i-alert"/></svg><p><strong>Importante:</strong> este artículo es informativo y no constituye asesoramiento financiero. Las rentabilidades pasadas no garantizan rentabilidades futuras.</p></div>
+<div class="cta-band reveal" style="margin-top:2.5rem"><div><h2>¿Quieres ver las estrategias en directo?</h2><p>Cada día 1 te mando por correo qué tengo en cada estrategia y qué cambio. Lo lees y decides tú qué hacer con tu dinero. Gratis y sin compromiso.</p></div>
+<div class="cta-row"><a href="../../index.html#suscripcion" class="btn btn-primary magnetic">Quiero el informe gratis <svg class="icon"><use href="#i-arrow"/></svg></a><a href="../../inversion-tactica-geda/index.html" class="btn btn-ghost">Ver cómo aplico el momentum en GEDA</a></div></div>
+</div></article>
+<section class="section alt tight" aria-labelledby="seguir-t"><div class="container"><h2 id="seguir-t" class="small-h reveal">Sigue leyendo</h2><div class="blog"><article class="post reveal" data-cat="Operativa">
+  <div class="post-media post-media--empty" aria-hidden="true"></div>
+  <div class="post-body"><small>Operativa · 26 oct 2026</small><h3><a href="../../aprende/con-cuanto-dinero-seguir-cada-estrategia/index.html">Con cuánto dinero seguir cada estrategia (y por qué el bróker importa tanto)</a></h3><p>No hay un mínimo, pero sí un importe a partir del cual las comisiones dejan de comerse la rentabilidad. La respuesta corta para cada estrategia y por qué yo empezaría GEDA con unos 7.000 €.</p><a class="more" href="../../aprende/con-cuanto-dinero-seguir-cada-estrategia/index.html">Leer artículo <svg class="icon"><use href="#i-arrow"/></svg><span class="sr-only">: Con cuánto dinero seguir cada estrategia (y por qué el bróker importa tanto)</span></a></div>
+</article><article class="post reveal" data-cat="Operativa">
+  <div class="post-media"><img src="../../assets/img/posts/rebalanceo-roca-impulso.webp" width="1200" height="800" loading="lazy" decoding="async" alt=""></div>
+  <div class="post-body"><small>Operativa · 19 oct 2026</small><h3><a href="../../aprende/rebalanceo-roca-impulso/index.html">Cómo rebalanceo ROCA e IMPULSO (y por qué no lo hago cada mes)</a></h3><p>Cuándo reviso las carteras permanentes, por qué rebalanceo con un margen del 15 %, cómo lo hago sin pagar impuestos de más y qué habría pasado con y sin rebalanceo desde que invierto con dinero real.</p><a class="more" href="../../aprende/rebalanceo-roca-impulso/index.html">Leer artículo <svg class="icon"><use href="#i-arrow"/></svg><span class="sr-only">: Cómo rebalanceo ROCA e IMPULSO (y por qué no lo hago cada mes)</span></a></div>
+</article><article class="post reveal" data-cat="Operativa">
+  <div class="post-media"><img src="../../assets/img/posts/como-aplico-el-informe-del-mes.webp" width="1200" height="800" loading="lazy" decoding="async" alt=""></div>
+  <div class="post-body"><small>Operativa · 12 oct 2026</small><h3><a href="../../aprende/como-aplico-el-informe-del-mes/index.html">Cómo aplico el informe del mes, paso a paso</a></h3><p>Qué miro primero cuando llega el informe del día 1, cómo ejecuto una rotación, qué tipo de orden uso y qué hago si empiezo de cero. Con el ejemplo real de octubre de 2026.</p><a class="more" href="../../aprende/como-aplico-el-informe-del-mes/index.html">Leer artículo <svg class="icon"><use href="#i-arrow"/></svg><span class="sr-only">: Cómo aplico el informe del mes, paso a paso</span></a></div>
+</article></div></div></section>
+</main>
+
+<!-- =========================== PIE =========================== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <a href="../../index.html" class="logo" style="margin-bottom:1rem"><img class="logo-mark" src="../../assets/img/logo-tai.jpg" width="40" height="40" alt="">Tu Amigo Inversor</a>
+        <p>Te cuento cada mes qué hago con mi dinero: estrategias con reglas claras, sin corazonadas. Lo que hagas con tu dinero lo decides tú.</p>
+        <p style="margin-top:.8rem"><a href="mailto:info@tuamigoinversor.com">info@tuamigoinversor.com</a></p>
+      </div>
+      <nav aria-label="Carteras permanentes"><h2>Cartera permanente</h2><ul><li><a href="../../cartera-permanente-conservadora-roca/index.html">ROCA</a></li><li><a href="../../cartera-inversion-crecimiento-impulso/index.html">IMPULSO</a></li></ul></nav>
+      <nav aria-label="Asignación táctica"><h2>Asignación táctica</h2><ul><li><a href="../../inversion-tactica-geda/index.html">GEDA</a></li><li><a href="../../inversion-tematica-gen-z/index.html">GEN-Z</a></li><li><a href="../../inversion-criptomonedas-crypto/index.html">CRYPTO</a></li><li><a href="../../plan-pensiones-moderado-horizonte/index.html">HORIZONTE <small class="pp">plan de pensiones</small></a></li></ul></nav>
+      <nav aria-label="Herramientas y proyecto"><h2>Empieza por aquí</h2><ul><li><a href="../../empieza-aqui/index.html">Explicado desde cero</a></li><li><a href="../../ejemplo-practico/index.html">Ejemplo práctico</a></li><li><a href="../../comparador/index.html">Comparador</a></li><li><a href="../../index.html#test" data-quiz>Test de riesgo</a></li><li><a href="../../combinar-estrategias/index.html">Combinar estrategias</a></li><li><a href="../../informes/index.html">Informes</a></li><li><a href="../../metodologia/index.html">Metodología</a></li><li><a href="../../glosario/index.html">Glosario</a></li><li><a href="../../blog/index.html">Blog</a></li><li><a href="../../sobre-mi/index.html">Sobre mí</a></li></ul></nav>
+      <nav aria-label="Legal"><h2>Legal</h2><ul><li><a href="../../aviso-legal/index.html">Aviso legal</a></li><li><a href="../../privacidad/index.html">Política de privacidad</a></li><li><a href="../../recomendaciones/index.html">Cómo elaboro los informes</a></li></ul></nav>
+    </div>
+    <div class="legal">
+      <p><strong>Aviso:</strong> la información publicada en esta web tiene carácter meramente informativo y no constituye asesoramiento financiero ni una recomendación personalizada de inversión. Las inversiones conllevan riesgo y pueden implicar la pérdida total o parcial del capital. Las rentabilidades pasadas no garantizan rentabilidades futuras. Cada inversor debe realizar su propio análisis y tomar decisiones en función de su situación personal.</p>
+      <p style="margin-top:.8rem">© 2026 Tu Amigo Inversor.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Test de riesgo (ventana emergente) -->
+<div class="modal" id="quizModal" aria-hidden="true">
+  <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="quizTitle">
+    <button class="icon-btn modal-close" type="button" aria-label="Cerrar test"><svg class="icon"><use href="#i-x"/></svg></button>
+    <div class="modal-content">
+      <span class="eyebrow">Test de riesgo</span>
+      <h2 id="quizTitle" style="font-size:var(--fs-xl);margin:.3rem 0 .4rem">¿Cuánto riesgo toleras?</h2>
+      <p style="color:var(--muted);margin-bottom:1.4rem">Diez preguntas, unos 3 minutos. Te explico tu tolerancia al riesgo y qué significa en caídas reales.</p>
+      <div class="quiz" id="quiz" aria-live="polite"></div>
+    </div>
+  </div>
+</div>
+<button class="icon-btn to-top" id="toTop" type="button" aria-label="Volver arriba"><svg class="icon"><use href="#i-up"/></svg></button>
+<div class="sticky-cta" id="stickyCta"><small><strong>Gratis</strong><br><span data-countdown-short>El informe del día 1 en tu correo</span></small><a href="../../index.html#suscripcion" class="btn btn-primary btn-sm">Quiero el informe</a></div>
+</body>
+</html>

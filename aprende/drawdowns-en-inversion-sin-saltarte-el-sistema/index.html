@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark" data-base="../../">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Drawdowns en inversión: la clave para no abandonar tu sistema en caídas | Tu Amigo Inversor</title>
+<meta name="description" content="Qué es un drawdown, por qué es inevitable y cómo prepararte para no abandonar tu estrategia en mitad de una caída.">
+<meta name="theme-color" content="#0a0f1e" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+
+<!-- Open Graph / Twitter -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:site_name" content="Tu Amigo Inversor">
+<meta property="og:title" content="Drawdowns en inversión: la clave para no abandonar tu sistema en caídas">
+<meta property="og:description" content="Qué es un drawdown, por qué es inevitable y cómo prepararte para no abandonar tu estrategia en mitad de una caída.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Drawdowns en inversión: la clave para no abandonar tu sistema en caídas">
+<meta name="twitter:description" content="Qué es un drawdown, por qué es inevitable y cómo prepararte para no abandonar tu estrategia en mitad de una caída.">
+<meta property="og:image" content="https://tuamigoinversor.com/assets/img/og-tuamigoinversor.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:image" content="https://tuamigoinversor.com/assets/img/og-tuamigoinversor.jpg">
+
+<!-- Tema sin parpadeo: se aplica antes de pintar -->
+<script>
+(function(){try{var t=localStorage.getItem('tai-theme-v3');if(!t){t='light'}document.documentElement.setAttribute('data-theme',t)}catch(e){}})();
+</script>
+
+<link rel="stylesheet" href="../../assets/css/fonts.css">
+<link rel="stylesheet" href="../../assets/css/site.css">
+<link rel="icon" href="../../assets/img/logo-tai.jpg" type="image/jpeg">
+<link rel="apple-touch-icon" href="../../assets/img/logo-tai.jpg">
+
+<!-- Única librería externa: Chart.js (diferida) -->
+<script defer src="../../assets/js/chart.umd.js"></script>
+<script defer src="../../assets/js/tai.js"></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Drawdowns en inversión: la clave para no abandonar tu sistema en caídas", "datePublished": "2026-06-19", "dateModified": "2026-06-19", "author": {"@type": "Person", "name": "José Manuel García"}, "description": "Qué es un drawdown, por qué es inevitable y cómo prepararte para no abandonar tu estrategia en mitad de una caída.", "mainEntityOfPage": "https://tuamigoinversor.com/aprende/drawdowns-en-inversion-sin-saltarte-el-sistema/"}</script>
+<!-- Analítica sin cookies (GoatCounter) -->
+<script data-goatcounter="https://tuamigoinversor.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Saltar al contenido</a>
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<!-- SVG sprite (iconos estilo Lucide) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></symbol>
+  <symbol id="i-left" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></symbol>
+  <symbol id="i-right" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+  <symbol id="i-up" viewBox="0 0 24 24"><path d="m18 15-6-6-6 6"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9z"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+  <symbol id="i-scale" viewBox="0 0 24 24"><path d="M12 3v18M5 7h14M5 7l-3 7a4 4 0 0 0 6 0L5 7zM19 7l-3 7a4 4 0 0 0 6 0l-3-7z"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></symbol>
+  <symbol id="i-flask" viewBox="0 0 24 24"><path d="M9 3h6M10 3v6L4 20a1 1 0 0 0 .9 1.5h14.2A1 1 0 0 0 20 20l-6-11V3"/></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></symbol>
+  <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M3 12a9 9 0 0 1 15-6.7L21 8M21 3v5h-5M21 12a9 9 0 0 1-15 6.7L3 16M3 21v-5h5"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></symbol>
+</svg>
+
+<!-- =========================== CABECERA =========================== -->
+<header class="site-header" id="header">
+  <nav class="container nav" aria-label="Navegación principal">
+    <a href="../../index.html" class="logo" aria-label="Tu Amigo Inversor, inicio"><img class="logo-mark" src="../../assets/img/logo-tai.jpg" width="40" height="40" alt="">Tu Amigo Inversor</a>
+    <ul class="nav-links">
+      <li class="has-sub"><button type="button" class="sub-toggle" aria-expanded="false" aria-haspopup="true">Estrategias <svg class="icon" aria-hidden="true"><use href="#i-down"/></svg></button>
+        <ul class="sub">
+          <li><a href="../../index.html#estrategias">Las seis estrategias</a></li>
+          <li><a href="../../comparador/index.html">Compáralas frente a frente</a></li>
+          <li><a href="../../index.html#test" data-quiz>Test de riesgo (3 min)</a></li>
+          <li><a href="../../combinar-estrategias/index.html">Combinar estrategias</a></li>
+        </ul></li>
+      <li class="has-sub"><button type="button" class="sub-toggle" aria-expanded="false" aria-haspopup="true">Cómo funciona <svg class="icon" aria-hidden="true"><use href="#i-down"/></svg></button>
+        <ul class="sub">
+          <li><a href="../../empieza-aqui/index.html">Explicado desde cero</a></li>
+          <li><a href="../../ejemplo-practico/index.html">Un ejemplo práctico, paso a paso</a></li>
+          <li><a href="../../metodologia/index.html">Metodología y cálculos</a></li>
+          <li><a href="../../glosario/index.html">Glosario</a></li>
+        </ul></li>
+      <li><a href="../../informes/index.html">Informes</a></li>
+      <li><a href="../../blog/index.html" aria-current="page">Blog</a></li>
+      <li><a href="../../sobre-mi/index.html">Sobre mí</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="icon-btn" id="themeToggle" type="button" aria-label="Cambiar a modo claro">
+        <svg class="icon i-sun"><use href="#i-sun"/></svg><svg class="icon i-moon"><use href="#i-moon"/></svg>
+      </button>
+      <a href="../../index.html#suscripcion" class="btn btn-primary btn-sm nav-cta magnetic">Quiero el informe</a>
+      <button class="icon-btn burger" id="burger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileMenu"><svg class="icon"><use href="#i-menu"/></svg></button>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="../../index.html#estrategias">Las seis estrategias</a></li>
+      <li><a href="../../comparador/index.html">Compáralas frente a frente</a></li>
+      <li><a href="../../index.html#test" data-quiz>Test de riesgo (3 min)</a></li>
+      <li><a href="../../combinar-estrategias/index.html">Combinar estrategias</a></li>
+      <li><a href="../../empieza-aqui/index.html">Explicado desde cero</a></li>
+      <li><a href="../../ejemplo-practico/index.html">Un ejemplo práctico, paso a paso</a></li>
+      <li><a href="../../metodologia/index.html">Metodología y cálculos</a></li>
+      <li><a href="../../glosario/index.html">Glosario</a></li>
+      <li><a href="../../informes/index.html">Informes</a></li>
+      <li><a href="../../blog/index.html" aria-current="page">Blog</a></li>
+      <li><a href="../../sobre-mi/index.html">Sobre mí</a></li>
+      <li><a href="../../index.html#suscripcion" class="btn btn-primary" style="margin-top:.5rem">Quiero el informe gratis</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+<section class="page-hero" aria-labelledby="page-title"><div class="container narrow">
+  <nav class="crumbs" aria-label="Migas de pan"><a href="../../index.html">Inicio</a><span aria-hidden="true">/</span><a href="../../blog/index.html">Blog</a><span aria-hidden="true">/</span><span aria-current="page">Operativa</span></nav>
+  <span class="eyebrow">Operativa</span>
+  <h1 id="page-title">Drawdowns en inversión: la clave para no abandonar tu sistema en caídas</h1>
+  <p class="post-meta">Por José Manuel García · <time datetime="2026-06-19">19 jun 2026</time> · 5 min de lectura</p>
+</div></section>
+<article class="page-body"><div class="container narrow"><figure class="post-cover"><img src="../../assets/img/posts/drawdowns-en-inversion-sin-saltarte-el-sistema.webp" alt="" width="1200" height="800" decoding="async"></figure>
+<div class="post-content prose"><p>Llevas varios meses siguiendo una estrategia. Todo va bien. La rentabilidad acumulada marca máximos y empiezas a sentir que has tomado una gran decisión.</p>
+<p>Y entonces llega una corrección.</p>
+<p>En pocas semanas ves desaparecer una parte importante de las ganancias acumuladas. Empiezas a consultar la cartera más veces al día. Lees noticias que antes ignorabas. Y aparece la pregunta que todos los inversores se hacen tarde o temprano:</p>
+<p><strong>«¿Y si esta vez es diferente?»</strong></p>
+<p>Si te ha pasado esto, no estás ante un problema de inversión. Estás viviendo un drawdown. Y cómo lo gestiones va a determinar si la estrategia termina funcionando para ti o si acabas convirtiéndote en otro caso de "compré arriba y vendí abajo".</p>
+<h2>Qué es realmente un drawdown</h2>
+<p>Un drawdown en inversión es simplemente la caída desde el máximo histórico de una estrategia hasta su punto más bajo posterior.</p>
+<p>No es un fallo del sistema.</p>
+<p>No es una señal de que algo vaya mal.</p>
+<p>No es una excepción.</p>
+<p>Es una parte inevitable del proceso de inversión.</p>
+<p>Toda estrategia que aspira a obtener rentabilidades superiores a las de los activos libres de riesgo tendrá periodos de pérdidas temporales. Si una estrategia nunca sufriera drawdowns, probablemente tampoco ofrecería una rentabilidad atractiva a largo plazo.</p>
+<p>Por eso la pregunta nunca es:</p>
+<p><strong>«¿Habrá drawdowns?»</strong></p>
+<p>La verdadera pregunta es:</p>
+<p><strong>«¿Qué drawdown soy capaz de soportar sin tomar una mala decisión?»</strong></p>
+<h2>El número que ya conocías antes de empezar</h2>
+<p>Esto es importante.</p>
+<p>El drawdown máximo histórico de cada estrategia está publicado en su ficha desde el primer día. No es una sorpresa que descubres a mitad de una caída.</p>
+<p>Es un dato que ya estaba disponible cuando decidiste invertir.</p>
+<figure class="tabla">
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>Estrategia</th>
+<th>Máxima caída con dinero real</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>ROCA</td>
+<td>-9,2%</td>
+</tr>
+<tr class="even">
+<td>IMPULSO</td>
+<td>-16,5%</td>
+</tr>
+<tr class="odd">
+<td>HORIZONTE</td>
+<td>-19,3%</td>
+</tr>
+<tr class="even">
+<td>GEDA</td>
+<td>-16,2%</td>
+</tr>
+<tr class="odd">
+<td>GEN-Z</td>
+<td>-44,9%</td>
+</tr>
+<tr class="even">
+<td>CRYPTO</td>
+<td>-50,1%</td>
+</tr>
+</tbody>
+</table></div>
+</figure>
+
+<p><em>Caídas con dinero real a 30 de septiembre de 2026, desde el año en que empecé con cada estrategia. En el backtest previo, CRYPTO llegó a caer más de un 70%. GEN-Z marcó su peor caída en el verano de 2026, después de publicar este artículo: es justo el tipo de situación de la que habla.</em></p>
+<p>Si elegiste GEDA sabiendo que su máxima caída con dinero real ha sido del -16%, y ahora estás viviendo una caída del -12%, no ha ocurrido nada que estuviera fuera del guion.</p>
+<p>Estás dentro del comportamiento esperado de la estrategia.</p>
+<p>El problema no suele ser la caída.</p>
+<p>El problema suele ser haber elegido una estrategia sin prestar suficiente atención a ese dato o haber invertido una cantidad de dinero que realmente no podías permitirte mantener invertida durante un periodo complicado.</p>
+<h2>El drawdown histórico siempre parece fácil... hasta que te toca vivirlo</h2>
+<p>Hay algo curioso sobre los drawdowns.</p>
+<p>Cuando vemos una tabla histórica y leemos que una estrategia sufrió una caída máxima del -20%, parece perfectamente asumible.</p>
+<p>Pero vivir una caída del -20% es una experiencia muy distinta.</p>
+<p>Cuando la estás viviendo no sabes dónde terminará.</p>
+<p>No sabes si mañana será un -22%, un -25% o un -30%.</p>
+<p>El drawdown histórico se observa conociendo el final de la historia.</p>
+<p>El drawdown real se vive sin conocer el desenlace.</p>
+<p>Por eso la parte más difícil de invertir no es elegir una estrategia.</p>
+<p>La parte difícil es mantenerla cuando resulta incómoda.</p>
+<h2>La matemática de salir en el peor momento</h2>
+<p>Hay un cálculo sencillo que conviene tener siempre presente.</p>
+<p>Cuanto mayor es la caída, mayor es la recuperación necesaria para volver al punto de partida.</p>
+<p>Y la relación no es lineal.</p>
+<ul>
+<li>Una caída del -10% necesita un +11,1% para recuperarse.</li>
+<li>Una caída del -20% necesita un +25%.</li>
+<li>Una caída del -40% necesita un +66,7%.</li>
+<li>Una caída del -50% necesita un +100%.</li>
+</ul>
+<p>Por eso la decisión más costosa que puede tomar un inversor sistemático es abandonar la estrategia justo en mitad de una caída importante.</p>
+<p>Si vendes en el peor momento, conviertes una pérdida temporal en una pérdida permanente.</p>
+<p>Y además corres el riesgo de perderte la recuperación posterior, que suele concentrar una parte muy importante de la rentabilidad de largo plazo.</p>
+<h2>El sistema ya tiene definidas las condiciones de salida</h2>
+<p>Aquí está una de las mayores ventajas de invertir siguiendo reglas objetivas.</p>
+<p>Las mismas reglas que decidieron qué comprar son las que deciden qué vender y cuándo. En unas estrategias eso significa rotar a otro activo; en otras, como HORIZONTE, pasar a renta fija.</p>
+<p>No necesitas interpretar noticias.</p>
+<p>No necesitas adivinar si el mercado seguirá cayendo.</p>
+<p>No necesitas acertar dónde está el suelo.</p>
+<p>Si llevas tiempo leyendo este blog, recordarás una idea que aparece con frecuencia en las estrategias momentum:</p>
+<p><strong>El sistema sigue la tendencia. No intenta predecirla.</strong></p>
+<p>Mientras no exista una señal de salida según las reglas de la estrategia, permanecer invertido no significa aguantar a ciegas.</p>
+<p>Significa seguir el plan que decidiste adoptar antes de que aparecieran las emociones.</p>
+<p>La pregunta importante nunca es:</p>
+<p><strong>«¿Qué creo yo que va a pasar?»</strong></p>
+<p>La pregunta correcta es:</p>
+<p><strong>«¿Ha cambiado la señal del sistema?»</strong></p>
+<p>Si la respuesta es no, el plan no te pide ninguna acción. Aun así, conviene revisar con criterio si ha aparecido un error operativo, un cambio en los datos o un cambio en tu situación personal que justifique replantearte algo.</p>
+<p>Si la respuesta es sí, el informe mensual te lo indicará.</p>
+<h2>Qué hacer en la práctica</h2>
+<h3>1. Mira el drawdown antes de invertir</h3>
+<p>Es una de las métricas más importantes de cualquier estrategia.</p>
+<p>Mucho más importante que la rentabilidad del último año.</p>
+<h3>2. Invierte solo dinero con un horizonte adecuado</h3>
+<p>Si vas a necesitar ese dinero dentro de seis meses, ninguna estrategia con drawdowns relevantes es adecuada para ti.</p>
+<p>La inversión requiere tiempo.</p>
+<h3>3. Reduce la frecuencia con la que miras la cartera</h3>
+<p>Consultar el valor de tus posiciones cada día rara vez aporta información útil.</p>
+<p>Sin embargo, sí multiplica el impacto emocional de cada movimiento del mercado.</p>
+<p>Por algo los informes de seguimiento son mensuales.</p>
+<h3>4. Cuando dudes, vuelve a las reglas</h3>
+<p>Las emociones cambian constantemente.</p>
+<p>Las reglas no.</p>
+<p>Si decidiste seguir una estrategia sistemática, confía en el proceso que elegiste cuando estabas pensando con calma.</p>
+<h2>Conclusión</h2>
+<p>Muchos inversores no abandonan una estrategia porque deje de funcionar.</p>
+<p>La abandonan porque se comporta como estaba previsto y descubren que no estaban preparados para soportarlo.</p>
+<p>Antes de invertir, estudia la rentabilidad esperada.</p>
+<p>Pero, sobre todo, estudia las caídas que tendrás que soportar para conseguirla.</p>
+<p>Porque el drawdown no es el precio del fracaso.</p>
+<p><strong>Es el precio de la rentabilidad.</strong></p></div>
+<div class="disclaimer-bar" role="note"><svg class="icon"><use href="#i-alert"/></svg><p><strong>Importante:</strong> este artículo es informativo y no constituye asesoramiento financiero. Las rentabilidades pasadas no garantizan rentabilidades futuras.</p></div>
+<div class="cta-band reveal" style="margin-top:2.5rem"><div><h2>¿Quieres ver las estrategias en directo?</h2><p>Cada día 1 te mando por correo qué tengo en cada estrategia y qué cambio. Lo lees y decides tú qué hacer con tu dinero. Gratis y sin compromiso.</p></div>
+<div class="cta-row"><a href="../../index.html#suscripcion" class="btn btn-primary magnetic">Quiero el informe gratis <svg class="icon"><use href="#i-arrow"/></svg></a><a href="../../comparador/index.html" class="btn btn-ghost">Ver las caídas de cada estrategia</a></div></div>
+</div></article>
+<section class="section alt tight" aria-labelledby="seguir-t"><div class="container"><h2 id="seguir-t" class="small-h reveal">Sigue leyendo</h2><div class="blog"><article class="post reveal" data-cat="Operativa">
+  <div class="post-media post-media--empty" aria-hidden="true"></div>
+  <div class="post-body"><small>Operativa · 26 oct 2026</small><h3><a href="../../aprende/con-cuanto-dinero-seguir-cada-estrategia/index.html">Con cuánto dinero seguir cada estrategia (y por qué el bróker importa tanto)</a></h3><p>No hay un mínimo, pero sí un importe a partir del cual las comisiones dejan de comerse la rentabilidad. La respuesta corta para cada estrategia y por qué yo empezaría GEDA con unos 7.000 €.</p><a class="more" href="../../aprende/con-cuanto-dinero-seguir-cada-estrategia/index.html">Leer artículo <svg class="icon"><use href="#i-arrow"/></svg><span class="sr-only">: Con cuánto dinero seguir cada estrategia (y por qué el bróker importa tanto)</span></a></div>
+</article><article class="post reveal" data-cat="Operativa">
+  <div class="post-media"><img src="../../assets/img/posts/rebalanceo-roca-impulso.webp" width="1200" height="800" loading="lazy" decoding="async" alt=""></div>
+  <div class="post-body"><small>Operativa · 19 oct 2026</small><h3><a href="../../aprende/rebalanceo-roca-impulso/index.html">Cómo rebalanceo ROCA e IMPULSO (y por qué no lo hago cada mes)</a></h3><p>Cuándo reviso las carteras permanentes, por qué rebalanceo con un margen del 15 %, cómo lo hago sin pagar impuestos de más y qué habría pasado con y sin rebalanceo desde que invierto con dinero real.</p><a class="more" href="../../aprende/rebalanceo-roca-impulso/index.html">Leer artículo <svg class="icon"><use href="#i-arrow"/></svg><span class="sr-only">: Cómo rebalanceo ROCA e IMPULSO (y por qué no lo hago cada mes)</span></a></div>
+</article><article class="post reveal" data-cat="Operativa">
+  <div class="post-media"><img src="../../assets/img/posts/como-aplico-el-informe-del-mes.webp" width="1200" height="800" loading="lazy" decoding="async" alt=""></div>
+  <div class="post-body"><small>Operativa · 12 oct 2026</small><h3><a href="../../aprende/como-aplico-el-informe-del-mes/index.html">Cómo aplico el informe del mes, paso a paso</a></h3><p>Qué miro primero cuando llega el informe del día 1, cómo ejecuto una rotación, qué tipo de orden uso y qué hago si empiezo de cero. Con el ejemplo real de octubre de 2026.</p><a class="more" href="../../aprende/como-aplico-el-informe-del-mes/index.html">Leer artículo <svg class="icon"><use href="#i-arrow"/></svg><span class="sr-only">: Cómo aplico el informe del mes, paso a paso</span></a></div>
+</article></div></div></section>
+</main>
+
+<!-- =========================== PIE =========================== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <a href="../../index.html" class="logo" style="margin-bottom:1rem"><img class="logo-mark" src="../../assets/img/logo-tai.jpg" width="40" height="40" alt="">Tu Amigo Inversor</a>
+        <p>Te cuento cada mes qué hago con mi dinero: estrategias con reglas claras, sin corazonadas. Lo que hagas con tu dinero lo decides tú.</p>
+        <p style="margin-top:.8rem"><a href="mailto:info@tuamigoinversor.com">info@tuamigoinversor.com</a></p>
+      </div>
+      <nav aria-label="Carteras permanentes"><h2>Cartera permanente</h2><ul><li><a href="../../cartera-permanente-conservadora-roca/index.html">ROCA</a></li><li><a href="../../cartera-inversion-crecimiento-impulso/index.html">IMPULSO</a></li></ul></nav>
+      <nav aria-label="Asignación táctica"><h2>Asignación táctica</h2><ul><li><a href="../../inversion-tactica-geda/index.html">GEDA</a></li><li><a href="../../inversion-tematica-gen-z/index.html">GEN-Z</a></li><li><a href="../../inversion-criptomonedas-crypto/index.html">CRYPTO</a></li><li><a href="../../plan-pensiones-moderado-horizonte/index.html">HORIZONTE <small class="pp">plan de pensiones</small></a></li></ul></nav>
+      <nav aria-label="Herramientas y proyecto"><h2>Empieza por aquí</h2><ul><li><a href="../../empieza-aqui/index.html">Explicado desde cero</a></li><li><a href="../../ejemplo-practico/index.html">Ejemplo práctico</a></li><li><a href="../../comparador/index.html">Comparador</a></li><li><a href="../../index.html#test" data-quiz>Test de riesgo</a></li><li><a href="../../combinar-estrategias/index.html">Combinar estrategias</a></li><li><a href="../../informes/index.html">Informes</a></li><li><a href="../../metodologia/index.html">Metodología</a></li><li><a href="../../glosario/index.html">Glosario</a></li><li><a href="../../blog/index.html">Blog</a></li><li><a href="../../sobre-mi/index.html">Sobre mí</a></li></ul></nav>
+      <nav aria-label="Legal"><h2>Legal</h2><ul><li><a href="../../aviso-legal/index.html">Aviso legal</a></li><li><a href="../../privacidad/index.html">Política de privacidad</a></li><li><a href="../../recomendaciones/index.html">Cómo elaboro los informes</a></li></ul></nav>
+    </div>
+    <div class="legal">
+      <p><strong>Aviso:</strong> la información publicada en esta web tiene carácter meramente informativo y no constituye asesoramiento financiero ni una recomendación personalizada de inversión. Las inversiones conllevan riesgo y pueden implicar la pérdida total o parcial del capital. Las rentabilidades pasadas no garantizan rentabilidades futuras. Cada inversor debe realizar su propio análisis y tomar decisiones en función de su situación personal.</p>
+      <p style="margin-top:.8rem">© 2026 Tu Amigo Inversor.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Test de riesgo (ventana emergente) -->
+<div class="modal" id="quizModal" aria-hidden="true">
+  <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="quizTitle">
+    <button class="icon-btn modal-close" type="button" aria-label="Cerrar test"><svg class="icon"><use href="#i-x"/></svg></button>
+    <div class="modal-content">
+      <span class="eyebrow">Test de riesgo</span>
+      <h2 id="quizTitle" style="font-size:var(--fs-xl);margin:.3rem 0 .4rem">¿Cuánto riesgo toleras?</h2>
+      <p style="color:var(--muted);margin-bottom:1.4rem">Diez preguntas, unos 3 minutos. Te explico tu tolerancia al riesgo y qué significa en caídas reales.</p>
+      <div class="quiz" id="quiz" aria-live="polite"></div>
+    </div>
+  </div>
+</div>
+<button class="icon-btn to-top" id="toTop" type="button" aria-label="Volver arriba"><svg class="icon"><use href="#i-up"/></svg></button>
+<div class="sticky-cta" id="stickyCta"><small><strong>Gratis</strong><br><span data-countdown-short>El informe del día 1 en tu correo</span></small><a href="../../index.html#suscripcion" class="btn btn-primary btn-sm">Quiero el informe</a></div>
+</body>
+</html>

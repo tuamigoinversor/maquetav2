@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark" data-base="../../">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cómo rebalanceo ROCA e IMPULSO (y por qué no lo hago cada mes) | Tu Amigo Inversor</title>
+<meta name="description" content="Cuándo reviso las carteras permanentes, por qué rebalanceo con un margen del 15 %, cómo lo hago sin pagar impuestos de más y qué habría pasado con y sin rebalanceo desde que invierto con dinero real.">
+<meta name="theme-color" content="#0a0f1e" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+
+<!-- Open Graph / Twitter -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:site_name" content="Tu Amigo Inversor">
+<meta property="og:title" content="Cómo rebalanceo ROCA e IMPULSO (y por qué no lo hago cada mes)">
+<meta property="og:description" content="Cuándo reviso las carteras permanentes, por qué rebalanceo con un margen del 15 %, cómo lo hago sin pagar impuestos de más y qué habría pasado con y sin rebalanceo desde que invierto con dinero real.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Cómo rebalanceo ROCA e IMPULSO (y por qué no lo hago cada mes)">
+<meta name="twitter:description" content="Cuándo reviso las carteras permanentes, por qué rebalanceo con un margen del 15 %, cómo lo hago sin pagar impuestos de más y qué habría pasado con y sin rebalanceo desde que invierto con dinero real.">
+<meta property="og:image" content="https://tuamigoinversor.com/assets/img/og-tuamigoinversor.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:image" content="https://tuamigoinversor.com/assets/img/og-tuamigoinversor.jpg">
+
+<!-- Tema sin parpadeo: se aplica antes de pintar -->
+<script>
+(function(){try{var t=localStorage.getItem('tai-theme-v3');if(!t){t='light'}document.documentElement.setAttribute('data-theme',t)}catch(e){}})();
+</script>
+
+<link rel="stylesheet" href="../../assets/css/fonts.css">
+<link rel="stylesheet" href="../../assets/css/site.css">
+<link rel="icon" href="../../assets/img/logo-tai.jpg" type="image/jpeg">
+<link rel="apple-touch-icon" href="../../assets/img/logo-tai.jpg">
+
+<!-- Única librería externa: Chart.js (diferida) -->
+<script defer src="../../assets/js/chart.umd.js"></script>
+<script defer src="../../assets/js/tai.js"></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Cómo rebalanceo ROCA e IMPULSO (y por qué no lo hago cada mes)", "datePublished": "2026-10-19", "dateModified": "2026-10-19", "author": {"@type": "Person", "name": "José Manuel García"}, "description": "Cuándo reviso las carteras permanentes, por qué rebalanceo con un margen del 15 %, cómo lo hago sin pagar impuestos de más y qué habría pasado con y sin rebalanceo desde que invierto con dinero real.", "mainEntityOfPage": "https://tuamigoinversor.com/aprende/rebalanceo-roca-impulso/"}</script>
+<!-- Analítica sin cookies (GoatCounter) -->
+<script data-goatcounter="https://tuamigoinversor.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Saltar al contenido</a>
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<!-- SVG sprite (iconos estilo Lucide) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></symbol>
+  <symbol id="i-left" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></symbol>
+  <symbol id="i-right" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+  <symbol id="i-up" viewBox="0 0 24 24"><path d="m18 15-6-6-6 6"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9z"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+  <symbol id="i-scale" viewBox="0 0 24 24"><path d="M12 3v18M5 7h14M5 7l-3 7a4 4 0 0 0 6 0L5 7zM19 7l-3 7a4 4 0 0 0 6 0l-3-7z"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></symbol>
+  <symbol id="i-flask" viewBox="0 0 24 24"><path d="M9 3h6M10 3v6L4 20a1 1 0 0 0 .9 1.5h14.2A1 1 0 0 0 20 20l-6-11V3"/></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></symbol>
+  <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M3 12a9 9 0 0 1 15-6.7L21 8M21 3v5h-5M21 12a9 9 0 0 1-15 6.7L3 16M3 21v-5h5"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></symbol>
+</svg>
+
+<!-- =========================== CABECERA =========================== -->
+<header class="site-header" id="header">
+  <nav class="container nav" aria-label="Navegación principal">
+    <a href="../../index.html" class="logo" aria-label="Tu Amigo Inversor, inicio"><img class="logo-mark" src="../../assets/img/logo-tai.jpg" width="40" height="40" alt="">Tu Amigo Inversor</a>
+    <ul class="nav-links">
+      <li class="has-sub"><button type="button" class="sub-toggle" aria-expanded="false" aria-haspopup="true">Estrategias <svg class="icon" aria-hidden="true"><use href="#i-down"/></svg></button>
+        <ul class="sub">
+          <li><a href="../../index.html#estrategias">Las seis estrategias</a></li>
+          <li><a href="../../comparador/index.html">Compáralas frente a frente</a></li>
+          <li><a href="../../index.html#test" data-quiz>Test de riesgo (3 min)</a></li>
+          <li><a href="../../combinar-estrategias/index.html">Combinar estrategias</a></li>
+        </ul></li>
+      <li class="has-sub"><button type="button" class="sub-toggle" aria-expanded="false" aria-haspopup="true">Cómo funciona <svg class="icon" aria-hidden="true"><use href="#i-down"/></svg></button>
+        <ul class="sub">
+          <li><a href="../../empieza-aqui/index.html">Explicado desde cero</a></li>
+          <li><a href="../../ejemplo-practico/index.html">Un ejemplo práctico, paso a paso</a></li>
+          <li><a href="../../metodologia/index.html">Metodología y cálculos</a></li>
+          <li><a href="../../glosario/index.html">Glosario</a></li>
+        </ul></li>
+      <li><a href="../../informes/index.html">Informes</a></li>
+      <li><a href="../../blog/index.html" aria-current="page">Blog</a></li>
+      <li><a href="../../sobre-mi/index.html">Sobre mí</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="icon-btn" id="themeToggle" type="button" aria-label="Cambiar a modo claro">
+        <svg class="icon i-sun"><use href="#i-sun"/></svg><svg class="icon i-moon"><use href="#i-moon"/></svg>
+      </button>
+      <a href="../../index.html#suscripcion" class="btn btn-primary btn-sm nav-cta magnetic">Quiero el informe</a>
+      <button class="icon-btn burger" id="burger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileMenu"><svg class="icon"><use href="#i-menu"/></svg></button>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="../../index.html#estrategias">Las seis estrategias</a></li>
+      <li><a href="../../comparador/index.html">Compáralas frente a frente</a></li>
+      <li><a href="../../index.html#test" data-quiz>Test de riesgo (3 min)</a></li>
+      <li><a href="../../combinar-estrategias/index.html">Combinar estrategias</a></li>
+      <li><a href="../../empieza-aqui/index.html">Explicado desde cero</a></li>
+      <li><a href="../../ejemplo-practico/index.html">Un ejemplo práctico, paso a paso</a></li>
+      <li><a href="../../metodologia/index.html">Metodología y cálculos</a></li>
+      <li><a href="../../glosario/index.html">Glosario</a></li>
+      <li><a href="../../informes/index.html">Informes</a></li>
+      <li><a href="../../blog/index.html" aria-current="page">Blog</a></li>
+      <li><a href="../../sobre-mi/index.html">Sobre mí</a></li>
+      <li><a href="../../index.html#suscripcion" class="btn btn-primary" style="margin-top:.5rem">Quiero el informe gratis</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+<section class="page-hero" aria-labelledby="page-title"><div class="container narrow">
+  <nav class="crumbs" aria-label="Migas de pan"><a href="../../index.html">Inicio</a><span aria-hidden="true">/</span><a href="../../blog/index.html">Blog</a><span aria-hidden="true">/</span><span aria-current="page">Operativa</span></nav>
+  <span class="eyebrow">Operativa</span>
+  <h1 id="page-title">Cómo rebalanceo ROCA e IMPULSO (y por qué no lo hago cada mes)</h1>
+  <p class="post-meta">Por José Manuel García · <time datetime="2026-10-19">19 oct 2026</time> · 9 min de lectura</p>
+</div></section>
+<article class="page-body"><div class="container narrow"><figure class="post-cover"><img src="../../assets/img/posts/rebalanceo-roca-impulso.webp" alt="" width="1200" height="800" decoding="async"></figure>
+<div class="post-content prose"><p><a href="../../cartera-permanente-conservadora-roca/index.html">ROCA</a> e <a href="../../cartera-inversion-crecimiento-impulso/index.html">IMPULSO</a> no rotan cada mes como GEDA o CRYPTO. Son carteras permanentes: cada activo tiene un peso fijo y la cartera se mantiene. Pero «mantener» no significa olvidarse. Cada activo sube o baja a su ritmo y, con el tiempo, los pesos se mueven solos.</p>
+<p>Rebalancear es devolver la cartera a sus pesos de partida. Aquí te cuento cuándo lo hago, con qué regla y cómo, con números reales de 2025.</p>
+<h2>Por qué los pesos se mueven solos</h2>
+<p>IMPULSO parte de un 40 % en oro, un 30 % en renta variable global y un 30 % en pequeñas empresas de EE. UU. de estilo valor (<em>small cap value</em>). En 2025 el oro subió un 45,2 % en euros, la renta variable global un 21,1 % y las <em>small cap</em> cayeron un 3,4 %.</p>
+<p>Si hubieras empezado el 1 de enero de 2025 con 10.000 € y no hubieras tocado nada, así habría acabado el año:</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Activo</th>
+<th>Peso objetivo</th>
+<th>A 31 dic 2025</th>
+<th>Peso real</th>
+<th>Desviación sobre su peso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Oro</td>
+<td>40 %</td>
+<td>5.809 €</td>
+<td>47,1 %</td>
+<td>+17,7 %</td>
+</tr>
+<tr>
+<td>Renta variable global</td>
+<td>30 %</td>
+<td>3.634 €</td>
+<td>29,4 %</td>
+<td>−1,9 %</td>
+</tr>
+<tr>
+<td>RV EE. UU. small cap value</td>
+<td>30 %</td>
+<td>2.899 €</td>
+<td>23,5 %</td>
+<td>−21,7 %</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><strong>100 %</strong></td>
+<td><strong>12.342 €</strong></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<p><em>Datos del histórico de la estrategia, en euros, sin comisiones ni impuestos.</em></p>
+<p>Nadie ha decidido nada y, aun así, tu cartera ya no es la que elegiste: tiene más oro y menos <em>small cap</em>. Si dejas que eso siga año tras año, acabas con una cartera distinta, con otro riesgo.</p>
+<h2>Mi regla: enero y julio, y un margen del 15 %</h2>
+<p>Reviso ROCA e IMPULSO <strong>dos veces al año, en enero y en julio</strong>, con los datos de cierre de diciembre y de junio.</p>
+<p>En cada revisión miro cuánto se ha alejado cada activo de su peso. <strong>Si alguno se desvía más de un 15 % de su propio peso, rebalanceo.</strong> Si ninguno lo hace, no toco nada.</p>
+<p>Ojo, que es un 15 % del peso de cada activo, no 15 puntos:</p>
+<ul>
+<li>El oro de IMPULSO pesa un 40 %. Su margen va del <strong>34 % al 46 %</strong>.</li>
+<li>Las <em>small cap</em> de IMPULSO pesan un 30 %. Su margen va del <strong>25,5 % al 34,5 %</strong>.</li>
+<li>En ROCA, las <em>small cap</em> pesan un 10 %. Su margen va del <strong>8,5 % al 11,5 %</strong>.</li>
+</ul>
+<p>Volviendo al ejemplo: en la revisión de enero de 2026, el oro (47,1 %) se había salido por arriba y las <em>small cap</em> (23,5 %), por abajo. Tocaba rebalancear.</p>
+<h2>Por qué no rebalanceo cada mes</h2>
+<p>Podría devolver la cartera a sus pesos todos los meses, pero no compensa:</p>
+<ul>
+<li><strong>Más operaciones, más costes.</strong> Cada ajuste tiene comisiones y, según el producto, impuestos.</li>
+<li><strong>Casi no cambia el resultado.</strong> Las desviaciones pequeñas se corrigen solas muchas veces. Un margen evita mover dinero por ruido.</li>
+<li><strong>Es más fácil de seguir.</strong> Dos revisiones al año caben en la agenda de cualquiera.</li>
+</ul>
+<p>Un matiz importante sobre las cifras de las fichas: las rentabilidades publicadas se calculan devolviendo la cartera a sus pesos cada mes. En la práctica rebalanceo mucho menos, así que lo que obtengas puede diferir un poco. En la tabla de abajo ves cuánto.</p>
+<h2>Qué habría pasado con dinero real</h2>
+<p>He aplicado tres formas de mantener la cartera al periodo con dinero real: de enero de 2017 (ROCA) y de enero de 2018 (IMPULSO) a septiembre de 2026:</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Estrategia y forma de mantenerla</th>
+<th>Rentabilidad anualizada</th>
+<th>Peor caída</th>
+<th>Rebalanceos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>IMPULSO</strong> · pesos fijos cada mes (cifras publicadas)</td>
+<td>+14,5 %</td>
+<td>−16,5 %</td>
+<td>Cada mes</td>
+</tr>
+<tr>
+<td><strong>IMPULSO</strong> · mi regla (enero y julio, margen del 15 %)</td>
+<td>+14,5 %</td>
+<td>−15,4 %</td>
+<td>3</td>
+</tr>
+<tr>
+<td><strong>IMPULSO</strong> · sin rebalancear nunca</td>
+<td>+14,0 %</td>
+<td>−15,4 %</td>
+<td>0</td>
+</tr>
+<tr>
+<td><strong>ROCA</strong> · pesos fijos cada mes (cifras publicadas)</td>
+<td>+7,1 %</td>
+<td>−9,2 %</td>
+<td>Cada mes</td>
+</tr>
+<tr>
+<td><strong>ROCA</strong> · mi regla (enero y julio, margen del 15 %)</td>
+<td>+7,1 %</td>
+<td>−8,8 %</td>
+<td>8</td>
+</tr>
+<tr>
+<td><strong>ROCA</strong> · sin rebalancear nunca</td>
+<td>+8,2 %</td>
+<td>−9,4 %</td>
+<td>0</td>
+</tr>
+</tbody>
+</table></div>
+<p><em>Solo el periodo con dinero real. En euros, sin comisiones ni impuestos. Rentabilidades pasadas no garantizan rentabilidades futuras.</em></p>
+<p>Hay tres cosas que me parecen interesantes:</p>
+<ol>
+<li><strong>Con mi regla, el resultado es casi el mismo que el publicado</strong>, con solo 3 rebalanceos en IMPULSO y 8 en ROCA en nueve o diez años.</li>
+<li><strong>En IMPULSO, no rebalancear nunca habría dado algo menos de rentabilidad</strong>, sin reducir la peor caída.</li>
+<li><strong>En ROCA, no rebalancear habría dado más rentabilidad. Y aquí está la trampa.</strong> A septiembre de 2026, esa cartera sin tocar tendría un 41 % en bolsa y solo un 36 % en renta fija, cuando debería tener un 25 % y un 60 %. Habría ganado más porque se habría vuelto otra cartera, mucho menos conservadora que la que elegiste. Que en este periodo haya salido bien no quiere decir que vaya a salir bien en la próxima crisis.</li>
+</ol>
+<p>Por eso rebalanceo. <strong>No lo hago para ganar más, sino para seguir teniendo el riesgo que elegí.</strong></p>
+<h2>Por qué un 15 % y no otro número</h2>
+<p>Antes de fijar la regla probé varios márgenes con el mismo histórico, siempre revisando en enero y julio:</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Margen</th>
+<th>Rebalanceos IMPULSO</th>
+<th>Desviación máx. de la bolsa en IMPULSO</th>
+<th>Rebalanceos ROCA</th>
+<th>Desviación máx. de la bolsa en ROCA</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10 % del peso</td>
+<td>6</td>
+<td>9,1 puntos</td>
+<td>11</td>
+<td>5,1 puntos</td>
+</tr>
+<tr>
+<td><strong>15 % del peso</strong></td>
+<td><strong>3</strong></td>
+<td><strong>10,2 puntos</strong></td>
+<td><strong>8</strong></td>
+<td><strong>5,1 puntos</strong></td>
+</tr>
+<tr>
+<td>20 % del peso</td>
+<td>3</td>
+<td>10,2 puntos</td>
+<td>5</td>
+<td>7,3 puntos</td>
+</tr>
+<tr>
+<td>Más de 5 puntos</td>
+<td>4</td>
+<td>9,8 puntos</td>
+<td>3</td>
+<td>7,2 puntos</td>
+</tr>
+</tbody>
+</table></div>
+<p><em>La desviación es la mayor diferencia que llegó a haber entre el peso real de la bolsa y su peso objetivo. Mismo periodo y mismas condiciones que la tabla anterior.</em></p>
+<p>Lo que saqué en claro:</p>
+<ul>
+<li><strong>La rentabilidad casi no cambia entre unos márgenes y otros.</strong> En todos los casos queda entre +14,2 % y +14,5 % en IMPULSO y entre +7,1 % y +7,3 % en ROCA. Con nueve o diez años de datos, esas diferencias son ruido. Lo que sí cambia es cuántas operaciones haces y cuánto se aleja la cartera de su riesgo.</li>
+<li><strong>Un margen en puntos no sirve igual para todos los activos.</strong> En un activo que pesa un 10 %, 5 puntos son la mitad de su peso: puede pasar del 10 % al 15 % sin que salte la regla. Con ese criterio, la bolsa de ROCA llegó a alejarse 7,2 puntos de su peso, frente a 5,1 con el 15 %. Un porcentaje del peso trata igual a todos los activos.</li>
+<li><strong>El 10 % obliga a rebalancear IMPULSO el doble</strong> (6 veces frente a 3). Mantiene la bolsa algo más cerca de su peso (9,1 puntos frente a 10,2), pero la peor caída no mejora (−15,6 % frente a −15,4 %), y cada rebalanceo de IMPULSO suele suponer vender oro, que tributa.</li>
+<li><strong>El 15 % es el punto medio.</strong> En IMPULSO rebalancea lo mismo que el 20 %. En ROCA mantiene el riesgo casi igual que rebalanceando en cada revisión, con algo menos de un ajuste al año, y casi todos se hacen con traspasos entre fondos, que no tributan.</li>
+</ul>
+<p>También probé a revisar cada mes en vez de dos veces al año: solo añade operaciones, sin mejorar el resultado.</p>
+<p>Con un aviso: es un histórico corto, que incluye 2020, 2022 y el oro de 2025, pero ninguna crisis larga como la de 2008. Con otros datos, el 20 % podría salir algo mejor que el 15 %, o al revés. Lo que se repite en todos los periodos que he probado es que un margen relativo funciona mejor que uno en puntos.</p>
+<h2>Cómo lo hago: traspasos y aportaciones</h2>
+<p>Aquí entra la fiscalidad, y es la razón por la que uso fondos de inversión en estas dos carteras.</p>
+<h3>Traspasos entre fondos</h3>
+<p>En España, pasar dinero de un fondo de inversión a otro mediante un traspaso <strong>no tributa en ese momento</strong>. La ganancia se queda pendiente hasta que vendas de verdad. Eso permite rebalancear moviendo dinero del fondo que se ha pasado al que se ha quedado corto, sin pagar impuestos por el camino.</p>
+<p>Esto vale para fondos de inversión traspasables. No vale para ETF ni para ETC: venderlos para rebalancear sí tributa.</p>
+<h3>Aportaciones nuevas</h3>
+<p>La forma más sencilla de rebalancear es no vender nada: <strong>meter el dinero nuevo en lo que se ha quedado corto.</strong> Si aportas cada cierto tiempo, muchas veces basta con eso para volver al margen.</p>
+<h3>El caso del oro</h3>
+<p>El oro lo tengo en un ETC/ETF, no en un fondo, así que no puedo traspasarlo. Cuando el oro se pasa de su peso, como en el ejemplo de 2025, hay dos caminos:</p>
+<ul>
+<li><strong>Vender la parte que sobra.</strong> Con los 12.342 € del ejemplo, habría que vender unos 872 € de oro y repartirlos entre los dos fondos: unos 69 € a la renta variable global y unos 804 € a las <em>small cap</em>. La ganancia de esa venta tributa.</li>
+<li><strong>Corregirlo con dinero nuevo.</strong> Para que el oro volviera al 40 % sin venderlo, habría que aportar unos 2.181 € a los fondos: unos 723 € a la renta variable global y unos 1.458 € a las <em>small cap</em>.</li>
+</ul>
+<p>Cada camino tiene su coste: impuestos en un caso y más dinero en el otro. Elegir uno u otro depende de tu situación fiscal y de si vas a aportar. Si dudas, consulta tu caso.</p>
+<h2>Lo que hago en cada revisión</h2>
+<ol>
+<li><strong>En enero y en julio, apunto el valor de cada posición</strong> y calculo su peso sobre el total.</li>
+<li><strong>Comparo cada peso con su margen</strong> (objetivo ± 15 % de ese objetivo).</li>
+<li><strong>Si todos están dentro, no hago nada.</strong> Es lo más habitual.</li>
+<li><strong>Si alguno se sale, calculo los importes objetivo</strong>: el total de la cartera multiplicado por cada peso.</li>
+<li><strong>Muevo el dinero</strong>: con aportaciones nuevas, con traspasos entre fondos o, si hace falta, vendiendo.</li>
+<li><strong>Anoto lo que he hecho</strong>, igual que con cualquier otra operación del <a href="../../aprende/como-aplico-el-informe-del-mes/index.html">informe del mes</a>.</li>
+</ol>
+<p>Cuando toca rebalancear, te aviso en el informe, como hice con IMPULSO a mitad de 2025.</p>
+<h2>¿Y si combinas varias estrategias?</h2>
+<p>Si sigues ROCA o IMPULSO junto a otras estrategias, como te contaba en <a href="../../aprende/combinar-estrategias-inversion/index.html">cómo combinar las estrategias</a>, aparece un segundo rebalanceo: el reparto <strong>entre estrategias</strong>. La lógica es la misma: fija unos pesos, define un margen y revísalo con calma unas pocas veces al año. Puedes probar mezclas en la herramienta <a href="../../combinar-estrategias/index.html">Combinar estrategias</a>.</p>
+<h2>En resumen</h2>
+<ul>
+<li>Los pesos se mueven solos: en 2025, el oro de IMPULSO pasó del 40 % al 47 % sin que nadie hiciera nada.</li>
+<li>Reviso en enero y julio, y rebalanceo solo si algún activo se desvía más de un 15 % de su peso. Es un porcentaje del peso, no puntos.</li>
+<li>Rebalancear no busca ganar más: busca mantener el riesgo que elegiste.</li>
+<li>Prefiero hacerlo con aportaciones y traspasos entre fondos, que no tributan. Con el oro en ETC/ETF hay que elegir entre vender (y tributar) o aportar más.</li>
+</ul>
+<p><em>Este artículo describe mi operativa personal y tiene carácter informativo. No es asesoramiento financiero ni fiscal, ni una recomendación personalizada. Los cálculos usan el histórico con dinero real de las estrategias, en euros y sin comisiones ni impuestos. Las rentabilidades pasadas no garantizan rentabilidades futuras.</em></p></div>
+<div class="disclaimer-bar" role="note"><svg class="icon"><use href="#i-alert"/></svg><p><strong>Importante:</strong> este artículo es informativo y no constituye asesoramiento financiero. Las rentabilidades pasadas no garantizan rentabilidades futuras.</p></div>
+<div class="cta-band reveal" style="margin-top:2.5rem"><div><h2>¿Quieres ver las estrategias en directo?</h2><p>Cada día 1 te mando por correo qué tengo en cada estrategia y qué cambio. Lo lees y decides tú qué hacer con tu dinero. Gratis y sin compromiso.</p></div>
+<div class="cta-row"><a href="../../index.html#suscripcion" class="btn btn-primary magnetic">Quiero el informe gratis <svg class="icon"><use href="#i-arrow"/></svg></a><a href="../../comparador/index.html" class="btn btn-ghost">Ver ROCA e IMPULSO frente a frente</a></div></div>
+</div></article>
+<section class="section alt tight" aria-labelledby="seguir-t"><div class="container"><h2 id="seguir-t" class="small-h reveal">Sigue leyendo</h2><div class="blog"><article class="post reveal" data-cat="Operativa">
+  <div class="post-media post-media--empty" aria-hidden="true"></div>
+  <div class="post-body"><small>Operativa · 26 oct 2026</small><h3><a href="../../aprende/con-cuanto-dinero-seguir-cada-estrategia/index.html">Con cuánto dinero seguir cada estrategia (y por qué el bróker importa tanto)</a></h3><p>No hay un mínimo, pero sí un importe a partir del cual las comisiones dejan de comerse la rentabilidad. La respuesta corta para cada estrategia y por qué yo empezaría GEDA con unos 7.000 €.</p><a class="more" href="../../aprende/con-cuanto-dinero-seguir-cada-estrategia/index.html">Leer artículo <svg class="icon"><use href="#i-arrow"/></svg><span class="sr-only">: Con cuánto dinero seguir cada estrategia (y por qué el bróker importa tanto)</span></a></div>
+</article><article class="post reveal" data-cat="Operativa">
+  <div class="post-media"><img src="../../assets/img/posts/como-aplico-el-informe-del-mes.webp" width="1200" height="800" loading="lazy" decoding="async" alt=""></div>
+  <div class="post-body"><small>Operativa · 12 oct 2026</small><h3><a href="../../aprende/como-aplico-el-informe-del-mes/index.html">Cómo aplico el informe del mes, paso a paso</a></h3><p>Qué miro primero cuando llega el informe del día 1, cómo ejecuto una rotación, qué tipo de orden uso y qué hago si empiezo de cero. Con el ejemplo real de octubre de 2026.</p><a class="more" href="../../aprende/como-aplico-el-informe-del-mes/index.html">Leer artículo <svg class="icon"><use href="#i-arrow"/></svg><span class="sr-only">: Cómo aplico el informe del mes, paso a paso</span></a></div>
+</article><article class="post reveal" data-cat="Fiscalidad">
+  <div class="post-media"><img src="../../assets/img/posts/cuenta-financia-europa.webp" width="1200" height="800" loading="lazy" decoding="async" alt=""></div>
+  <div class="post-body"><small>Fiscalidad · 30 sep 2026 · actualizado el 18 oct 2026</small><h3><a href="../../aprende/cuenta-financia-europa/index.html">Cuenta Financia Europa: qué es, qué ventajas fiscales tiene y cuándo podrá contratarse</a></h3><p>La Cuenta de Ahorro e Inversión Financia Europa ya tiene norma en vigor, pero todavía no puede contratarse y sigue pendiente de convalidación en el Congreso. Te explico cómo funciona, qué ventajas fiscales ofrece y qué falta por conocer.</p><a class="more" href="../../aprende/cuenta-financia-europa/index.html">Leer artículo <svg class="icon"><use href="#i-arrow"/></svg><span class="sr-only">: Cuenta Financia Europa: qué es, qué ventajas fiscales tiene y cuándo podrá contratarse</span></a></div>
+</article></div></div></section>
+</main>
+
+<!-- =========================== PIE =========================== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <a href="../../index.html" class="logo" style="margin-bottom:1rem"><img class="logo-mark" src="../../assets/img/logo-tai.jpg" width="40" height="40" alt="">Tu Amigo Inversor</a>
+        <p>Te cuento cada mes qué hago con mi dinero: estrategias con reglas claras, sin corazonadas. Lo que hagas con tu dinero lo decides tú.</p>
+        <p style="margin-top:.8rem"><a href="mailto:info@tuamigoinversor.com">info@tuamigoinversor.com</a></p>
+      </div>
+      <nav aria-label="Carteras permanentes"><h2>Cartera permanente</h2><ul><li><a href="../../cartera-permanente-conservadora-roca/index.html">ROCA</a></li><li><a href="../../cartera-inversion-crecimiento-impulso/index.html">IMPULSO</a></li></ul></nav>
+      <nav aria-label="Asignación táctica"><h2>Asignación táctica</h2><ul><li><a href="../../inversion-tactica-geda/index.html">GEDA</a></li><li><a href="../../inversion-tematica-gen-z/index.html">GEN-Z</a></li><li><a href="../../inversion-criptomonedas-crypto/index.html">CRYPTO</a></li><li><a href="../../plan-pensiones-moderado-horizonte/index.html">HORIZONTE <small class="pp">plan de pensiones</small></a></li></ul></nav>
+      <nav aria-label="Herramientas y proyecto"><h2>Empieza por aquí</h2><ul><li><a href="../../empieza-aqui/index.html">Explicado desde cero</a></li><li><a href="../../ejemplo-practico/index.html">Ejemplo práctico</a></li><li><a href="../../comparador/index.html">Comparador</a></li><li><a href="../../index.html#test" data-quiz>Test de riesgo</a></li><li><a href="../../combinar-estrategias/index.html">Combinar estrategias</a></li><li><a href="../../informes/index.html">Informes</a></li><li><a href="../../metodologia/index.html">Metodología</a></li><li><a href="../../glosario/index.html">Glosario</a></li><li><a href="../../blog/index.html">Blog</a></li><li><a href="../../sobre-mi/index.html">Sobre mí</a></li></ul></nav>
+      <nav aria-label="Legal"><h2>Legal</h2><ul><li><a href="../../aviso-legal/index.html">Aviso legal</a></li><li><a href="../../privacidad/index.html">Política de privacidad</a></li><li><a href="../../recomendaciones/index.html">Cómo elaboro los informes</a></li></ul></nav>
+    </div>
+    <div class="legal">
+      <p><strong>Aviso:</strong> la información publicada en esta web tiene carácter meramente informativo y no constituye asesoramiento financiero ni una recomendación personalizada de inversión. Las inversiones conllevan riesgo y pueden implicar la pérdida total o parcial del capital. Las rentabilidades pasadas no garantizan rentabilidades futuras. Cada inversor debe realizar su propio análisis y tomar decisiones en función de su situación personal.</p>
+      <p style="margin-top:.8rem">© 2026 Tu Amigo Inversor.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Test de riesgo (ventana emergente) -->
+<div class="modal" id="quizModal" aria-hidden="true">
+  <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="quizTitle">
+    <button class="icon-btn modal-close" type="button" aria-label="Cerrar test"><svg class="icon"><use href="#i-x"/></svg></button>
+    <div class="modal-content">
+      <span class="eyebrow">Test de riesgo</span>
+      <h2 id="quizTitle" style="font-size:var(--fs-xl);margin:.3rem 0 .4rem">¿Cuánto riesgo toleras?</h2>
+      <p style="color:var(--muted);margin-bottom:1.4rem">Diez preguntas, unos 3 minutos. Te explico tu tolerancia al riesgo y qué significa en caídas reales.</p>
+      <div class="quiz" id="quiz" aria-live="polite"></div>
+    </div>
+  </div>
+</div>
+<button class="icon-btn to-top" id="toTop" type="button" aria-label="Volver arriba"><svg class="icon"><use href="#i-up"/></svg></button>
+<div class="sticky-cta" id="stickyCta"><small><strong>Gratis</strong><br><span data-countdown-short>El informe del día 1 en tu correo</span></small><a href="../../index.html#suscripcion" class="btn btn-primary btn-sm">Quiero el informe</a></div>
+</body>
+</html>
