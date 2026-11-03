@@ -102,6 +102,10 @@ def card(p, base, i):
 
 
 def write(rel, content):
+    rel = rel.replace(os.sep, '/')
+    if rel.endswith('index.html') and '</title>' in content and 'rel="canonical"' not in content:
+        url = SITE_URL + '/' + rel[:-len('index.html')]   # misma regla que tools/prelaunch.py
+        content = content.replace('</title>', '</title>\n<link rel="canonical" href="%s">\n<meta property="og:url" content="%s">' % (url, url), 1)
     full = os.path.join(ROOT, rel)
     os.makedirs(os.path.dirname(full), exist_ok=True)
     open(full, 'w', encoding='utf8').write(content)
@@ -196,6 +200,21 @@ def update_home(posts):
     open(path, 'w', encoding='utf8').write(h[:a] + block + h[b:])
 
 
+def build_sitemap():
+    """sitemap.xml con todas las páginas indexables (sin redirecciones ni noindex)."""
+    urls = []
+    for f in sorted(glob.glob(os.path.join(ROOT, '**', 'index.html'), recursive=True)):
+        rel = os.path.relpath(f, ROOT).replace(os.sep, '/')
+        if rel.startswith('tools/'):
+            continue
+        t = open(f, encoding='utf8').read()
+        if 'http-equiv="refresh"' in t or 'noindex' in t:
+            continue
+        urls.append(SITE_URL + '/' + rel[:-len('index.html')])
+    write('sitemap.xml', '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + ''.join('  <url><loc>%s</loc></url>\n' % u for u in urls) + '</urlset>\n')
+    return len(urls)
+
+
 def build_feed(posts):
     items = ''.join('<item><title>%s</title><link>%s/aprende/%s/</link><guid>%s/aprende/%s/</guid><pubDate>%s</pubDate><description>%s</description></item>' % (
         esc(p['title']), SITE_URL, p['slug'], SITE_URL, p['slug'], p['date'].strftime('%a, %d %b %Y 08:00:00 +0000'), esc(p['summary'])) for p in posts[:20])
@@ -207,4 +226,4 @@ if __name__ == '__main__':
     for p in posts: build_post(p, posts)
     build_index(posts); update_home(posts); build_feed(posts)
     nimg = sum(1 for p in posts if p['image'] and exists(p['image']))
-    print('Blog generado: %d artículos (%d con imagen destacada).' % (len(posts), nimg))
+    print('Blog generado: %d artículos (%d con imagen destacada). sitemap.xml: %d páginas.' % (len(posts), nimg, build_sitemap()))

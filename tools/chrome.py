@@ -11,7 +11,6 @@ def head(title, desc, base, scripts, og_title=None, ld=''):
 <html lang="es" data-theme="dark" data-base="%(base)s">
 <head>
 <meta charset="UTF-8">
-<meta name="robots" content="noindex, nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>%(title)s</title>
 <meta name="description" content="%(desc)s">
