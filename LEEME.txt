@@ -1,5 +1,16 @@
-TU AMIGO INVERSOR · WEB V45
+TU AMIGO INVERSOR · WEB V46
 ===========================
+
+CAMBIOS V46 (lanzamiento: web abierta a buscadores)
+  - Ejecutado tools/prelaunch.py: quitado el noindex de las 33 páginas, añadidos canonical y og:url, creado sitemap.xml
+    y robots.txt abierto («Allow: /» + enlace al sitemap). Las 3 páginas de redirección (aprende/brokers/cuenta-financia-europa,
+    simulador, informe-ejemplo) siguen con «noindex, follow», a propósito.
+  - tools/chrome.py ya no mete el noindex en las páginas nuevas.
+  - tools/build_blog.py añade canonical y og:url a cada artículo y regenera sitemap.xml al final. Al publicar un artículo
+    nuevo basta con ejecutar build_blog.py; no hace falta volver a ejecutar prelaunch.py.
+  - Imagen destacada de «Con cuánto dinero seguir cada estrategia» (assets/img/posts/con-cuanto-dinero-seguir-cada-estrategia.webp).
+  - Analítica: solo GoatCounter (sin Google Analytics ni cookies). Sin cambios.
+  - Siguiente paso (tuyo): dar de alta el dominio en Google Search Console y enviar https://tuamigoinversor.com/sitemap.xml.
 
 CAMBIOS V45
   - Quitadas todas las referencias a Rankia: portada, Quién soy, Informes y el archivo del informe (datos/2026-10.yaml).
