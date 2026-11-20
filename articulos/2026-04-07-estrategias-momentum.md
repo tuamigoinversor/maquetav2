@@ -2,7 +2,7 @@
 title: "Estrategias momentum: ¿por qué funcionan?"
 fecha: 2026-04-07
 categoria: "Estrategias"
-resumen: "Qué es el momentum, qué dice la investigación académica y qué autores han influido en cómo lo aplico en GEDA, GEN-Z y CRYPTO."
+resumen: "Qué es el momentum, qué dice la investigación académica y qué autores han influido en cómo lo aplico en GEDA y GEN-Z."
 imagen: "assets/img/posts/estrategias-momentum.webp"
 siguiente_texto: "Ver cómo aplico el momentum en GEDA"
 siguiente_url: "/inversion-tactica-geda/"
@@ -188,7 +188,7 @@ De aquí salen muchas estrategias tipo:
 
 ## Cómo aplico el momentum en mis estrategias
 
-Todas mis estrategias siguen reglas objetivas. En las tácticas (GEDA, GEN-Z, CRYPTO y HORIZONTE), esas reglas se basan solo en el precio. ROCA e IMPULSO son distintas: son carteras permanentes, con pesos fijos que se rebalancean.
+Todas mis estrategias siguen reglas objetivas. En las tácticas (GEDA, GEN-Z y HORIZONTE), esas reglas se basan solo en el precio. ROCA e IMPULSO son distintas: son carteras permanentes, con pesos fijos que se rebalancean. CRYPTO fue táctica hasta noviembre de 2026; desde diciembre es también una cartera permanente.
 
 En las tácticas, por ejemplo:
 

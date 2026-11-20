@@ -4,8 +4,8 @@ fecha: 2026-06-19
 categoria: "Estrategias"
 resumen: "No tienes que elegir solo una estrategia: cómo pensar una combinación con núcleo y satélites sin perder de vista la caída máxima conjunta."
 imagen: "assets/img/posts/combinar-estrategias-inversion.webp"
-siguiente_texto: "Probar a combinar estrategias"
-siguiente_url: "/combinar-estrategias/"
+siguiente_texto: "Ver las seis carteras en una tabla"
+siguiente_url: "/comparador/"
 ---
 
 Una de las preguntas que más me llega es: «¿Me meto en ROCA o en GEDA?» Está planteada como un dilema, como si tuvieras que elegir un bando. Y no es así. Las seis estrategias no compiten entre sí — están pensadas como piezas que se pueden combinar, cada una con un papel distinto dentro de tu cartera.
@@ -44,19 +44,19 @@ Cada estrategia se diseñó con un objetivo y un perfil de riesgo distinto. ROCA
 <tr class="even">
 <td>HORIZONTE</td>
 <td>Planes de pensiones</td>
-<td>-19,3%</td>
+<td>-18,0%</td>
 <td>Vehículo fiscal a largo plazo</td>
 </tr>
 <tr class="odd">
 <td>GEDA</td>
 <td>Táctica momentum agresiva</td>
-<td>-16,2%</td>
+<td>-13,6%</td>
 <td>Crecimiento táctico</td>
 </tr>
 <tr class="even">
 <td>GEN-Z</td>
 <td>Alta convicción concentrada</td>
-<td>-44,9%</td>
+<td>-52,2%</td>
 <td>Satélite de alta convicción</td>
 </tr>
 <tr class="odd">
@@ -69,7 +69,7 @@ Cada estrategia se diseñó con un objetivo y un perfil de riesgo distinto. ROCA
 </table>
 </figure>
 
-*Caídas máximas con dinero real a 30 de septiembre de 2026, desde el año en que empecé con cada estrategia (GEN-Z y CRYPTO, con menos de cinco años de historial). En el backtest previo, CRYPTO llegó a caer más de un 70%. Las cifras actualizadas están en el [comparador](/comparador/).*
+*Caídas máximas con dinero real a 31 de octubre de 2026, medidas a fin de mes, desde el año en que empecé con cada estrategia (GEN-Z y CRYPTO, con menos de cinco años de historial y con la versión anterior de su método). Una cartera de Bitcoin y Ethereum ha llegado a caer cerca de un 70 % en los últimos años. Las cifras actualizadas están en el [comparador](/comparador/).*
 
 ## La lógica de combinar: núcleo + satélites
 
@@ -83,7 +83,7 @@ Esto no es una recomendación personalizada — es la lógica que yo mismo sigo 
 
 - **Perfil conservador**: ROCA como núcleo principal, con una porción pequeña de IMPULSO o GEDA como complemento de crecimiento.
 - **Perfil moderado**: IMPULSO como base, combinado con GEDA como aporte táctico, manteniendo el núcleo permanente como la mayoría de la cartera.
-- **Perfil agresivo**: GEDA y GEN-Z como motor principal, con CRYPTO como satélite muy acotado — nunca como pieza central: con dinero real ha caído un -50,1%, y en el backtest previo, más de un 70%.
+- **Perfil agresivo**: GEDA y GEN-Z como motor principal, con CRYPTO como satélite muy acotado — nunca como pieza central: con dinero real ha caído un -50,1%, y una cartera de Bitcoin y Ethereum ha llegado a caer cerca de un 70 %.
 - **HORIZONTE (plan de pensiones)**: funciona como vehículo aparte, normalmente complementario a cualquiera de los perfiles anteriores por su tratamiento fiscal específico, no exclusivo de ninguno.
 
 ## La regla de oro: que el drawdown combinado sea uno que puedas aguantar
@@ -94,7 +94,7 @@ Antes de fijar tu mezcla, pregúntate: si todas las piezas cayeran a la vez a su
 
 ## Combinar no es «configurar y olvidar»
 
-Con el tiempo, las piezas de tu cartera se mueven a ritmos distintos, y el peso real de cada estrategia se desvía del que elegiste al principio. Eso requiere rebalanceo, un tema con suficiente miga como para dedicarle su propio post más adelante. Mientras tanto, puedes probar distintas mezclas en la herramienta [Combinar estrategias](/combinar-estrategias/). Por ahora, queda claro que combinar estrategias es una decisión inicial, pero también un mantenimiento continuo.
+Con el tiempo, las piezas de tu cartera se mueven a ritmos distintos, y el peso real de cada estrategia se desvía del que elegiste al principio. Eso requiere rebalanceo, un tema con suficiente miga como para dedicarle su propio post más adelante. Cómo lo hago en ROCA e IMPULSO lo cuento en [cómo rebalanceo ROCA e IMPULSO](/aprende/rebalanceo-roca-impulso/). Por ahora, queda claro que combinar estrategias es una decisión inicial, pero también un mantenimiento continuo.
 
 ## Resumen: cómo decidir tu combinación
 

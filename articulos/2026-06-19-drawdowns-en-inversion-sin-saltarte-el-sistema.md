@@ -67,15 +67,15 @@ Es un dato que ya estaba disponible cuando decidiste invertir.
 </tr>
 <tr class="odd">
 <td>HORIZONTE</td>
-<td>-19,3%</td>
+<td>-18,0%</td>
 </tr>
 <tr class="even">
 <td>GEDA</td>
-<td>-16,2%</td>
+<td>-13,6%</td>
 </tr>
 <tr class="odd">
 <td>GEN-Z</td>
-<td>-44,9%</td>
+<td>-52,2%</td>
 </tr>
 <tr class="even">
 <td>CRYPTO</td>
@@ -85,9 +85,9 @@ Es un dato que ya estaba disponible cuando decidiste invertir.
 </table>
 </figure>
 
-*Caídas con dinero real a 30 de septiembre de 2026, desde el año en que empecé con cada estrategia. En el backtest previo, CRYPTO llegó a caer más de un 70%. GEN-Z marcó su peor caída en el verano de 2026, después de publicar este artículo: es justo el tipo de situación de la que habla.*
+*Caídas con dinero real a 31 de octubre de 2026, medidas a fin de mes, desde el año en que empecé con cada estrategia. Una cartera de Bitcoin y Ethereum ha llegado a caer cerca de un 70 % en los últimos años. GEN-Z marcó su peor caída en octubre de 2026, después de publicar este artículo: es justo el tipo de situación de la que habla.*
 
-Si elegiste GEDA sabiendo que su máxima caída con dinero real ha sido del -16%, y ahora estás viviendo una caída del -12%, no ha ocurrido nada que estuviera fuera del guion.
+Si elegiste GEDA sabiendo que su máxima caída con dinero real ha sido del -14%, y ahora estás viviendo una caída del -12%, no ha ocurrido nada que estuviera fuera del guion.
 
 Estás dentro del comportamiento esperado de la estrategia.
 

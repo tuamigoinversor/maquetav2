@@ -8,11 +8,14 @@ siguiente_texto: "Ver un informe de ejemplo"
 siguiente_url: "/informes/"
 ---
 
+> **Actualización (noviembre de 2026):** desde diciembre de 2026, CRYPTO es 50 % bitcoin y 50 % ether, sin altcoins ni rotaciones mensuales. Lo que este artículo dice de las altcoins se refiere a la versión anterior. [Por qué ha cambiado](/aprende/lo-que-he-cambiado-tras-revisar-mis-estrategias/).
+
+
 El día 1 de cada mes te llega el informe. Trae muchas tablas, comentarios del mercado y el detalle de las seis estrategias. Y es normal que la primera vez te preguntes: «Vale, ¿y yo qué tengo que hacer con esto?».
 
 La respuesta corta: casi siempre, muy poco. La mayor parte del informe es para que entiendas qué ha pasado. Lo que tienes que hacer tú cabe en unas pocas líneas.
 
-Aquí te cuento cómo lo aplico yo, paso a paso, con el informe real de octubre de 2026 como ejemplo. Puedes descargarlo en la página de [informes de ejemplo](/informes/).
+Aquí te cuento cómo lo aplico yo, paso a paso, con el informe real de octubre de 2026 como ejemplo. Puedes descargarlo en la página de [informes publicados](/informes/).
 
 ## Antes de empezar: qué necesitas tener listo
 

@@ -1,0 +1,246 @@
+{
+ "estrategias": {
+  "ROCA": {
+   "que_es": "Cartera permanente conservadora de seis activos con peso fijo, que sigo con dinero real desde 2017 y rebalanceo una o dos veces al año.",
+   "reglas": [
+    "Combino activos que se comportan distinto según el entorno: bonos, oro y renta variable.",
+    "Cada activo tiene un peso fijo definido de antemano, sin decidir qué va a subir.",
+    "Renta fija 60 %, oro 15 % y renta variable 25 % de la cartera.",
+    "En enero y julio compruebo que ningún activo se aleje más de un 15 % de su peso.",
+    "Rebalanceo una o dos veces al año para volver a los pesos iniciales."
+   ],
+   "composicion": [
+    [
+     "RF ligada a inflación (Vanguard Inflation-Protected Securities Fund)",
+     "20 %"
+    ],
+    [
+     "RF a corto plazo (NYLI Short Term Bond Class A)",
+     "25 %"
+    ],
+    [
+     "RF global (Dodge & Cox Global Bond Fund)",
+     "15 %"
+    ],
+    [
+     "Oro (iShares Gold Trust, IAU)",
+     "15 %"
+    ],
+    [
+     "RV global (Vanguard Global Equity Fund – Investor Shares)",
+     "15 %"
+    ],
+    [
+     "RV EE. UU. small cap value (Vanguard Small Cap Value Index Admiral, VSIAX)",
+     "10 %"
+    ]
+   ],
+   "revision": "Cada semestre (enero y julio); rebalanceo una o dos veces al año",
+   "limites": [
+    "Se queda bastante por detrás de la bolsa en años muy alcistas: está pensada para caer poco.",
+    "Depende en parte de la renta fija, sobre todo estadounidense.",
+    "Los activos no siempre se compensan: en septiembre de 2026 cayeron a la vez renta fija global, oro y small caps."
+   ],
+   "capital_minimo": null,
+   "vehiculos": "Fondos de inversión indexados, por su ventaja fiscal en traspasos; los ETF equivalentes también valdrían."
+  },
+  "IMPULSO": {
+   "que_es": "Evolución de ROCA sin renta fija: tres activos con peso fijo, con el oro como protección y la renta variable como motor.",
+   "reglas": [
+    "Elimino la renta fija, que protege pero limita la rentabilidad, y mantengo solo el oro como cobertura.",
+    "Pesos fijos: 40 % oro, 30 % bolsa global y 30 % small cap value de EE. UU.",
+    "En enero y julio compruebo que ningún activo se aleje más de un 15 % de su peso.",
+    "Al rebalancear, vendo parte de lo que más ha subido y compro de lo que más ha bajado."
+   ],
+   "composicion": [
+    [
+     "Oro (iShares Gold Trust, IAU)",
+     "40 %"
+    ],
+    [
+     "RV global (Vanguard Global Equity Fund – Investor Shares)",
+     "30 %"
+    ],
+    [
+     "RV EE. UU. small cap value (Vanguard Small Cap Value Index Admiral, VSIAX)",
+     "30 %"
+    ]
+   ],
+   "revision": "Cada semestre (enero y julio); una o dos operaciones al año",
+   "limites": [
+    "Depende mucho del oro, que pesa el 40 % de la cartera: cuando el oro cae, se nota.",
+    "Es más volátil que ROCA y exige convicción y un horizonte largo.",
+    "En ciclos alcistas muy fuertes de la renta variable rinde menos."
+   ],
+   "capital_minimo": null,
+   "vehiculos": "Fondos indexados o ETF que repliquen los mismos índices o tipos de activo."
+  },
+  "HORIZONTE": {
+   "que_es": "Estrategia para planes de pensiones: toda la cartera alterna entre un plan de bolsa de EE. UU. y un plan monetario según la tendencia del S&P 500.",
+   "reglas": [
+    "La señal se calcula con el S&P 500 con dividendos (Total Return), en datos semanales, mirando la última semana cerrada de cada mes.",
+    "Paso a bolsa de EE. UU. cuando el MACD (12, 26) es positivo y el índice cierra por encima de su media ponderada de 30 semanas.",
+    "Paso al plan monetario cuando el MACD es negativo, el índice cierra por debajo de esa media y está a menos de un 2 % de ella. Si no se cumplen las tres cosas, me quedo donde estoy.",
+    "Estoy siempre al 100 % en uno de los dos planes y reviso solo una vez al mes."
+   ],
+   "composicion": [
+    [
+     "Santander ASG Renta Variable Norteamérica, plan de pensiones",
+     "100 % con tendencia alcista"
+    ],
+    [
+     "Santander ASG Renta Fija Corto Plazo, plan de pensiones (monetario)",
+     "100 % con tendencia bajista"
+    ]
+   ],
+   "revision": "Cada mes, con la última semana cerrada del mes",
+   "limites": [
+    "Pasa la mayor parte del tiempo en bolsa (más del 90 % de los meses desde 2020): en las caídas cortas y rápidas apenas protege.",
+    "La señal llega con retraso; en un giro brusco puede salir tarde y volver a entrar después de parte de la subida.",
+    "Cada traspaso entre planes tarda varios días, y lo que pase en esos días depende de la entidad.",
+    "Solo funciona con planes de pensiones, cuyo dinero no está disponible salvo en supuestos concretos."
+   ],
+   "capital_minimo": null,
+   "vehiculos": "Dos planes de pensiones de Santander: uno de bolsa de EE. UU. y uno monetario. En otras entidades se puede hacer con un plan de bolsa de EE. UU. y uno monetario o de renta fija a muy corto plazo."
+  },
+  "GEDA": {
+   "que_es": "Estrategia táctica de momentum: cada mes un algoritmo selecciona los 7 activos con mayor fortaleza relativa, sin intervención humana.",
+   "reglas": [
+    "Cada mes un algoritmo en Python analiza un amplio universo de activos usando solo precios.",
+    "Las acciones candidatas son las que están en su índice y llevan más de tres meses dentro. La lista sale sola cada mes.",
+    "Agrupo los activos en cuatro categorías estancas; cada uno solo compite con los de la suya.",
+    "En cada categoría me quedo con el activo más consistente según varios criterios de momentum.",
+    "No hay filtro de momentum positivo: siempre tengo 7 posiciones, aunque el mercado caiga.",
+    "Las 7 posiciones llevan el mismo importe y las mantengo hasta el día 1 del mes siguiente."
+   ],
+   "composicion": [
+    [
+     "Índice global (oro, bonos, inmobiliario, materias primas, renta variable…)",
+     "1 posición, 1/7 del importe"
+    ],
+    [
+     "Sectores de EE. UU.",
+     "2 posiciones, 1/7 cada una"
+    ],
+    [
+     "Acciones de EE. UU. (S&P 500, Nasdaq o Dow Jones)",
+     "2 posiciones, 1/7 cada una"
+    ],
+    [
+     "Acciones europeas (Euro Stoxx 50, IBEX, DAX, CAC, MIB o AEX)",
+     "2 posiciones, 1/7 cada una"
+    ]
+   ],
+   "revision": "Cada mes: el día 1 miro el informe y cambio solo lo que indique",
+   "limites": [
+    "Sufre con giros bruscos y en mercados laterales o sin liderazgo claro.",
+    "Con solo 7 posiciones, cada una pesa mucho en el resultado.",
+    "No pasa a liquidez: en una caída general del mercado sigue invertida."
+   ],
+   "capital_minimo": "Unos 7.000 € con un bróker de 1 € por operación (unos 1.000 € por posición); unos 9.000 € con uno de unos 3 €",
+   "vehiculos": "ETF UCITS para índices y sectores, y acciones sueltas de EE. UU. y Europa."
+  },
+  "GEN-Z": {
+   "que_es": "Estrategia temática de momentum: cada mes elijo las 4 acciones con mayor momentum entre las empresas de los grandes índices que pertenecen a temas de futuro.",
+   "reglas": [
+    "Solo son candidatas las acciones que forman parte de los mismos índices que GEDA, con más de tres meses dentro, y que pertenecen a uno de los temas de la estrategia: semiconductores, software y ciberseguridad, videojuegos, metales críticos, energía para la IA, salud con IA, aeroespacial y defensa, y robótica/IA y cuántica; en estos dos últimos temas, las candidatas se toman de las mayores posiciones de sus ETF de referencia.",
+    "La lista de candidatas sale sola cada mes de esa regla; no la elijo yo.",
+    "Cada mes un algoritmo mide el momentum de todas las candidatas en los últimos 24 meses.",
+    "Las cuatro con mayor momentum forman la cartera del mes, con dos del mismo tema como máximo.",
+    "Las 4 llevan el mismo importe, un 25 % cada una, hasta el día 1 siguiente.",
+    "Si hay cambios, vendo lo que sale y compro lo que entra; si no, no hago nada."
+   ],
+   "composicion": [
+    [
+     "Acciones de los grandes índices de EE. UU. y Europa que pertenecen a los temas de la estrategia (máximo 2 por tema)",
+     "4 posiciones, 25 % cada una"
+    ]
+   ],
+   "revision": "Cada mes: el día 1 miro el informe y cambio solo lo que indique",
+   "limites": [
+    "Solo cuatro acciones de pocas temáticas: movimientos muy bruscos y muy concentrados.",
+    "Sufre con giros bruscos tras una gran subida y con caídas prolongadas que tardan en recuperarse.",
+    "El historial con dinero real es corto, desde enero de 2024, y dos años concentran gran parte del resultado. Además, es de la versión anterior del método."
+   ],
+   "capital_minimo": "Unos 4.000 € con un bróker de 1 € por operación (unos 1.000 € por posición); unos 4.500 € con uno de unos 3 €",
+   "vehiculos": "Acciones sueltas de EE. UU. y Europa."
+  },
+  "CRYPTO": {
+   "que_es": "Cartera permanente especulativa: mitad Bitcoin y mitad Ethereum, que se revisa dos veces al año. Hasta noviembre de 2026 llevaba además tres altcoins elegidas por momentum.",
+   "reglas": [
+    "50 % Bitcoin y 50 % Ethereum, con peso fijo definido de antemano.",
+    "En enero y julio compruebo que ninguno se aleje más de un 15 % de su peso (es decir, que cada uno siga entre el 42,5 % y el 57,5 %).",
+    "Si alguno se aleja, rebalanceo para volver al 50/50; si no, no toco nada.",
+    "Sin altcoins ni rotaciones mensuales desde diciembre de 2026: la revisión de noviembre de 2026 mostró que no daban una ventaja que se mantuviera.",
+    "Las cifras publicadas hasta noviembre de 2026 son de la versión anterior, con altcoins."
+   ],
+   "composicion": [
+    [
+     "Bitcoin (BTC)",
+     "50 %"
+    ],
+    [
+     "Ethereum (ETH)",
+     "50 %"
+    ]
+   ],
+   "revision": "Cada semestre (enero y julio); rebalanceo solo si un activo se desvía más de un 15 % de su peso",
+   "limites": [
+    "Volatilidad extrema: una cartera de Bitcoin y Ethereum ha llegado a caer cerca de un 70 % desde máximos.",
+    "Depende de solo dos activos muy relacionados: cuando cae uno, suele caer el otro.",
+    "Cada venta para rebalancear tributa.",
+    "La historia de las criptomonedas es corta: las caídas futuras pueden ser mayores que las pasadas."
+   ],
+   "capital_minimo": null,
+   "vehiculos": "Criptomonedas, a través de un exchange o bróker especializado (yo uso Revolut X)."
+  }
+ },
+ "como_seguirlo": {
+  "dia_1": [
+   "Abro el informe, busco mis estrategias y leo la línea «Cambios para…» o «Sin cambios».",
+   "Si dice «Sin cambios», no hago nada: ni ajusto un poco ni vendo lo que ha bajado.",
+   "Si hay una rotación, vendo entera la posición que sale y con ese dinero compro la que entra.",
+   "Lo hago el primer día hábil del mes; si el día 1 es festivo o fin de semana, el siguiente día de mercado.",
+   "Uso orden a mercado en lo muy líquido y orden limitada en lo menos líquido, mirando antes la horquilla.",
+   "Al terminar anoto cada operación: fecha, activo, importe, precio y comisión."
+  ],
+  "capital": [
+   [
+    "GEDA",
+    "Unos 7.000 € con bróker de 1 € por operación (unos 9.000 € con uno de unos 3 €): unos 1.000 € por posición, con unas 30 operaciones al año."
+   ],
+   [
+    "GEN-Z",
+    "Unos 4.000 € con bróker de 1 € por operación (unos 4.500 € con uno de unos 3 €): unos 1.000 € por posición, con unas 15 operaciones al año."
+   ],
+   [
+    "CRYPTO",
+    "Sin importe fijo: pesa el porcentaje que cobra la plataforma, un 0,09 % en Revolut X frente a un 1,49 % en Openbank."
+   ],
+   [
+    "ROCA",
+    "Sin mínimo: vale cualquier importe razonable porque casi no hay operaciones, aunque algunos fondos piden una inversión mínima."
+   ],
+   [
+    "IMPULSO",
+    "Sin mínimo: vale cualquier importe razonable porque casi no hay operaciones, aunque algunos fondos piden una inversión mínima."
+   ],
+   [
+    "HORIZONTE",
+    "Lo que se pueda aportar al plan: en 2026 el límite general en planes individuales es de 1.500 € al año."
+   ]
+  ],
+  "brokers": [
+   "Acciones de EE. UU. (GEDA y GEN-Z): Interactive Brokers, porque puedo mantener saldo en dólares y evitar el cambio de divisa en cada rotación.",
+   "Acciones europeas (GEDA y GEN-Z) y ETF (GEDA): DEGIRO y, cada vez más, Openbank, con 1 € por operación y sin custodia.",
+   "Fondos de inversión (ROCA e IMPULSO): Renta 4 como plataforma principal y Openbank como alternativa sin custodia.",
+   "Criptomonedas (CRYPTO): Revolut X, tras dejar Binance, por sus comisiones bajas y su autorización MiCA.",
+   "Planes de pensiones (HORIZONTE): Santander, con su plan de bolsa de EE. UU. y su plan monetario."
+  ],
+  "empezar_de_cero": [
+   "En las estrategias más agresivas (GEDA, GEN-Z y CRYPTO) entraría poco a poco, repartiendo el importe total en varios meses.",
+   "El primer mes compro las posiciones vigentes con la primera parte, respetando el reparto; los meses siguientes añado otra parte a las vigentes.",
+   "Si hay una rotación mientras tanto, la aplico a lo que ya tengo. Con 1.000 €: unos 143 € por posición en GEDA y 250 € en GEN-Z."
+  ]
+ }
+}

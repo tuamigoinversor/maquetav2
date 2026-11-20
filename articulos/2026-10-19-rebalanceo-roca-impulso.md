@@ -136,7 +136,7 @@ Cuando toca rebalancear, te aviso en el informe, como hice con IMPULSO a mitad d
 
 ## ¿Y si combinas varias estrategias?
 
-Si sigues ROCA o IMPULSO junto a otras estrategias, como te contaba en [cómo combinar las estrategias](/aprende/combinar-estrategias-inversion/), aparece un segundo rebalanceo: el reparto **entre estrategias**. La lógica es la misma: fija unos pesos, define un margen y revísalo con calma unas pocas veces al año. Puedes probar mezclas en la herramienta [Combinar estrategias](/combinar-estrategias/).
+Si sigues ROCA o IMPULSO junto a otras estrategias, como te contaba en [cómo combinar las estrategias](/aprende/combinar-estrategias-inversion/), aparece un segundo rebalanceo: el reparto **entre estrategias**. La lógica es la misma: fija unos pesos, define un margen y revísalo con calma unas pocas veces al año.
 
 ## En resumen
 

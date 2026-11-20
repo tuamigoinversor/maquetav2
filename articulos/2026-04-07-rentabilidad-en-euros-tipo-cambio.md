@@ -16,7 +16,7 @@ Y eso, aunque suele pasarse por alto, cambia completamente la interpretación de
 
 En este blog no se ignora.
 
-Todo lo que ves aquí —estrategias, backtests, benchmarks, ratios de riesgo y seguimiento de carteras— está calculado en euros. No como un ajuste estético, sino como una decisión metodológica clave: reflejar la rentabilidad real de un inversor europeo.
+Todo lo que ves aquí —rentabilidades, caídas, volatilidad y el resultado de cada mes— está calculado en euros. No como un ajuste estético, sino como una decisión metodológica clave: reflejar la rentabilidad real de un inversor europeo.
 
 Porque si inviertes en euros, tu resultado no depende solo de lo que hace el mercado. También depende de lo que hace el tipo de cambio.
 

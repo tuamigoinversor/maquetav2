@@ -4,8 +4,8 @@ fecha: 2026-05-15
 categoria: "Operativa"
 resumen: "Entrar poco a poco en una estrategia (dollar cost averaging): cuándo ayuda, cuánto cuesta y en cuántas partes dividir la entrada."
 imagen: "assets/img/posts/dollar-cost-averaging.webp"
-siguiente_texto: "Ver el ejemplo práctico"
-siguiente_url: "/ejemplo-practico/"
+siguiente_texto: "Ver qué hago yo el día 1"
+siguiente_url: "/como-seguirlo/"
 ---
 
 Hay una situación que se repite mucho.
@@ -70,7 +70,7 @@ Con el tiempo, el precio medio de tu entrada es más razonable que si hubieras e
 
 Y eso marca una diferencia enorme en cómo vives la inversión.
 
-Un matiz honesto: entrar poco a poco no mejora la rentabilidad esperada. En un mercado que sube, entrar de golpe suele salir mejor, porque tienes antes todo el dinero trabajando. Lo que hace la incorporación progresiva es reducir el riesgo de entrar justo antes de una caída y, sobre todo, el arrepentimiento que te lleva a abandonar.
+Un matiz importante: entrar poco a poco no mejora la rentabilidad esperada. En un mercado que sube, entrar de golpe suele salir mejor, porque tienes antes todo el dinero trabajando. Lo que hace la incorporación progresiva es reducir el riesgo de entrar justo antes de una caída y, sobre todo, el arrepentimiento que te lleva a abandonar.
 
 ## ¿En cuántas partes lo divido?
 
@@ -150,4 +150,4 @@ Una buena estrategia necesita tiempo y paciencia, también cuando el primer mes 
 
 *— Tu Amigo Inversor*
 
-*Si estás pensando en incorporarte a alguna estrategia, en el [ejemplo práctico](/ejemplo-practico/) verás el recorrido completo, del test de perfil a la primera operación.*
+*Si estás pensando en incorporarte a alguna estrategia, en [qué hago yo el día 1](/como-seguirlo/) verás cómo aplico el informe, con qué importes y en qué brókers.*

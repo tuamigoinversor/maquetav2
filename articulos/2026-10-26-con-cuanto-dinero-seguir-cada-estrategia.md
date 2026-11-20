@@ -8,9 +8,12 @@ siguiente_texto: "Ver qué brókers utilizo"
 siguiente_url: "/aprende/que-brokers-utilizo/"
 ---
 
+> **Actualización (noviembre de 2026):** desde diciembre de 2026, CRYPTO es 50 % bitcoin y 50 % ether, sin altcoins ni rotaciones mensuales. Lo que este artículo dice de las altcoins se refiere a la versión anterior. [Por qué ha cambiado](/aprende/lo-que-he-cambiado-tras-revisar-mis-estrategias/).
+
+
 Es una de las preguntas que más me llegan: «¿Con cuánto dinero puedo empezar?».
 
-La respuesta honesta es que **no hay un mínimo**. Pero no todos los importes funcionan igual. En las estrategias que cambian de posiciones cada mes, con poco dinero o con un bróker caro, las comisiones pueden comerse buena parte de lo que ganas.
+La respuesta corta es que **no hay un mínimo**. Pero no todos los importes funcionan igual. En las estrategias que cambian de posiciones cada mes, con poco dinero o con un bróker caro, las comisiones pueden comerse buena parte de lo que ganas.
 
 Te doy primero la respuesta corta y después te explico de dónde sale.
 
@@ -35,7 +38,7 @@ Si solo te quedas con una idea: **en GEDA y GEN-Z, el bróker pesa tanto como el
 
 Antes de pensar en comisiones, hay una pregunta más importante: **¿qué dinero puedes invertir sin que te cambie la vida si cae?**
 
-- **Tu colchón para imprevistos no se invierte.** En el [ejemplo práctico](/ejemplo-practico/) verás cómo Marta refuerza su reserva antes de decidir cuánto invierte.
+- **Tu colchón para imprevistos no se invierte.** Primero la reserva; después, lo que puedas dejar invertido varios años.
 - **Piensa en la caída en euros.** Con 10.000 €, la peor caída con dinero real te habría dejado en 9.080 € en ROCA y en 4.990 € en CRYPTO. Si esa cifra te quitaría el sueño, el importe es demasiado alto para esa estrategia. Y la próxima caída puede ser mayor. Lo explico en el artículo sobre [drawdowns](/aprende/drawdowns-en-inversion-sin-saltarte-el-sistema/).
 
 Con ese importe claro, toca la segunda pregunta: ¿es suficiente para que las comisiones no se lo coman?
@@ -93,7 +96,7 @@ Mira lo que cuesta, más o menos, vender 1.000 € de una acción de EE. UU. y 
 | DEGIRO (unos 2 € y un 0,25 % de cambio automático) | 4 € | unos 5 € | unos 9 € |
 | Interactive Brokers con saldo en dólares | unos 2 dólares | casi nada: no conviertes | unos 2 € |
 
-*Ejemplo ilustrativo con las tarifas publicadas en 2026. Openbank ha anunciado que su diferencial de cambio sube al 1 % a partir del 10 de noviembre de 2026.*
+*Ejemplo ilustrativo con las tarifas publicadas en 2026. Openbank anunció que su diferencial de cambio subía al 1 % desde el 10 de noviembre de 2026.*
 
 El bróker más barato en comisiones no siempre es el más barato en total. Por eso yo opero las acciones de EE. UU. desde Interactive Brokers, donde puedo mantener saldo en dólares, y las europeas cada vez más en Openbank. Te lo cuento en [qué brókers utilizo](/aprende/que-brokers-utilizo/).
 

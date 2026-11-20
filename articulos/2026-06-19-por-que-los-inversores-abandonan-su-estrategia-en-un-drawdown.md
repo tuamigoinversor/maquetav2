@@ -4,8 +4,8 @@ fecha: 2026-06-19
 categoria: "Operativa"
 resumen: "El inversor medio obtiene menos que el activo en el que invierte. Los sesgos que te empujan a abandonar en mitad de una caída y cómo evitarlos."
 imagen: "assets/img/posts/por-que-los-inversores-abandonan-su-estrategia-en-un-drawdown.webp"
-siguiente_texto: "Hacer el test de perfil"
-siguiente_url: "/index.html#test"
+siguiente_texto: "Ver las caídas de cada cartera"
+siguiente_url: "/comparador/"
 ---
 
 En el post sobre [drawdowns](/aprende/drawdowns-en-inversion-sin-saltarte-el-sistema/) vimos algo importante: una caída no es un fallo del sistema, es matemáticamente inevitable en cualquier estrategia que busca rentabilidad por encima del activo libre de riesgo. Hoy toca hablar de la otra mitad de la ecuación: lo que tú haces cuando llega esa caída.

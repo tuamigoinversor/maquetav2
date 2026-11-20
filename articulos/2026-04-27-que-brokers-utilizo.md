@@ -9,6 +9,9 @@ siguiente_texto: "Ver cómo aplico el informe del mes"
 siguiente_url: "/aprende/como-aplico-el-informe-del-mes/"
 ---
 
+> **Actualización (noviembre de 2026):** desde diciembre de 2026, CRYPTO es 50 % bitcoin y 50 % ether, sin altcoins ni rotaciones mensuales. Lo que este artículo dice de las altcoins se refiere a la versión anterior. [Por qué ha cambiado](/aprende/lo-que-he-cambiado-tras-revisar-mis-estrategias/).
+
+
 No busco el mejor bróker del mundo. Busco el mejor para cada tipo de inversión, siguiendo los criterios que te contaba en [Qué bróker elegir en 2026](/aprende/mejores-brokers-espana-2026/).
 
 Por eso uso varios a la vez. Aquí te enseño mi configuración real y por qué.
@@ -27,10 +30,10 @@ Por eso uso varios a la vez. Aquí te enseño mi configuración real y por qué.
 | Tipo de inversión | Dónde la hago | Para qué la uso |
 |---|---|---|
 | Acciones de EE. UU. | Interactive Brokers | GEDA y GEN-Z |
-| Acciones europeas y ETF | DEGIRO y Openbank | GEDA |
+| Acciones europeas y ETF | DEGIRO y Openbank | GEDA y GEN-Z |
 | Fondos de inversión | Renta 4 y Openbank | ROCA e IMPULSO |
 | Criptomonedas | Revolut X | CRYPTO |
-| Planes de pensiones | Bankinter e ING | HORIZONTE (en ING) y otros planes |
+| Planes de pensiones | Santander, Bankinter e ING | HORIZONTE (en Santander) y otros planes |
 
 Ahora, el porqué de cada una.
 
@@ -42,7 +45,7 @@ Lo que más valoro es que **puedo mantener saldo en dólares**. Cuando el sistem
 
 En estrategias que rotan cada mes, ese detalle importa. El cambio de divisa es un coste que se repite en cada operación, y acaba pesando en la rentabilidad.
 
-**¿Por qué no hago esto también en Openbank?** Porque los 1 € por operación son muy competitivos, pero las acciones de EE. UU. llevan cambio de divisa. Según la información publicada en octubre de 2026, Openbank aplica un diferencial del 0,70 %, que sube al 1 % a partir del 10 de noviembre. Comprar y vender 1.000 € en una acción estadounidense supondría unos 2 € de comisión y unos 14 € de cambio de moneda (con el 0,70 %). Con rotaciones frecuentes, Interactive Brokers me sigue saliendo mejor.
+**¿Por qué no hago esto también en Openbank?** Porque los 1 € por operación son muy competitivos, pero las acciones de EE. UU. llevan cambio de divisa. Según la información publicada en octubre de 2026, Openbank aplicaba un diferencial del 0,70 % y anunció que subía al 1 % desde el 10 de noviembre. Comprar y vender 1.000 € en una acción estadounidense supondría unos 2 € de comisión y unos 14 € de cambio de moneda (con el 0,70 %). Con rotaciones frecuentes, Interactive Brokers me sigue saliendo mejor.
 
 Ojo con la fiscalidad: Interactive Brokers es un bróker extranjero. No envía la información a Hacienda como lo hace un bróker español y, según el importe que tengas fuera, puedes tener que presentar el modelo 720.
 
@@ -90,7 +93,7 @@ Que esté regulada no quiere decir que no haya riesgo. Las criptomonedas pueden 
 
 Los planes los tengo en Bankinter e ING. Aquí no busco una entidad para siempre: comparo cada plan y aprovecho las promociones por traspaso cuando compensan.
 
-De ING me interesa sobre todo su plan indexado al S&P 500, que es el que uso para la parte de bolsa de [HORIZONTE](/plan-pensiones-moderado-horizonte/). Replica el índice en lugar de intentar batirlo, así que lo que miro es qué índice sigue exactamente y cuánto cobra.
+[HORIZONTE](/plan-pensiones-moderado-horizonte/) la hago en Santander, con dos planes de la misma entidad: Santander ASG Renta Variable Norteamérica para la parte de bolsa y Santander ASG Renta Fija Corto Plazo, que es un monetario, para cuando la señal dice salir.
 
 Antes de mover un plan, miro:
 
